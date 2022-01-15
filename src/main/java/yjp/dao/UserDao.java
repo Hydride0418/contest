@@ -1,10 +1,9 @@
-package wuhobin.dao;
+package yjp.dao;
 
 
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
-import wuhobin.pojo.User;
-import wuhobin.pojo.query.UserQuery;
+import yjp.pojo.User;
 
 import java.util.List;
 
@@ -17,10 +16,6 @@ public interface UserDao {
 
     // 根据id查询用户
     public User queryUserById(Integer id);
-
-
-    // 根据用户名来查询用户  并分页展示
-    public List<User> listUserByName(UserQuery userQuery);
 
     //根据id删除用户
     public int deleteUserById(Integer id);
