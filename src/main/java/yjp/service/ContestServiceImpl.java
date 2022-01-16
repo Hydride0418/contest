@@ -1,6 +1,5 @@
 package yjp.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import yjp.dao.ContestDao;
 import yjp.pojo.Contest;
@@ -18,12 +17,14 @@ public class ContestServiceImpl implements ContestService{
 
     @Override
     public boolean addContest(Contest contest) {
-        return false;
+        boolean success = contestDao.addContest(contest);
+        return success;
     }
 
     @Override
     public List<Contest> showContestList() {
-        return null;
+        List<Contest> contestList = contestDao.listContest();
+        return contestList;
     }
 
     @Override
@@ -33,6 +34,7 @@ public class ContestServiceImpl implements ContestService{
 
     @Override
     public boolean modifyContestInfo(Contest contest) {
-        return false;
+        boolean success = contestDao.modifyContest(contest);
+        return success;
     }
 }

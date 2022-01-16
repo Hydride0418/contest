@@ -2,21 +2,21 @@ package yjp.controller;
 
 
 import com.alibaba.fastjson.JSONObject;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import yjp.pojo.User;
-import yjp.response.AddUserResponse;
+import yjp.response.ContestResponse.AddContestResponse;
 import yjp.service.UserService;
 
 
 @Controller
+@RequestMapping("/user")
 public class UserController {
-    @Autowired
-    private UserService userService;
+    private final UserService userService;
+
+    public UserController(UserService userService) {
+        this.userService = userService;
+    }
 
     @GetMapping("/get")
     @ResponseBody
@@ -31,6 +31,8 @@ public class UserController {
     @ResponseBody
     public String addUser(@RequestBody User user) {
         boolean success = userService.addUser(user);
-        return JSONObject.toJSONString(AddUserResponse.genAddUserResponse(success));
+        AddContestResponse addContestResponse = new AddContestResponse();
+        addContestResponse.generate(success);
+        return JSONObject.toJSONString(addContestResponse);
     }
 }
