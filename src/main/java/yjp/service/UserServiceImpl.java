@@ -9,8 +9,11 @@ import java.util.List;
 
 @Service   //  交由spring容齐管理
 public class UserServiceImpl implements UserService {
-    @Autowired
-    private UserDao userDao;
+    private final UserDao userDao;
+
+    public UserServiceImpl(UserDao userDao) {
+        this.userDao = userDao;
+    }
 
     @Override
     public List<User> listUser() {
