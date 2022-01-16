@@ -21,7 +21,6 @@ public class ContestController {
     @ResponseBody
     public int getUserList() {
         int count = contestService.showContestList().size();
-        System.out.println("**********");
         System.out.println(count);
         return count;
     }
