@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="yjp.dao.ContestDao">
-    <select id="listContest" resultMap="yjp.pojo.Contest">
+    <select id="listContest" resultType="yjp.pojo.Contest">
         select * from contest.contest;
     </select>
     <insert id="addContest" parameterType="yjp.pojo.Contest">

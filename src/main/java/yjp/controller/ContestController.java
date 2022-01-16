@@ -2,12 +2,10 @@ package yjp.controller;
 
 import com.alibaba.fastjson.JSONObject;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import yjp.pojo.Contest;
 import yjp.response.ContestResponse.AddContestResponse;
+import yjp.response.ContestResponse.ModifyContestResponse;
 import yjp.service.ContestService;
 
 @Controller
@@ -19,6 +17,15 @@ public class ContestController {
         this.contestService = contestService;
     }
 
+    @GetMapping("/get")
+    @ResponseBody
+    public int getUserList() {
+        int count = contestService.showContestList().size();
+        System.out.println("**********");
+        System.out.println(count);
+        return count;
+    }
+
     @PostMapping("/add_contest")
     @ResponseBody
     public String addContest(@RequestBody Contest contest) {
@@ -26,5 +33,14 @@ public class ContestController {
         AddContestResponse addContestResponse = new AddContestResponse();
         addContestResponse.generate(success);
         return JSONObject.toJSONString(addContestResponse);
+    }
+
+    @PostMapping("/modify_contest")
+    @ResponseBody
+    public String modifyContest(@RequestBody Contest contest) {
+        boolean success = contestService.modifyContestInfo(contest);
+        ModifyContestResponse modifyContestResponse = new ModifyContestResponse();
+        modifyContestResponse.generate(success);
+        return JSONObject.toJSONString(modifyContestResponse);
     }
 }
