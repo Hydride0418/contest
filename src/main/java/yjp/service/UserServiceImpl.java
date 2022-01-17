@@ -7,7 +7,7 @@ import yjp.pojo.User;
 
 import java.util.List;
 
-@Service   //  交由spring容齐管理
+@Service   //  交由spring容器管理
 public class UserServiceImpl implements UserService {
     private final UserDao userDao;
 
