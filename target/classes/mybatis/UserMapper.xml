@@ -5,10 +5,10 @@
 <mapper namespace="yjp.dao.UserDao">
     <select id="listUser" resultType="yjp.pojo.User">
         select *
-        from contest.user;
+        from city.user;
     </select>
     <insert id="addUser" parameterType="yjp.pojo.User">
-        insert into contest.user(username, password, email, phone, name, team_id, gender, school)
+        insert into city.user(username, password, email, phone, name, team_id, gender, school)
         values (#{username}, #{password}, #{email}, #{phone}, #{name}, #{team_id}, #{gender},
                 #{school})
     </insert>
