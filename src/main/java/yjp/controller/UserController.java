@@ -22,7 +22,6 @@ public class UserController {
     @ResponseBody
     public int getUserList() {
         int count = userService.listUser().size();
-        System.out.println("**********");
         System.out.println(count);
         return count;
     }
