@@ -1,9 +1,10 @@
-package yjp.service;
+package yjp.ServiceImpl;
 
 import org.springframework.stereotype.Service;
 import yjp.dao.AwardDao;
 import yjp.pojo.Award;
 import yjp.pojo.query.AwardQuery;
+import yjp.service.AwardService;
 
 import java.util.List;
 

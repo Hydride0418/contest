@@ -13,7 +13,13 @@ public class Response {
     }
 
     public void generate(boolean success) {
-
+        if (success == true) {
+            this.code = 200;
+            this.message = "OK";
+        } else {
+            this.code = 600;
+            this.message = "Failed";
+        }
     }
 
     public int getCode() {

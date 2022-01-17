@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yjp.dao.PreContestDao">
+    <select id="listPreContest" resultType="yjp.pojo.PreContest">
+        select *
+        from city.pre_contest;
+    </select>
+    <insert id="addPreContest" parameterType="yjp.pojo.PreContest">
+        insert into city.pre_contest(name, time_limit, question_number, archive_status, contest_id)
+        values (#{name}, #{time_limit}, #{question_number}, #{archive_status}, #{contest_id})
+    </insert>
+    <delete id="deletePreContest" parameterType="int">
+        delete
+        from city.pre_contest
+        where id = #{id}
+    </delete>
+    <update id="modifyPreContest" parameterType="yjp.pojo.PreContest">
+        update city.pre_contest
+        set name            = #{name},
+            time_limit      = #{time_limit},
+            question_number = #{question_number},
+            archive_status  = #{archive_status},
+            contest_id      = #{contest_id}
+        where id = #{id}
+    </update>
+</mapper>
