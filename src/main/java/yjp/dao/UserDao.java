@@ -7,8 +7,8 @@ import yjp.pojo.User;
 
 import java.util.List;
 
-@Mapper  // 告诉springboot这是一个mybatis的mapepr类
-@Repository   // 将userdao交由spring容齐管理
+@Mapper  // 告诉springboot这是一个mybatis的mapper类
+@Repository   // 将userDao交由spring容器管理
 public interface UserDao {
     // 查询所有用户
     public List<User> listUser();
