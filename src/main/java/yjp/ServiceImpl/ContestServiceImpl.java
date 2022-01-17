@@ -1,14 +1,15 @@
-package yjp.service;
+package yjp.ServiceImpl;
 
 import org.springframework.stereotype.Service;
 import yjp.dao.ContestDao;
 import yjp.pojo.Contest;
 import yjp.pojo.query.ContestQuery;
+import yjp.service.ContestService;
 
 import java.util.List;
 
 @Service
-public class ContestServiceImpl implements ContestService{
+public class ContestServiceImpl implements ContestService {
     private final ContestDao contestDao;
 
     public ContestServiceImpl(ContestDao contestDao) {

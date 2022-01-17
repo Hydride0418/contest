@@ -1,9 +1,10 @@
-package yjp.service;
+package yjp.ServiceImpl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import yjp.dao.UserDao;
 import yjp.pojo.User;
+import yjp.service.UserService;
 
 import java.util.List;
 
