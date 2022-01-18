@@ -4,6 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import yjp.pojo.Team;
+import yjp.pojo.query.SelectionQuery;
+import yjp.pojo.query.TeamQuery;
+import yjp.pojo.requiredInfo.SelectionInfo;
+import yjp.pojo.requiredInfo.TeamInfo;
 import yjp.service.TeamService;
 
 import java.util.List;
@@ -68,19 +72,19 @@ public class TeamController {
         return success;
     }
 
-//    选题信息(团队信息+作品信息)查询
-//    @PostMapping("/search_selection_info")
-//      @ResponseBody
-//    public List<SelectionInfo> searchSelectionInfo(SelectionQuery selectionQuery) {
-//        return null;
-//    }
+    //选题信息(团队信息+作品信息)查询
+    @PostMapping("/search_selection_info")
+    @ResponseBody
+    public List<SelectionInfo> searchSelectionInfo(SelectionQuery selectionQuery) {
+        return null;
+    }
 
-//    //报名信息(团队信息+赛题)查询
-//    @PostMapping("search_team_info")
-//    @ResponseBody
-//    public List<TeamInfo> searchTeamInfo(TeamInfoQuery teamInfoQuery) {
-//        return null;
-//    }
+    //报名信息(团队信息+赛题)查询
+    @PostMapping("search_team_info")
+    @ResponseBody
+    public List<TeamInfo> searchTeamInfo(TeamQuery teamQuery) {
+        return null;
+    }
 
     //查看审核历史（需要新增 审核信息 实体）
 }
