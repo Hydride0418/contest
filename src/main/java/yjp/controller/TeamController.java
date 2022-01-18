@@ -53,10 +53,10 @@ public class TeamController {
     }
 
     //参赛资格审核
-    @PostMapping("/qualification_review")
+    @GetMapping("/qualification_review")
     @ResponseBody
-    public boolean qualificationReview(@RequestParam("ldList") List<Integer> idList) {
-        boolean success = teamService.qualificationReview(idList);
+    public boolean qualificationReview(@PathVariable("id") Integer id) {
+        boolean success = teamService.qualificationReview(id);
         return false;
     }
 
@@ -64,7 +64,8 @@ public class TeamController {
     @PostMapping("/batch_selection_review")
     @ResponseBody
     public boolean batchSelectionReview(@RequestParam("ldList") List<Integer> idList) {
-        return false;
+        boolean success = teamService.batchSelectionReview(idList);
+        return success;
     }
 
 //    选题信息(团队信息+作品信息)查询
