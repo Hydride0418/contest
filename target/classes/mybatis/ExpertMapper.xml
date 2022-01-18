@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yjp.dao.ExpertDao">
+    <select id="listExpert" resultType="yjp.pojo.Expert">
+        select *
+        from city.expert;
+    </select>
+    <insert id="addExpert" parameterType="yjp.pojo.Expert">
+        insert into city.expert(name, gender, organization_name, phone, email, create_date, remarks)
+        values (#{name}, #{gender}, #{organization_name}, #{phone},#{email},#{create_date},#{remarks})
+    </insert>
+    <delete id="deleteExpert" parameterType="int">
+        delete
+        from city.expert
+        where id = #{id}
+    </delete>
+    <update id="modifyExpert" parameterType="yjp.pojo.Expert">
+        update city.expert
+        set name            = #{name},
+            gender      = #{gender},
+            organization_name = #{organization_name},
+            phone  = #{phone},
+            email  = #{email},
+            create_date  = #{create_date},
+            remarks  = #{remarks}
+        where id = #{id}
+    </update>
+</mapper>

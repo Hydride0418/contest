@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yjp.dao.RuleDao">
+    <select id="listRule" resultType="yjp.pojo.Rule">
+        select *
+        from city.rule;
+    </select>
+    <insert id="addRule" parameterType="yjp.pojo.Rule">
+        insert into city.rule(name, title_colu, is_use_wei, is_valid, head_info, num)
+        values (#{name}, #{title_colu}, #{is_use_wei}, #{is_valid}, #{head_info}, #{num})
+    </insert>
+    <select id="checkRule" parameterType="int" resultType="yjp.pojo.Rule">
+        select *
+        from city.rule
+        where id = #{id};
+    </select>
+    <update id="invalidRule" parameterType="yjp.pojo.Rule">
+        update city.rule
+        set is_valid = 0
+        where id = #{id}
+    </update>
+</mapper>

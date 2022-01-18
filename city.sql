@@ -1,21 +1,19 @@
 /*
- Navicat MySQL Data Transfer
+Navicat MySQL Data Transfer
 
- Source Server         : demo
- Source Server Type    : MySQL
- Source Server Version : 80027
- Source Host           : localhost:3306
- Source Schema         : city
+Source Server         : city
+Source Server Version : 80021
+Source Host           : localhost:3306
+Source Database       : city
 
- Target Server Type    : MySQL
- Target Server Version : 80027
- File Encoding         : 65001
+Target Server Type    : MYSQL
+Target Server Version : 80021
+File Encoding         : 65001
 
- Date: 17/01/2022 16:42:24
+Date: 2022-01-19 01:42:26
 */
 
-SET NAMES utf8mb4;
-SET FOREIGN_KEY_CHECKS = 0;
+SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
 -- Table structure for administrator
@@ -25,12 +23,12 @@ CREATE TABLE `administrator` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `gender` int NOT NULL,
-  `organization_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `organization` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `phone` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `create_date` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for allocation
@@ -41,12 +39,14 @@ CREATE TABLE `allocation` (
   `work_id` int DEFAULT NULL,
   `expert_id` int DEFAULT NULL,
   `masks` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `advice` varchar(0) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
+  `is_valid` int DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `allo_fk_1` (`work_id`),
   KEY `allo_fk_2` (`expert_id`),
   CONSTRAINT `allo_fk_1` FOREIGN KEY (`work_id`) REFERENCES `work` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `allo_fk_2` FOREIGN KEY (`expert_id`) REFERENCES `expert` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for award
@@ -70,7 +70,7 @@ CREATE TABLE `award` (
   CONSTRAINT `award_kf_2` FOREIGN KEY (`org_id`) REFERENCES `organization` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `award_kf_3` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `award_kf_4` FOREIGN KEY (`team_id`) REFERENCES `team` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for batch
@@ -88,8 +88,8 @@ CREATE TABLE `batch` (
   `expert_work` int DEFAULT NULL,
   `start_date` datetime DEFAULT NULL,
   `end_date` datetime DEFAULT NULL,
-  `aveg_mask` double NOT NULL,
-  `max_mask` double NOT NULL,
+  `is_aveg` int NOT NULL,
+  `is_max` int NOT NULL,
   `match_task` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `batch_1` (`ques_id`) USING BTREE,
@@ -98,7 +98,7 @@ CREATE TABLE `batch` (
   CONSTRAINT `batch_fk_1` FOREIGN KEY (`ques_id`) REFERENCES `question` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `batch_fk_2` FOREIGN KEY (`track_id`) REFERENCES `track` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `batch_fk_3` FOREIGN KEY (`rule_id`) REFERENCES `rule` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for contest
@@ -126,8 +126,9 @@ CREATE TABLE `expert` (
   `phone` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `email` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `create_date` datetime DEFAULT NULL,
+  `remarks` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for master_principal
@@ -138,7 +139,7 @@ CREATE TABLE `master_principal` (
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `organization_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for member_team
@@ -204,12 +205,12 @@ CREATE TABLE `rule` (
   `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `title_colu` int DEFAULT NULL,
-  `is_use_wei` double DEFAULT NULL,
-  `is_valid` double DEFAULT NULL,
+  `is_use_wei` int DEFAULT NULL,
+  `is_valid` int DEFAULT NULL,
   `head_info` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `num` int DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for team
@@ -268,7 +269,7 @@ CREATE TABLE `user` (
   `school` varchar(255) DEFAULT NULL COMMENT '学校',
   PRIMARY KEY (`id`),
   KEY `user_ibfk_1` (`team_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ----------------------------
 -- Table structure for user_log
@@ -278,7 +279,7 @@ CREATE TABLE `user_log` (
   `id` int NOT NULL AUTO_INCREMENT,
   `content` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for user_team
@@ -315,6 +316,4 @@ CREATE TABLE `work` (
   CONSTRAINT `work_fk_2` FOREIGN KEY (`team_id`) REFERENCES `team` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `work_fk_3` FOREIGN KEY (`ques_id`) REFERENCES `question` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `work_fk_4` FOREIGN KEY (`rule_id`) REFERENCES `rule` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
-
-SET FOREIGN_KEY_CHECKS = 1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
