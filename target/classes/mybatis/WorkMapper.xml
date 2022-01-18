@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yjp.dao.WorkDao">
+    <select id="listWork" resultType="yjp.pojo.Work">
+        select *
+        from city.work;
+    </select>
+    <insert id="addWork" parameterType="yjp.pojo.Work">
+        insert into city.work(name, user_id, team_id, ques_id, rule_id)
+        values (#{name}, #{user_id}, #{team_id}, #{ques_id},#{rule_id})
+    </insert>
+    <delete id="deleteWork" parameterType="int">
+        delete
+        from city.work
+        where id = #{id}
+    </delete>
+    <update id="modifyWork" parameterType="yjp.pojo.Work">
+        update city.work
+        set name            = #{name},
+            user_id      = #{user_id},
+            team_id = #{team_id},
+            ques_id  = #{ques_id},
+            rule_id      = #{rule_id},
+        where id = #{id}
+    </update>
+    <select id="getWorkById" parameterType="int" resultType="yjp.pojo.Work">
+        select *
+        from city.work
+        where id = #{id};
+    </select>
+</mapper>

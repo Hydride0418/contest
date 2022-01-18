@@ -18,6 +18,7 @@ public class Team {
     private String leader_school;
     private String leader_phone;
     private String advisor;
-    private int team_no_rematch;
+    private Integer team_no_rematch;
+    private Integer is_rematch;
     private Date submit_date;
 }
