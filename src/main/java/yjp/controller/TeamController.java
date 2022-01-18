@@ -13,13 +13,13 @@ import java.util.List;
 public class TeamController {
     private final TeamService teamService;
 
-    public TeamController(TeamService teamService ) {
+    public TeamController(TeamService teamService) {
         this.teamService = teamService;
     }
 
     @GetMapping("/get_list")
     @ResponseBody
-    public List<Team> getTeamList(){
+    public List<Team> getTeamList() {
         List<Team> teamList = teamService.showTeamList();
         return teamList;
     }
@@ -51,4 +51,35 @@ public class TeamController {
         Team team = teamService.getTeamById(id);
         return team;
     }
+
+    //参赛资格审核
+    @PostMapping("/qualification_review")
+    @ResponseBody
+    public boolean qualificationReview(@RequestParam("ldList") List<Integer> idList) {
+        boolean success = teamService.qualificationReview(idList);
+        return false;
+    }
+
+    //选题信息批量审核
+    @PostMapping("/batch_selection_review")
+    @ResponseBody
+    public boolean batchSelectionReview(@RequestParam("ldList") List<Integer> idList) {
+        return false;
+    }
+
+//    选题信息(团队信息+作品信息)查询
+//    @PostMapping("/search_selection_info")
+//      @ResponseBody
+//    public List<SelectionInfo> searchSelectionInfo(SelectionQuery selectionQuery) {
+//        return null;
+//    }
+
+//    //报名信息(团队信息+赛题)查询
+//    @PostMapping("search_team_info")
+//    @ResponseBody
+//    public List<TeamInfo> searchTeamInfo(TeamInfoQuery teamInfoQuery) {
+//        return null;
+//    }
+
+    //查看审核历史（需要新增 审核信息 实体）
 }

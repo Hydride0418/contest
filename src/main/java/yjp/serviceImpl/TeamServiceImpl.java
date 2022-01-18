@@ -44,4 +44,10 @@ public class TeamServiceImpl implements TeamService {
         Team team = teamDao.getTeamById(id);
         return team;
     }
+
+    @Override
+    public boolean qualificationReview(List<Integer> idList) {
+        boolean success =  teamDao.qualificationReview(idList);
+        return success;
+    }
 }

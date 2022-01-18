@@ -35,4 +35,9 @@
         from city.team
         where id = #{id};
     </select>
+    <update id="qualificationReview">
+        update city.team
+        set participat = "participant"
+        where id in #{collection}
+    </update>
 </mapper>
