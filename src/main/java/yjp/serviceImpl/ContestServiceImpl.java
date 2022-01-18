@@ -1,4 +1,4 @@
-package yjp.ServiceImpl;
+package yjp.serviceImpl;
 
 import org.springframework.stereotype.Service;
 import yjp.dao.ContestDao;

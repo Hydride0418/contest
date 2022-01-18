@@ -1,6 +1,5 @@
-package yjp.ServiceImpl;
+package yjp.serviceImpl;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import yjp.dao.UserDao;
 import yjp.pojo.User;
