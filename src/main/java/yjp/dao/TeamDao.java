@@ -19,4 +19,8 @@ public interface TeamDao {
     public boolean modifyTeam(Team Team);
     //根据id查一个团队的信息
     public Team getTeamById(Integer id);
+    //审核参赛资格
+    public boolean qualificationReview(Integer id);
+    //批量审核选题
+    public boolean batchSelectionReview(List<Integer> idList);
 }
