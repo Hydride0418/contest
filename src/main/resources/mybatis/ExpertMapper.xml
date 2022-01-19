@@ -16,6 +16,7 @@
         from city.expert
         where id = #{id}
     </delete>
+
     <update id="modifyExpert" parameterType="yjp.pojo.Expert">
         update city.expert
         set name            = #{name},
