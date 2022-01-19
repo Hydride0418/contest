@@ -1,5 +1,6 @@
 package yjp.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import yjp.pojo.Contest;
@@ -26,19 +27,19 @@ public class ContestController {
 
     @PostMapping("/add_contest")
     @ResponseBody
-    public AddContestResponse addContest(@RequestBody Contest contest) {
+    public String addContest(@RequestBody Contest contest) {
         boolean success = contestService.addContest(contest);
         AddContestResponse addContestResponse = new AddContestResponse();
         addContestResponse.generate(success);
-        return addContestResponse;
+        return JSONObject.toJSONString(addContestResponse);
     }
 
     @PostMapping("/modify_contest")
     @ResponseBody
-    public ModifyContestResponse modifyContest(@RequestBody Contest contest) {
+    public String modifyContest(@RequestBody Contest contest) {
         boolean success = contestService.modifyContestInfo(contest);
         ModifyContestResponse modifyContestResponse = new ModifyContestResponse();
         modifyContestResponse.generate(success);
-        return modifyContestResponse;
+        return JSONObject.toJSONString(modifyContestResponse);
     }
 }

@@ -8,10 +8,8 @@
         from city.team;
     </select>
     <insert id="addTeam" parameterType="yjp.pojo.Team">
-        insert into city.team(name, question_id, participat, team_leader, leader_school, leader_phone, advisor,
-                              team_no_rematch, is_rematch, submit_date)
-        values (#{name}, #{question_id}, #{participat}, #{team_leader}, #{leader_school}, #{leader_phone}, #{advisor},
-                #{team_no_rematch}, #{is_rematch}, #{submit_date})
+        insert into city.team(name, question_id, participat, team_leader, leader_school, leader_phone, advisor, team_no_rematch, is_rematch, submit_date)
+        values (#{name}, #{question_id}, #{participat}, #{team_leader}, #{leader_school}, #{leader_phone}, #{advisor},#{team_no_rematch},#{is_rematch},#{submit_date})
     </insert>
     <delete id="deleteTeam" parameterType="int">
         delete
@@ -21,15 +19,15 @@
     <update id="modifyTeam" parameterType="yjp.pojo.Team">
         update city.team
         set name            = #{name},
-            question_id     = #{question_id},
-            participat      = #{participat},
-            team_leader     = #{team_leader},
-            leader_school   = #{leader_school},
-            leader_phone    = #{leader_phone},
-            advisor         = #{advisor},
+            question_id      = #{question_id},
+            participat = #{participat},
+            team_leader  = #{team_leader},
+            leader_school      = #{leader_school},
+            leader_phone  = #{leader_phone},
+            advisor = #{advisor},
             team_no_rematch = #{team_no_rematch},
-            is_rematch      = #{is_rematch},
-            submit_date     = #{submit_date}
+            is_rematch = #{is_rematch},
+            submit_date = #{submit_date}
         where id = #{id}
     </update>
     <select id="getTeamById" parameterType="int" resultType="yjp.pojo.Team">
@@ -37,17 +35,4 @@
         from city.team
         where id = #{id};
     </select>
-    <update id="qualificationReview" parameterType="int">
-        update city.team
-        set participat = "participant"
-        where id = #{id}
-    </update>
-    <update id="batchSelectionReview">
-        update city.team
-        set participat = "select passed"
-        where id in
-        <foreach collection="idList" item="item" index="index" open="(" close=")" separator=",">
-            #{item}
-        </foreach>
-    </update>
 </mapper>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yjp.dao.BatchDao">
+    <select id="listBatch" resultType="yjp.pojo.Batch">
+        select *
+        from city.batch;
+    </select>
+    <insert id="addBatch" parameterType="yjp.pojo.Batch">
+        insert into city.batch(num, , ques_id, track_id, rule_id, work_id, expert_id, work_expert, expert_work, start_date, end_date, is_aveg, is_max, match_task)
+        values (#{num}, #{ques_id}, #{track_id}, #{rule_id}, #{work_id}, #{expert_id}, #{work_expert}, #{expert_work}, #{start_date}, #{end_date}, #{is_aveg}, #{is_max}, #{match_task})
+    </insert>
+    <select id="checkBatch" parameterType="int" resultType="yjp.pojo.Batch">
+        select *
+        from city.batch
+        where id = #{id};
+    </select>
+</mapper>

@@ -1,6 +1,7 @@
 package yjp.controller;
 
 
+import com.alibaba.fastjson.JSONObject;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import yjp.pojo.User;
@@ -27,10 +28,10 @@ public class UserController {
 
     @PostMapping("/add_user")
     @ResponseBody
-    public AddContestResponse addUser(@RequestBody User user) {
+    public String addUser(@RequestBody User user) {
         boolean success = userService.addUser(user);
         AddContestResponse addContestResponse = new AddContestResponse();
         addContestResponse.generate(success);
-        return addContestResponse;
+        return JSONObject.toJSONString(addContestResponse);
     }
 }
