@@ -17,5 +17,5 @@ public interface ContestDao {
     //修改赛事信息
     public boolean modifyContest(Contest contest);
     //查询赛事
-    public boolean searchContest(ContestQuery contestQuery);
+    public List<Contest> searchContest(ContestQuery contestQuery);
 }

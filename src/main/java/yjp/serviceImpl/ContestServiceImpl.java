@@ -30,7 +30,8 @@ public class ContestServiceImpl implements ContestService {
 
     @Override
     public List<Contest> searchContest(ContestQuery contestQuery) {
-        return null;
+        List<Contest> contestList = contestDao.searchContest(contestQuery);
+        return contestList;
     }
 
     @Override
