@@ -1,6 +1,7 @@
 package yjp.dao;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 import yjp.pojo.Administrator;
 import java.util.List;
@@ -18,6 +19,6 @@ public interface AdministratorDao {
     public boolean updateAdministrator(Administrator administrator);
 
     // 修改管理员密码
-    public boolean modifyAdministratorPassword(Administrator administrator);
+    int modifyAdministratorPassword(@Param("administrator") Administrator administrator, @Param("password") String password);
 
 }

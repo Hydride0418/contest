@@ -3,6 +3,7 @@ package yjp.service;
 import yjp.pojo.Administrator;
 
 import java.util.List;
+import org.apache.ibatis.annotations.Results;
 
 public interface AdministratorService {
 
@@ -16,6 +17,6 @@ public interface AdministratorService {
     public boolean updateAdministrator(Administrator administrator);
 
     // 修改管理员密码
-    public boolean modifyAdministratorPassword(Administrator administrator);
+    public boolean modifyAdministratorPassword(Administrator administrator, String newPassword);
 
 }

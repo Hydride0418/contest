@@ -32,7 +32,9 @@ public class AdministratorServiceImpl implements AdministratorService {
     }
 
     @Override
-    public boolean modifyAdministratorPassword(Administrator administrator) {
-        return false;
+    public boolean modifyAdministratorPassword(Administrator administrator, String newPassword) {
+        administratorDao.modifyAdministratorPassword(administrator, newPassword);
+        return true;
     }
+
 }
