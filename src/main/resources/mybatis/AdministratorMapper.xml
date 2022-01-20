@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yjp.dao.AwardDao">
+    <select id="listAdministrator" resultType="yjp.pojo.Administrator">
+        select *
+        from city.administrator;
+    </select>
+    <insert id="addAdministrator" parameterType="yjp.pojo.Administrator">
+        insert into city.administrator(username, password, name, gender, affiliation, privatePhone, email, officePhone, qqNumber, address, postcode)
+        values (#{username}, #{password}, #{name}, #{gender}, #{affiliation}, #{privatePhone}, #{email}, #{officePhone}, #{qqNumber}, #{address}, #{postcode})
+    </insert>
+    <update id="updateAdministrator" parameterType="yjp.pojo.Administrator">
+        update city.administrator
+        set name            = #{name},
+            gender          = #{gender},
+            privatePhone    = #{privatePhone},
+            email           = #{email},
+            officePhone     = #{officePhone},
+            qqNumber        = #{qqNumber},
+            address         = #{address},
+            postcode        = #{postcode}
+        where id = #{id}
+    </update>
+    <update id="modifyAdministratorPassword" parameterType="yjp.pojo.Administrator">
+        update city.administrator
+        set password = #{password} where id = #{id}
+    </update>
+</mapper>
