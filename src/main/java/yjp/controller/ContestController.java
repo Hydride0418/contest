@@ -3,9 +3,12 @@ package yjp.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import yjp.pojo.Contest;
+import yjp.pojo.query.ContestQuery;
 import yjp.response.ContestResponse.AddContestResponse;
 import yjp.response.ContestResponse.ModifyContestResponse;
 import yjp.service.ContestService;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/contest")
@@ -18,10 +21,9 @@ public class ContestController {
 
     @GetMapping("/get")
     @ResponseBody
-    public int getUserList() {
-        int count = contestService.showContestList().size();
-        System.out.println(count);
-        return count;
+    public List<Contest> getUserList() {
+        List<Contest> contestList = contestService.showContestList();
+        return contestList;
     }
 
     @PostMapping("/add_contest")
@@ -40,5 +42,12 @@ public class ContestController {
         ModifyContestResponse modifyContestResponse = new ModifyContestResponse();
         modifyContestResponse.generate(success);
         return modifyContestResponse;
+    }
+
+    @PostMapping("search")
+    @ResponseBody
+    public List<Contest> searchContest(@RequestBody ContestQuery contestQuery) {
+        List<Contest> contestList = contestService.searchContest(contestQuery);
+        return contestList;
     }
 }

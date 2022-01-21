@@ -12,4 +12,5 @@ public class Question {
     private String name;
     private Integer track_id;
     private Integer batch_id;
+    private Team team;
 }

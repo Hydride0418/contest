@@ -21,4 +21,6 @@ public class Team {
     private Integer team_no_rematch;
     private Integer is_rematch;
     private Date submit_date;
+    private Work work;
+    private Question question;
 }

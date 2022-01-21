@@ -2,7 +2,10 @@ package yjp.serviceImpl;
 
 import org.springframework.stereotype.Service;
 import yjp.dao.TeamDao;
+import yjp.pojo.Question;
 import yjp.pojo.Team;
+import yjp.pojo.query.SelectionQuery;
+import yjp.pojo.query.TeamQuery;
 import yjp.service.TeamService;
 
 import java.util.List;
@@ -55,5 +58,15 @@ public class TeamServiceImpl implements TeamService {
     public boolean batchSelectionReview(List<Integer> idList) {
         boolean success = teamDao.batchSelectionReview(idList);
         return success;
+    }
+
+    @Override
+    public List<Team> searchSelectionInfo(SelectionQuery selectionQuery) {
+        return teamDao.searchSelectionInfo(selectionQuery);
+    }
+
+    @Override
+    public List<Question> searchTeamInfo(TeamQuery teamQuery) {
+        return teamDao.searchTeamInfo(teamQuery);
     }
 }

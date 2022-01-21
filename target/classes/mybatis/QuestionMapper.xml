@@ -5,24 +5,21 @@
 <mapper namespace="yjp.dao.QuestionDao">
     <select id="listQuestion" resultType="yjp.pojo.Question">
         select *
-        from city.question;
+        from city_1.question;
     </select>
     <insert id="addQuestion" parameterType="yjp.pojo.Question">
-        insert into city.question(name, batch, works, track_id, teams, batch_id)
-        values (#{name}, #{batch}, #{works}, #{track_id}, #{teams}, #{batch_id})
+        insert into city.question(name, track_id, batch_id)
+        values (#{name}, #{track_id}, #{batch_id})
     </insert>
     <delete id="deleteQuestion" parameterType="int">
         delete
-        from city.question
+        from city_1.question
         where id = #{id}
     </delete>
     <update id="modifyQuestion" parameterType="yjp.pojo.Question">
-        update city.question
+        update city_1.question
         set name            = #{name},
-            batch      = #{batch},
-            works = #{works},
             track_id  = #{track_id},
-            teams      = #{teams},
             batch_id  = #{batch_id}
         where id = #{id}
     </update>

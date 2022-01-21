@@ -30,4 +30,12 @@
         from city.work
         where id = #{id};
     </select>
+    <select id="queryWork" parameterType="yjp.pojo.query.WorkQuery" resultType="yjp.pojo.Work">
+        select * from city.work
+        <where>
+            <if test="question != null and question != ''">
+                and `question` like concat('%',#{question},'%')
+            </if>
+        </where>
+    </select>
 </mapper>

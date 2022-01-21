@@ -19,10 +19,7 @@
     <update id="modifyQuestion" parameterType="yjp.pojo.Question">
         update city.question
         set name            = #{name},
-            batch      = #{batch},
-            works = #{works},
             track_id  = #{track_id},
-            teams      = #{teams},
             batch_id  = #{batch_id}
         where id = #{id}
     </update>

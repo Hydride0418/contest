@@ -5,34 +5,121 @@
 <mapper namespace="yjp.dao.TeamDao">
     <select id="listTeam" resultType="yjp.pojo.Team">
         select *
-        from city.team;
+        from city_1.team;
     </select>
     <insert id="addTeam" parameterType="yjp.pojo.Team">
-        insert into city.team(name, question_id, participat, team_leader, leader_school, leader_phone, advisor, team_no_rematch, is_rematch, submit_date)
-        values (#{name}, #{question_id}, #{participat}, #{team_leader}, #{leader_school}, #{leader_phone}, #{advisor},#{team_no_rematch},#{is_rematch},#{submit_date})
+        insert into city_1.team(name, question_id, participat, team_leader, leader_school, leader_phone, advisor,
+                                team_no_rematch, is_rematch, submit_date)
+        values (#{name}, #{question_id}, #{participat}, #{team_leader}, #{leader_school}, #{leader_phone}, #{advisor},
+                #{team_no_rematch}, #{is_rematch}, #{submit_date})
     </insert>
     <delete id="deleteTeam" parameterType="int">
         delete
-        from city.team
+        from city_1.team
         where id = #{id}
     </delete>
     <update id="modifyTeam" parameterType="yjp.pojo.Team">
-        update city.team
+        update city_1.team
         set name            = #{name},
-            question_id      = #{question_id},
-            participat = #{participat},
-            team_leader  = #{team_leader},
-            leader_school      = #{leader_school},
-            leader_phone  = #{leader_phone},
-            advisor = #{advisor},
+            question_id     = #{question_id},
+            participat      = #{participat},
+            team_leader     = #{team_leader},
+            leader_school   = #{leader_school},
+            leader_phone    = #{leader_phone},
+            advisor         = #{advisor},
             team_no_rematch = #{team_no_rematch},
-            is_rematch = #{is_rematch},
-            submit_date = #{submit_date}
+            is_rematch      = #{is_rematch},
+            submit_date     = #{submit_date}
         where id = #{id}
     </update>
     <select id="getTeamById" parameterType="int" resultType="yjp.pojo.Team">
         select *
-        from city.team
+        from city_1.team
         where id = #{id};
+    </select>
+    <update id="qualificationReview" parameterType="int">
+        update city_1.team
+        set participat = "participant"
+        where id = #{id}
+    </update>
+    <update id="batchSelectionReview">
+        update city_1.team
+        set participat = "select passed"
+        where id in
+        <foreach collection="idList" item="item" index="index" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </update>
+    <resultMap id="workTeamMap" type="Team">
+        <id property="id" column="id"></id>
+        <result property="name" column="name"></result>
+        <result property="question_id" column="question"></result>
+        <result property="participat" column="participat"></result>
+        <result property="team_leader" column="team_leader"></result>
+        <result property="leader_school" column="leader_school"></result>
+        <result property="leader_phone" column="leader_phone"></result>
+        <result property="advisor" column="advisor"></result>
+        <result property="team_no_rematch" column="team_no_rematch"></result>
+        <result property="is_rematch" column="is_rematch"></result>
+        <result property="submit_date" column="submit_date"></result>
+        <association property="work" javaType="Work">
+            <id property="id" column="w_id"></id>
+            <result property="name" column="w_name"></result>
+        </association>
+    </resultMap>
+    <select id="searchSelectionInfo" parameterType="yjp.pojo.query.SelectionQuery"
+            resultMap="workTeamMap">
+        select t.*, w.id w_id ,w.name w_name
+        from city_1.team t inner join city_1.work w
+        on w.team_id = t.id
+        <where>
+            <if test="team_name != null and team_name != ''">
+                and t.`name` like concat('%',#{team_name},'%')
+            </if>
+            <if test="work_name != null and work_name != ''">
+                and w.`name` like concat('%',#{work_name},'%')
+            </if>
+            <if test="leader_school != null and leader_school != ''">
+                and `leader_school` like concat('%',#{leader_school},'%')
+            </if>
+            <if test="team_leader != null and team_leader != ''">
+                and `team_leader` like concat('%',#{team_leader},'%')
+            </if>
+        </where>
+    </select>
+    <resultMap id="questionTeamMap" type="Question">
+        <id property="id" column="id"></id>
+        <result property="name" column="name"></result>
+        <result property="batch" column="batch"></result>
+        <result property="works" column="works"></result>
+        <result property="track_id" column="track_id"></result>
+        <result property="teams" column="teams"></result>
+        <result property="batch_id" column="batch_id"></result>
+        <association property="team" javaType="Team">
+            <id property="id" column="t_id"></id>
+            <result property="name" column="t_name"></result>
+        </association>
+    </resultMap>
+    <select id="searchTeamInfo" parameterType="yjp.pojo.query.TeamQuery" resultMap="questionTeamMap">
+        select t.*,q.name q_name
+        from city_1.team t inner join city_1.question q
+        on t.question_id = q.id
+        <where>
+            <if test="team_name != null and team_name != ''">
+                and t.`name` like concat('%',#{team_name},'%')
+            </if>
+            <if test="contest_status != null and contest_status != ''">
+                and `participat` = #{contest_status}
+            </if>
+            <if test="leader_phone != null and leader_phone != ''">
+                and `leader_phone` = #{leader_phone}
+            </if>
+            <if test="leader_school != null and leader_school != ''">
+                and `leader_school` = #{leader_school}
+            </if>
+            <if test="team_leader != null and team_leader != ''">
+                and `team_leader` like concat('%',#{team_leader},'%')
+            </if>
+        </where>
     </select>
 </mapper>

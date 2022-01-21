@@ -1,6 +1,9 @@
 package yjp.service;
 
+import yjp.pojo.Question;
 import yjp.pojo.Team;
+import yjp.pojo.query.SelectionQuery;
+import yjp.pojo.query.TeamQuery;
 
 import java.util.List;
 
@@ -19,4 +22,8 @@ public interface TeamService {
     public boolean qualificationReview(Integer id);
     //批量审核选题
     public boolean batchSelectionReview(List<Integer> id);
+    //搜索work+team
+    public List<Team> searchSelectionInfo(SelectionQuery selectionQuery);
+    //搜索question+team
+    public List<Question> searchTeamInfo(TeamQuery teamQuery);
 }

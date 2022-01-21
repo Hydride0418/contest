@@ -1,6 +1,5 @@
 package yjp.response.RuleResponse;
 
-import sun.misc.Request;
 import yjp.response.Response;
 
 public class AddRuleResponse extends Response {
