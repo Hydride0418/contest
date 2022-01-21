@@ -8,7 +8,7 @@
         from city_1.question;
     </select>
     <insert id="addQuestion" parameterType="yjp.pojo.Question">
-        insert into city_1.question(name, track_id, batch_id)
+        insert into city.question(name, track_id, batch_id)
         values (#{name}, #{track_id}, #{batch_id})
     </insert>
     <delete id="deleteQuestion" parameterType="int">

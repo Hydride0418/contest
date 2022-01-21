@@ -5,21 +5,21 @@
 <mapper namespace="yjp.dao.TeamDao">
     <select id="listTeam" resultType="yjp.pojo.Team">
         select *
-        from city_1.team;
+        from city.team;
     </select>
     <insert id="addTeam" parameterType="yjp.pojo.Team">
-        insert into city_1.team(name, question_id, participat, team_leader, leader_school, leader_phone, advisor,
+        insert into city.team(name, question_id, participat, team_leader, leader_school, leader_phone, advisor,
                                 team_no_rematch, is_rematch, submit_date)
         values (#{name}, #{question_id}, #{participat}, #{team_leader}, #{leader_school}, #{leader_phone}, #{advisor},
                 #{team_no_rematch}, #{is_rematch}, #{submit_date})
     </insert>
     <delete id="deleteTeam" parameterType="int">
         delete
-        from city_1.team
+        from city.team
         where id = #{id}
     </delete>
     <update id="modifyTeam" parameterType="yjp.pojo.Team">
-        update city_1.team
+        update city.team
         set name            = #{name},
             question_id     = #{question_id},
             participat      = #{participat},
@@ -34,16 +34,16 @@
     </update>
     <select id="getTeamById" parameterType="int" resultType="yjp.pojo.Team">
         select *
-        from city_1.team
+        from city.team
         where id = #{id};
     </select>
     <update id="qualificationReview" parameterType="int">
-        update city_1.team
+        update city.team
         set participat = "participant"
         where id = #{id}
     </update>
     <update id="batchSelectionReview">
-        update city_1.team
+        update city.team
         set participat = "select passed"
         where id in
         <foreach collection="idList" item="item" index="index" open="(" close=")" separator=",">
@@ -70,7 +70,7 @@
     <select id="searchSelectionInfo" parameterType="yjp.pojo.query.SelectionQuery"
             resultMap="workTeamMap">
         select t.*, w.id w_id ,w.name w_name
-        from city_1.team t inner join city_1.work w
+        from city.team t inner join city.work w
         on w.team_id = t.id
         <where>
             <if test="team_name != null and team_name != ''">
@@ -102,7 +102,7 @@
     </resultMap>
     <select id="searchTeamInfo" parameterType="yjp.pojo.query.TeamQuery" resultMap="questionTeamMap">
         select t.*,q.name q_name
-        from city_1.team t inner join city_1.question q
+        from city.team t inner join city.question q
         on t.question_id = q.id
         <where>
             <if test="team_name != null and team_name != ''">
