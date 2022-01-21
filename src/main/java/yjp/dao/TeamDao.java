@@ -1,6 +1,7 @@
 package yjp.dao;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 import yjp.pojo.Question;
 import yjp.pojo.Team;
@@ -25,7 +26,7 @@ public interface TeamDao {
     //审核参赛资格
     public boolean qualificationReview(Integer id);
     //批量审核选题
-    public boolean batchSelectionReview(List<Integer> idList);
+    public boolean batchSelectionReview(@Param("idList") List<Integer> idList);
     //搜索选题信息（work + team）
     public List<Team> searchSelectionInfo(SelectionQuery selectionQuery);
     //搜索question+team
