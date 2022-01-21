@@ -1,0 +1,617 @@
+2022-01-20 16:20:54.685  INFO 79715 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on C02XQCBBJG5H with PID 79715 (/Users/bytedance/IdeaProjects/city_contest/target/classes started by bytedance in /Users/bytedance/IdeaProjects/city_contest)
+2022-01-20 16:20:54.689 DEBUG 79715 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
+2022-01-20 16:20:54.689  INFO 79715 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
+2022-01-20 16:20:54.729  INFO 79715 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-20 16:20:54.729  INFO 79715 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-20 16:20:55.764  INFO 79715 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-20 16:20:55.772  INFO 79715 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-20 16:20:55.772  INFO 79715 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-01-20 16:20:55.832  INFO 79715 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-20 16:20:55.832  INFO 79715 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1102 ms
+2022-01-20 16:20:56.389  INFO 79715 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-20 16:20:56.505  WARN 79715 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-01-20 16:20:56.608  WARN 79715 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-01-20 16:20:56.641  WARN 79715 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2022-01-20 16:20:56.644  INFO 79715 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-20 16:20:56.645  INFO 79715 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2022-01-20 16:20:56.647  INFO 79715 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-01-20 16:20:56.665  INFO 79715 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-01-20 16:20:56.682 ERROR 79715 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2022-01-20 16:42:17.451  INFO 80787 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on C02XQCBBJG5H with PID 80787 (/Users/bytedance/IdeaProjects/city_contest/target/classes started by bytedance in /Users/bytedance/IdeaProjects/city_contest)
+2022-01-20 16:42:17.453 DEBUG 80787 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
+2022-01-20 16:42:17.453  INFO 80787 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
+2022-01-20 16:42:17.490  INFO 80787 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-20 16:42:17.490  INFO 80787 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-20 16:42:18.458  INFO 80787 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-20 16:42:18.468  INFO 80787 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-20 16:42:18.468  INFO 80787 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-01-20 16:42:18.556  INFO 80787 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-20 16:42:18.556  INFO 80787 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1065 ms
+2022-01-20 16:42:19.087  INFO 80787 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-20 16:42:19.196  WARN 80787 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-01-20 16:42:19.298  WARN 80787 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-01-20 16:42:19.340  INFO 80787 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-20 16:42:19.352  INFO 80787 --- [restartedMain] yjp.SpringbootMybatisApplication         : Started SpringbootMybatisApplication in 2.222 seconds (JVM running for 3.818)
+2022-01-20 16:45:13.125  INFO 80787 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-20 16:45:13.125  INFO 80787 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-20 16:45:13.126  INFO 80787 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-01-20 16:45:13.221 ERROR 80787 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalArgumentException: Result Maps collection does not contain value for yjp.pojo.Contest] with root cause
+
+java.lang.IllegalArgumentException: Result Maps collection does not contain value for yjp.pojo.Contest
+	at org.apache.ibatis.session.Configuration$StrictMap.get(Configuration.java:1009) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.session.Configuration.getResultMap(Configuration.java:718) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.builder.MapperBuilderAssistant.getStatementResultMaps(MapperBuilderAssistant.java:394) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addMappedStatement(MapperBuilderAssistant.java:285) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:113) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.session.Configuration.lambda$buildAllStatements$2(Configuration.java:860) ~[mybatis-3.5.5.jar:3.5.5]
+	at java.base/java.util.Collection.removeIf(Collection.java:576) ~[na:na]
+	at org.apache.ibatis.session.Configuration.buildAllStatements(Configuration.java:859) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.session.Configuration.hasStatement(Configuration.java:836) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.session.Configuration.hasStatement(Configuration.java:831) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.resolveMappedStatement(MapperMethod.java:257) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:227) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:115) ~[mybatis-3.5.5.jar:3.5.5]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1708) ~[na:na]
+	at org.apache.ibatis.binding.MapperProxy.cachedInvoker(MapperProxy.java:102) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85) ~[mybatis-3.5.5.jar:3.5.5]
+	at jdk.proxy3/jdk.proxy3.$Proxy62.searchContest(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
+	at jdk.proxy3/jdk.proxy3.$Proxy63.searchContest(Unknown Source) ~[na:na]
+	at yjp.serviceImpl.ContestServiceImpl.searchContest(ContestServiceImpl.java:33) ~[classes/:na]
+	at yjp.controller.ContestController.searchContest(ContestController.java:51) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-01-20 16:45:55.532  INFO 80787 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-20 16:45:55.533  INFO 80787 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2022-01-20 16:45:59.680  INFO 80862 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on C02XQCBBJG5H with PID 80862 (/Users/bytedance/IdeaProjects/city_contest/target/classes started by bytedance in /Users/bytedance/IdeaProjects/city_contest)
+2022-01-20 16:45:59.682 DEBUG 80862 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
+2022-01-20 16:45:59.683  INFO 80862 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
+2022-01-20 16:45:59.722  INFO 80862 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-20 16:45:59.722  INFO 80862 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-20 16:46:00.596  INFO 80862 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-20 16:46:00.604  INFO 80862 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-20 16:46:00.604  INFO 80862 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-01-20 16:46:00.670  INFO 80862 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-20 16:46:00.670  INFO 80862 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 947 ms
+2022-01-20 16:46:01.163  INFO 80862 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-20 16:46:01.276  WARN 80862 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-01-20 16:46:01.383  WARN 80862 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-01-20 16:46:01.415  INFO 80862 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-20 16:46:01.427  INFO 80862 --- [restartedMain] yjp.SpringbootMybatisApplication         : Started SpringbootMybatisApplication in 2.102 seconds (JVM running for 3.291)
+2022-01-20 16:46:32.063  INFO 80862 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-20 16:46:32.064  INFO 80862 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-20 16:46:32.065  INFO 80862 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-01-20 16:46:32.214  INFO 80862 --- [http-nio-8080-exec-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-01-20 16:46:32.621 DEBUG 80862 --- [http-nio-8080-exec-2] yjp.dao.ContestDao.searchContest         : ==>  Preparing: select * from city.contest
+2022-01-20 16:46:32.643 DEBUG 80862 --- [http-nio-8080-exec-2] yjp.dao.ContestDao.searchContest         : ==> Parameters: 
+2022-01-20 16:46:32.716 DEBUG 80862 --- [http-nio-8080-exec-2] yjp.dao.ContestDao.searchContest         : <==      Total: 1
+2022-01-20 16:48:02.624  INFO 80862 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-20 16:48:02.626  INFO 80862 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-01-20 16:48:02.631  INFO 80862 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-01-20 16:48:05.889  INFO 80882 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on C02XQCBBJG5H with PID 80882 (/Users/bytedance/IdeaProjects/city_contest/target/classes started by bytedance in /Users/bytedance/IdeaProjects/city_contest)
+2022-01-20 16:48:05.892 DEBUG 80882 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
+2022-01-20 16:48:05.893  INFO 80882 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
+2022-01-20 16:48:05.943  INFO 80882 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-20 16:48:05.944  INFO 80882 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-20 16:48:06.853  INFO 80882 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-20 16:48:06.861  INFO 80882 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-20 16:48:06.862  INFO 80882 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-01-20 16:48:06.924  INFO 80882 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-20 16:48:06.925  INFO 80882 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 980 ms
+2022-01-20 16:48:07.489  INFO 80882 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-20 16:48:07.614  WARN 80882 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-01-20 16:48:07.724  WARN 80882 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-01-20 16:48:07.763  INFO 80882 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-20 16:48:07.774  INFO 80882 --- [restartedMain] yjp.SpringbootMybatisApplication         : Started SpringbootMybatisApplication in 2.193 seconds (JVM running for 3.091)
+2022-01-20 16:48:37.602  INFO 80882 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-20 16:48:37.604  INFO 80882 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-20 16:48:37.610  INFO 80882 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-01-20 16:48:37.768  INFO 80882 --- [http-nio-8080-exec-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-01-20 16:48:38.087 DEBUG 80882 --- [http-nio-8080-exec-2] yjp.dao.ContestDao.searchContest         : ==>  Preparing: select * from city.contest WHERE `name` like concat('%',?,'%')
+2022-01-20 16:48:38.108 DEBUG 80882 --- [http-nio-8080-exec-2] yjp.dao.ContestDao.searchContest         : ==> Parameters: null
+2022-01-20 16:48:38.138 DEBUG 80882 --- [http-nio-8080-exec-2] yjp.dao.ContestDao.searchContest         : <==      Total: 0
+2022-01-20 16:49:34.614 DEBUG 80882 --- [http-nio-8080-exec-3] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-01-20 16:49:34.615 DEBUG 80882 --- [http-nio-8080-exec-3] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-01-20 16:49:34.620 DEBUG 80882 --- [http-nio-8080-exec-3] yjp.dao.ContestDao.listContest           : <==      Total: 1
+2022-01-20 16:49:45.125 DEBUG 80882 --- [http-nio-8080-exec-4] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-01-20 16:49:45.126 DEBUG 80882 --- [http-nio-8080-exec-4] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-01-20 16:49:45.127 DEBUG 80882 --- [http-nio-8080-exec-4] yjp.dao.ContestDao.listContest           : <==      Total: 1
+2022-01-20 16:49:57.585 DEBUG 80882 --- [http-nio-8080-exec-5] yjp.dao.ContestDao.modifyContest         : ==>  Preparing: update city.contest set name = ?, time_limit = ?, question_number = ?, archive_status = ?, contest_id = ? where id = ?
+2022-01-20 16:49:57.587 DEBUG 80882 --- [http-nio-8080-exec-5] yjp.dao.ContestDao.modifyContest         : ==> Parameters: 北航五子棋大赛(String), 2(Integer), 2(Integer), 1(Integer), 1234(Integer), 2(Integer)
+2022-01-20 16:49:57.615 DEBUG 80882 --- [http-nio-8080-exec-5] yjp.dao.ContestDao.modifyContest         : <==    Updates: 0
+2022-01-20 16:50:12.372 DEBUG 80882 --- [http-nio-8080-exec-6] yjp.dao.ContestDao.searchContest         : ==>  Preparing: select * from city.contest WHERE `name` like concat('%',?,'%')
+2022-01-20 16:50:12.373 DEBUG 80882 --- [http-nio-8080-exec-6] yjp.dao.ContestDao.searchContest         : ==> Parameters: null
+2022-01-20 16:50:12.376 DEBUG 80882 --- [http-nio-8080-exec-6] yjp.dao.ContestDao.searchContest         : <==      Total: 0
+2022-01-20 16:52:51.799  INFO 80882 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-20 16:52:51.801  INFO 80882 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-01-20 16:52:51.807  INFO 80882 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-01-20 16:52:56.635  INFO 81496 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on C02XQCBBJG5H with PID 81496 (/Users/bytedance/IdeaProjects/city_contest/target/classes started by bytedance in /Users/bytedance/IdeaProjects/city_contest)
+2022-01-20 16:52:56.638 DEBUG 81496 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
+2022-01-20 16:52:56.639  INFO 81496 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
+2022-01-20 16:52:56.684  INFO 81496 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-20 16:52:56.685  INFO 81496 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-20 16:52:57.559  INFO 81496 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-20 16:52:57.567  INFO 81496 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-20 16:52:57.567  INFO 81496 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-01-20 16:52:57.626  INFO 81496 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-20 16:52:57.626  INFO 81496 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 941 ms
+2022-01-20 16:52:58.118  INFO 81496 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-20 16:52:58.229  WARN 81496 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-01-20 16:52:58.316  WARN 81496 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-01-20 16:52:58.351  INFO 81496 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-20 16:52:58.362  INFO 81496 --- [restartedMain] yjp.SpringbootMybatisApplication         : Started SpringbootMybatisApplication in 2.041 seconds (JVM running for 3.038)
+2022-01-20 16:53:27.972  INFO 81496 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-20 16:53:27.973  INFO 81496 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-20 16:53:27.974  INFO 81496 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-01-20 16:53:28.112  INFO 81496 --- [http-nio-8080-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-01-20 16:53:28.459 DEBUG 81496 --- [http-nio-8080-exec-1] yjp.dao.ContestDao.searchContest         : ==>  Preparing: select * from city.contest WHERE `name` like concat('%',?,'%')
+2022-01-20 16:53:28.485 DEBUG 81496 --- [http-nio-8080-exec-1] yjp.dao.ContestDao.searchContest         : ==> Parameters: 赛(String)
+2022-01-20 16:53:28.511 DEBUG 81496 --- [http-nio-8080-exec-1] yjp.dao.ContestDao.searchContest         : <==      Total: 0
+2022-01-20 16:53:39.691 DEBUG 81496 --- [http-nio-8080-exec-3] yjp.dao.ContestDao.searchContest         : ==>  Preparing: select * from city.contest WHERE `name` like concat('%',?,'%')
+2022-01-20 16:53:39.691 DEBUG 81496 --- [http-nio-8080-exec-3] yjp.dao.ContestDao.searchContest         : ==> Parameters: c(String)
+2022-01-20 16:53:39.695 DEBUG 81496 --- [http-nio-8080-exec-3] yjp.dao.ContestDao.searchContest         : <==      Total: 1
+2022-01-20 16:53:47.644 DEBUG 81496 --- [http-nio-8080-exec-4] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-01-20 16:53:47.645 DEBUG 81496 --- [http-nio-8080-exec-4] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-01-20 16:53:47.647 DEBUG 81496 --- [http-nio-8080-exec-4] yjp.dao.ContestDao.listContest           : <==      Total: 1
+2022-01-20 16:55:31.011  INFO 81496 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-20 16:55:31.012  INFO 81496 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-01-20 16:55:31.015  INFO 81496 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-01-20 16:55:37.176  INFO 81526 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on C02XQCBBJG5H with PID 81526 (/Users/bytedance/IdeaProjects/city_contest/target/classes started by bytedance in /Users/bytedance/IdeaProjects/city_contest)
+2022-01-20 16:55:37.178 DEBUG 81526 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
+2022-01-20 16:55:37.179  INFO 81526 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
+2022-01-20 16:55:37.225  INFO 81526 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-20 16:55:37.225  INFO 81526 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-20 16:55:38.142  INFO 81526 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-20 16:55:38.150  INFO 81526 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-20 16:55:38.150  INFO 81526 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-01-20 16:55:38.211  INFO 81526 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-20 16:55:38.211  INFO 81526 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 985 ms
+2022-01-20 16:55:38.736  INFO 81526 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-20 16:55:38.845  WARN 81526 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-01-20 16:55:38.933  WARN 81526 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-01-20 16:55:38.965  INFO 81526 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-20 16:55:38.976  INFO 81526 --- [restartedMain] yjp.SpringbootMybatisApplication         : Started SpringbootMybatisApplication in 2.17 seconds (JVM running for 3.311)
+2022-01-20 16:55:45.538  INFO 81526 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-20 16:55:45.538  INFO 81526 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-20 16:55:45.539  INFO 81526 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-01-20 16:55:45.560  WARN 81526 --- [http-nio-8080-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public yjp.response.ContestResponse.AddContestResponse yjp.controller.ContestController.addContest(yjp.pojo.Contest)]
+2022-01-20 16:55:52.259  WARN 81526 --- [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public yjp.response.ContestResponse.AddContestResponse yjp.controller.ContestController.addContest(yjp.pojo.Contest)]
+2022-01-20 16:56:18.189  WARN 81526 --- [http-nio-8080-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content type 'text/plain;charset=UTF-8' not supported]
+2022-01-20 16:56:27.198  INFO 81526 --- [http-nio-8080-exec-7] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-01-20 16:56:27.503 DEBUG 81526 --- [http-nio-8080-exec-7] yjp.dao.ContestDao.addContest            : ==>  Preparing: insert into city.contest(name, time_limit, question_number, archive_status, contest_id) values (?, ?, ?, ?, ?)
+2022-01-20 16:56:27.524 DEBUG 81526 --- [http-nio-8080-exec-7] yjp.dao.ContestDao.addContest            : ==> Parameters: 北航五子棋大赛(String), 2(Integer), 2(Integer), 1(Integer), 1234(Integer)
+2022-01-20 16:56:27.541 DEBUG 81526 --- [http-nio-8080-exec-7] yjp.dao.ContestDao.addContest            : <==    Updates: 1
+2022-01-20 16:56:38.276 DEBUG 81526 --- [http-nio-8080-exec-8] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-01-20 16:56:38.277 DEBUG 81526 --- [http-nio-8080-exec-8] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-01-20 16:56:38.294 DEBUG 81526 --- [http-nio-8080-exec-8] yjp.dao.ContestDao.listContest           : <==      Total: 2
+2022-01-20 16:56:54.932 DEBUG 81526 --- [http-nio-8080-exec-9] yjp.dao.ContestDao.addContest            : ==>  Preparing: insert into city.contest(name, time_limit, question_number, archive_status, contest_id) values (?, ?, ?, ?, ?)
+2022-01-20 16:56:54.932 DEBUG 81526 --- [http-nio-8080-exec-9] yjp.dao.ContestDao.addContest            : ==> Parameters: cc(String), 2(Integer), 2(Integer), 1(Integer), 1234(Integer)
+2022-01-20 16:56:54.938 DEBUG 81526 --- [http-nio-8080-exec-9] yjp.dao.ContestDao.addContest            : <==    Updates: 1
+2022-01-20 16:56:59.747 DEBUG 81526 --- [http-nio-8080-exec-10] yjp.dao.ContestDao.searchContest         : ==>  Preparing: select * from city.contest WHERE `name` like concat('%',?,'%')
+2022-01-20 16:56:59.747 DEBUG 81526 --- [http-nio-8080-exec-10] yjp.dao.ContestDao.searchContest         : ==> Parameters: c(String)
+2022-01-20 16:56:59.749 DEBUG 81526 --- [http-nio-8080-exec-10] yjp.dao.ContestDao.searchContest         : <==      Total: 2
+2022-01-20 16:59:02.307  INFO 81526 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-20 16:59:02.309  INFO 81526 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-01-20 16:59:02.312  INFO 81526 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-01-20 16:59:05.769  INFO 81551 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on C02XQCBBJG5H with PID 81551 (/Users/bytedance/IdeaProjects/city_contest/target/classes started by bytedance in /Users/bytedance/IdeaProjects/city_contest)
+2022-01-20 16:59:05.770 DEBUG 81551 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
+2022-01-20 16:59:05.771  INFO 81551 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
+2022-01-20 16:59:05.810  INFO 81551 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-20 16:59:05.810  INFO 81551 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-20 16:59:06.682  INFO 81551 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-20 16:59:06.691  INFO 81551 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-20 16:59:06.691  INFO 81551 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-01-20 16:59:06.753  INFO 81551 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-20 16:59:06.753  INFO 81551 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 942 ms
+2022-01-20 16:59:07.237  INFO 81551 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-20 16:59:07.344  WARN 81551 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-01-20 16:59:07.433  WARN 81551 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-01-20 16:59:07.467  INFO 81551 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-20 16:59:07.478  INFO 81551 --- [restartedMain] yjp.SpringbootMybatisApplication         : Started SpringbootMybatisApplication in 2.028 seconds (JVM running for 3.157)
+2022-01-20 16:59:12.962  INFO 81551 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-20 16:59:12.962  INFO 81551 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-20 16:59:12.964  INFO 81551 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-01-20 16:59:13.104  INFO 81551 --- [http-nio-8080-exec-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-01-20 16:59:13.418 DEBUG 81551 --- [http-nio-8080-exec-2] yjp.dao.ContestDao.searchContest         : ==>  Preparing: select * from city.contest WHERE `name` like concat('%',?,'%')
+2022-01-20 16:59:13.441 DEBUG 81551 --- [http-nio-8080-exec-2] yjp.dao.ContestDao.searchContest         : ==> Parameters: c(String)
+2022-01-20 16:59:13.463 DEBUG 81551 --- [http-nio-8080-exec-2] yjp.dao.ContestDao.searchContest         : <==      Total: 2
+2022-01-20 16:59:19.036 DEBUG 81551 --- [http-nio-8080-exec-3] yjp.dao.ContestDao.searchContest         : ==>  Preparing: select * from city.contest
+2022-01-20 16:59:19.036 DEBUG 81551 --- [http-nio-8080-exec-3] yjp.dao.ContestDao.searchContest         : ==> Parameters: 
+2022-01-20 16:59:19.040 DEBUG 81551 --- [http-nio-8080-exec-3] yjp.dao.ContestDao.searchContest         : <==      Total: 3
+2022-01-20 16:59:30.670 DEBUG 81551 --- [http-nio-8080-exec-4] yjp.dao.ContestDao.searchContest         : ==>  Preparing: select * from city.contest
+2022-01-20 16:59:30.671 DEBUG 81551 --- [http-nio-8080-exec-4] yjp.dao.ContestDao.searchContest         : ==> Parameters: 
+2022-01-20 16:59:30.673 DEBUG 81551 --- [http-nio-8080-exec-4] yjp.dao.ContestDao.searchContest         : <==      Total: 3
+2022-01-20 16:59:39.804 DEBUG 81551 --- [http-nio-8080-exec-5] yjp.dao.ContestDao.searchContest         : ==>  Preparing: select * from city.contest
+2022-01-20 16:59:39.805 DEBUG 81551 --- [http-nio-8080-exec-5] yjp.dao.ContestDao.searchContest         : ==> Parameters: 
+2022-01-20 16:59:39.807 DEBUG 81551 --- [http-nio-8080-exec-5] yjp.dao.ContestDao.searchContest         : <==      Total: 3
+2022-01-20 17:01:39.954  INFO 81551 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-20 17:01:39.955  INFO 81551 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-01-20 17:01:39.958  INFO 81551 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-01-20 17:01:43.639  INFO 81578 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on C02XQCBBJG5H with PID 81578 (/Users/bytedance/IdeaProjects/city_contest/target/classes started by bytedance in /Users/bytedance/IdeaProjects/city_contest)
+2022-01-20 17:01:43.642 DEBUG 81578 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
+2022-01-20 17:01:43.643  INFO 81578 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
+2022-01-20 17:01:43.687  INFO 81578 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-20 17:01:43.687  INFO 81578 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-20 17:01:45.338  INFO 81578 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-20 17:01:45.353  INFO 81578 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-20 17:01:45.353  INFO 81578 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-01-20 17:01:45.455  INFO 81578 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-20 17:01:45.455  INFO 81578 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1767 ms
+2022-01-20 17:01:46.057  INFO 81578 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-20 17:01:46.164  WARN 81578 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-01-20 17:01:46.261  WARN 81578 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-01-20 17:01:46.295  INFO 81578 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-20 17:01:46.305  INFO 81578 --- [restartedMain] yjp.SpringbootMybatisApplication         : Started SpringbootMybatisApplication in 3.07 seconds (JVM running for 4.314)
+2022-01-20 17:01:58.883  INFO 81578 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-20 17:01:58.884  INFO 81578 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-20 17:01:58.889  INFO 81578 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-01-20 17:01:59.057 ERROR 81578 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'id' in 'class yjp.pojo.query.ContestQuery'] with root cause
+
+org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'id' in 'class yjp.pojo.query.ContestQuery'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:374) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:164) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:162) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:49) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:122) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextMap.get(DynamicContext.java:102) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextAccessor.getProperty(DynamicContext.java:113) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.ognl.OgnlRuntime.getProperty(OgnlRuntime.java:3338) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.ognl.ASTProperty.getValueBody(ASTProperty.java:121) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:212) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:258) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.ognl.ASTNotEq.getValueBody(ASTNotEq.java:50) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:212) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:258) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:560) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:524) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.scripting.xmltags.OgnlCache.getValue(OgnlCache.java:46) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.scripting.xmltags.ExpressionEvaluator.evaluateBoolean(ExpressionEvaluator.java:32) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.scripting.xmltags.IfSqlNode.apply(IfSqlNode.java:34) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.lambda$apply$0(MixedSqlNode.java:32) ~[mybatis-3.5.5.jar:3.5.5]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.scripting.xmltags.TrimSqlNode.apply(TrimSqlNode.java:55) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.lambda$apply$0(MixedSqlNode.java:32) ~[mybatis-3.5.5.jar:3.5.5]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.scripting.xmltags.DynamicSqlSource.getBoundSql(DynamicSqlSource.java:39) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.mapping.MappedStatement.getBoundSql(MappedStatement.java:305) ~[mybatis-3.5.5.jar:3.5.5]
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:82) ~[pagehelper-5.2.0.jar:na]
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61) ~[mybatis-3.5.5.jar:3.5.5]
+	at jdk.proxy2/jdk.proxy2.$Proxy89.query(Unknown Source) ~[na:na]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140) ~[mybatis-3.5.5.jar:3.5.5]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) ~[mybatis-spring-2.0.5.jar:2.0.5]
+	at jdk.proxy2/jdk.proxy2.$Proxy57.selectList(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223) ~[mybatis-spring-2.0.5.jar:2.0.5]
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85) ~[mybatis-3.5.5.jar:3.5.5]
+	at jdk.proxy3/jdk.proxy3.$Proxy62.searchContest(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
+	at jdk.proxy3/jdk.proxy3.$Proxy63.searchContest(Unknown Source) ~[na:na]
+	at yjp.serviceImpl.ContestServiceImpl.searchContest(ContestServiceImpl.java:33) ~[classes/:na]
+	at yjp.controller.ContestController.searchContest(ContestController.java:50) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-01-20 17:02:10.181  INFO 81578 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-20 17:02:10.182  INFO 81578 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2022-01-20 17:02:13.600  INFO 81611 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on C02XQCBBJG5H with PID 81611 (/Users/bytedance/IdeaProjects/city_contest/target/classes started by bytedance in /Users/bytedance/IdeaProjects/city_contest)
+2022-01-20 17:02:13.601 DEBUG 81611 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
+2022-01-20 17:02:13.602  INFO 81611 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
+2022-01-20 17:02:13.646  INFO 81611 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-20 17:02:13.646  INFO 81611 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-20 17:02:14.712  INFO 81611 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-20 17:02:14.721  INFO 81611 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-20 17:02:14.722  INFO 81611 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-01-20 17:02:14.793  INFO 81611 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-20 17:02:14.793  INFO 81611 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1146 ms
+2022-01-20 17:02:15.316  INFO 81611 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-20 17:02:15.444  WARN 81611 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-01-20 17:02:15.549  WARN 81611 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-01-20 17:02:15.580  INFO 81611 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-20 17:02:15.590  INFO 81611 --- [restartedMain] yjp.SpringbootMybatisApplication         : Started SpringbootMybatisApplication in 2.354 seconds (JVM running for 3.119)
+2022-01-20 17:02:15.731  INFO 81611 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-20 17:02:15.731  INFO 81611 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-20 17:02:15.732  INFO 81611 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-01-20 17:02:15.827 ERROR 81611 --- [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'id' in 'class yjp.pojo.query.ContestQuery'] with root cause
+
+org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'id' in 'class yjp.pojo.query.ContestQuery'
+	at org.apache.ibatis.reflection.Reflector.getGetInvoker(Reflector.java:374) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.reflection.MetaClass.getGetInvoker(MetaClass.java:164) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.getBeanProperty(BeanWrapper.java:162) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.reflection.wrapper.BeanWrapper.get(BeanWrapper.java:49) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.reflection.MetaObject.getValue(MetaObject.java:122) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextMap.get(DynamicContext.java:102) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.scripting.xmltags.DynamicContext$ContextAccessor.getProperty(DynamicContext.java:113) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.ognl.OgnlRuntime.getProperty(OgnlRuntime.java:3338) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.ognl.ASTProperty.getValueBody(ASTProperty.java:121) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:212) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:258) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.ognl.ASTNotEq.getValueBody(ASTNotEq.java:50) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.ognl.SimpleNode.evaluateGetValueBody(SimpleNode.java:212) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.ognl.SimpleNode.getValue(SimpleNode.java:258) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:560) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.ognl.Ognl.getValue(Ognl.java:524) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.scripting.xmltags.OgnlCache.getValue(OgnlCache.java:46) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.scripting.xmltags.ExpressionEvaluator.evaluateBoolean(ExpressionEvaluator.java:32) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.scripting.xmltags.IfSqlNode.apply(IfSqlNode.java:34) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.lambda$apply$0(MixedSqlNode.java:32) ~[mybatis-3.5.5.jar:3.5.5]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.scripting.xmltags.TrimSqlNode.apply(TrimSqlNode.java:55) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.lambda$apply$0(MixedSqlNode.java:32) ~[mybatis-3.5.5.jar:3.5.5]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
+	at org.apache.ibatis.scripting.xmltags.MixedSqlNode.apply(MixedSqlNode.java:32) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.scripting.xmltags.DynamicSqlSource.getBoundSql(DynamicSqlSource.java:39) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.mapping.MappedStatement.getBoundSql(MappedStatement.java:305) ~[mybatis-3.5.5.jar:3.5.5]
+	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:82) ~[pagehelper-5.2.0.jar:na]
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61) ~[mybatis-3.5.5.jar:3.5.5]
+	at jdk.proxy2/jdk.proxy2.$Proxy89.query(Unknown Source) ~[na:na]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140) ~[mybatis-3.5.5.jar:3.5.5]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) ~[mybatis-spring-2.0.5.jar:2.0.5]
+	at jdk.proxy2/jdk.proxy2.$Proxy57.selectList(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223) ~[mybatis-spring-2.0.5.jar:2.0.5]
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85) ~[mybatis-3.5.5.jar:3.5.5]
+	at jdk.proxy3/jdk.proxy3.$Proxy62.searchContest(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
+	at jdk.proxy3/jdk.proxy3.$Proxy63.searchContest(Unknown Source) ~[na:na]
+	at yjp.serviceImpl.ContestServiceImpl.searchContest(ContestServiceImpl.java:33) ~[classes/:na]
+	at yjp.controller.ContestController.searchContest(ContestController.java:50) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-01-20 17:02:45.779  INFO 81611 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-20 17:02:45.780  INFO 81611 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2022-01-20 17:02:50.502  INFO 81620 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on C02XQCBBJG5H with PID 81620 (/Users/bytedance/IdeaProjects/city_contest/target/classes started by bytedance in /Users/bytedance/IdeaProjects/city_contest)
+2022-01-20 17:02:50.503 DEBUG 81620 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
+2022-01-20 17:02:50.504  INFO 81620 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
+2022-01-20 17:02:50.555  INFO 81620 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-20 17:02:50.555  INFO 81620 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-20 17:02:51.421  INFO 81620 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-20 17:02:51.430  INFO 81620 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-20 17:02:51.431  INFO 81620 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-01-20 17:02:51.498  INFO 81620 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-20 17:02:51.499  INFO 81620 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 943 ms
+2022-01-20 17:02:52.029  INFO 81620 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-20 17:02:52.159  WARN 81620 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-01-20 17:02:52.265  WARN 81620 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-01-20 17:02:52.301  INFO 81620 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-20 17:02:52.311  INFO 81620 --- [restartedMain] yjp.SpringbootMybatisApplication         : Started SpringbootMybatisApplication in 2.224 seconds (JVM running for 3.363)
+2022-01-20 17:02:52.523  INFO 81620 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-20 17:02:52.524  INFO 81620 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-20 17:02:52.525  INFO 81620 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-01-20 17:02:52.650  INFO 81620 --- [http-nio-8080-exec-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-01-20 17:02:52.888 DEBUG 81620 --- [http-nio-8080-exec-2] yjp.dao.ContestDao.searchContest         : ==>  Preparing: select * from city.contest WHERE id = ?
+2022-01-20 17:02:52.905 DEBUG 81620 --- [http-nio-8080-exec-2] yjp.dao.ContestDao.searchContest         : ==> Parameters: 3(Integer)
+2022-01-20 17:02:52.921 DEBUG 81620 --- [http-nio-8080-exec-2] yjp.dao.ContestDao.searchContest         : <==      Total: 1
+2022-01-20 17:06:13.267  INFO 81620 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-01-20 17:06:13.269  INFO 81620 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-01-20 17:06:13.284  INFO 81620 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-01-20 17:06:18.282  INFO 81691 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on C02XQCBBJG5H with PID 81691 (/Users/bytedance/IdeaProjects/city_contest/target/classes started by bytedance in /Users/bytedance/IdeaProjects/city_contest)
+2022-01-20 17:06:18.284 DEBUG 81691 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
+2022-01-20 17:06:18.285  INFO 81691 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
+2022-01-20 17:06:18.350  INFO 81691 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-01-20 17:06:18.351  INFO 81691 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-01-20 17:06:19.447  INFO 81691 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-01-20 17:06:19.455  INFO 81691 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-01-20 17:06:19.456  INFO 81691 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-01-20 17:06:19.535  INFO 81691 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-01-20 17:06:19.536  INFO 81691 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1184 ms
+2022-01-20 17:06:20.001  INFO 81691 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-01-20 17:06:20.119  WARN 81691 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-01-20 17:06:20.222  WARN 81691 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-01-20 17:06:20.256  INFO 81691 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-01-20 17:06:20.267  INFO 81691 --- [restartedMain] yjp.SpringbootMybatisApplication         : Started SpringbootMybatisApplication in 2.271 seconds (JVM running for 3.585)
+2022-01-20 17:06:26.759  INFO 81691 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-01-20 17:06:26.759  INFO 81691 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-01-20 17:06:26.760  INFO 81691 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-01-20 17:06:26.898  INFO 81691 --- [http-nio-8080-exec-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-01-20 17:06:27.206 DEBUG 81691 --- [http-nio-8080-exec-2] yjp.dao.ContestDao.searchContest         : ==>  Preparing: select * from city.contest
+2022-01-20 17:06:27.225 DEBUG 81691 --- [http-nio-8080-exec-2] yjp.dao.ContestDao.searchContest         : ==> Parameters: 
+2022-01-20 17:06:27.246 DEBUG 81691 --- [http-nio-8080-exec-2] yjp.dao.ContestDao.searchContest         : <==      Total: 3
+2022-01-20 17:06:41.872 DEBUG 81691 --- [http-nio-8080-exec-3] yjp.dao.ContestDao.searchContest         : ==>  Preparing: select * from city.contest WHERE `name` like concat('%',?,'%')
+2022-01-20 17:06:41.874 DEBUG 81691 --- [http-nio-8080-exec-3] yjp.dao.ContestDao.searchContest         : ==> Parameters: c(String)
+2022-01-20 17:06:41.878 DEBUG 81691 --- [http-nio-8080-exec-3] yjp.dao.ContestDao.searchContest         : <==      Total: 2

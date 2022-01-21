@@ -67,7 +67,8 @@ public class TeamController {
     //选题信息批量审核
     @PostMapping("/batch_selection_review")
     @ResponseBody
-    public boolean batchSelectionReview(@RequestParam("ldList") List<Integer> idList) {
+    public boolean batchSelectionReview(@RequestBody List<Integer> idList) {
+        System.out.println(idList.get(1));
         boolean success = teamService.batchSelectionReview(idList);
         return success;
     }
@@ -75,14 +76,15 @@ public class TeamController {
     //选题信息(团队信息+作品信息)查询
     @PostMapping("/search_selection_info")
     @ResponseBody
-    public List<SelectionInfo> searchSelectionInfo(SelectionQuery selectionQuery) {
-        return null;
+    public List<SelectionInfo> searchSelectionInfo(@RequestBody SelectionQuery selectionQuery) {
+        List<SelectionInfo> selectionInfos =  teamService.searchSelectionInfo(selectionQuery);
+        return selectionInfos;
     }
 
     //报名信息(团队信息+赛题)查询
     @PostMapping("search_team_info")
     @ResponseBody
-    public List<TeamInfo> searchTeamInfo(TeamQuery teamQuery) {
+    public List<TeamInfo> searchTeamInfo(@RequestBody TeamQuery teamQuery) {
         return null;
     }
 

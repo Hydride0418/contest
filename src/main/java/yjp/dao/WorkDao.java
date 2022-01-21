@@ -3,6 +3,7 @@ package yjp.dao;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 import yjp.pojo.Work;
+import yjp.pojo.query.WorkQuery;
 
 import java.util.List;
 
@@ -19,4 +20,6 @@ public interface WorkDao {
     public boolean modifyWork(Work Work);
     //根据id查一个作品的信息
     public Work getWorkById(Integer id);
+    //作品查询
+    public List<Work> queryWork(WorkQuery workQuery);
 }

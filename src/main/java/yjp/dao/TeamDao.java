@@ -3,6 +3,8 @@ package yjp.dao;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 import yjp.pojo.Team;
+import yjp.pojo.query.SelectionQuery;
+import yjp.pojo.requiredInfo.SelectionInfo;
 
 import java.util.List;
 
@@ -23,4 +25,6 @@ public interface TeamDao {
     public boolean qualificationReview(Integer id);
     //批量审核选题
     public boolean batchSelectionReview(List<Integer> idList);
+    //搜索选题信息（work + team）
+    public List<SelectionInfo> searchSelectionInfo(SelectionQuery selectionQuery);
 }
