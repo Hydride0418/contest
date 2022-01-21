@@ -2,10 +2,10 @@ package yjp.dao;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
+import yjp.pojo.Question;
 import yjp.pojo.Team;
 import yjp.pojo.query.SelectionQuery;
 import yjp.pojo.query.TeamQuery;
-import yjp.pojo.requiredInfo.SelectionInfo;
 
 import java.util.List;
 
@@ -29,5 +29,5 @@ public interface TeamDao {
     //搜索选题信息（work + team）
     public List<Team> searchSelectionInfo(SelectionQuery selectionQuery);
     //搜索question+team
-    public List<Team> searchTeamInfo(TeamQuery teamQuery);
+    public List<Question> searchTeamInfo(TeamQuery teamQuery);
 }

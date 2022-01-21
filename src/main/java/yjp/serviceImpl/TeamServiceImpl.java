@@ -2,10 +2,10 @@ package yjp.serviceImpl;
 
 import org.springframework.stereotype.Service;
 import yjp.dao.TeamDao;
+import yjp.pojo.Question;
 import yjp.pojo.Team;
 import yjp.pojo.query.SelectionQuery;
 import yjp.pojo.query.TeamQuery;
-import yjp.pojo.requiredInfo.SelectionInfo;
 import yjp.service.TeamService;
 
 import java.util.List;
@@ -66,7 +66,7 @@ public class TeamServiceImpl implements TeamService {
     }
 
     @Override
-    public List<Team> searchTeamInfo(TeamQuery teamQuery) {
+    public List<Question> searchTeamInfo(TeamQuery teamQuery) {
         return teamDao.searchTeamInfo(teamQuery);
     }
 }

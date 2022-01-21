@@ -87,4 +87,39 @@
             </if>
         </where>
     </select>
+    <resultMap id="questionTeamMap" type="Question">
+        <id property="id" column="id"></id>
+        <result property="name" column="name"></result>
+        <result property="batch" column="batch"></result>
+        <result property="works" column="works"></result>
+        <result property="track_id" column="track_id"></result>
+        <result property="teams" column="teams"></result>
+        <result property="batch_id" column="batch_id"></result>
+        <association property="team" javaType="Team">
+            <id property="id" column="t_id"></id>
+            <result property="name" column="t_name"></result>
+        </association>
+    </resultMap>
+    <select id="searchTeamInfo" parameterType="yjp.pojo.query.TeamQuery" resultMap="questionTeamMap">
+        select t.*,q.name q_name
+        from city_1.team t inner join city_1.question q
+        on t.question_id = q.id
+        <where>
+            <if test="team_name != null and team_name != ''">
+                and t.`name` like concat('%',#{team_name},'%')
+            </if>
+            <if test="contest_status != null and contest_status != ''">
+                and `participat` = #{contest_status}
+            </if>
+            <if test="leader_phone != null and leader_phone != ''">
+                and `leader_phone` = #{leader_phone}
+            </if>
+            <if test="leader_school != null and leader_school != ''">
+                and `leader_school` = #{leader_school}
+            </if>
+            <if test="team_leader != null and team_leader != ''">
+                and `team_leader` like concat('%',#{team_leader},'%')
+            </if>
+        </where>
+    </select>
 </mapper>
