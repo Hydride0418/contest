@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 import yjp.dao.TeamDao;
 import yjp.pojo.Team;
 import yjp.pojo.query.SelectionQuery;
+import yjp.pojo.query.TeamQuery;
 import yjp.pojo.requiredInfo.SelectionInfo;
 import yjp.service.TeamService;
 
@@ -60,7 +61,12 @@ public class TeamServiceImpl implements TeamService {
     }
 
     @Override
-    public List<SelectionInfo> searchSelectionInfo(SelectionQuery selectionQuery) {
+    public List<Team> searchSelectionInfo(SelectionQuery selectionQuery) {
         return teamDao.searchSelectionInfo(selectionQuery);
+    }
+
+    @Override
+    public List<Team> searchTeamInfo(TeamQuery teamQuery) {
+        return teamDao.searchTeamInfo(teamQuery);
     }
 }

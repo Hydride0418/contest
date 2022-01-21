@@ -2,6 +2,7 @@ package yjp.service;
 
 import yjp.pojo.Team;
 import yjp.pojo.query.SelectionQuery;
+import yjp.pojo.query.TeamQuery;
 import yjp.pojo.requiredInfo.SelectionInfo;
 
 import java.util.List;
@@ -22,5 +23,7 @@ public interface TeamService {
     //批量审核选题
     public boolean batchSelectionReview(List<Integer> id);
     //搜索work+team
-    public List<SelectionInfo> searchSelectionInfo(SelectionQuery selectionQuery);
+    public List<Team> searchSelectionInfo(SelectionQuery selectionQuery);
+    //搜索question+team
+    public List<Team> searchTeamInfo(TeamQuery teamQuery);
 }

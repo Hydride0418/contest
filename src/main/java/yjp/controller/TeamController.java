@@ -76,16 +76,17 @@ public class TeamController {
     //选题信息(团队信息+作品信息)查询
     @PostMapping("/search_selection_info")
     @ResponseBody
-    public List<SelectionInfo> searchSelectionInfo(@RequestBody SelectionQuery selectionQuery) {
-        List<SelectionInfo> selectionInfos =  teamService.searchSelectionInfo(selectionQuery);
+    public List<Team> searchSelectionInfo(@RequestBody SelectionQuery selectionQuery) {
+        List<Team> selectionInfos =  teamService.searchSelectionInfo(selectionQuery);
         return selectionInfos;
     }
 
     //报名信息(团队信息+赛题)查询
     @PostMapping("search_team_info")
     @ResponseBody
-    public List<TeamInfo> searchTeamInfo(@RequestBody TeamQuery teamQuery) {
-        return null;
+    public List<Team> searchTeamInfo(@RequestBody TeamQuery teamQuery) {
+        List<Team> team = teamService.searchTeamInfo(teamQuery);
+        return team;
     }
 
     //查看审核历史（需要新增 审核信息 实体）
