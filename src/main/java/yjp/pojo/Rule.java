@@ -7,9 +7,12 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Question {
+public class Rule {
     private Integer id;
     private String name;
-    private Integer track_id;
-    private Integer batch_id;
+    private Integer title_colu;
+    private Integer is_use_wei;
+    private Integer is_valid;
+    private String head_info;
+    private Integer num;
 }

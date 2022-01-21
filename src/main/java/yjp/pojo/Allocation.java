@@ -7,9 +7,12 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Question {
+public class Allocation {
     private Integer id;
-    private String name;
-    private Integer track_id;
+    private Integer work_id;
+    private Integer expert_id;
+    private Integer is_valid; //默认有效
     private Integer batch_id;
+    private String masks;
+    private String advice;
 }
