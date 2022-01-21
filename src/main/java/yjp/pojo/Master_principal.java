@@ -7,9 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Question {
+public class Master_principal {
     private Integer id;
     private String name;
-    private Integer track_id;
-    private Integer batch_id;
+    private String organization_name;
 }
