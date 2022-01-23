@@ -10,5 +10,14 @@ import lombok.NoArgsConstructor;
 public class Master_principal {
     private Integer id;
     private String name;
+    private String organization_id;
     private String organization_name;
+
+    public void setOrganization_id(String organization_id) {
+        this.organization_id = organization_id;
+    }
+
+    public void setOrganization_name(String organization_name) {
+        this.organization_name = organization_name;
+    }
 }

@@ -1,6 +1,7 @@
 package yjp.service;
 
 import yjp.pojo.Allocation;
+import yjp.pojo.query.AllocationQuery;
 
 import java.util.List;
 
@@ -13,4 +14,6 @@ public interface AllocationService {
     public Allocation checkAllocation(Integer id);
     //增加评阅信息
     public boolean addAllocation(Allocation allocation);
+    //查询评阅信息
+    public List<Allocation> queryAllocation(AllocationQuery allocationQuery);
 }

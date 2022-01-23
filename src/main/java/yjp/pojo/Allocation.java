@@ -1,8 +1,11 @@
 package yjp.pojo;
 
+import jdk.nashorn.internal.runtime.QuotedStringTokenizer;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.Queue;
 
 @Data
 @AllArgsConstructor
@@ -15,4 +18,9 @@ public class Allocation {
     private Integer batch_id;
     private String masks;
     private String advice;
+    private Work work;
+    private Batch batch;
+    private Team team;
+    private Question question;
+    private Expert expert;
 }

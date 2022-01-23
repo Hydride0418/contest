@@ -15,4 +15,8 @@ public class Rule {
     private Integer is_valid;
     private String head_info;
     private Integer num;
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

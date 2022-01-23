@@ -14,4 +14,5 @@ public class Work {
     private Integer team_id;
     private Integer ques_id;
     private Integer rule_id;
+    private Integer review_num; //完成评审数
 }

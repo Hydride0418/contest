@@ -3,6 +3,7 @@ package yjp.dao;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 import yjp.pojo.Allocation;
+import yjp.pojo.query.AllocationQuery;
 
 import java.util.List;
 
@@ -17,4 +18,6 @@ public interface AllocationDao {
     public Allocation checkAllocation(Integer id);
     //增加评阅信息
     public boolean addAllocation(Allocation allocation);
+    //查阅评阅信息
+    public List<Allocation> queryAllocation(AllocationQuery allocationQuery);
 }

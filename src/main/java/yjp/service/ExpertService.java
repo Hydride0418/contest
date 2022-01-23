@@ -19,4 +19,6 @@ public interface ExpertService {
     public boolean modifyRemarks(List<Expert> ids);
     //修改单个评阅批注
     public boolean modifyRemark(Expert expert);
+    //搜索专家
+    public List<Expert> queryExpert(Expert expert);
 }
