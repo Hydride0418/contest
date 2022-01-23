@@ -8,8 +8,8 @@
         from city.expert;
     </select>
     <insert id="addExpert" parameterType="yjp.pojo.Expert">
-        insert into city.expert(name, gender, organization_name, phone, email, create_date, remarks, contest_id)
-        values (#{name}, #{gender}, #{organization_name}, #{phone},#{email},#{create_date},#{remarks}, #{contest_id})
+        insert into city.expert(name, gender, organization_name, phone, email, create_date, remarks, contest_id, major_name, research_direction)
+        values (#{name}, #{gender}, #{organization_name}, #{phone},#{email},#{create_date},#{remarks}, #{contest_id}, #{major_name}, #{research_name})
     </insert>
     <delete id="deleteExpert" parameterType="int">
         delete
@@ -49,4 +49,25 @@
             where id = #{item.id}
         </foreach>
     </update>
+    <select id="queryExpert" parameterType="yjp.pojo.Expert" resultType="yjp.pojo.Expert">
+        select * from city.expert where 1=1
+        <if test="name != null and name != ''">
+            and name like concat('%',#{name},'%')
+        </if>
+        <if test="organization_name != null and organization_name != ''">
+            and organization_name = #{organization_name}
+        </if>
+        <if test="major_name != null and major_name != ''">
+            and major_name = #{major_name}
+        </if>
+        <if test="phone != null and phone != ''">
+            and phone = #{phone}
+        </if>
+        <if test="research_direction != null and research_direction != ''">
+            and research_direction like concat('%',#{research_direction},'%')
+        </if>
+        <if test="remarks != null and remarks != ''">
+            and remarks like concat('%',#{remarks},'%')
+        </if>
+    </select>
 </mapper>
