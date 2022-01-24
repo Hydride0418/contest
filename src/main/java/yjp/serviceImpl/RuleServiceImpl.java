@@ -35,4 +35,9 @@ public class RuleServiceImpl implements RuleService {
     public Rule checkRule(Integer id) {
         return ruleDao.checkRule(id);
     }
+
+    @Override
+    public List<Rule> queryRule(Rule rule) {
+        return ruleDao.queryRule(rule);
+    }
 }

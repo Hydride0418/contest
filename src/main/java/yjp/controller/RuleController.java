@@ -39,4 +39,12 @@ public class RuleController {
         return addRuleResponse;
     }
 
+    @GetMapping("/query_rule")
+    @ResponseBody
+    public List<Rule> queryRule(@RequestParam("name") String name) {
+        Rule rule = new Rule();
+        rule.setName(name);
+        return ruleService.queryRule(rule);
+    }
+
 }

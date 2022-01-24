@@ -17,4 +17,21 @@ public class Administrator {
     private String phone;
     private String email;
     private Date create_date;
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setOrganization(String organization) {
+        this.organization = organization;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
 }

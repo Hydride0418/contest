@@ -3,6 +3,7 @@ package yjp.serviceImpl;
 import org.springframework.stereotype.Service;
 import yjp.dao.BatchDao;
 import yjp.pojo.Batch;
+import yjp.pojo.query.BatchQuery;
 import yjp.service.BatchService;
 
 import java.util.List;
@@ -29,5 +30,10 @@ public class BatchServiceImpl implements BatchService {
     @Override
     public Batch checkBatch(Integer id) {
         return batchDao.checkBatch(id);
+    }
+
+    @Override
+    public List<Batch> queryBatch(BatchQuery batchQuery) {
+        return batchDao.queryBatch(batchQuery);
     }
 }

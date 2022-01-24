@@ -11,7 +11,7 @@ import java.util.Date;
 @NoArgsConstructor
 public class Batch {
     private Integer id;
-    private Integer num;
+    private String name;
     private Integer track_id;
     private Integer rule_id;
     private Integer work_expert;
@@ -20,4 +20,7 @@ public class Batch {
     private Date end_date;
     private Integer is_aveg;
     private Integer is_max;
+    private Track track;
+    private Contest contest;
+    private Rule rule;
 }

@@ -13,4 +13,6 @@ public interface RuleService {
     public boolean invalidRule(Integer id);
     //查看指标
     public Rule checkRule(Integer id);
+    //查询指标
+    public List<Rule> queryRule(Rule rule);
 }

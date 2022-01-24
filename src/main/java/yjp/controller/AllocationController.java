@@ -4,6 +4,7 @@ import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import yjp.pojo.Allocation;
+import yjp.pojo.query.AllocationQuery;
 import yjp.response.AllocationResponse.AddAllocationResponse;
 import yjp.response.AllocationResponse.ModifyAllocationResponse;
 import yjp.service.AllocationService;
@@ -23,6 +24,12 @@ public class AllocationController {
     @ResponseBody
     public List<Allocation> listAllocation() {
         return allocationService.listAllocation();
+    }
+
+    @GetMapping("/get_info/{id}")
+    @ResponseBody
+    public List<Allocation> getWorkAllocation(@PathVariable("id") Integer id) {
+        return allocationService.listWorkAllocation(id);
     }
 
     @GetMapping("/get/{id}")
@@ -47,4 +54,12 @@ public class AllocationController {
         modifyAllocationResponse.generate(allocationService.backAllocation(allocation));
         return modifyAllocationResponse;
     }
+
+    //查询
+    @PostMapping("/query_allocation")
+    @ResponseBody
+    public List<Allocation> queryAllocation(@RequestBody AllocationQuery allocationQuery) {
+        return allocationService.queryAllocation(allocationQuery);
+    }
+
 }

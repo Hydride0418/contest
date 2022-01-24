@@ -73,4 +73,21 @@ public class ExpertController {
         return modifyRemarksResponse;
     }
 
+    @GetMapping("/query_expert")
+    @ResponseBody
+    public List<Expert> queryExpert(@RequestParam("name") String name,
+                                    @RequestParam("organization_name") String organization_name,
+                                    @RequestParam("major_name") String major_name,
+                                    @RequestParam("phone") String phone,
+                                    @RequestParam("research_direction") String research_direction,
+                                    @RequestParam("remarks") String remarks) {
+        Expert expert = new Expert();
+        expert.setName(name);
+        expert.setOrganization_name(organization_name);
+        expert.setMajor_name(major_name);
+        expert.setResearch_direction(research_direction);
+        expert.setRemarks(remarks);
+        return expertService.queryExpert(expert);
+    }
+
 }
