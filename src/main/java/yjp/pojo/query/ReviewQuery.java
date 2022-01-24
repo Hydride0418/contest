@@ -3,22 +3,25 @@ package yjp.pojo.query;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import yjp.pojo.*;
+import yjp.pojo.Allocation;
+import yjp.pojo.Batch;
+import yjp.pojo.Question;
+import yjp.pojo.Team;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class AllocationQuery {
+public class ReviewQuery {
     private String batch_name;
     private String team_name;
     private String work_name;
     private String ques_name;
-    private String expert_name;
-    private String expert_organization_name;
-    private boolean is_valid;
-    private Work work;
+    private String team_leader;
+    private String leader_school;
+    private String leader_phone;
+    private Integer reviewed;
     private Team team;
-    private Batch batch;
     private Question question;
-    private Expert expert;
+    private Batch batch;
+    private Allocation allocation;
 }

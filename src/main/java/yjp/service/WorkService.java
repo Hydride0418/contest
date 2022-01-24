@@ -1,6 +1,7 @@
 package yjp.service;
 
 import yjp.pojo.Work;
+import yjp.pojo.query.ReviewQuery;
 
 import java.util.List;
 
@@ -15,4 +16,8 @@ public interface WorkService {
     public boolean deleteWork(Integer id);
     //根据id查一个作品的信息
     public Work getWorkById(Integer id);
+    //展示评审结果信息
+    public List<Work> showInfo();
+    //搜索评审结果
+    public List<Work> queryReview(ReviewQuery reviewQuery);
 }

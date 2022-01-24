@@ -23,6 +23,11 @@ public class AllocationServiceImpl implements AllocationService {
     }
 
     @Override
+    public List<Allocation> listWorkAllocation(Integer id) {
+        return allocationDao.listWorkAllocation(id);
+    }
+
+    @Override
     public boolean backAllocation(Allocation allocation) {
         return allocationDao.backAllocation(allocation);
     }

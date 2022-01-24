@@ -4,12 +4,29 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="yjp.dao.AllocationDao">
     <insert id="addAllocation" parameterType="yjp.pojo.Allocation">
-        insert into city.allocation(work_id, expert_id, batch_id, is_valid)
-        values (#{work_id}, #{expert_id}, #{batch_id}, #{is_valid})
+        insert into city.allocation(work_id, expert_id, batch_id, is_valid, sum)
+        values (#{work_id}, #{expert_id}, #{batch_id}, #{is_valid}, '0')
     </insert>
     <select id="listAllocation" resultType="yjp.pojo.Allocation">
         select *
         from city.allocation;
+    </select>
+    <resultMap id="allocationExpertMap" type="Allocation">
+        <id property="id" column="id"></id>
+        <result property="work_id" column="work_id"></result>
+        <result property="expert_id" column="expert_id"></result>
+        <result property="is_valid" column="is_valid"></result>
+        <result property="masks" column="masks"></result>
+        <result property="advice" column="advice"></result>
+        <association property="expert" javaType="Expert">
+            <id property="id" column="e_id"></id>
+            <result property="name" column="e_name"></result>
+            <result property="organization_name" column="e_organ_name"></result>
+        </association>
+    </resultMap>
+    <select id="listWorkAllocation" parameterType="int" resultMap="allocationExpertMap">
+        select a.*, e.name from allocation a inner join expert e on a.expert_id = e.id
+        where a.id = #{id}
     </select>
     <update id="backAllocation" parameterType="yjp.pojo.Allocation">
         update city.allocation

@@ -26,6 +26,12 @@ public class AllocationController {
         return allocationService.listAllocation();
     }
 
+    @GetMapping("/get_info/{id}")
+    @ResponseBody
+    public List<Allocation> getWorkAllocation(@PathVariable("id") Integer id) {
+        return allocationService.listWorkAllocation(id);
+    }
+
     @GetMapping("/get/{id}")
     @ResponseBody
     public Allocation getAllocationInfo(@PathVariable("id") Integer id) {

@@ -3,6 +3,7 @@ package yjp.dao;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 import yjp.pojo.Work;
+import yjp.pojo.query.ReviewQuery;
 import yjp.pojo.query.WorkQuery;
 
 import java.util.List;
@@ -12,6 +13,8 @@ import java.util.List;
 public interface WorkDao {
     //返回所有作品
     public List<Work> listWork();
+    //返回评审结果
+    public List<Work> listInfo();
     //增加一个作品
     public boolean addWork(Work work);
     //根据id删除一个作品
@@ -22,4 +25,6 @@ public interface WorkDao {
     public Work getWorkById(Integer id);
     //作品查询
     public List<Work> queryWork(WorkQuery workQuery);
+    //评审结果查询
+    public List<Work> queryReview(ReviewQuery reviewQuery);
 }

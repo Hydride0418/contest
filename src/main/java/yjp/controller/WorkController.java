@@ -3,6 +3,7 @@ package yjp.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import yjp.pojo.Work;
+import yjp.pojo.query.ReviewQuery;
 import yjp.service.WorkService;
 
 import java.util.List;
@@ -21,6 +22,12 @@ public class WorkController {
     public List<Work> getWorkList(){
         List<Work> workList = workService.showWorkList();
         return workList;
+    }
+
+    @GetMapping("/get_reviewed_info")
+    @ResponseBody
+    public List<Work> getWorkInfo() {
+        return workService.showInfo();
     }
 
     @GetMapping("/delete/{id}")
@@ -50,4 +57,11 @@ public class WorkController {
         Work work = workService.getWorkById(id);
         return work;
     }
+
+    @PostMapping("/search_review")
+    @ResponseBody
+    public List<Work> searchReview(@RequestBody ReviewQuery reviewQuery) {
+        return workService.showWorkList();
+    }
+
 }
