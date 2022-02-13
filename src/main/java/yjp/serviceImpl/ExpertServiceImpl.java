@@ -50,4 +50,9 @@ public class ExpertServiceImpl implements ExpertService {
     public boolean modifyRemark(Expert expert) {
         return expertDao.modifyRemark(expert);
     }
+
+    @Override
+    public List<Expert> queryExpert(Expert expert) {
+        return expertDao.queryExpert(expert);
+    }
 }

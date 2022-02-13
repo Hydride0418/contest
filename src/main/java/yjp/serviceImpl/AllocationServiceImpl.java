@@ -3,6 +3,7 @@ package yjp.serviceImpl;
 import org.springframework.stereotype.Service;
 import yjp.dao.AllocationDao;
 import yjp.pojo.Allocation;
+import yjp.pojo.query.AllocationQuery;
 import yjp.service.AllocationService;
 
 import java.util.List;
@@ -22,6 +23,11 @@ public class AllocationServiceImpl implements AllocationService {
     }
 
     @Override
+    public List<Allocation> listWorkAllocation(Integer id) {
+        return allocationDao.listWorkAllocation(id);
+    }
+
+    @Override
     public boolean backAllocation(Allocation allocation) {
         return allocationDao.backAllocation(allocation);
     }
@@ -34,5 +40,10 @@ public class AllocationServiceImpl implements AllocationService {
     @Override
     public boolean addAllocation(Allocation allocation) {
         return allocationDao.addAllocation(allocation);
+    }
+
+    @Override
+    public List<Allocation> queryAllocation(AllocationQuery allocationQuery) {
+        return allocationDao.queryAllocation(allocationQuery);
     }
 }

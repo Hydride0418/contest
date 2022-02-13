@@ -35,4 +35,10 @@ public class AdministratorServiceImpl implements AdministratorService {
     public boolean modifyAdmin(Administrator administrator) {
         return administratorDao.modifyAdmin(administrator);
     }
+
+    @Override
+    public List<Administrator> queryAdmin(Administrator administrator) {
+        return administratorDao.queryAdmin(administrator);
+    }
+
 }

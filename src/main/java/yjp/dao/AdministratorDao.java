@@ -18,5 +18,5 @@ public interface AdministratorDao {
     //修改管理员信息
     public boolean modifyAdmin(Administrator administrator);
     //查询管理员
-
+    public List<Administrator> queryAdmin(Administrator administrator);
 }

@@ -1,5 +1,7 @@
 package yjp.controller;
 
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import yjp.pojo.Administrator;
@@ -48,6 +50,18 @@ public class AdministratorController {
         ModifyAdministratorResponse modifyAdministratorResponse = new ModifyAdministratorResponse();
         modifyAdministratorResponse.generate(administratorService.modifyAdmin(administrator));
         return modifyAdministratorResponse;
+    }
+
+    @GetMapping("/query_admin")
+    @ResponseBody
+    public List<Administrator> queryAdmin(@RequestParam("name") String name,
+                                          @RequestParam("organization") String organization,
+                                          @RequestParam("phone") String phone) {
+        Administrator admin = new Administrator();
+        admin.setName(name);
+        admin.setOrganization(organization);
+        admin.setPhone(phone);
+        return administratorService.queryAdmin(admin);
     }
 
 }

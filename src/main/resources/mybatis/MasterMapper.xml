@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yjp.dao.MasterprincipalDao">
+    <select id="queryMaster" parameterType="yjp.pojo.Master_principal" resultType="yjp.pojo.Master_principal">
+        select * from city.master_principal where 1=1
+        <if test="organization_id != null and organization_id != ''">
+            and organization_id = #{organization_id}
+        </if>
+        <if test="phone != null and phone != ''">
+            and organization_name like concat('%',#{organization_name},'%')
+        </if>
+    </select>
+</mapper>

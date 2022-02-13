@@ -21,4 +21,10 @@
         set is_valid = 0
         where id = #{id}
     </update>
+    <select id="queryRule" parameterType="yjp.pojo.Rule" resultType="yjp.pojo.Rule">
+        select * from city.rule where 1=1
+        <if test="name != null and name != ''">
+            and name like concat('%',#{name},'%')
+        </if>
+    </select>
 </mapper>

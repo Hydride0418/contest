@@ -3,6 +3,7 @@ package yjp.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import yjp.pojo.Batch;
+import yjp.pojo.query.BatchQuery;
 import yjp.response.BatchResponse.AddBatchResponse;
 import yjp.service.BatchService;
 
@@ -36,6 +37,12 @@ public class BatchController {
         AddBatchResponse addBatchResponse = new AddBatchResponse();
         addBatchResponse.generate(batchService.addBatch(batch));
         return addBatchResponse;
+    }
+
+    @PostMapping("/query_batch")
+    @ResponseBody
+    public List<Batch> queryBatch(@RequestBody BatchQuery batchQuery) {
+        return batchService.queryBatch(batchQuery);
     }
 
 }

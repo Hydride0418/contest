@@ -24,4 +24,6 @@ public interface ExpertDao {
     public boolean modifyRemarks(@Param("expertList") List<Expert> expertList);
     //修改单个评阅批注
     public boolean modifyRemark(Expert expert);
+    //搜索专家
+    public List<Expert> queryExpert(Expert expert);
 }
