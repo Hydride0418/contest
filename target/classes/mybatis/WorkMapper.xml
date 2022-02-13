@@ -5,19 +5,19 @@
 <mapper namespace="yjp.dao.WorkDao">
     <select id="listWork" resultType="yjp.pojo.Work">
         select *
-        from city_1.work;
+        from city.work;
     </select>
     <insert id="addWork" parameterType="yjp.pojo.Work">
-        insert into city_1.work(name, user_id, team_id, ques_id, rule_id)
+        insert into city.work(name, user_id, team_id, ques_id, rule_id)
         values (#{name}, #{user_id}, #{team_id}, #{ques_id},#{rule_id})
     </insert>
     <delete id="deleteWork" parameterType="int">
         delete
-        from city_1.work
+        from city.work
         where id = #{id}
     </delete>
     <update id="modifyWork" parameterType="yjp.pojo.Work">
-        update city_1.work
+        update city.work
         set name            = #{name},
             user_id      = #{user_id},
             team_id = #{team_id},
@@ -27,11 +27,11 @@
     </update>
     <select id="getWorkById" parameterType="int" resultType="yjp.pojo.Work">
         select *
-        from city_1.work
+        from city.work
         where id = #{id};
     </select>
     <select id="queryWork" parameterType="yjp.pojo.query.WorkQuery" resultType="yjp.pojo.Work">
-        select * from city_1.work
+        select * from city.work
         <where>
             <if test="question != null and question != ''">
                 and `question` like concat('%',#{question},'%')

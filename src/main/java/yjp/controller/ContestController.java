@@ -10,6 +10,7 @@ import yjp.service.ContestService;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:5000", maxAge = 3600)
 @Controller
 @RequestMapping("/contest")
 public class ContestController {
