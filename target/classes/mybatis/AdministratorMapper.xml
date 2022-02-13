@@ -26,4 +26,16 @@
             create_date = #{create_date}
         where id = #{id}
     </update>
+    <select id="queryAdmin" parameterType="yjp.pojo.Administrator" resultType="yjp.pojo.Administrator">
+        select * from city.administrator where 1=1
+        <if test="name != null and name != ''">
+            and name like concat('%',#{name},'%')
+        </if>
+        <if test="organization != null and organization != ''">
+            and organization = #{organization}
+        </if>
+        <if test="phone != null and phone != ''">
+            and phone = #{phone}
+        </if>
+    </select>
 </mapper>

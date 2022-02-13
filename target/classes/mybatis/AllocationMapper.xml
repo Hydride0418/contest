@@ -4,12 +4,29 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="yjp.dao.AllocationDao">
     <insert id="addAllocation" parameterType="yjp.pojo.Allocation">
-        insert into city.allocation(work_id, expert_id, batch_id, is_valid)
-        values (#{work_id}, #{expert_id}, #{batch_id}, #{is_valid})
+        insert into city.allocation(work_id, expert_id, batch_id, is_valid, sum)
+        values (#{work_id}, #{expert_id}, #{batch_id}, #{is_valid}, '0')
     </insert>
     <select id="listAllocation" resultType="yjp.pojo.Allocation">
         select *
         from city.allocation;
+    </select>
+    <resultMap id="allocationExpertMap" type="Allocation">
+        <id property="id" column="id"></id>
+        <result property="work_id" column="work_id"></result>
+        <result property="expert_id" column="expert_id"></result>
+        <result property="is_valid" column="is_valid"></result>
+        <result property="masks" column="masks"></result>
+        <result property="advice" column="advice"></result>
+        <association property="expert" javaType="Expert">
+            <id property="id" column="e_id"></id>
+            <result property="name" column="e_name"></result>
+            <result property="organization_name" column="e_organ_name"></result>
+        </association>
+    </resultMap>
+    <select id="listWorkAllocation" parameterType="int" resultMap="allocationExpertMap">
+        select a.*, e.name from allocation a inner join expert e on a.expert_id = e.id
+        where a.id = #{id}
     </select>
     <update id="backAllocation" parameterType="yjp.pojo.Allocation">
         update city.allocation
@@ -20,5 +37,64 @@
         select *
         from city.allocation
         where id = #{id};
+    </select>
+    <resultMap id="allocationMap" type="Allocation">
+        <id property="id" column="id"></id>
+        <result property="work_id" column="work_id"></result>
+        <result property="expert_id" column="expert_id"></result>
+        <result property="is_valid" column="is_valid"></result>
+        <result property="masks" column="masks"></result>
+        <result property="advice" column="advice"></result>
+        <association property="work" javaType="Work">
+            <id property="id" column="w_id"></id>
+            <result property="name" column="w_name"></result>
+            <result property="team_id" column="team_id"></result>
+            <result property="ques_id" column="ques_id"></result>
+        </association>
+        <association property="team" javaType="Team">
+            <id property="id" column="t_id"></id>
+            <result property="name" column="t_name"></result>
+        </association>
+        <association property="batch" javaType="Batch">
+            <id property="id" column="b_id"></id>
+            <result property="name" column="b_name"></result>
+        </association>
+        <association property="question" javaType="Question">
+            <id property="id" column="q_id"></id>
+            <result property="name" column="q_name"></result>
+            <result property="batch_id" column="q_batch_id"></result>
+        </association>
+        <association property="expert" javaType="Expert">
+            <id property="id" column="e_id"></id>
+            <result property="name" column="e_name"></result>
+            <result property="organization_name" column="e_organ_name"></result>
+        </association>
+    </resultMap>
+    <select id="queryAllocation" parameterType="yjp.pojo.query.AllocationQuery" resultMap="allocationMap">
+        select a.*,b.name b_name,t.name t_name,w.name w_name,q.name q_name,e.name e_name,e.organization_name e_organ_name
+        from ((((city.allocation a inner join expert e on a.expert_id = e.id) inner join city.work w on a.work_id = w.id) inner join team t on w.team_id = t.id) inner join question q on t.question_id = q.id) inner join batch b on q.batch_id = b.id
+        <where>
+            <if test="batch_name != null and batch_name != ''">
+                and b.name = #{batch_name}
+            </if>
+            <if test="team_name != null and team_name != ''">
+                and t.name like concat('%',#{team_name},'%')
+            </if>
+            <if test="work_name != null and work_name != ''">
+                and w.name like concat('%',#{work_name},'%')
+            </if>
+            <if test="ques_name != null and ques_name != ''">
+                and q.name like concat('%',#{ques_name},'%')
+            </if>
+            <if test="expert_name != null and expert_name != ''">
+                and e.name like concat('%',#(expert_name),'%')
+            </if>
+            <if test="expert_organization_name != null and expert_organization_name != ''">
+                and e.organization_name = #{expert_organization_name}
+            </if>
+            <if test="is_valid != null and is_valid != ''">
+                and is_valid = #{is_valid}
+            </if>
+        </where>
     </select>
 </mapper>
