@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yjp.dao.BatchDao">
+    <select id="listBatch" resultType="yjp.pojo.Batch">
+        select *
+        from city.batch;
+    </select>
+    <insert id="addBatch" parameterType="yjp.pojo.Batch">
+        insert into city.batch(name, track_id, rule_id, work_expert, expert_work, start_date, end_date, is_aveg, is_max)
+        values (#{name}, #{track_id}, #{rule_id}, #{work_expert}, #{expert_work}, #{start_date}, #{end_date}, #{is_aveg}, #{is_max})
+    </insert>
+    <select id="checkBatch" parameterType="int" resultType="yjp.pojo.Batch">
+        select *
+        from city.batch
+        where id = #{id};
+    </select>
+    <resultMap id="BatchMap" type="Batch">
+        <id property="id" column="id"></id>
+        <result property="name" column="name"></result>
+        <result property="track_id" column="track_id"></result>
+        <result property="rule_id" column="rule_id"></result>
+        <result property="work_expert" column="work_expert"></result>
+        <result property="expert_work" column="expert_work"></result>
+        <result property="is_aveg" column="is_aveg"></result>
+        <result property="is_max" column="is_max"></result>
+        <result property="start_date" column="start_date"></result>
+        <result property="end_date" column="end_date"></result>
+        <association property="track" javaType="yjp.pojo.Track">
+            <id property="id" column="t_id"></id>
+            <result property="contest_id" column="contest_id"></result>
+        </association>
+        <association property="contest" javaType="yjp.pojo.Contest">
+            <id property="id" column="c_id"></id>
+            <result property="name" column="c_name"></result>
+        </association>
+        <association property="rule" javaType="yjp.pojo.Rule">
+            <id property="id" column="r_id"></id>
+            <result property="name" column="r_name"></result>
+        </association>
+    </resultMap>
+        <select id="queryBatch" parameterType="yjp.pojo.query.BatchQuery" resultMap="BatchMap">
+            select b.*,r.name r_name,c2.name c_name
+            from ((batch b inner join rule r on b.rule_id = r.id) inner join track t on b.track_id = t.id) inner join contest c2 on t.contest_id = c2.id
+            <where>
+                <if test="batch_name != null and batch_name != ''">
+                    and b.name like concat('%',#{batch_name},'%')
+                </if>
+                <if test="rule_name != null and rule_name != ''">
+                    and r.`name` = #{rule_name}
+                </if>
+                <if test="contest_name != null and contest_name != ''">
+                    and c2.`name` = #{contest_name}
+                </if>
+            </where>
+        </select>
+<!--    <select id="queryBatch" parameterType="yjp.pojo.query.BatchQuery" resultMap="BatchMap">-->
+<!--        select b.*,r.name r_name,c.name c_name-->
+<!--        from batch b, rule r, track t, contest c-->
+<!--        where b.rule_id = r.id and b.track_id = t.id and t.contest_id = c.id-->
+<!--            <if test="batch_name != null and batch_name != ''">-->
+<!--                and b.name like concat('%',#{batch_name},'%')-->
+<!--            </if>-->
+<!--            <if test="rule_name != null and rule_name != ''">-->
+<!--                and r.name = #{rule_name}-->
+<!--            </if>-->
+<!--            <if test="contest_name != null and contest_name != ''">-->
+<!--                and c.name = #{contest_name}-->
+<!--            </if>-->
+
+<!--    </select>-->
+</mapper>

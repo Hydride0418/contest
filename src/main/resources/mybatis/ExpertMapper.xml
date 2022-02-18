@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yjp.dao.ExpertDao">
+    <select id="listExpert" resultType="yjp.pojo.Expert">
+        select *
+        from city.expert;
+    </select>
+    <insert id="addExpert" parameterType="yjp.pojo.Expert">
+        insert into city.expert(name, gender, organization_name, phone, email, create_date, remarks, contest_id, major_name, research_direction)
+        values (#{name}, #{gender}, #{organization_name}, #{phone},#{email},#{create_date},#{remarks}, #{contest_id}, #{major_name}, #{research_name})
+    </insert>
+    <delete id="deleteExpert" parameterType="int">
+        delete
+        from city.expert
+        where id = #{id}
+    </delete>
+    <update id="emptyRemarks" parameterType="list">
+        update city.expert
+        set remarks  = null
+        where id in
+            <foreach collection="idList" item="id" index="index" open="(" close=")" separator=",">
+                #{id}
+            </foreach>
+    </update>
+    <update id="modifyExpert" parameterType="yjp.pojo.Expert">
+        update city.expert
+        set name            = #{name},
+            gender      = #{gender},
+            organization_name = #{organization_name},
+            phone  = #{phone},
+            email  = #{email},
+            create_date  = #{create_date},
+            remarks  = #{remarks}
+        where id = #{id}
+    </update>
+    <update id="modifyRemark" parameterType="yjp.pojo.Expert">
+        update city.expert
+        set remarks  = #{remarks}
+        where id = #{id}
+    </update>
+    <update id="modifyRemarks" parameterType="java.util.List">
+        <foreach collection="expertList" item="item" index="index" open="" close="" separator=";">
+            update city.expert
+            <set>
+                remarks = #{item.remarks}
+            </set>
+            where id = #{item.id}
+        </foreach>
+    </update>
+    <select id="queryExpert" parameterType="yjp.pojo.Expert" resultType="yjp.pojo.Expert">
+        select * from city.expert where 1=1
+        <if test="name != null and name != ''">
+            and name like concat('%',#{name},'%')
+        </if>
+        <if test="organization_name != null and organization_name != ''">
+            and organization_name = #{organization_name}
+        </if>
+        <if test="major_name != null and major_name != ''">
+            and major_name = #{major_name}
+        </if>
+        <if test="phone != null and phone != ''">
+            and phone = #{phone}
+        </if>
+        <if test="research_direction != null and research_direction != ''">
+            and research_direction like concat('%',#{research_direction},'%')
+        </if>
+        <if test="remarks != null and remarks != ''">
+            and remarks like concat('%',#{remarks},'%')
+        </if>
+    </select>
+</mapper>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yjp.dao.WorkDao">
+    <select id="listWork" resultType="yjp.pojo.Work">
+        select *
+        from city.work;
+    </select>
+    <resultMap id="workMap" type="Work">
+        <id property="id" column="id"></id>
+        <result property="name" column="name"></result>
+        <result property="team_id" column="team_id"></result>
+        <result property="ques_id" column="ques_id"></result>
+        <association property="team" javaType="Team">
+            <id property="id" column="t_id"></id>
+            <result property="name" column="t_name"></result>
+            <result property="team_leader" column="t_leader"></result>
+            <result property="leader_school" column="t_school"></result>
+            <result property="advisor" column="t_advisor"></result>
+        </association>
+        <association property="question" javaType="Question">
+            <id property="id" column="q_id"></id>
+            <result property="name" column="q_name"></result>
+            <result property="batch_id" column="q_batch_id"></result>
+        </association>
+        <association property="batch" javaType="Batch">
+            <id property="id" column="b_id"></id>
+            <result property="name" column="b_name"></result>
+            <result property="work_expert" column="b_work_expert"></result>
+        </association>
+        <association property="allocation" javaType="Allocation">
+            <id property="id" column="a_id"></id>
+            <result property="work_id" column="a_work_id"></result>
+            <result property="sum" column="a_sum"></result>
+            <result property="masks" column="a_masks"></result>
+            <result property="is_valid" column="a_is_valid"></result>
+        </association>
+    </resultMap>
+    <select id="listInfo" resultMap="workMap">
+        select w.*, b.name b_name, t.name t_name, q.name q_name, t.team_leader t_leader, t.leader_school t_school, t.advisor t_advisor, b.work_expert b_work_expert, a.*,
+        from (((work w inner join team t on w.team_id = t.id) inner join question q on w.ques_id = q.id) inner join batch b on q.batch_id = b.id) inner join allocation a on a.work_id = w.id
+    </select>
+    <select id="queryReview" resultMap="workMap">
+        select w.*, b.name b_name, t.name t_name, q.name q_name, t.team_leader t_leader, t.leader_school t_school, t.advisor t_advisor, b.work_expert b_work_expert, a.*,
+        from (((work w inner join team t on w.team_id = t.id) inner join question q on w.ques_id = q.id) inner join batch b on q.batch_id = b.id) inner join allocation a on a.work_id = w.id
+        <where>
+            <if test="batch_name != null and batch_name != ''">
+                and b.name = #{batch_name}
+            </if>
+            <if test="team_name != null and team_name != ''">
+                and t.name like concat('%',#{team_name},'%')
+            </if>
+            <if test="work_name != null and work_name != ''">
+                and w.name like concat('%',#{work_name},'%')
+            </if>
+            <if test="ques_name != null and ques_name != ''">
+                and t.name like concat('%',#{team_name},'%')
+            </if>
+            <if test="team_leader != null and team_leader != ''">
+                and t.team_leader like concat('%',#{team_leader},'%')
+            </if>
+            <if test="leader_school != null and leader_school != ''">
+                and t.leader_school like concat('%',#{leader_school},'%')
+            </if>
+            <if test="leader_phone != null and leader_phone != ''">
+                and t.leader_phone = #{leader_phone}
+            </if>
+            <if test="reviewed != null and reviewed != ''">
+                and w.reviewed = #{reviewed}
+            </if>
+        </where>
+    </select>
+    <insert id="addWork" parameterType="yjp.pojo.Work">
+        insert into city.work(name, user_id, team_id, ques_id, rule_id, reviewed_num)
+        values (#{name}, #{user_id}, #{team_id}, #{ques_id},#{rule_id}, '0')
+    </insert>
+    <delete id="deleteWork" parameterType="int">
+        delete
+        from city.work
+        where id = #{id}
+    </delete>
+    <update id="modifyWork" parameterType="yjp.pojo.Work">
+        update city.work
+        set name            = #{name},
+            user_id      = #{user_id},
+            team_id = #{team_id},
+            ques_id  = #{ques_id},
+            rule_id      = #{rule_id},
+        where id = #{id}
+    </update>
+    <select id="getWorkById" parameterType="int" resultType="yjp.pojo.Work">
+        select *
+        from city.work
+        where id = #{id};
+    </select>
+    <select id="queryWork" parameterType="yjp.pojo.query.WorkQuery" resultType="yjp.pojo.Work">
+        select * from city.work
+        <where>
+            <if test="question != null and question != ''">
+                and `question` like concat('%',#{question},'%')
+            </if>
+        </where>
+    </select>
+</mapper>

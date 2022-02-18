@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yjp.dao.AwardDao">
+    <select id="listAward" resultType="yjp.pojo.Award">
+        select *
+        from city.award;
+    </select>
+    <insert id="addAward" parameterType="yjp.pojo.Award">
+        insert into city.award(name, type, grade, cont_id, org_id, user_id, team_id)
+        values (#{name}, #{type}, #{grade}, #{cont_id}, #{org_id}, #{user_id}, #{team_id})
+    </insert>
+    <delete id="deleteAward" parameterType="int">
+        delete
+        from city.award
+        where id = #{id}
+    </delete>
+    <update id="modifyAward" parameterType="yjp.pojo.Award">
+        update city.award
+        set name    = #{name},
+            type    = #{type},
+            grade   = #{grade},
+            cont_id = #{cont_id},
+            org_id  = #{org_id},
+            user_id = #{user_id},
+            team_id = #{team_id}
+        where id = #{id}
+    </update>
+</mapper>

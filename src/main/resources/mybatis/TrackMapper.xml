@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yjp.dao.TrackDao">
+    <select id="listTrack" resultType="yjp.pojo.Track">
+        select *
+        from city.track;
+    </select>
+    <insert id="addTrack" parameterType="yjp.pojo.Track">
+        insert into city.track(name, time_limit, question_number, archive_status, contest_id, pre_contest_id)
+        values (#{name}, #{time_limit}, #{question_number}, #{archive_status}, #{contest_id}, #{pre_contest_id})
+    </insert>
+    <delete id="deleteTrack" parameterType="int">
+        delete
+        from city.track
+        where id = #{id}
+    </delete>
+    <update id="modifyTrack" parameterType="yjp.pojo.Track">
+        update city.track
+        set name            = #{name},
+            time_limit      = #{time_limit},
+            question_number = #{question_number},
+            archive_status  = #{archive_status},
+            contest_id      = #{contest_id},
+            pre_contest_id  = #{pre_contest_id}
+        where id = #{id}
+    </update>
+</mapper>
