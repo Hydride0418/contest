@@ -57,14 +57,6 @@ public class AdministratorController {
         return deleteAdministratorResponse;
     }
 
-//    @PostMapping("/modify_admin")
-//    @ResponseBody
-//    public ModifyAdministratorResponse modifyAdmin(@RequestBody Administrator administrator) {
-//        ModifyAdministratorResponse modifyAdministratorResponse = new ModifyAdministratorResponse();
-//        modifyAdministratorResponse.generate(administratorService.modifyAdmin(administrator));
-//        return modifyAdministratorResponse;
-//    }
-
     @GetMapping("/query_admin")
     @ResponseBody
     public Map<String, Object> queryAdmin(@RequestParam("name") String name,
