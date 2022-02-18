@@ -12,6 +12,8 @@ import java.util.List;
 public interface AllocationDao {
     //返回所有评审信息
     public List<Allocation> listAllocation();
+    //查看单个作品评审信息
+    public List<Allocation> listWorkAllocation(Integer id);
     //退回评审信息,置为无效
     public boolean backAllocation(Allocation allocation);
     //查看评阅信息

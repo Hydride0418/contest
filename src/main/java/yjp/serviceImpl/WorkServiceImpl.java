@@ -3,6 +3,7 @@ package yjp.serviceImpl;
 import org.springframework.stereotype.Service;
 import yjp.dao.WorkDao;
 import yjp.pojo.Work;
+import yjp.pojo.query.ReviewQuery;
 import yjp.service.WorkService;
 
 import java.util.List;
@@ -43,5 +44,15 @@ public class WorkServiceImpl implements WorkService {
     public Work getWorkById(Integer id) {
         Work work = workDao.getWorkById(id);
         return work;
+    }
+
+    @Override
+    public List<Work> showInfo() {
+        return workDao.listInfo();
+    }
+
+    @Override
+    public List<Work> queryReview(ReviewQuery reviewQuery) {
+        return workDao.queryReview(reviewQuery);
     }
 }

@@ -1,5 +1,6 @@
 package yjp.service;
 
+import org.springframework.web.multipart.MultipartFile;
 import yjp.pojo.Expert;
 
 import java.util.List;
@@ -21,4 +22,6 @@ public interface ExpertService {
     public boolean modifyRemark(Expert expert);
     //搜索专家
     public List<Expert> queryExpert(Expert expert);
+    //批量导入专家
+    public boolean batchImport(String fileName, MultipartFile file) throws Exception;
 }

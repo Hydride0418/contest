@@ -34,4 +34,15 @@ public class Administrator {
         this.phone = phone;
     }
 
+    public void setGender(Integer gender) {
+        this.gender = gender;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Integer getId() {
+        return id;
+    }
 }

@@ -1,12 +1,12 @@
 server:
-  port: 8080
+  port: 9090
 
 # 数据库数据源
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     username: root
-    password: 024688sdf
+    password: 
     url: jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true
     driver-class-name: com.mysql.cj.jdbc.Driver
 

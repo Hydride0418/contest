@@ -7,9 +7,13 @@
         select *
         from city.administrator;
     </select>
+    <select id="selectPage" resultType="yjp.pojo.Administrator">
+        select * from city.administrator
+        limit #{pageNum}, #{pageSize}
+    </select>
     <insert id="addAdmin" parameterType="yjp.pojo.Administrator">
         insert into city.administrator(name, gender,organization, phone, email, create_date)
-        values (#{name}, #{gender}, #{organization}, #{phone}, #{email}, #{create_date})
+        values (#{name}, #{gender}, #{organization}, #{phone}, #{email}, sysdate())
     </insert>
     <delete id="deleteAdmin" parameterType="int">
         delete
@@ -22,11 +26,23 @@
             gender  = #{gender},
             organization = #{organization},
             phone  = #{phone},
-            email = #{email},
-            create_date = #{create_date}
+            email = #{email}
         where id = #{id}
     </update>
-    <select id="queryAdmin" parameterType="yjp.pojo.Administrator" resultType="yjp.pojo.Administrator">
+    <select id="queryAdmin" resultType="yjp.pojo.Administrator">
+        select * from city.administrator where 1=1
+        <if test="name != null and name != ''">
+            and name like concat('%',#{name},'%')
+        </if>
+        <if test="organization != null and organization != ''">
+            and organization = #{organization}
+        </if>
+        <if test="phone != null and phone != ''">
+            and phone = #{phone}
+        </if>
+        limit #{pageNum}, #{pageSize}
+    </select>
+    <select id="queryNum" resultType="yjp.pojo.Administrator">
         select * from city.administrator where 1=1
         <if test="name != null and name != ''">
             and name like concat('%',#{name},'%')
@@ -38,4 +54,6 @@
             and phone = #{phone}
         </if>
     </select>
+
+    
 </mapper>

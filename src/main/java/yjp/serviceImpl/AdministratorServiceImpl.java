@@ -22,8 +22,12 @@ public class AdministratorServiceImpl implements AdministratorService {
     }
 
     @Override
-    public boolean addAdmin(Administrator administrator) {
-        return administratorDao.addAdmin(administrator);
+    public boolean saveAdmin(Administrator administrator) {
+        if (administrator.getId() == null) {
+            return administratorDao.addAdmin(administrator);
+        } else {
+            return administratorDao.modifyAdmin(administrator);
+        }
     }
 
     @Override
@@ -31,14 +35,24 @@ public class AdministratorServiceImpl implements AdministratorService {
         return administratorDao.deleteAdmin(id);
     }
 
+//    @Override
+//    public boolean modifyAdmin(Administrator administrator) {
+//        return administratorDao.modifyAdmin(administrator);
+//    }
+
     @Override
-    public boolean modifyAdmin(Administrator administrator) {
-        return administratorDao.modifyAdmin(administrator);
+    public List<Administrator> queryAdmin(String name, String organization, String phone, Integer pageNum, Integer pageSize) {
+        return administratorDao.queryAdmin(name, organization, phone, pageNum, pageSize);
     }
 
     @Override
-    public List<Administrator> queryAdmin(Administrator administrator) {
-        return administratorDao.queryAdmin(administrator);
+    public List<Administrator> queryNum(String name, String organization, String phone) {
+        return administratorDao.queryNum(name, organization, phone);
     }
+
+//    @Override
+//    public List<Administrator> selectPage(Integer pageNum, Integer pageSize) {
+//        return administratorDao.selectPage(pageNum, pageSize);
+//    }
 
 }

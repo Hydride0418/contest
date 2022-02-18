@@ -3,6 +3,7 @@ package yjp.dao;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.multipart.MultipartFile;
 import yjp.pojo.Expert;
 
 import java.util.List;

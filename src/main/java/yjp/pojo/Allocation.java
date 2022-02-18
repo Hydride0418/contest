@@ -18,6 +18,7 @@ public class Allocation {
     private Integer batch_id;
     private String masks;
     private String advice;
+    private String sum;
     private Work work;
     private Batch batch;
     private Team team;
