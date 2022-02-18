@@ -29,7 +29,11 @@
             email = #{email}
         where id = #{id}
     </update>
+<<<<<<< HEAD
     <select id="queryAdmin" resultType="yjp.pojo.Administrator">
+=======
+    <select id="queryAdmin" parameterType="yjp.pojo.Administrator" resultType="yjp.pojo.Administrator">
+>>>>>>> 18ba691fabe248fe72b0d4a06072744a9f8d57fc
         select * from city.administrator where 1=1
         <if test="name != null and name != ''">
             and name like concat('%',#{name},'%')
@@ -40,6 +44,7 @@
         <if test="phone != null and phone != ''">
             and phone = #{phone}
         </if>
+<<<<<<< HEAD
         limit #{pageNum}, #{pageSize}
     </select>
     <select id="queryNum" resultType="yjp.pojo.Administrator">
@@ -56,4 +61,7 @@
     </select>
 
     
+=======
+    </select>
+>>>>>>> 18ba691fabe248fe72b0d4a06072744a9f8d57fc
 </mapper>

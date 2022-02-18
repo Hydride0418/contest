@@ -34,6 +34,7 @@ public class Administrator {
         this.phone = phone;
     }
 
+<<<<<<< HEAD
     public void setGender(Integer gender) {
         this.gender = gender;
     }
@@ -45,4 +46,6 @@ public class Administrator {
     public Integer getId() {
         return id;
     }
+=======
+>>>>>>> 18ba691fabe248fe72b0d4a06072744a9f8d57fc
 }

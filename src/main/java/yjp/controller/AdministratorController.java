@@ -1,11 +1,14 @@
 package yjp.controller;
 
+<<<<<<< HEAD
 import cn.hutool.core.collection.CollUtil;
 import cn.hutool.extra.tokenizer.Result;
 import cn.hutool.poi.excel.ExcelReader;
 import cn.hutool.poi.excel.ExcelUtil;
 import cn.hutool.poi.excel.ExcelWriter;
 import com.sun.corba.se.spi.ior.ObjectKey;
+=======
+>>>>>>> 18ba691fabe248fe72b0d4a06072744a9f8d57fc
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -141,6 +144,18 @@ public class AdministratorController {
             administratorService.saveAdmin(admin);
         }
         return true;
+    }
+
+    @GetMapping("/query_admin")
+    @ResponseBody
+    public List<Administrator> queryAdmin(@RequestParam("name") String name,
+                                          @RequestParam("organization") String organization,
+                                          @RequestParam("phone") String phone) {
+        Administrator admin = new Administrator();
+        admin.setName(name);
+        admin.setOrganization(organization);
+        admin.setPhone(phone);
+        return administratorService.queryAdmin(admin);
     }
 
 }

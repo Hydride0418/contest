@@ -18,6 +18,7 @@ public interface AdministratorDao {
     public boolean deleteAdmin(Integer id);
     //修改管理员信息
     public boolean modifyAdmin(Administrator administrator);
+<<<<<<< HEAD
     //分页查询管理员
     public List<Administrator> queryAdmin(@Param("name") String name, @Param("organization") String organization,
                                           @Param("phone") String phone, @Param("pageNum") Integer pageNum,
@@ -25,4 +26,8 @@ public interface AdministratorDao {
     //查询管理员信息总数
     public List<Administrator> queryNum(@Param("name") String name, @Param("organization") String organization,
                                         @Param("phone") String phone);
+=======
+    //查询管理员
+    public List<Administrator> queryAdmin(Administrator administrator);
+>>>>>>> 18ba691fabe248fe72b0d4a06072744a9f8d57fc
 }

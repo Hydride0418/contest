@@ -50,9 +50,16 @@ public class AdministratorServiceImpl implements AdministratorService {
         return administratorDao.queryNum(name, organization, phone);
     }
 
+<<<<<<< HEAD
 //    @Override
 //    public List<Administrator> selectPage(Integer pageNum, Integer pageSize) {
 //        return administratorDao.selectPage(pageNum, pageSize);
 //    }
+=======
+    @Override
+    public List<Administrator> queryAdmin(Administrator administrator) {
+        return administratorDao.queryAdmin(administrator);
+    }
+>>>>>>> 18ba691fabe248fe72b0d4a06072744a9f8d57fc
 
 }

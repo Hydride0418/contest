@@ -22,6 +22,9 @@ public interface ExpertService {
     public boolean modifyRemark(Expert expert);
     //搜索专家
     public List<Expert> queryExpert(Expert expert);
+<<<<<<< HEAD
     //批量导入专家
     public boolean batchImport(String fileName, MultipartFile file) throws Exception;
+=======
+>>>>>>> 18ba691fabe248fe72b0d4a06072744a9f8d57fc
 }

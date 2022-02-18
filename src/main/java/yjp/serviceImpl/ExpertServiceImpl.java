@@ -65,9 +65,12 @@ public class ExpertServiceImpl implements ExpertService {
     public List<Expert> queryExpert(Expert expert) {
         return expertDao.queryExpert(expert);
     }
+<<<<<<< HEAD
 
     @Override
     public boolean batchImport(String fileName, MultipartFile file) throws Exception {
         return false;
     }
+=======
+>>>>>>> 18ba691fabe248fe72b0d4a06072744a9f8d57fc
 }
