@@ -12,4 +12,5 @@ public class SelectionQuery {
     private String work_name; //作品名称
     private String leader_school; //队长学校
     private String team_leader; //队长姓名
+    private Integer work_status; //作品状态
 }

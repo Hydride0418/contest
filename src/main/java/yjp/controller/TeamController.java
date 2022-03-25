@@ -81,7 +81,7 @@ public class TeamController {
     }
 
     //报名信息(团队信息+赛题)查询
-    @PostMapping("search_team_info")
+    @PostMapping("/search_team_info")
     @ResponseBody
     public List<Question> searchTeamInfo(@RequestBody TeamQuery teamQuery) {
         List<Question> teamInfo = teamService.searchTeamInfo(teamQuery);

@@ -1,11 +1,6 @@
 package yjp.controller;
 
-import cn.hutool.core.collection.CollUtil;
-import cn.hutool.extra.tokenizer.Result;
-import cn.hutool.poi.excel.ExcelReader;
-import cn.hutool.poi.excel.ExcelUtil;
-import cn.hutool.poi.excel.ExcelWriter;
-import com.sun.corba.se.spi.ior.ObjectKey;
+
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -25,6 +20,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+//@CrossOrigin(origins = "http://localhost:5000", maxAge = 3600)
 @Controller
 @RequestMapping("/admin")
 public class AdministratorController {
@@ -79,60 +75,6 @@ public class AdministratorController {
                                         @RequestParam("organization") String organization,
                                         @RequestParam("phone") String phone) {
         return administratorService.queryNum(name, organization, phone);
-    }
-
-    @GetMapping("/export")
-    @ResponseBody
-    public void export(HttpServletResponse response) throws Exception {
-        // 从数据库查询出所有的数据
-        List<Administrator> list = administratorService.listAdmin();
-        // 通过工具类创建writer 写出到磁盘路径
-//        ExcelWriter writer = ExcelUtil.getWriter(filesUploadPath + "/用户信息.xlsx");
-        // 在内存操作，写出到浏览器
-        ExcelWriter writer = ExcelUtil.getWriter(true);
-        //自定义标题别名
-        writer.addHeaderAlias("name", "姓名");
-        writer.addHeaderAlias("gender", "性别");
-        writer.addHeaderAlias("organization", "所在单位");
-        writer.addHeaderAlias("phone", "手机号");
-        writer.addHeaderAlias("email", "邮箱");
-        writer.addHeaderAlias("address", "地址");
-        writer.addHeaderAlias("create_date", "创建时间");
-
-        // 一次性写出list内的对象到excel，使用默认样式，强制输出标题
-        writer.write(list, true);
-
-        // 设置浏览器响应的格式
-        response.setContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8");
-        String fileName = URLEncoder.encode("管理员信息", "UTF-8");
-        response.setHeader("Content-Disposition", "attachment;filename=" + fileName + ".xlsx");
-
-        ServletOutputStream out = response.getOutputStream();
-        writer.flush(out, true);
-        out.close();
-        writer.close();
-    }
-
-    @PostMapping("/import")
-    @ResponseBody
-    public boolean imp(MultipartFile file) throws Exception {
-        InputStream inputStream = file.getInputStream();
-        ExcelReader reader = ExcelUtil.getReader(inputStream);
-        // 方式1：(推荐) 通过 javabean的方式读取Excel内的对象，但是要求表头必须是英文，跟javabean的属性要对应起来
-//        List<User> list = reader.readAll(User.class);
-
-        // 方式2：忽略表头的中文，直接读取表的内容
-        List<List<Object>> list = reader.read(1);
-        for (List<Object> row : list) {
-            Administrator admin = new Administrator();
-            admin.setName(row.get(0).toString());
-            admin.setGender(Integer.parseInt(row.get(1).toString()));
-            admin.setOrganization(row.get(2).toString());
-            admin.setPhone(row.get(3).toString());
-            admin.setEmail(row.get(4).toString());
-            administratorService.saveAdmin(admin);
-        }
-        return true;
     }
 
 }

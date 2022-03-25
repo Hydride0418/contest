@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yjp.dao.AdministratorDao">
+    <select id="listAdmin" resultType="yjp.pojo.Administrator">
+        select *
+        from city.administrator;
+    </select>
+    <select id="selectPage" resultType="yjp.pojo.Administrator">
+        select * from city.administrator
+        limit #{pageNum}, #{pageSize}
+    </select>
+    <insert id="addAdmin" parameterType="yjp.pojo.Administrator">
+        insert into city.administrator(name, gender,organization, phone, email, create_date)
+        values (#{name}, #{gender}, #{organization}, #{phone}, #{email}, sysdate())
+    </insert>
+    <delete id="deleteAdmin" parameterType="int">
+        delete
+        from city.administrator
+        where id = #{id}
+    </delete>
+    <update id="modifyAdmin" parameterType="yjp.pojo.Administrator">
+        update city.administrator
+        set name    = #{name},
+            gender  = #{gender},
+            organization = #{organization},
+            phone  = #{phone},
+            email = #{email}
+        where id = #{id}
+    </update>
+    <select id="queryAdmin" resultType="yjp.pojo.Administrator">
+        select * from city.administrator where 1=1
+        <if test="name != null and name != ''">
+            and name like concat('%',#{name},'%')
+        </if>
+        <if test="organization != null and organization != ''">
+            and organization = #{organization}
+        </if>
+        <if test="phone != null and phone != ''">
+            and phone = #{phone}
+        </if>
+        limit #{pageNum}, #{pageSize}
+    </select>
+    <select id="queryNum" resultType="yjp.pojo.Administrator">
+        select * from city.administrator where 1=1
+        <if test="name != null and name != ''">
+            and name like concat('%',#{name},'%')
+        </if>
+        <if test="organization != null and organization != ''">
+            and organization = #{organization}
+        </if>
+        <if test="phone != null and phone != ''">
+            and phone = #{phone}
+        </if>
+    </select>
+
+    
+</mapper>

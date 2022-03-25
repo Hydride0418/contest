@@ -1,6 +1,5 @@
 package yjp.pojo;
 
-import jdk.nashorn.internal.runtime.QuotedStringTokenizer;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
