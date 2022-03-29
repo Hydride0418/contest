@@ -55,8 +55,14 @@ public class TeamServiceImpl implements TeamService {
     }
 
     @Override
-    public boolean batchSelectionReview(List<Integer> idList) {
-        boolean success = teamDao.batchSelectionReview(idList);
+    public boolean batchSelectionReviewPass(List<Integer> idList) {
+        boolean success = teamDao.batchSelectionReviewPass(idList);
+        return success;
+    }
+
+    @Override
+    public boolean batchSelectionReviewFail(List<Integer> idList) {
+        boolean success = teamDao.batchSelectionReviewFail(idList);
         return success;
     }
 

@@ -21,7 +21,9 @@ public interface TeamService {
     //审核参赛资格
     public boolean qualificationReview(Integer id);
     //批量审核选题
-    public boolean batchSelectionReview(List<Integer> id);
+    public boolean batchSelectionReviewPass(List<Integer> idList);
+    //批量审核不通过
+    public boolean batchSelectionReviewFail(List<Integer> idList);
     //搜索work+team
     public List<Team> searchSelectionInfo(SelectionQuery selectionQuery);
     //搜索question+team

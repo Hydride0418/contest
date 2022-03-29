@@ -42,9 +42,17 @@
         set participat = "participant"
         where id = #{id}
     </update>
-    <update id="batchSelectionReview">
+    <update id="batchSelectionReviewPass">
         update city.team
-        set participat = "select passed"
+        set participat = "ok"
+        where id in
+        <foreach collection="idList" item="item" index="index" open="(" close=")" separator=",">
+            #{item}
+        </foreach>
+    </update>
+    <update id="batchSelectionReviewFail">
+        update city.team
+        set participat = "failed"
         where id in
         <foreach collection="idList" item="item" index="index" open="(" close=")" separator=",">
             #{item}
@@ -62,11 +70,10 @@
         <result property="team_no_rematch" column="team_no_rematch"></result>
         <result property="is_rematch" column="is_rematch"></result>
         <result property="submit_date" column="submit_date"></result>
-<!--        <association property="work" javaType="Work">-->
-<!--            <id property="id" column="w_id"></id>-->
-<!--            <result property="name" column="w_name"></result>-->
-<!--            <result property="work_status" column="wt"></result>-->
-<!--        </association>-->
+        <association property="question" javaType="Question">
+            <id property="id" column="q_id"></id>
+            <result property="name" column="q_name"></result>
+        </association>
         <collection property="work" ofType="yjp.pojo.Work">
             <id property="id" column="w_id"></id>
             <result property="name" column="w_name"></result>
@@ -75,10 +82,15 @@
     </resultMap>
     <select id="searchSelectionInfo" parameterType="yjp.pojo.query.SelectionQuery"
             resultMap="workTeamMap">
-        select t.*, w.id w_id ,w.name w_name, w.work_status wt
-        from city.team t inner join city.work w
+        select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name
+        from city.team t left join city.work w
         on w.team_id = t.id
+        left join city.question q
+        on t.question_id = q.id
         <where>
+            <if test="question_name != null and question_name != ''">
+                and q.`name` like concat('%',#{question_name},'%')
+            </if>
             <if test="team_name != null and team_name != ''">
                 and t.`name` like concat('%',#{team_name},'%')
             </if>
@@ -88,11 +100,17 @@
             <if test="leader_school != null and leader_school != ''">
                 and `leader_school` like concat('%',#{leader_school},'%')
             </if>
+            <if test="leader_phone != null and leader_phone != ''">
+                and `leader_phone` = #{leader_phone}
+            </if>
             <if test="team_leader != null and team_leader != ''">
                 and `team_leader` like concat('%',#{team_leader},'%')
             </if>
-            <if test="work_status != null and work_status != ''">
-                and `work_status` like concat('%',#{work_status},'%')
+            <if test="work_status != 0">
+                and `work_status` = #{work_status}
+            </if>
+            <if test="contest_status != null and contest_status != ''">
+                and `participat` = #{contest_status}
             </if>
         </where>
     </select>
@@ -117,7 +135,7 @@
             <if test="team_name != null and team_name != ''">
                 and t.`name` like concat('%',#{team_name},'%')
             </if>
-            <if test="contest_status != null and contest_status != ''">
+            <if test="contest_status != 0">
                 and `participat` = #{contest_status}
             </if>
             <if test="leader_phone != null and leader_phone != ''">

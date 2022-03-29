@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TeamQuery {
-    private String question_name; //赛题
+    private String question_name; //赛题名称
     private String team_name; //团队名称
     private String contest_status; //参赛状态 审核中/审核通过/审核未通过
     private String work_status; //作品状态 未提交/提交完成

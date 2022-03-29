@@ -25,8 +25,10 @@ public interface TeamDao {
     public Team getTeamById(Integer id);
     //审核参赛资格
     public boolean qualificationReview(Integer id);
-    //批量审核选题
-    public boolean batchSelectionReview(@Param("idList") List<Integer> idList);
+    //批量审核通过
+    public boolean batchSelectionReviewPass(@Param("idList") List<Integer> idList);
+    //批量审核不通过
+    public boolean batchSelectionReviewFail(@Param("idList") List<Integer> idList);
     //搜索选题信息（work + team）
     public List<Team> searchSelectionInfo(SelectionQuery selectionQuery);
     //搜索question+team

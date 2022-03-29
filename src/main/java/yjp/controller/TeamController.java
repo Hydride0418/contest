@@ -63,12 +63,19 @@ public class TeamController {
         return false;
     }
 
-    //选题信息批量审核
-    @PostMapping("/batch_selection_review")
+    //选题信息批量审核通过
+    @PostMapping("/batch_selection_review_pass")
     @ResponseBody
-    public boolean batchSelectionReview(@RequestBody List<Integer> idList) {
-        System.out.println(idList.get(1));
-        boolean success = teamService.batchSelectionReview(idList);
+    public boolean batchSelectionReviewPass(@RequestBody List<Integer> idList) {
+        boolean success = teamService.batchSelectionReviewPass(idList);
+        return success;
+    }
+
+    //选题信息批量审核不通过
+    @PostMapping("/batch_selection_review_fail")
+    @ResponseBody
+    public boolean batchSelectionReviewFail(@RequestBody List<Integer> idList) {
+        boolean success = teamService.batchSelectionReviewFail(idList);
         return success;
     }
 
