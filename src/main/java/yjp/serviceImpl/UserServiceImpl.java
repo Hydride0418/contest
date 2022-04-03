@@ -37,12 +37,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean updateUser(User user) {
-        int i = userDao.updateUser(user);
-        if (i > 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return userDao.updateUser(user);
     }
 
     @Override

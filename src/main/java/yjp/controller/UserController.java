@@ -5,7 +5,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import yjp.pojo.User;
 import yjp.response.ContestResponse.AddContestResponse;
+import yjp.response.ContestResponse.ModifyContestResponse;
 import yjp.service.UserService;
+
+import java.util.List;
 
 
 @Controller
@@ -19,10 +22,8 @@ public class UserController {
 
     @GetMapping("/get")
     @ResponseBody
-    public int getUserList() {
-        int count = userService.listUser().size();
-        System.out.println(count);
-        return count;
+    public List<User> getUserList() {
+        return userService.listUser();
     }
 
     @PostMapping("/add_user")
@@ -32,5 +33,14 @@ public class UserController {
         AddContestResponse addContestResponse = new AddContestResponse();
         addContestResponse.generate(success);
         return addContestResponse;
+    }
+
+    @PostMapping("/modify_user")
+    @ResponseBody
+    public ModifyContestResponse modifyUser(@RequestBody User user) {
+        boolean success = userService.updateUser(user);
+        ModifyContestResponse modifyContestResponse = new ModifyContestResponse();
+        modifyContestResponse.generate(success);
+        return modifyContestResponse;
     }
 }
