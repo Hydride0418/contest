@@ -1,0 +1,263 @@
+2022-04-03 03:10:07.001  INFO 58488 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-03 03:10:07.006  INFO 58488 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-04-03 03:10:07.008  INFO 58488 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-04-03 14:41:32.763  INFO 3996 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on MacBook-Pro.local with PID 3996 (/Users/bytedance/IdeaProjects/contest1/target/classes started by bytedance in /Users/bytedance/IdeaProjects/contest1)
+2022-04-03 14:41:32.766 DEBUG 3996 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
+2022-04-03 14:41:32.768  INFO 3996 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
+2022-04-03 14:41:32.847  INFO 3996 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-03 14:41:32.847  INFO 3996 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-03 14:41:33.862  INFO 3996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-04-03 14:41:33.870  INFO 3996 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-03 14:41:33.871  INFO 3996 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-04-03 14:41:33.937  INFO 3996 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-03 14:41:33.937  INFO 3996 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1088 ms
+2022-04-03 14:41:34.582  INFO 3996 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-03 14:41:34.686  WARN 3996 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-04-03 14:41:34.793  INFO 3996 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-03 14:41:34.828  INFO 3996 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-04-03 14:41:34.840  INFO 3996 --- [restartedMain] yjp.SpringbootMybatisApplication         : Started SpringbootMybatisApplication in 2.531 seconds (JVM running for 3.367)
+2022-04-03 14:42:31.095  INFO 3996 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-03 14:42:31.095  INFO 3996 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-03 14:42:31.096  INFO 3996 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-04-03 17:43:28.719  INFO 3996 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-03 17:43:28.722  INFO 3996 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-0} closing ...
+2022-04-03 17:43:48.599  INFO 12332 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on MacBook-Pro.local with PID 12332 (/Users/bytedance/IdeaProjects/contest1/target/classes started by bytedance in /Users/bytedance/IdeaProjects/contest1)
+2022-04-03 17:43:48.602 DEBUG 12332 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
+2022-04-03 17:43:48.602  INFO 12332 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
+2022-04-03 17:43:48.669  INFO 12332 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-03 17:43:48.670  INFO 12332 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-03 17:43:49.681  INFO 12332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-04-03 17:43:49.690  INFO 12332 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-03 17:43:49.691  INFO 12332 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-04-03 17:43:49.765  INFO 12332 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-03 17:43:49.765  INFO 12332 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1092 ms
+2022-04-03 17:43:50.383  INFO 12332 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-03 17:43:50.494  WARN 12332 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-04-03 17:43:50.598  INFO 12332 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-03 17:43:50.634  INFO 12332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-04-03 17:43:50.645  INFO 12332 --- [restartedMain] yjp.SpringbootMybatisApplication         : Started SpringbootMybatisApplication in 2.383 seconds (JVM running for 3.271)
+2022-04-03 17:45:25.690  INFO 12332 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-03 17:45:25.691  INFO 12332 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-03 17:45:25.692  INFO 12332 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-04-03 17:45:25.833  INFO 12332 --- [http-nio-9090-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-04-03 17:45:26.231 DEBUG 12332 --- [http-nio-9090-exec-1] yjp.dao.UserDao.addUser                  : ==>  Preparing: insert into city.user(username, password, email, phone, name, team_id, gender, school) values (?, ?, ?, ?, ?, ?, ?, ?)
+2022-04-03 17:45:26.252 DEBUG 12332 --- [http-nio-9090-exec-1] yjp.dao.UserDao.addUser                  : ==> Parameters: 杨靖平(String), root(String), wewe@qq.com(String), 12312312312(String), rrdd(String), 1(Integer), 1(Integer), 北京航空航天大学(String)
+2022-04-03 17:45:26.282 DEBUG 12332 --- [http-nio-9090-exec-1] yjp.dao.UserDao.addUser                  : <==    Updates: 1
+2022-04-03 17:45:51.925 DEBUG 12332 --- [http-nio-9090-exec-3] yjp.dao.UserDao.addUser                  : ==>  Preparing: insert into city.user(username, password, email, phone, name, team_id, gender, school) values (?, ?, ?, ?, ?, ?, ?, ?)
+2022-04-03 17:45:51.926 DEBUG 12332 --- [http-nio-9090-exec-3] yjp.dao.UserDao.addUser                  : ==> Parameters: yjp(String), root(String), wewe@qq.com(String), 12312312312(String), rrdd(String), 1(Integer), 1(Integer), 北京航空航天大学(String)
+2022-04-03 17:45:51.929 DEBUG 12332 --- [http-nio-9090-exec-3] yjp.dao.UserDao.addUser                  : <==    Updates: 1
+2022-04-03 17:46:00.455 DEBUG 12332 --- [http-nio-9090-exec-4] yjp.dao.UserDao.addUser                  : ==>  Preparing: insert into city.user(username, password, email, phone, name, team_id, gender, school) values (?, ?, ?, ?, ?, ?, ?, ?)
+2022-04-03 17:46:00.462 DEBUG 12332 --- [http-nio-9090-exec-4] yjp.dao.UserDao.addUser                  : ==> Parameters: yjpp(String), root(String), wewe@qq.com(String), 12312312312(String), rrdd(String), 1(Integer), 1(Integer), 北京航空航天大学(String)
+2022-04-03 17:46:00.466 DEBUG 12332 --- [http-nio-9090-exec-4] yjp.dao.UserDao.addUser                  : <==    Updates: 1
+2022-04-03 17:46:29.885 DEBUG 12332 --- [http-nio-9090-exec-5] yjp.dao.UserDao.listUser                 : ==>  Preparing: select * from city.user;
+2022-04-03 17:46:29.886 DEBUG 12332 --- [http-nio-9090-exec-5] yjp.dao.UserDao.listUser                 : ==> Parameters: 
+2022-04-03 17:46:29.907 DEBUG 12332 --- [http-nio-9090-exec-5] yjp.dao.UserDao.listUser                 : <==      Total: 3
+2022-04-03 17:46:50.296 DEBUG 12332 --- [http-nio-9090-exec-6] yjp.dao.UserDao.listUser                 : ==>  Preparing: select * from city.user;
+2022-04-03 17:46:50.297 DEBUG 12332 --- [http-nio-9090-exec-6] yjp.dao.UserDao.listUser                 : ==> Parameters: 
+2022-04-03 17:46:50.300 DEBUG 12332 --- [http-nio-9090-exec-6] yjp.dao.UserDao.listUser                 : <==      Total: 3
+2022-04-03 17:47:08.435 DEBUG 12332 --- [http-nio-9090-exec-7] yjp.dao.TeamDao.listTeam                 : ==>  Preparing: select * from city.team;
+2022-04-03 17:47:08.437 DEBUG 12332 --- [http-nio-9090-exec-7] yjp.dao.TeamDao.listTeam                 : ==> Parameters: 
+2022-04-03 17:47:08.447 DEBUG 12332 --- [http-nio-9090-exec-7] yjp.dao.TeamDao.listTeam                 : <==      Total: 10
+2022-04-03 17:47:49.726  INFO 12332 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-03 17:47:49.728  INFO 12332 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-04-03 17:47:49.733  INFO 12332 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-04-03 17:47:54.207  INFO 12409 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on MacBook-Pro.local with PID 12409 (/Users/bytedance/IdeaProjects/contest1/target/classes started by bytedance in /Users/bytedance/IdeaProjects/contest1)
+2022-04-03 17:47:54.209 DEBUG 12409 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
+2022-04-03 17:47:54.210  INFO 12409 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
+2022-04-03 17:47:54.245  INFO 12409 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-03 17:47:54.245  INFO 12409 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-03 17:47:55.209  INFO 12409 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-04-03 17:47:55.220  INFO 12409 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-03 17:47:55.220  INFO 12409 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-04-03 17:47:55.291  INFO 12409 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-03 17:47:55.291  INFO 12409 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1045 ms
+2022-04-03 17:47:55.829  INFO 12409 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-03 17:47:55.949  WARN 12409 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-04-03 17:47:56.056  INFO 12409 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-03 17:47:56.093  INFO 12409 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-04-03 17:47:56.104  INFO 12409 --- [restartedMain] yjp.SpringbootMybatisApplication         : Started SpringbootMybatisApplication in 2.183 seconds (JVM running for 2.935)
+2022-04-03 17:47:56.785  INFO 12409 --- [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-03 17:47:56.786  INFO 12409 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-03 17:47:56.787  INFO 12409 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-04-03 17:47:56.852  INFO 12409 --- [http-nio-9090-exec-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-04-03 17:47:57.076 DEBUG 12409 --- [http-nio-9090-exec-2] yjp.dao.UserDao.listUser                 : ==>  Preparing: select * from city.user;
+2022-04-03 17:47:57.092 DEBUG 12409 --- [http-nio-9090-exec-2] yjp.dao.UserDao.listUser                 : ==> Parameters: 
+2022-04-03 17:47:57.108 DEBUG 12409 --- [http-nio-9090-exec-2] yjp.dao.UserDao.listUser                 : <==      Total: 3
+2022-04-03 18:02:39.138  WARN 12409 --- [http-nio-9090-exec-4] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 882033
+2022-04-03 18:02:39.156 DEBUG 12409 --- [http-nio-9090-exec-4] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-04-03 18:02:39.156 DEBUG 12409 --- [http-nio-9090-exec-4] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-04-03 18:02:39.171 DEBUG 12409 --- [http-nio-9090-exec-4] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 12
+2022-04-03 18:02:40.167 DEBUG 12409 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-04-03 18:02:40.168 DEBUG 12409 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-04-03 18:02:40.175 DEBUG 12409 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 12
+2022-04-03 18:02:40.853 DEBUG 12409 --- [http-nio-9090-exec-6] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-04-03 18:02:40.853 DEBUG 12409 --- [http-nio-9090-exec-6] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-04-03 18:02:40.857 DEBUG 12409 --- [http-nio-9090-exec-6] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 12
+2022-04-03 18:02:49.794  WARN 12409 --- [http-nio-9090-exec-7] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'orgarnization_name' is not present]
+2022-04-03 18:02:51.236 DEBUG 12409 --- [http-nio-9090-exec-8] yjp.dao.AdministratorDao.queryAdmin      : ==>  Preparing: select * from city.administrator where 1=1 limit ?, ?
+2022-04-03 18:02:51.236 DEBUG 12409 --- [http-nio-9090-exec-8] yjp.dao.AdministratorDao.queryAdmin      : ==> Parameters: 0(Integer), 5(Integer)
+2022-04-03 18:02:51.243 DEBUG 12409 --- [http-nio-9090-exec-8] yjp.dao.AdministratorDao.queryAdmin      : <==      Total: 5
+2022-04-03 18:02:51.244 DEBUG 12409 --- [http-nio-9090-exec-8] yjp.dao.AdministratorDao.queryNum        : ==>  Preparing: select * from city.administrator where 1=1
+2022-04-03 18:02:51.244 DEBUG 12409 --- [http-nio-9090-exec-8] yjp.dao.AdministratorDao.queryNum        : ==> Parameters: 
+2022-04-03 18:02:51.246 DEBUG 12409 --- [http-nio-9090-exec-8] yjp.dao.AdministratorDao.queryNum        : <==      Total: 8
+2022-04-03 18:16:58.432  WARN 12409 --- [http-nio-9090-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 847186
+2022-04-03 18:16:58.457 DEBUG 12409 --- [http-nio-9090-exec-10] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-04-03 18:16:58.458 DEBUG 12409 --- [http-nio-9090-exec-10] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-04-03 18:16:58.464 DEBUG 12409 --- [http-nio-9090-exec-10] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 12
+2022-04-03 18:18:09.816  WARN 12409 --- [http-nio-9090-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 71354
+2022-04-03 18:18:09.852 DEBUG 12409 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-04-03 18:18:09.853 DEBUG 12409 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-04-03 18:18:09.858 DEBUG 12409 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 12
+2022-04-03 18:18:26.530 DEBUG 12409 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-04-03 18:18:26.530 DEBUG 12409 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-04-03 18:18:26.534 DEBUG 12409 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 12
+2022-04-03 18:19:34.068  WARN 12409 --- [http-nio-9090-exec-5] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 67535
+2022-04-03 18:19:34.090 DEBUG 12409 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-04-03 18:19:34.091 DEBUG 12409 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-04-03 18:19:34.094 DEBUG 12409 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 12
+2022-04-03 18:19:54.568 DEBUG 12409 --- [http-nio-9090-exec-6] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-04-03 18:19:54.569 DEBUG 12409 --- [http-nio-9090-exec-6] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-04-03 18:19:54.572 DEBUG 12409 --- [http-nio-9090-exec-6] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 12
+2022-04-03 20:48:18.146 DEBUG 12409 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-04-03 20:48:18.149 DEBUG 12409 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-04-03 20:48:18.153 DEBUG 12409 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 12
+2022-04-03 20:48:32.197 DEBUG 12409 --- [http-nio-9090-exec-10] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-04-03 20:48:32.198 DEBUG 12409 --- [http-nio-9090-exec-10] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-04-03 20:48:32.204 DEBUG 12409 --- [http-nio-9090-exec-10] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 12
+2022-04-03 21:01:38.762  WARN 12409 --- [http-nio-9090-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 786562
+2022-04-03 21:01:38.788 DEBUG 12409 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id WHERE `work_status` = ?
+2022-04-03 21:01:38.789 DEBUG 12409 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: null
+2022-04-03 21:01:38.792 DEBUG 12409 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 0
+2022-04-03 21:01:38.804 DEBUG 12409 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id WHERE `work_status` = ?
+2022-04-03 21:01:38.804 DEBUG 12409 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: null
+2022-04-03 21:01:38.805 DEBUG 12409 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 0
+2022-04-03 21:02:11.010 DEBUG 12409 --- [http-nio-9090-exec-4] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id WHERE `work_status` = ?
+2022-04-03 21:02:11.011 DEBUG 12409 --- [http-nio-9090-exec-4] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: null
+2022-04-03 21:02:11.014 DEBUG 12409 --- [http-nio-9090-exec-4] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 0
+2022-04-03 21:05:18.733  WARN 12409 --- [http-nio-9090-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 187720
+2022-04-03 21:05:18.754 DEBUG 12409 --- [http-nio-9090-exec-6] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id WHERE `work_status` = ?
+2022-04-03 21:05:18.754 DEBUG 12409 --- [http-nio-9090-exec-6] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: null
+2022-04-03 21:05:18.756 DEBUG 12409 --- [http-nio-9090-exec-6] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 0
+2022-04-03 21:05:18.774 DEBUG 12409 --- [http-nio-9090-exec-7] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id WHERE `work_status` = ?
+2022-04-03 21:05:18.774 DEBUG 12409 --- [http-nio-9090-exec-7] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: null
+2022-04-03 21:05:18.775 DEBUG 12409 --- [http-nio-9090-exec-7] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 0
+2022-04-03 21:23:33.510  WARN 12409 --- [http-nio-9090-exec-9] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 1094735
+2022-04-03 21:23:33.526 DEBUG 12409 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id WHERE `work_status` = ?
+2022-04-03 21:23:33.527 DEBUG 12409 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: null
+2022-04-03 21:23:33.528 DEBUG 12409 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 0
+2022-04-03 21:28:44.013  WARN 12409 --- [http-nio-9090-exec-1] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 310484
+2022-04-03 21:28:44.039 DEBUG 12409 --- [http-nio-9090-exec-1] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id WHERE `work_status` = ?
+2022-04-03 21:28:44.040 DEBUG 12409 --- [http-nio-9090-exec-1] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: null
+2022-04-03 21:28:44.041 DEBUG 12409 --- [http-nio-9090-exec-1] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 0
+2022-04-03 21:28:44.047 DEBUG 12409 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id WHERE `work_status` = ?
+2022-04-03 21:28:44.048 DEBUG 12409 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: null
+2022-04-03 21:28:44.049 DEBUG 12409 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 0
+2022-04-03 21:28:44.081 DEBUG 12409 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id WHERE `work_status` = ?
+2022-04-03 21:28:44.081 DEBUG 12409 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: null
+2022-04-03 21:28:44.083 DEBUG 12409 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 0
+2022-04-03 21:31:11.613  WARN 12409 --- [http-nio-9090-exec-5] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 147530
+2022-04-03 21:31:11.631 DEBUG 12409 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id WHERE `work_status` = ?
+2022-04-03 21:31:11.632 DEBUG 12409 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: null
+2022-04-03 21:31:11.634 DEBUG 12409 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 0
+2022-04-03 21:32:40.921  WARN 12409 --- [http-nio-9090-exec-7] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 89287
+2022-04-03 21:32:40.935 DEBUG 12409 --- [http-nio-9090-exec-7] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id WHERE `work_status` = ?
+2022-04-03 21:32:40.935 DEBUG 12409 --- [http-nio-9090-exec-7] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: null
+2022-04-03 21:32:40.936 DEBUG 12409 --- [http-nio-9090-exec-7] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 0
+2022-04-03 21:33:15.501 DEBUG 12409 --- [http-nio-9090-exec-8] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id WHERE `work_status` = ?
+2022-04-03 21:33:15.502 DEBUG 12409 --- [http-nio-9090-exec-8] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: null
+2022-04-03 21:33:15.503 DEBUG 12409 --- [http-nio-9090-exec-8] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 0
+2022-04-03 21:33:16.796 DEBUG 12409 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id WHERE `work_status` = ?
+2022-04-03 21:33:16.796 DEBUG 12409 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: null
+2022-04-03 21:33:16.797 DEBUG 12409 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 0
+2022-04-03 21:33:17.601 DEBUG 12409 --- [http-nio-9090-exec-10] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id WHERE `work_status` = ?
+2022-04-03 21:33:17.601 DEBUG 12409 --- [http-nio-9090-exec-10] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: null
+2022-04-03 21:33:17.602 DEBUG 12409 --- [http-nio-9090-exec-10] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 0
+2022-04-03 21:35:40.675  WARN 12409 --- [http-nio-9090-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 143073
+2022-04-03 21:35:40.689 DEBUG 12409 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-04-03 21:35:40.690 DEBUG 12409 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-04-03 21:35:40.693 DEBUG 12409 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 12
+2022-04-03 21:35:46.041 DEBUG 12409 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.getWorkById              : ==>  Preparing: select * from city.work where id = ?;
+2022-04-03 21:35:46.042 DEBUG 12409 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.getWorkById              : ==> Parameters: 8(Integer)
+2022-04-03 21:35:46.043 DEBUG 12409 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.getWorkById              : <==      Total: 1
+2022-04-03 21:35:46.066 DEBUG 12409 --- [http-nio-9090-exec-4] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-04-03 21:35:46.067 DEBUG 12409 --- [http-nio-9090-exec-4] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-04-03 21:35:46.070 DEBUG 12409 --- [http-nio-9090-exec-4] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 12
+2022-04-03 21:37:50.739  WARN 12409 --- [http-nio-9090-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 124670
+2022-04-03 21:37:50.753 DEBUG 12409 --- [http-nio-9090-exec-6] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id WHERE `work_status` = ?
+2022-04-03 21:37:50.753 DEBUG 12409 --- [http-nio-9090-exec-6] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: null
+2022-04-03 21:37:50.754 DEBUG 12409 --- [http-nio-9090-exec-6] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 0
+2022-04-03 21:50:37.153  WARN 12409 --- [http-nio-9090-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 766399
+2022-04-03 21:50:37.167 DEBUG 12409 --- [http-nio-9090-exec-8] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-04-03 21:50:37.167 DEBUG 12409 --- [http-nio-9090-exec-8] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-04-03 21:50:37.170 DEBUG 12409 --- [http-nio-9090-exec-8] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 12
+2022-04-03 21:51:19.692 DEBUG 12409 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-04-03 21:51:19.694 DEBUG 12409 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-04-03 21:51:19.702 DEBUG 12409 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 12
+2022-04-03 21:54:51.847  WARN 12409 --- [http-nio-9090-exec-1] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 212149
+2022-04-03 21:54:51.862 DEBUG 12409 --- [http-nio-9090-exec-1] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id WHERE `work_status` = ?
+2022-04-03 21:54:51.863 DEBUG 12409 --- [http-nio-9090-exec-1] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: null
+2022-04-03 21:54:51.864 DEBUG 12409 --- [http-nio-9090-exec-1] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 0
+2022-04-03 22:10:27.632  WARN 12409 --- [http-nio-9090-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 935768
+2022-04-03 22:10:27.647 DEBUG 12409 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-04-03 22:10:27.647 DEBUG 12409 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-04-03 22:10:27.649 DEBUG 12409 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 12
+2022-04-03 22:10:29.542 DEBUG 12409 --- [http-nio-9090-exec-4] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id WHERE `work_status` = ?
+2022-04-03 22:10:29.543 DEBUG 12409 --- [http-nio-9090-exec-4] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: null
+2022-04-03 22:10:29.544 DEBUG 12409 --- [http-nio-9090-exec-4] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 0
+2022-04-03 22:16:00.720  WARN 12409 --- [http-nio-9090-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 331175
+2022-04-03 22:16:00.733 DEBUG 12409 --- [http-nio-9090-exec-6] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-04-03 22:16:00.733 DEBUG 12409 --- [http-nio-9090-exec-6] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-04-03 22:16:00.736 DEBUG 12409 --- [http-nio-9090-exec-6] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 12
+2022-04-03 22:16:02.356 DEBUG 12409 --- [http-nio-9090-exec-7] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-04-03 22:16:02.356 DEBUG 12409 --- [http-nio-9090-exec-7] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-04-03 22:16:02.358 DEBUG 12409 --- [http-nio-9090-exec-7] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 12
+2022-04-03 22:16:03.327 DEBUG 12409 --- [http-nio-9090-exec-8] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-04-03 22:16:03.328 DEBUG 12409 --- [http-nio-9090-exec-8] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-04-03 22:16:03.330 DEBUG 12409 --- [http-nio-9090-exec-8] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 12
+2022-04-03 22:16:05.995 DEBUG 12409 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.getWorkById              : ==>  Preparing: select * from city.work where id = ?;
+2022-04-03 22:16:05.995 DEBUG 12409 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.getWorkById              : ==> Parameters: 8(Integer)
+2022-04-03 22:16:05.996 DEBUG 12409 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.getWorkById              : <==      Total: 1
+2022-04-03 22:16:06.014 DEBUG 12409 --- [http-nio-9090-exec-10] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-04-03 22:16:06.015 DEBUG 12409 --- [http-nio-9090-exec-10] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-04-03 22:16:06.017 DEBUG 12409 --- [http-nio-9090-exec-10] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 12
+2022-04-03 22:16:13.902  WARN 12409 --- [http-nio-9090-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'orgarnization_name' is not present]
+2022-04-03 22:16:15.792 DEBUG 12409 --- [http-nio-9090-exec-2] yjp.dao.AdministratorDao.queryAdmin      : ==>  Preparing: select * from city.administrator where 1=1 limit ?, ?
+2022-04-03 22:16:15.793 DEBUG 12409 --- [http-nio-9090-exec-2] yjp.dao.AdministratorDao.queryAdmin      : ==> Parameters: 0(Integer), 5(Integer)
+2022-04-03 22:16:15.797 DEBUG 12409 --- [http-nio-9090-exec-2] yjp.dao.AdministratorDao.queryAdmin      : <==      Total: 5
+2022-04-03 22:16:15.797 DEBUG 12409 --- [http-nio-9090-exec-2] yjp.dao.AdministratorDao.queryNum        : ==>  Preparing: select * from city.administrator where 1=1
+2022-04-03 22:16:15.798 DEBUG 12409 --- [http-nio-9090-exec-2] yjp.dao.AdministratorDao.queryNum        : ==> Parameters: 
+2022-04-03 22:16:15.800 DEBUG 12409 --- [http-nio-9090-exec-2] yjp.dao.AdministratorDao.queryNum        : <==      Total: 8
+2022-04-03 22:18:15.124  WARN 12409 --- [http-nio-9090-exec-4] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 119324
+2022-04-03 22:18:15.140 DEBUG 12409 --- [http-nio-9090-exec-4] yjp.dao.AdministratorDao.queryAdmin      : ==>  Preparing: select * from city.administrator where 1=1 limit ?, ?
+2022-04-03 22:18:15.141 DEBUG 12409 --- [http-nio-9090-exec-4] yjp.dao.AdministratorDao.queryAdmin      : ==> Parameters: 0(Integer), 5(Integer)
+2022-04-03 22:18:15.143 DEBUG 12409 --- [http-nio-9090-exec-4] yjp.dao.AdministratorDao.queryAdmin      : <==      Total: 5
+2022-04-03 22:18:15.143 DEBUG 12409 --- [http-nio-9090-exec-4] yjp.dao.AdministratorDao.queryNum        : ==>  Preparing: select * from city.administrator where 1=1
+2022-04-03 22:18:15.144 DEBUG 12409 --- [http-nio-9090-exec-4] yjp.dao.AdministratorDao.queryNum        : ==> Parameters: 
+2022-04-03 22:18:15.146 DEBUG 12409 --- [http-nio-9090-exec-4] yjp.dao.AdministratorDao.queryNum        : <==      Total: 8
+2022-04-03 22:18:35.656 DEBUG 12409 --- [http-nio-9090-exec-5] yjp.dao.AdministratorDao.queryAdmin      : ==>  Preparing: select * from city.administrator where 1=1 limit ?, ?
+2022-04-03 22:18:35.657 DEBUG 12409 --- [http-nio-9090-exec-5] yjp.dao.AdministratorDao.queryAdmin      : ==> Parameters: 0(Integer), 5(Integer)
+2022-04-03 22:18:35.659 DEBUG 12409 --- [http-nio-9090-exec-5] yjp.dao.AdministratorDao.queryAdmin      : <==      Total: 5
+2022-04-03 22:18:35.660 DEBUG 12409 --- [http-nio-9090-exec-5] yjp.dao.AdministratorDao.queryNum        : ==>  Preparing: select * from city.administrator where 1=1
+2022-04-03 22:18:35.661 DEBUG 12409 --- [http-nio-9090-exec-5] yjp.dao.AdministratorDao.queryNum        : ==> Parameters: 
+2022-04-03 22:18:35.663 DEBUG 12409 --- [http-nio-9090-exec-5] yjp.dao.AdministratorDao.queryNum        : <==      Total: 8
+2022-04-03 22:20:04.963  WARN 12409 --- [http-nio-9090-exec-7] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 89301
+2022-04-03 22:20:04.979 DEBUG 12409 --- [http-nio-9090-exec-7] yjp.dao.AdministratorDao.queryAdmin      : ==>  Preparing: select * from city.administrator where 1=1 limit ?, ?
+2022-04-03 22:20:04.979 DEBUG 12409 --- [http-nio-9090-exec-7] yjp.dao.AdministratorDao.queryAdmin      : ==> Parameters: 0(Integer), 5(Integer)
+2022-04-03 22:20:04.981 DEBUG 12409 --- [http-nio-9090-exec-7] yjp.dao.AdministratorDao.queryAdmin      : <==      Total: 5
+2022-04-03 22:20:04.981 DEBUG 12409 --- [http-nio-9090-exec-7] yjp.dao.AdministratorDao.queryNum        : ==>  Preparing: select * from city.administrator where 1=1
+2022-04-03 22:20:04.981 DEBUG 12409 --- [http-nio-9090-exec-7] yjp.dao.AdministratorDao.queryNum        : ==> Parameters: 
+2022-04-03 22:20:04.983 DEBUG 12409 --- [http-nio-9090-exec-7] yjp.dao.AdministratorDao.queryNum        : <==      Total: 8
+2022-04-03 22:20:59.025 DEBUG 12409 --- [http-nio-9090-exec-8] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-04-03 22:20:59.025 DEBUG 12409 --- [http-nio-9090-exec-8] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-04-03 22:20:59.027 DEBUG 12409 --- [http-nio-9090-exec-8] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 12
+2022-04-03 22:21:02.047  WARN 12409 --- [http-nio-9090-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required String parameter 'orgarnization_name' is not present]
+2022-04-03 22:21:03.579 DEBUG 12409 --- [http-nio-9090-exec-10] yjp.dao.AdministratorDao.queryAdmin      : ==>  Preparing: select * from city.administrator where 1=1 limit ?, ?
+2022-04-03 22:21:03.580 DEBUG 12409 --- [http-nio-9090-exec-10] yjp.dao.AdministratorDao.queryAdmin      : ==> Parameters: 0(Integer), 5(Integer)
+2022-04-03 22:21:03.584 DEBUG 12409 --- [http-nio-9090-exec-10] yjp.dao.AdministratorDao.queryAdmin      : <==      Total: 5
+2022-04-03 22:21:03.585 DEBUG 12409 --- [http-nio-9090-exec-10] yjp.dao.AdministratorDao.queryNum        : ==>  Preparing: select * from city.administrator where 1=1
+2022-04-03 22:21:03.585 DEBUG 12409 --- [http-nio-9090-exec-10] yjp.dao.AdministratorDao.queryNum        : ==> Parameters: 
+2022-04-03 22:21:03.588 DEBUG 12409 --- [http-nio-9090-exec-10] yjp.dao.AdministratorDao.queryNum        : <==      Total: 8
+2022-04-03 22:42:02.994  WARN 12409 --- [http-nio-9090-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 1259406
+2022-04-03 22:42:03.007 DEBUG 12409 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id WHERE `work_status` = ?
+2022-04-03 22:42:03.007 DEBUG 12409 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: null
+2022-04-03 22:42:03.008 DEBUG 12409 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 0
