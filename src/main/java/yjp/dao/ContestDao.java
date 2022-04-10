@@ -18,4 +18,6 @@ public interface ContestDao {
     public boolean modifyContest(Contest contest);
     //查询赛事
     public List<Contest> searchContest(ContestQuery contestQuery);
+    //设置图片信息
+    public boolean setImageUrl(Contest contest);
 }

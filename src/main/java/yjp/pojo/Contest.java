@@ -14,4 +14,5 @@ public class Contest {
     private Integer question_number;
     private Integer archive_status;
     private Integer contest_id;
+    private String image;
 }

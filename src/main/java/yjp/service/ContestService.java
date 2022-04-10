@@ -15,4 +15,6 @@ public interface ContestService {
     public List<Contest> searchContest(ContestQuery contestQuery);
     //修改赛事信息
     public boolean modifyContestInfo(Contest contest);
+    //改图片信息
+    public boolean setImageUrl(Contest contest);
 }

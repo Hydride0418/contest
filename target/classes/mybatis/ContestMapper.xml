@@ -8,8 +8,8 @@
         from city.contest;
     </select>
     <insert id="addContest" parameterType="yjp.pojo.Contest">
-        insert into city.contest(name, time_limit, question_number, archive_status, contest_id)
-        values (#{name}, #{time_limit}, #{question_number}, #{archive_status}, #{contest_id})
+        insert into city.contest(name, time_limit, question_number, archive_status, contest_id, image)
+        values (#{name}, #{time_limit}, #{question_number}, #{archive_status}, #{contest_id}, #{image})
     </insert>
     <update id="modifyContest" parameterType="yjp.pojo.Contest">
         update city.contest
@@ -17,7 +17,13 @@
             time_limit      = #{time_limit},
             question_number = #{question_number},
             archive_status  = #{archive_status},
-            contest_id      = #{contest_id}
+            contest_id      = #{contest_id},
+            image           = #{image}
+        where id = #{id}
+    </update>
+    <update id="setImageUrl" parameterType="yjp.pojo.Contest">
+        update city.contest
+        set image = #{image}
         where id = #{id}
     </update>
     <select id="searchContest" parameterType="yjp.pojo.query.ContestQuery" resultType="yjp.pojo.Contest">
@@ -25,7 +31,7 @@
         from city.contest
         <where>
             <if test="name != null and name != ''">
-            and `name` like concat('%',#{name},'%')
+                and `name` like concat('%',#{name},'%')
             </if>
         </where>
     </select>
