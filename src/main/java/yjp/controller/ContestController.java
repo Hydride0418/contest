@@ -68,7 +68,7 @@ public class ContestController {
             file.transferTo(dest);
             Contest contest = new Contest();
             contest.setId(contestID);
-            contest.setImage(filepath + filename);
+            contest.setImage(filepath + '/' + filename);
             contestService.setImageUrl(contest);
             return "upload succeeded";
         } catch (IOException e) {
