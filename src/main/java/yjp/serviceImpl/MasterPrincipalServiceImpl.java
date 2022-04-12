@@ -1,11 +1,13 @@
 package yjp.serviceImpl;
 
+import org.springframework.stereotype.Service;
 import yjp.dao.MasterprincipalDao;
 import yjp.pojo.Master_principal;
 import yjp.service.MasterPrincipalService;
 
 import java.util.List;
 
+@Service
 public class MasterPrincipalServiceImpl implements MasterPrincipalService {
 
     private final MasterprincipalDao masterprincipalDao;

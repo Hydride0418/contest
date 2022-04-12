@@ -61,7 +61,7 @@ public class WorkController {
     @PostMapping("/search_review")
     @ResponseBody
     public List<Work> searchReview(@RequestBody ReviewQuery reviewQuery) {
-        return workService.showWorkList();
+        return workService.queryReview(reviewQuery);
     }
 
 }

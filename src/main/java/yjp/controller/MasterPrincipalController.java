@@ -1,15 +1,17 @@
 package yjp.controller;
 
-import org.apache.catalina.LifecycleState;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import yjp.pojo.Administrator;
 import yjp.pojo.Master_principal;
 import yjp.service.MasterPrincipalService;
 
 import java.util.List;
 
+@Controller
+@RequestMapping("/master")
 public class MasterPrincipalController {
 
     private final MasterPrincipalService masterPrincipalService;
@@ -17,6 +19,7 @@ public class MasterPrincipalController {
     public MasterPrincipalController(MasterPrincipalService masterPrincipalService) {
         this.masterPrincipalService = masterPrincipalService;
     }
+
 
     @GetMapping("/query_master")
     @ResponseBody

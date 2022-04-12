@@ -16,12 +16,12 @@
         from city.rule
         where id = #{id};
     </select>
-    <update id="invalidRule" parameterType="yjp.pojo.Rule">
+    <update id="invalidRule" parameterType="int">
         update city.rule
-        set is_valid = 0
+        set is_valid = '否'
         where id = #{id}
     </update>
-    <select id="queryRule" parameterType="yjp.pojo.Rule" resultType="yjp.pojo.Rule">
+    <select id="queryRule" resultType="yjp.pojo.Rule">
         select * from city.rule where 1=1
         <if test="name != null and name != ''">
             and name like concat('%',#{name},'%')

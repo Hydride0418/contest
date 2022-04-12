@@ -13,7 +13,6 @@ public interface UserDao {
     // 查询所有用户
     public List<User> listUser();
 
-
     // 根据id查询用户
     public User queryUserById(Integer id);
 
@@ -25,5 +24,7 @@ public interface UserDao {
 
     // 新增用户
     public int addUser(User user);
+
+    //根据
 }
 

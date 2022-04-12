@@ -11,6 +11,16 @@
         insert into city.award(name, type, grade, cont_id, org_id, user_id, team_id)
         values (#{name}, #{type}, #{grade}, #{cont_id}, #{org_id}, #{user_id}, #{team_id})
     </insert>
+    <update id="addTeamAward" parameterType="int">
+        update city.team
+        set is_award = 1
+        where id = #{team_id}
+    </update>
+    <update id="addOrgAward" parameterType="int">
+        update city.organization
+        set is_award = 1
+        where id = #{org_id}
+    </update>
     <delete id="deleteAward" parameterType="int">
         delete
         from city.award
@@ -27,4 +37,18 @@
             team_id = #{team_id}
         where id = #{id}
     </update>
+    <select id="searchAward" resultType="yjp.pojo.Award">
+        select a.* from award a
+        <where>
+            <if test="org_id != null and org_id != ''">
+                and a.org_id = #{org_id}
+            </if>
+            <if test="team_id != null and team_id != ''">
+                and a.team_id = #{team_id}
+            </if>
+            <if test="user_id != null and user_id != ''">
+                and a.user_id = #{user_id}
+            </if>
+        </where>
+    </select>
 </mapper>

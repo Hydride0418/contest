@@ -18,8 +18,8 @@ public class Batch {
     private Integer expert_work;
     private Date start_date;
     private Date end_date;
-    private Integer is_aveg;
-    private Integer is_max;
+    private String is_aveg;
+    private String is_max;
     private Track track;
     private Contest contest;
     private Rule rule;

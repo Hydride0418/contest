@@ -33,7 +33,11 @@ public class ExpertServiceImpl implements ExpertService {
 
     @Override
     public boolean addExpert(Expert expert) {
-        return expertDao.addExpert(expert);
+        if (expert.getId() == null) {
+            return expertDao.addExpert(expert);
+        } else {
+            return expertDao.modifyExpert(expert);
+        }
     }
 
     @Override

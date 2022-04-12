@@ -29,7 +29,7 @@
         <result property="end_date" column="end_date"></result>
         <association property="track" javaType="yjp.pojo.Track">
             <id property="id" column="t_id"></id>
-            <result property="contest_id" column="contest_id"></result>
+            <result property="name" column="t_name"></result>
         </association>
         <association property="contest" javaType="yjp.pojo.Contest">
             <id property="id" column="c_id"></id>

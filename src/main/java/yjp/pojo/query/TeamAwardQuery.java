@@ -1,28 +1,20 @@
-package yjp.pojo;
+package yjp.pojo.query;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.Date;
+import yjp.pojo.Team;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Team {
+public class TeamAwardQuery {
     private Integer id;
     private String name;
-    private Integer question_id;
-    private String participat;
     private String team_leader;
     private String leader_school;
     private String leader_phone;
     private String advisor;
-    private Integer team_no_rematch;
-    private Integer is_rematch;
     private Integer is_award; //是否获奖
-    private Integer org_id; //所属组织id
-    private Date submit_date;
-    private Work work;
-    private Question question;
+    private String content;
 }

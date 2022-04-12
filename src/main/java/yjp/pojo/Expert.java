@@ -22,6 +22,10 @@ public class Expert {
     private String major_name;
     private String research_direction;
 
+    public Integer getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
     }

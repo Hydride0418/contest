@@ -1,5 +1,7 @@
 package yjp.controller;
 
+import cn.hutool.poi.excel.ExcelUtil;
+import cn.hutool.poi.excel.ExcelWriter;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -7,6 +9,9 @@ import yjp.pojo.Expert;
 import yjp.response.ExpertResponse.*;
 import yjp.service.ExpertService;
 
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletResponse;
+import java.net.URLEncoder;
 import java.util.List;
 
 @Controller
@@ -92,6 +97,34 @@ public class ExpertController {
         expert.setResearch_direction(research_direction);
         expert.setRemarks(remarks);
         return expertService.queryExpert(expert);
+    }
+
+    @GetMapping("/export")
+    @ResponseBody
+    public void export(HttpServletResponse response) throws Exception {
+        List<Expert> list = expertService.listExpert();
+        ExcelWriter writer = ExcelUtil.getWriter(true);
+        writer.addHeaderAlias("name", "姓名");
+        writer.addHeaderAlias("gender", "性别");
+        writer.addHeaderAlias("organization_name", "所在单位");
+        writer.addHeaderAlias("phone", "手机号");
+        writer.addHeaderAlias("email", "邮箱");
+        writer.addHeaderAlias("major_name", "专业名称");
+        writer.addHeaderAlias("research_direction", "研究方向");
+        writer.addHeaderAlias("remarks", "评阅备注");
+        writer.addHeaderAlias("create_date", "创建时间");
+        // 一次性写出list内的对象到excel，使用默认样式，强制输出标题
+        writer.write(list, true);
+
+        // 设置浏览器响应的格式
+        response.setContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8");
+        String fileName = URLEncoder.encode("专家信息", "UTF-8");
+        response.setHeader("Content-Disposition", "attachment;filename=" + fileName + ".xlsx");
+
+        ServletOutputStream out = response.getOutputStream();
+        writer.flush(out, true);
+        out.close();
+        writer.close();
     }
 
 }

@@ -8,6 +8,12 @@ import yjp.response.ContestResponse.AddContestResponse;
 import yjp.response.ContestResponse.ModifyContestResponse;
 import yjp.service.ContestService;
 
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
 
 @Controller
@@ -44,10 +50,24 @@ public class ContestController {
         return modifyContestResponse;
     }
 
-    @PostMapping("search")
+    @PostMapping("/search")
     @ResponseBody
     public List<Contest> searchContest(@RequestBody ContestQuery contestQuery) {
         List<Contest> contestList = contestService.searchContest(contestQuery);
         return contestList;
     }
+
+    @GetMapping("/getJson")
+    @ResponseBody
+    public void getJson(HttpServletResponse response) throws IOException {
+        ServletOutputStream outputStream = response.getOutputStream();
+        String filepath = "D:/resources/Agraduation/city-front - 2/vuetest/src/Json"; //作品文件的本地文件夹 未来在服务器中修改
+        File f = new File(filepath);
+        File[] fs = f.listFiles();
+       outputStream.write(Files.readAllBytes(Paths.get(filepath).resolve(fs[0].getName())));
+
+        outputStream.flush();
+        outputStream.close();
+    }
+
 }

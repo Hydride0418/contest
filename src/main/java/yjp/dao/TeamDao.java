@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 import yjp.pojo.Question;
 import yjp.pojo.Team;
 import yjp.pojo.query.SelectionQuery;
+import yjp.pojo.query.TeamAwardQuery;
 import yjp.pojo.query.TeamQuery;
 
 import java.util.List;
@@ -15,6 +16,8 @@ import java.util.List;
 public interface TeamDao {
     //返回所有团队
     public List<Team> listTeam();
+    //返回团队和赛题名称
+    public List<Team> list2Team();
     //增加一个团队
     public boolean addTeam(Team team);
     //根据id删除一个团队
@@ -31,4 +34,15 @@ public interface TeamDao {
     public List<Team> searchSelectionInfo(SelectionQuery selectionQuery);
     //搜索question+team
     public List<Question> searchTeamInfo(TeamQuery teamQuery);
+    //搜索团队信息
+    public List<Team> queryTeam(@Param("contest") String contest,
+                                @Param("question") String question,
+                                @Param("team_name") String team_name,
+                                @Param("team_leader") String team_leader,
+                                @Param("leader_school") String leader_school,
+                                @Param("leader_phone") String leader_phone,
+                                @Param("is_award") Integer is_award);
+    //给团队添加奖项
+    public boolean addAward(TeamAwardQuery teamAwardQuery);
+
 }

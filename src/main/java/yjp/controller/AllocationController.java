@@ -1,14 +1,20 @@
 package yjp.controller;
 
+import cn.hutool.poi.excel.ExcelUtil;
+import cn.hutool.poi.excel.ExcelWriter;
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import yjp.pojo.Allocation;
+import yjp.pojo.RuleItem;
 import yjp.pojo.query.AllocationQuery;
 import yjp.response.AllocationResponse.AddAllocationResponse;
 import yjp.response.AllocationResponse.ModifyAllocationResponse;
 import yjp.service.AllocationService;
 
+import javax.servlet.ServletOutputStream;
+import javax.servlet.http.HttpServletResponse;
+import java.net.URLEncoder;
 import java.util.List;
 
 @Controller
@@ -34,7 +40,7 @@ public class AllocationController {
 
     @GetMapping("/get/{id}")
     @ResponseBody
-    public Allocation getAllocationInfo(@PathVariable("id") Integer id) {
+    public List<RuleItem> getAllocationInfo(@PathVariable("id") Integer id) {
         return allocationService.checkAllocation(id);
     }
 
@@ -49,9 +55,9 @@ public class AllocationController {
     //退回
     @PostMapping("/back")
     @ResponseBody
-    public ModifyAllocationResponse modifyAllocation(@RequestBody Allocation allocation) {
+    public ModifyAllocationResponse modifyAllocation(@RequestBody Integer id) {
         ModifyAllocationResponse modifyAllocationResponse = new ModifyAllocationResponse();
-        modifyAllocationResponse.generate(allocationService.backAllocation(allocation));
+        modifyAllocationResponse.generate(allocationService.backAllocation(id));
         return modifyAllocationResponse;
     }
 
@@ -60,6 +66,30 @@ public class AllocationController {
     @ResponseBody
     public List<Allocation> queryAllocation(@RequestBody AllocationQuery allocationQuery) {
         return allocationService.queryAllocation(allocationQuery);
+    }
+
+    @GetMapping("/export")
+    @ResponseBody
+    public void export(HttpServletResponse response) throws Exception {
+        List<Allocation> list = allocationService.listAllocation();
+        ExcelWriter writer = ExcelUtil.getWriter(true);
+        writer.addHeaderAlias("team_id", "队伍序号");
+        writer.addHeaderAlias("expert_id", "专家序号");
+        writer.addHeaderAlias("masks", "各项评分");
+        writer.addHeaderAlias("sum", "总分");
+        writer.addHeaderAlias("advice", "建议");
+        // 一次性写出list内的对象到excel，使用默认样式，强制输出标题
+        writer.write(list, true);
+
+        // 设置浏览器响应的格式
+        response.setContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8");
+        String fileName = URLEncoder.encode("评阅信息", "UTF-8");
+        response.setHeader("Content-Disposition", "attachment;filename=" + fileName + ".xlsx");
+
+        ServletOutputStream out = response.getOutputStream();
+        writer.flush(out, true);
+        out.close();
+        writer.close();
     }
 
 }

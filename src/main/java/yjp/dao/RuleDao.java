@@ -18,5 +18,5 @@ public interface RuleDao {
     //查看指标
     public Rule checkRule(Integer id);
     //查询指标
-    public List<Rule> queryRule(Rule rule);
+    public List<Rule> queryRule(String name);
 }

@@ -7,6 +7,56 @@
         select *
         from city.team;
     </select>
+    <resultMap id="teamQuestionMap" type="Team">
+        <id property="id" column="id"></id>
+        <result property="name" column="name"></result>
+        <result property="team_leader" column="team_leader"></result>
+        <result property="leader_school" column="leader_school"></result>
+        <result property="leader_phone" column="leader_phone"></result>
+        <result property="advisor" column="advisor"></result>
+        <result property="submit_date" column="submit_date"></result>
+        <result property="is_award" column="is_award"></result>
+        <association property="question" javaType="Question">
+            <id property="id" column="q_id"></id>
+            <result property="name" column="q_name"></result>
+        </association>
+    </resultMap>
+    <select id="list2Team" resultMap="teamQuestionMap">
+        select t.*, q.name q_name
+        from ((city.team t inner join question q on t.question_id = q.id) inner join track k on q.track_id = k.id) inner join contest c on k.contest_id = c.id
+    </select>
+    <select id="queryTeam" resultMap="teamQuestionMap">
+        select t.*, q.name q_name
+        from ((city.team t inner join question q on t.question_id = q.id) inner join track k on q.track_id = k.id) inner join contest c on k.contest_id = c.id
+        <where>
+            <if test="contest != null and contest != ''">
+                and c.`name` = #{contest}
+            </if>
+            <if test="question != null and question != ''">
+                and q.`name` like concat('%',#{question},'%')
+            </if>
+            <if test="team_name != null and team_name != ''">
+                and t.`name` like concat('%',#{team_name},'%')
+            </if>
+            <if test="team_leader != null and team_leader != ''">
+                and t.`team_leader` like concat('%',#{team_leader},'%')
+            </if>
+            <if test="leader_school != null and leader_school != ''">
+                and t.`leader_school` like concat('%',#{leader_school},'%')
+            </if>
+            <if test="leader_phone != null and leader_phone != ''">
+                and t.`leader_phone` = #{leader_phone}
+            </if>
+            <if test="is_award != null and is_award != ''">
+                and t.`is_award` = #{is_award}
+            </if>
+        </where>
+    </select>
+<!--    <update id="addAward">-->
+<!--        update city.team-->
+<!--        set is_award = 1 where id = #{id}-->
+<!--&#45;&#45;         and insert into city.award(name, team_id) values (#{content}, #{id})-->
+<!--    </update>-->
     <insert id="addTeam" parameterType="yjp.pojo.Team">
         insert into city.team(name, question_id, participat, team_leader, leader_school, leader_phone, advisor,
                                 team_no_rematch, is_rematch, submit_date)

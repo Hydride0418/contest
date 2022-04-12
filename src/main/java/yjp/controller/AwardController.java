@@ -29,11 +29,16 @@ public class AwardController {
 
     @PostMapping("/add_award")
     @ResponseBody
-    public AddAwardResponse addAward(@RequestBody Award award){
-        boolean success = awardService.addAward(award);
-        AddAwardResponse addAwardResponse = new AddAwardResponse();
-        addAwardResponse.generate(success);
-        return addAwardResponse;
+    public boolean addAward(@RequestBody Award award){
+        Integer team_id = award.getTeam_id();
+        return awardService.addAward(award) && awardService.addTeamAward(team_id);
+    }
+
+    @PostMapping("/add_org_award")
+    @ResponseBody
+    public boolean addOrgAward(@RequestBody Award award){
+        Integer org_id = award.getOrg_id();
+        return awardService.addAward(award) && awardService.addOrgAward(org_id);
     }
 
     @GetMapping("/delete_award/{id}")
@@ -48,7 +53,7 @@ public class AwardController {
     @PostMapping("/search_award")
     @ResponseBody
     public List<Award> SearchAward(@RequestBody AwardQuery awardQuery) {
-        return null;
+        return awardService.searchAward(awardQuery);
     }
 
     @PostMapping("/modify_award")
@@ -59,4 +64,7 @@ public class AwardController {
         modifyAwardResponse.generate(success);
         return modifyAwardResponse;
     }
+
+
+
 }

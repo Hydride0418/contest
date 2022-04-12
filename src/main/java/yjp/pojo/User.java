@@ -20,4 +20,6 @@ public class User {
     private Integer gender;
     private Date birthday;
     private String school;
+    private String type; //有指导教师和学生两种类型
+    private Integer is_award; //是否获奖
 }

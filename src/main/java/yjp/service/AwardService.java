@@ -18,4 +18,8 @@ public interface AwardService {
     public List<Award> searchAward(AwardQuery awardQuery);
     //修改奖项信息
     public boolean modifyAwardInfo(Award award);
+    //增加团队奖项
+    public boolean addTeamAward(Integer team_id);
+    //增加机构奖项
+    public boolean addOrgAward(Integer org_id);
 }

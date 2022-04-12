@@ -37,7 +37,7 @@ public class RuleServiceImpl implements RuleService {
     }
 
     @Override
-    public List<Rule> queryRule(Rule rule) {
-        return ruleDao.queryRule(rule);
+    public List<Rule> queryRule(String name) {
+        return ruleDao.queryRule(name);
     }
 }

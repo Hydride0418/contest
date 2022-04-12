@@ -36,7 +36,7 @@ public class AwardServiceImpl implements AwardService {
 
     @Override
     public List<Award> searchAward(AwardQuery awardQuery) {
-        return null;
+        return awardDao.searchAward(awardQuery);
     }
 
     @Override
@@ -44,4 +44,16 @@ public class AwardServiceImpl implements AwardService {
         boolean success = awardDao.modifyAward(award);
         return success;
     }
+
+    @Override
+    public boolean addTeamAward(Integer team_id) {
+        return awardDao.addTeamAward(team_id);
+    }
+
+    @Override
+    public boolean addOrgAward(Integer org_id) {
+        return awardDao.addOrgAward(org_id);
+    }
+
+
 }

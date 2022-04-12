@@ -9,7 +9,7 @@
     </select>
     <insert id="addExpert" parameterType="yjp.pojo.Expert">
         insert into city.expert(name, gender, organization_name, phone, email, create_date, remarks, contest_id, major_name, research_direction)
-        values (#{name}, #{gender}, #{organization_name}, #{phone},#{email},#{create_date},#{remarks}, #{contest_id}, #{major_name}, #{research_name})
+        values (#{name}, #{gender}, #{organization_name}, #{phone},#{email}, sysdate(),#{remarks}, #{contest_id}, #{major_name}, #{research_direction})
     </insert>
     <delete id="deleteExpert" parameterType="int">
         delete

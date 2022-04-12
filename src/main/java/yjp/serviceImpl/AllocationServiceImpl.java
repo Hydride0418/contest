@@ -3,6 +3,7 @@ package yjp.serviceImpl;
 import org.springframework.stereotype.Service;
 import yjp.dao.AllocationDao;
 import yjp.pojo.Allocation;
+import yjp.pojo.RuleItem;
 import yjp.pojo.query.AllocationQuery;
 import yjp.service.AllocationService;
 
@@ -28,12 +29,12 @@ public class AllocationServiceImpl implements AllocationService {
     }
 
     @Override
-    public boolean backAllocation(Allocation allocation) {
+    public boolean backAllocation(Integer allocation) {
         return allocationDao.backAllocation(allocation);
     }
 
     @Override
-    public Allocation checkAllocation(Integer id) {
+    public List<RuleItem> checkAllocation(Integer id) {
         return allocationDao.checkAllocation(id);
     }
 

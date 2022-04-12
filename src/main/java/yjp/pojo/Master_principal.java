@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 public class Master_principal {
     private Integer id;
     private String name;
+    private String phone;
     private String organization_id;
     private String organization_name;
 
