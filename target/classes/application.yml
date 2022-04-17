@@ -13,7 +13,7 @@ spring:
     multipart:
       max-file-size: 100MB
       max-request-size: 1000MB
-      
+
 mybatis:
   type-aliases-package: yjp.pojo   #   别名
   mapper-locations: classpath:/mybatis/*.xml   #   xml文件

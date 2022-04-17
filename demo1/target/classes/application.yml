@@ -1,0 +1,16 @@
+spring:
+  neo4j:
+    authentication:
+      password: neo4j
+    uri: bolt://localhost:7687
+#??neo4j???Cypher
+logging:
+  level:
+    org:
+      neo4j:
+        ogm:
+          drivers:
+            bolt:
+              request:
+                BoltRequest: DEBUG
+

@@ -38,7 +38,7 @@ public class ContestController {
         return addContestResponse;
     }
 
-    @PostMapping("/modifqy_contest")
+    @PostMapping("/modify_contest")
     @ResponseBody
     public ModifyContestResponse modifyContest(@RequestBody Contest contest) {
         boolean success = contestService.modifyContestInfo(contest);
