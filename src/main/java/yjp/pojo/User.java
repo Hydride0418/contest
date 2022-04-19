@@ -20,4 +20,5 @@ public class User {
     private Integer gender;
     private Date birthday;
     private String school;
+    private Integer role;// 0:学生、普通用户 1：指导老师 2：评审专家 255：管理员
 }

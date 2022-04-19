@@ -8,9 +8,9 @@
         from city.user;
     </select>
     <insert id="addUser" parameterType="yjp.pojo.User">
-        insert into city.user(username, password, email, phone, name, team_id, gender, school)
+        insert into city.user(username, password, email, phone, name, team_id, gender, school, role)
         values (#{username}, #{password}, #{email}, #{phone}, #{name}, #{team_id}, #{gender},
-                #{school})
+                #{school}, #{role})
     </insert>
     <update id="updateUser" parameterType="yjp.pojo.User">
         update city.user
@@ -21,11 +21,20 @@
             phone    = #{phone},
             gender   = #{gender},
             birthday = #{birthday},
-            school   = #{school}
+            school   = #{school},
+            role     = #{role}
         where id = #{id}
     </update>
     <select id="getPassword" parameterType="string" resultType="string">
-        select password from city.user
+        select password
+        from city.user
         where username = #{username}
+        limit 1
+    </select>
+    <select id="getUserRole" parameterType="string" resultType="int">
+        select role
+        from city.user
+        where username = #{username}
+        limit 1
     </select>
 </mapper>

@@ -3,6 +3,7 @@ package yjp.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import yjp.pojo.Allocation;
 import yjp.pojo.User;
 import yjp.response.ContestResponse.AddContestResponse;
 import yjp.response.ContestResponse.ModifyContestResponse;
@@ -24,6 +25,12 @@ public class UserController {
     @ResponseBody
     public List<User> getUserList() {
         return userService.listUser();
+    }
+
+    @PostMapping("/get_role")
+    @ResponseBody
+    public Integer getUserRole(@RequestBody User user) {
+        return userService.getUserRole(user.getUsername());
     }
 
     @PostMapping("/add_user")

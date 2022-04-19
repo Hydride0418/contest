@@ -22,4 +22,7 @@ public interface UserService {
 
     //查密码
     public String getPassword(String username);
+
+    //查用户权限
+    public Integer getUserRole(String username);
 }

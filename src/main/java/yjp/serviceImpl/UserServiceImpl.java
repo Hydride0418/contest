@@ -49,4 +49,9 @@ public class UserServiceImpl implements UserService {
     public String getPassword(String username) {
         return userDao.getPassword(username);
     }
+
+    @Override
+    public Integer getUserRole(String username) {
+        return userDao.getUserRole(username);
+    }
 }
