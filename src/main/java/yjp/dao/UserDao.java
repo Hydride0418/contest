@@ -25,5 +25,8 @@ public interface UserDao {
 
     // 新增用户
     public int addUser(User user);
+
+    //查密码
+    public String getPassword(String username);
 }
 

@@ -24,4 +24,8 @@
             school   = #{school}
         where id = #{id}
     </update>
+    <select id="getPassword" parameterType="string" resultType="string">
+        select password from city.user
+        where username = #{username}
+    </select>
 </mapper>

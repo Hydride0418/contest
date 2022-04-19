@@ -20,4 +20,6 @@ public interface UserService {
     // 新增用户
     public boolean addUser(User user);
 
+    //查密码
+    public String getPassword(String username);
 }

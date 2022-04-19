@@ -44,4 +44,9 @@ public class UserServiceImpl implements UserService {
     public boolean addUser(User user) {
         return userDao.addUser(user) > 0 ? true : false;
     }
+
+    @Override
+    public String getPassword(String username) {
+        return userDao.getPassword(username);
+    }
 }
