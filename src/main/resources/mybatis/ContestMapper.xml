@@ -20,6 +20,11 @@
             contest_id      = #{contest_id}
         where id = #{id}
     </update>
+    <update id="setImageUrl" parameterType="yjp.pojo.Contest">
+        update city.contest
+        set image = #{image}
+        where id = #{id}
+    </update>
     <select id="searchContest" parameterType="yjp.pojo.query.ContestQuery" resultType="yjp.pojo.Contest">
         select *
         from city.contest

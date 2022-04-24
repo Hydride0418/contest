@@ -24,5 +24,4 @@ public class Work {
     private Batch batch;
     private Team team;
     private Question question;
-    private Allocation allocation;
 }

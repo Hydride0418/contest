@@ -20,4 +20,15 @@ public interface UserService {
     // 新增用户
     public boolean addUser(User user);
 
+    //查密码
+    public String getPassword(String username);
+
+    //搜索用户获奖信息
+    public List<User> queryUser(String contest, String question, String team_name,
+                                String user_name, String user_school, String user_phone,
+                                Integer is_award);
+
+    //查用户权限
+    public Integer getUserRole(String username);
+
 }

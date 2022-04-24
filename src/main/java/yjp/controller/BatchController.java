@@ -13,7 +13,9 @@ import yjp.service.BatchService;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import java.net.URLEncoder;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/batch")
@@ -39,10 +41,16 @@ public class BatchController {
 
     @PostMapping("/add_batch")
     @ResponseBody
-    public AddBatchResponse addBatch(@RequestBody Batch batch) {
-        AddBatchResponse addBatchResponse = new AddBatchResponse();
-        addBatchResponse.generate(batchService.addBatch(batch));
-        return addBatchResponse;
+    public Map<String, Integer> addBatch(@RequestBody Batch batch) {
+        Map<String, Integer> res = new HashMap<>();
+        int temp = batchService.addBatch(batch);
+        if (temp > 0) {
+            res.put("code", 200);
+            res.put("batch_id", temp);
+        } else {
+            res.put("code", 600);
+        }
+        return res;
     }
 
     @PostMapping("/query_batch")

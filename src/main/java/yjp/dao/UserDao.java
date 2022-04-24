@@ -2,6 +2,7 @@ package yjp.dao;
 
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 import yjp.pojo.User;
 
@@ -25,6 +26,19 @@ public interface UserDao {
     // 新增用户
     public int addUser(User user);
 
-    //根据
+    //查密码
+    public String getPassword(String username);
+
+    //搜索用户信息
+    public List<User> queryUser(@Param("contest") String contest,
+                                @Param("question") String question,
+                                @Param("team_name") String team_name,
+                                @Param("user_name") String user_name,
+                                @Param("user_school") String user_school,
+                                @Param("user_phone") String user_phone,
+                                @Param("is_award") Integer is_award);
+
+    //查用户角色
+    public Integer getUserRole(String username);
 }
 

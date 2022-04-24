@@ -141,12 +141,5 @@ public class TeamController {
         writer.close();
     }
 
-//    //团队新增奖项
-//    @PostMapping("/add_award")
-//    @ResponseBody
-//    public boolean addTeamAward(@RequestBody TeamAwardQuery teamAwardQuery) {
-//        return teamService.addAward(teamAwardQuery);
-//    }
-
     //查看审核历史（需要新增 审核信息 实体）
 }
