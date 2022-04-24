@@ -1,0 +1,755 @@
+2022-04-23 19:46:36.749  INFO 6721 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on MacBook-Pro-235.local with PID 6721 (/Users/bytedance/IdeaProjects/contest1/target/classes started by bytedance in /Users/bytedance/IdeaProjects/contest1)
+2022-04-23 19:46:36.755 DEBUG 6721 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
+2022-04-23 19:46:36.756  INFO 6721 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
+2022-04-23 19:46:36.815  INFO 6721 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-23 19:46:36.815  INFO 6721 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-23 19:46:37.738  INFO 6721 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-04-23 19:46:37.746  INFO 6721 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-23 19:46:37.746  INFO 6721 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-04-23 19:46:37.807  INFO 6721 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-23 19:46:37.807  INFO 6721 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 991 ms
+2022-04-23 19:46:38.388  INFO 6721 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-23 19:46:38.501  WARN 6721 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-04-23 19:46:38.604  INFO 6721 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-23 19:46:38.644  INFO 6721 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-04-23 19:46:38.655  INFO 6721 --- [restartedMain] yjp.SpringbootMybatisApplication         : Started SpringbootMybatisApplication in 2.368 seconds (JVM running for 3.17)
+2022-04-23 19:47:22.104  INFO 6721 --- [http-nio-9090-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-23 19:47:22.105  INFO 6721 --- [http-nio-9090-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-23 19:47:22.106  INFO 6721 --- [http-nio-9090-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-04-23 19:47:22.204  INFO 6721 --- [http-nio-9090-exec-9] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-04-23 19:47:22.601 DEBUG 6721 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 19:47:22.612 DEBUG 6721 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 19:47:22.616 DEBUG 6721 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 19:47:22.616 DEBUG 6721 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 19:47:22.656 DEBUG 6721 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 19:47:22.656 DEBUG 6721 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 19:49:50.037  WARN 6721 --- [http-nio-9090-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 147371
+2022-04-23 19:49:50.037  WARN 6721 --- [http-nio-9090-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 147370
+2022-04-23 19:49:50.068 DEBUG 6721 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 19:49:50.069 DEBUG 6721 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 19:49:50.075 DEBUG 6721 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 19:49:50.076 DEBUG 6721 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 19:49:50.076 DEBUG 6721 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 19:49:50.079 DEBUG 6721 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 19:53:48.188  WARN 6721 --- [http-nio-9090-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 238097
+2022-04-23 19:53:48.189  WARN 6721 --- [http-nio-9090-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 238111
+2022-04-23 19:53:48.204 DEBUG 6721 --- [http-nio-9090-exec-6] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user where username = ? limit 1
+2022-04-23 19:53:48.204 DEBUG 6721 --- [http-nio-9090-exec-6] yjp.dao.UserDao.getPassword              : ==> Parameters: yjp(String)
+2022-04-23 19:53:48.212 DEBUG 6721 --- [http-nio-9090-exec-6] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-04-23 19:53:48.213 DEBUG 6721 --- [http-nio-9090-exec-6] yjp.dao.UserDao.getUserRole              : ==>  Preparing: select role from city.user where username = ? limit 1
+2022-04-23 19:53:48.213 DEBUG 6721 --- [http-nio-9090-exec-6] yjp.dao.UserDao.getUserRole              : ==> Parameters: yjp(String)
+2022-04-23 19:53:48.215 DEBUG 6721 --- [http-nio-9090-exec-6] yjp.dao.UserDao.getUserRole              : <==      Total: 1
+2022-04-23 19:53:51.185 DEBUG 6721 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 19:53:51.185 DEBUG 6721 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 19:53:51.196 DEBUG 6721 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 19:53:51.196 DEBUG 6721 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 19:53:51.197 DEBUG 6721 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 19:53:51.202 DEBUG 6721 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 19:55:27.664  WARN 6721 --- [http-nio-9090-exec-5] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 96448
+2022-04-23 19:55:27.664  WARN 6721 --- [http-nio-9090-exec-1] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 96464
+2022-04-23 19:55:27.680 DEBUG 6721 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 19:55:27.680 DEBUG 6721 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 19:55:27.682 DEBUG 6721 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 19:55:27.683 DEBUG 6721 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 19:55:27.683 DEBUG 6721 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 19:55:27.686 DEBUG 6721 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 19:58:43.002  WARN 6721 --- [http-nio-9090-exec-5] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 195305
+2022-04-23 19:58:43.002  WARN 6721 --- [http-nio-9090-exec-1] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 195318
+2022-04-23 19:58:43.017 DEBUG 6721 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 19:58:43.017 DEBUG 6721 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 19:58:43.019 DEBUG 6721 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 19:58:43.019 DEBUG 6721 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 19:58:43.019 DEBUG 6721 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 19:58:43.021 DEBUG 6721 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 19:59:40.150 DEBUG 6721 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 19:59:40.151 DEBUG 6721 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 19:59:40.152 DEBUG 6721 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 19:59:40.152 DEBUG 6721 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 19:59:40.154 DEBUG 6721 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 19:59:40.155 DEBUG 6721 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 20:06:06.946  WARN 6721 --- [http-nio-9090-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 386793
+2022-04-23 20:06:06.948  WARN 6721 --- [http-nio-9090-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 386795
+2022-04-23 20:06:06.963 DEBUG 6721 --- [http-nio-9090-exec-3] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user where username = ? limit 1
+2022-04-23 20:06:06.963 DEBUG 6721 --- [http-nio-9090-exec-3] yjp.dao.UserDao.getPassword              : ==> Parameters: root(String)
+2022-04-23 20:06:06.964 DEBUG 6721 --- [http-nio-9090-exec-3] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-04-23 20:06:06.965 DEBUG 6721 --- [http-nio-9090-exec-3] yjp.dao.UserDao.getUserRole              : ==>  Preparing: select role from city.user where username = ? limit 1
+2022-04-23 20:06:06.966 DEBUG 6721 --- [http-nio-9090-exec-3] yjp.dao.UserDao.getUserRole              : ==> Parameters: root(String)
+2022-04-23 20:06:06.967 DEBUG 6721 --- [http-nio-9090-exec-3] yjp.dao.UserDao.getUserRole              : <==      Total: 1
+2022-04-23 20:06:08.374 DEBUG 6721 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 20:06:08.375 DEBUG 6721 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 20:06:08.379 DEBUG 6721 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 20:06:08.383 DEBUG 6721 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 20:06:08.383 DEBUG 6721 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 20:06:08.387 DEBUG 6721 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 20:26:16.946  WARN 6721 --- [http-nio-9090-exec-1] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 1208560
+2022-04-23 20:26:16.958 DEBUG 6721 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 20:26:16.958 DEBUG 6721 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 20:26:16.960 DEBUG 6721 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 20:26:16.960 DEBUG 6721 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 20:26:16.960 DEBUG 6721 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 20:26:16.961 DEBUG 6721 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 20:26:55.142 DEBUG 6721 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 20:26:55.144 DEBUG 6721 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 20:26:55.146 DEBUG 6721 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 20:26:55.147 DEBUG 6721 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 20:26:55.148 DEBUG 6721 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 20:26:55.151 DEBUG 6721 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 20:26:55.214 DEBUG 6721 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 20:26:55.215 DEBUG 6721 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 20:26:55.215 DEBUG 6721 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 20:26:55.215 DEBUG 6721 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 20:26:55.216 DEBUG 6721 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 20:26:55.216 DEBUG 6721 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 20:26:56.488 DEBUG 6721 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 20:26:56.488 DEBUG 6721 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 20:26:56.490 DEBUG 6721 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 20:26:56.492 DEBUG 6721 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 20:26:56.493 DEBUG 6721 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 20:26:56.496 DEBUG 6721 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 21:32:55.228 DEBUG 6721 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 21:32:55.231 DEBUG 6721 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 21:32:55.237 DEBUG 6721 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 21:32:55.238 DEBUG 6721 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 21:32:55.238 DEBUG 6721 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 21:32:55.241 DEBUG 6721 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 21:33:23.889 DEBUG 6721 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 21:33:23.890 DEBUG 6721 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 21:33:23.891 DEBUG 6721 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 21:33:23.892 DEBUG 6721 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 21:33:23.894 DEBUG 6721 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 21:33:23.895 DEBUG 6721 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 21:33:28.625 DEBUG 6721 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 21:33:28.625 DEBUG 6721 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 21:33:28.630 DEBUG 6721 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 21:33:28.630 DEBUG 6721 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 21:33:28.631 DEBUG 6721 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 21:33:28.631 DEBUG 6721 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 21:33:36.201 DEBUG 6721 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 21:33:36.202 DEBUG 6721 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 21:33:36.203 DEBUG 6721 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 21:33:36.203 DEBUG 6721 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 21:33:36.210 DEBUG 6721 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 21:33:36.211 DEBUG 6721 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 21:33:55.766 DEBUG 6721 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 21:33:55.766 DEBUG 6721 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 21:33:55.766 DEBUG 6721 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 21:33:55.768 DEBUG 6721 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 21:33:55.770 DEBUG 6721 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 21:33:55.770 DEBUG 6721 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 21:38:02.684  INFO 6721 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-04-23 21:38:02.686  INFO 6721 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-04-23 21:38:02.693  INFO 6721 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-04-23 21:38:07.219  INFO 12186 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on MacBook-Pro-235.local with PID 12186 (/Users/bytedance/IdeaProjects/contest1/target/classes started by bytedance in /Users/bytedance/IdeaProjects/contest1)
+2022-04-23 21:38:07.222 DEBUG 12186 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
+2022-04-23 21:38:07.223  INFO 12186 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
+2022-04-23 21:38:07.264  INFO 12186 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-04-23 21:38:07.264  INFO 12186 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-04-23 21:38:08.265  INFO 12186 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-04-23 21:38:08.274  INFO 12186 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-23 21:38:08.274  INFO 12186 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-04-23 21:38:08.330  INFO 12186 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-23 21:38:08.330  INFO 12186 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1065 ms
+2022-04-23 21:38:08.955  INFO 12186 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-23 21:38:09.073  WARN 12186 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-04-23 21:38:09.176  INFO 12186 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-04-23 21:38:09.216  INFO 12186 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-04-23 21:38:09.231  INFO 12186 --- [restartedMain] yjp.SpringbootMybatisApplication         : Started SpringbootMybatisApplication in 2.307 seconds (JVM running for 3.073)
+2022-04-23 21:39:55.957  INFO 12186 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-23 21:39:55.958  INFO 12186 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-23 21:39:55.959  INFO 12186 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-04-23 21:39:56.089  INFO 12186 --- [http-nio-9090-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-04-23 21:39:56.399 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user where username = ? limit 1
+2022-04-23 21:39:56.417 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.UserDao.getPassword              : ==> Parameters: root(String)
+2022-04-23 21:39:56.434 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-04-23 21:39:56.437 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.UserDao.getUserRole              : ==>  Preparing: select role from city.user where username = ? limit 1
+2022-04-23 21:39:56.437 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.UserDao.getUserRole              : ==> Parameters: root(String)
+2022-04-23 21:39:56.438 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.UserDao.getUserRole              : <==      Total: 1
+2022-04-23 21:39:57.830 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 21:39:57.830 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 21:39:57.836 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 21:39:57.837 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 21:39:57.837 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 21:39:57.840 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 21:41:08.626  WARN 12186 --- [http-nio-9090-exec-7] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 70771
+2022-04-23 21:41:08.628  WARN 12186 --- [http-nio-9090-exec-7] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 70788
+2022-04-23 21:41:08.643 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user where username = ? limit 1
+2022-04-23 21:41:08.644 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.UserDao.getPassword              : ==> Parameters: root(String)
+2022-04-23 21:41:08.645 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-04-23 21:41:08.645 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.UserDao.getUserRole              : ==>  Preparing: select role from city.user where username = ? limit 1
+2022-04-23 21:41:08.646 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.UserDao.getUserRole              : ==> Parameters: root(String)
+2022-04-23 21:41:08.647 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.UserDao.getUserRole              : <==      Total: 1
+2022-04-23 21:41:10.213 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 21:41:10.215 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 21:41:10.219 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 21:41:10.222 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 21:41:10.223 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 21:41:10.235 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 21:44:17.588  WARN 12186 --- [http-nio-9090-exec-5] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 187338
+2022-04-23 21:44:17.590  WARN 12186 --- [http-nio-9090-exec-5] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 187362
+2022-04-23 21:44:17.636 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 21:44:17.636 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 21:44:17.641 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 21:44:17.642 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 21:44:17.643 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 21:44:17.650 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 21:44:51.918 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 21:44:51.918 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 21:44:51.919 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 21:44:51.919 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 21:44:51.922 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 21:44:51.923 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 21:44:55.114 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 21:44:55.115 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 21:44:55.115 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 21:44:55.115 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 21:44:55.118 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 21:44:55.119 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 21:44:58.200 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 21:44:58.201 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 21:44:58.203 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 21:44:58.205 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 21:44:58.205 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 21:44:58.210 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 21:45:03.466 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 21:45:03.467 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 21:45:03.470 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 21:45:03.507 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 21:45:03.507 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 21:45:03.509 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 21:46:51.070  WARN 12186 --- [http-nio-9090-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 107556
+2022-04-23 21:46:51.075  WARN 12186 --- [http-nio-9090-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 112869
+2022-04-23 21:46:51.146 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 21:46:51.148 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 21:46:51.156 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 21:46:51.157 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 21:46:51.158 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 21:46:51.167 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 21:47:04.126 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 21:47:04.126 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 21:47:04.126 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 21:47:04.126 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 21:47:04.128 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 21:47:04.128 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 21:51:28.101  WARN 12186 --- [http-nio-9090-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 263974
+2022-04-23 21:51:28.103  WARN 12186 --- [http-nio-9090-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 263975
+2022-04-23 21:51:28.116 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user where username = ? limit 1
+2022-04-23 21:51:28.116 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.UserDao.getPassword              : ==> Parameters: root(String)
+2022-04-23 21:51:28.117 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-04-23 21:51:28.118 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.UserDao.getUserRole              : ==>  Preparing: select role from city.user where username = ? limit 1
+2022-04-23 21:51:28.118 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.UserDao.getUserRole              : ==> Parameters: root(String)
+2022-04-23 21:51:28.119 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.UserDao.getUserRole              : <==      Total: 1
+2022-04-23 21:51:29.330 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 21:51:29.331 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 21:51:29.338 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 21:51:29.340 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 21:51:29.340 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 21:51:29.344 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 21:51:43.686 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 21:51:43.686 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 21:51:43.687 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 21:51:43.688 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 21:51:43.690 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 21:51:43.691 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 21:56:29.733  WARN 12186 --- [http-nio-9090-exec-4] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 286043
+2022-04-23 21:56:29.733  WARN 12186 --- [http-nio-9090-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 286044
+2022-04-23 21:56:29.748 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 21:56:29.748 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 21:56:29.750 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 21:56:29.750 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 21:56:29.750 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 21:56:29.751 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:02:19.434  WARN 12186 --- [http-nio-9090-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 349674
+2022-04-23 22:02:19.435  WARN 12186 --- [http-nio-9090-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 349683
+2022-04-23 22:02:19.469 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:02:19.470 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:02:19.472 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:02:19.472 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:02:19.473 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:02:19.475 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:04:30.513  WARN 12186 --- [http-nio-9090-exec-1] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 131022
+2022-04-23 22:04:30.515  WARN 12186 --- [http-nio-9090-exec-1] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 131040
+2022-04-23 22:04:30.540 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:04:30.540 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:04:30.542 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:04:30.543 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:04:30.543 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:04:30.549 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:05:37.357  WARN 12186 --- [http-nio-9090-exec-1] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 66807
+2022-04-23 22:05:37.357  WARN 12186 --- [http-nio-9090-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 66792
+2022-04-23 22:05:37.374 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:05:37.374 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:05:37.376 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:05:37.376 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:05:37.376 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:05:37.377 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:05:42.755 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:05:42.755 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:05:42.757 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:05:42.757 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:05:42.759 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:05:42.759 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:06:15.505 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:06:15.505 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:06:15.506 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:06:15.506 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:06:15.508 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:06:15.508 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:06:15.590 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:06:15.590 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:06:15.590 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:06:15.590 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:06:15.592 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:06:15.592 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:06:46.777 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:06:46.778 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:06:46.783 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:06:46.786 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:06:46.787 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:06:46.790 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:06:46.849 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:06:46.850 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:06:46.851 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:06:46.851 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:06:46.852 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:06:46.853 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:06:58.179 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:06:58.180 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:06:58.180 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:06:58.180 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:06:58.183 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:06:58.183 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:07:05.869 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:07:05.869 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:07:05.869 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:07:05.869 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:07:05.871 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:07:05.871 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:07:05.944 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:07:05.944 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:07:05.947 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:07:05.972 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:07:05.973 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:07:05.974 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:07:19.774 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:07:19.775 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:07:19.778 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:07:19.779 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:07:19.780 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:07:19.783 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:07:19.861 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:07:19.861 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:07:19.862 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:07:19.862 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:07:19.863 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:07:19.863 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:07:43.167 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:07:43.167 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:07:43.167 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:07:43.167 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:07:43.169 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:07:43.169 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:07:48.184 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:07:48.184 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:07:48.184 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:07:48.184 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:07:48.186 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:07:48.186 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:13:24.940  WARN 12186 --- [http-nio-9090-exec-1] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 336754
+2022-04-23 22:13:24.940  WARN 12186 --- [http-nio-9090-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 336754
+2022-04-23 22:13:24.969 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:13:24.969 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:13:24.971 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:13:24.972 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:13:24.972 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:13:24.973 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:13:25.131 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:13:25.132 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:13:25.132 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:13:25.132 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:13:25.133 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:13:25.133 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:30:15.180  WARN 12186 --- [http-nio-9090-exec-7] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 1010047
+2022-04-23 22:30:15.180  WARN 12186 --- [http-nio-9090-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 1010047
+2022-04-23 22:30:15.216 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:30:15.217 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:30:15.219 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:30:15.220 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:30:15.220 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:30:15.222 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:30:15.224 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:30:15.224 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:30:15.226 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:30:15.229 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:30:15.231 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:30:15.235 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:30:15.254 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:30:15.254 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:30:15.256 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:30:15.256 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:30:15.256 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:30:15.258 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:30:15.275 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:30:15.275 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:30:15.275 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:30:15.276 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:30:15.276 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:30:15.277 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:30:15.292 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:30:15.292 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:30:15.292 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:30:15.292 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:30:15.294 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:30:15.294 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:30:15.375 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:30:15.375 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:30:15.375 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:30:15.375 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:30:15.377 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:30:15.377 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:30:28.596 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:30:28.596 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:30:28.597 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:30:28.597 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:30:28.600 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:30:28.600 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:30:28.696 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:30:28.697 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:30:28.698 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:30:28.698 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:30:28.698 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:30:28.701 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:34:09.300  WARN 12186 --- [http-nio-9090-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 220599
+2022-04-23 22:34:09.302  WARN 12186 --- [http-nio-9090-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 220604
+2022-04-23 22:34:09.322 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:34:09.322 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:34:09.324 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:34:09.324 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:34:09.324 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:34:09.326 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:35:15.217  WARN 12186 --- [http-nio-9090-exec-1] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 65891
+2022-04-23 22:35:15.217  WARN 12186 --- [http-nio-9090-exec-5] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 65879
+2022-04-23 22:35:15.244 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:35:15.245 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:35:15.246 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:35:15.247 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:35:15.247 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:35:15.251 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:38:44.752  WARN 12186 --- [http-nio-9090-exec-4] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 209480
+2022-04-23 22:38:44.752  WARN 12186 --- [http-nio-9090-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 209500
+2022-04-23 22:38:44.772 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:38:44.773 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:38:44.774 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:38:44.775 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:38:44.775 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:38:44.776 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:49:34.161  WARN 12186 --- [http-nio-9090-exec-5] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 649371
+2022-04-23 22:49:34.162  WARN 12186 --- [http-nio-9090-exec-5] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 649386
+2022-04-23 22:49:34.180 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:49:34.180 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:49:34.181 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:49:34.181 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:49:34.181 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:49:34.182 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:50:18.117 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:50:18.117 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:50:18.117 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:50:18.117 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:50:18.118 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:50:18.118 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:50:18.119 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:50:18.119 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:50:18.119 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:50:18.119 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:50:18.120 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:50:18.122 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:50:28.194 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:50:28.194 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:50:28.195 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:50:28.196 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:50:28.197 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:50:28.198 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:50:28.213 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:50:28.213 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:50:28.213 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:50:28.213 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:50:28.216 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:50:28.216 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:50:37.123 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:50:37.123 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:50:37.123 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:50:37.124 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:50:37.125 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:50:37.125 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:50:37.135 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:50:37.135 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:50:37.135 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:50:37.135 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:50:37.136 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:50:37.136 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:50:38.238 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:50:38.238 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:50:38.239 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:50:38.239 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:50:38.240 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:50:38.240 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:50:38.247 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:50:38.247 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:50:38.247 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:50:38.247 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:50:38.248 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:50:38.248 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:50:57.064 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:50:57.064 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:50:57.065 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:50:57.065 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:50:57.066 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:50:57.066 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:50:57.536 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:50:57.537 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:50:57.538 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:50:57.538 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:50:57.539 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:50:57.540 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:51:32.190 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:51:32.191 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:51:32.191 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:51:32.191 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:51:32.192 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:51:32.193 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:51:32.539 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:51:32.540 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:51:32.540 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:51:32.541 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:51:32.541 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:51:32.542 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:51:34.044 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:51:34.045 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:51:34.047 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:51:34.047 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:51:34.047 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:51:34.049 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:51:34.060 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:51:34.061 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:51:34.061 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:51:34.061 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:51:34.063 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:51:34.063 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:51:49.522 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:51:49.522 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:51:49.522 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:51:49.522 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:51:49.524 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:51:49.524 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:51:49.628 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:51:49.628 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:51:49.629 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:51:49.629 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:51:49.633 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:51:49.633 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:53:50.751  WARN 12186 --- [http-nio-9090-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 121117
+2022-04-23 22:53:50.752  WARN 12186 --- [http-nio-9090-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 121119
+2022-04-23 22:53:50.752  WARN 12186 --- [http-nio-9090-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 212632
+2022-04-23 22:53:50.782 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:53:50.783 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:53:50.785 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:53:50.785 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:53:50.785 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:53:50.787 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:53:50.809 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:53:50.809 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:53:50.811 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:53:50.820 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:53:50.820 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:53:50.822 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:53:51.460 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:53:51.461 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:53:51.462 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:53:51.462 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:53:51.462 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:53:51.463 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:53:59.853 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:53:59.853 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:53:59.853 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:53:59.853 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:53:59.854 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:53:59.854 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:53:59.892 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:53:59.892 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:53:59.893 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:53:59.893 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:53:59.895 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:53:59.895 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:54:06.305 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:54:06.305 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:54:06.306 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:54:06.306 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:54:06.307 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:54:06.308 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:54:11.008 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:54:11.009 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:54:11.010 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:54:11.010 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:54:11.010 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:54:11.011 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:54:23.691 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:54:23.692 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:54:23.693 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:54:23.693 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:54:23.695 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:54:23.696 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:54:23.715 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:54:23.715 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:54:23.715 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:54:23.715 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:54:23.716 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:54:23.716 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:54:36.827 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:54:36.828 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:54:36.830 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:54:36.840 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:54:36.840 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:54:36.842 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:54:36.886 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:54:36.886 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:54:36.887 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:54:36.887 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:54:36.887 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:54:36.889 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:54:43.241 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user where username = ? limit 1
+2022-04-23 22:54:43.241 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.UserDao.getPassword              : ==> Parameters: root(String)
+2022-04-23 22:54:43.242 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-04-23 22:54:43.242 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.UserDao.getUserRole              : ==>  Preparing: select role from city.user where username = ? limit 1
+2022-04-23 22:54:43.243 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.UserDao.getUserRole              : ==> Parameters: root(String)
+2022-04-23 22:54:43.243 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.UserDao.getUserRole              : <==      Total: 1
+2022-04-23 22:54:44.595 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:54:44.596 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:54:44.596 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:54:44.597 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:54:44.598 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:54:44.599 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:54:47.969 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:54:47.969 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:54:47.970 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:54:47.970 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:54:47.971 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:54:47.972 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:55:06.245 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:55:06.245 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:55:06.246 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:55:06.246 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:55:06.247 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:55:06.247 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 22:55:09.994 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 22:55:09.994 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 22:55:09.994 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 22:55:09.994 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 22:55:09.995 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 22:55:09.995 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 23:07:29.556  WARN 12186 --- [http-nio-9090-exec-4] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 739561
+2022-04-23 23:07:29.558  WARN 12186 --- [http-nio-9090-exec-4] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 739563
+2022-04-23 23:07:29.571 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user where username = ? limit 1
+2022-04-23 23:07:29.571 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.UserDao.getPassword              : ==> Parameters: root(String)
+2022-04-23 23:07:29.572 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-04-23 23:07:29.572 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.UserDao.getUserRole              : ==>  Preparing: select role from city.user where username = ? limit 1
+2022-04-23 23:07:29.572 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.UserDao.getUserRole              : ==> Parameters: root(String)
+2022-04-23 23:07:29.572 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.UserDao.getUserRole              : <==      Total: 1
+2022-04-23 23:07:31.187 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 23:07:31.187 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 23:07:31.190 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 23:07:31.190 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 23:07:31.191 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 23:07:31.193 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 23:07:41.078 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 23:07:41.078 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 23:07:41.078 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 23:07:41.078 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 23:07:41.079 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 23:07:41.079 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 23:07:47.770 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 23:07:47.770 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 23:07:47.770 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 23:07:47.770 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 23:07:47.771 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 23:07:47.771 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 23:07:51.455 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 23:07:51.455 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 23:07:51.456 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 23:07:51.456 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 23:07:51.457 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 23:07:51.458 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 23:14:39.166  WARN 12186 --- [http-nio-9090-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 407708
+2022-04-23 23:14:39.167  WARN 12186 --- [http-nio-9090-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 407709
+2022-04-23 23:14:39.198 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 23:14:39.198 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 23:14:39.202 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 23:14:39.203 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 23:14:39.204 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 23:14:39.207 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 23:14:39.208 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 23:14:39.208 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 23:14:39.210 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 23:14:39.211 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 23:14:39.211 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 23:14:39.213 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 23:14:45.463 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 23:14:45.464 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 23:14:45.466 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 23:14:45.477 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 23:14:45.478 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 23:14:45.480 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 23:14:45.599 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 23:14:45.599 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 23:14:45.600 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 23:14:45.600 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 23:14:45.600 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 23:14:45.602 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 23:15:18.016 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 23:15:18.016 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 23:15:18.017 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 23:15:18.017 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 23:15:18.018 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 23:15:18.019 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 23:15:18.057 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 23:15:18.057 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 23:15:18.059 DEBUG 12186 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 23:15:18.059 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 23:15:18.059 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 23:15:18.060 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 23:15:56.505 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user where username = ? limit 1
+2022-04-23 23:15:56.506 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.UserDao.getPassword              : ==> Parameters: root(String)
+2022-04-23 23:15:56.506 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-04-23 23:15:56.507 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.UserDao.getUserRole              : ==>  Preparing: select role from city.user where username = ? limit 1
+2022-04-23 23:15:56.507 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.UserDao.getUserRole              : ==> Parameters: root(String)
+2022-04-23 23:15:56.507 DEBUG 12186 --- [http-nio-9090-exec-1] yjp.dao.UserDao.getUserRole              : <==      Total: 1
+2022-04-23 23:15:57.812 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 23:15:57.812 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 23:15:57.813 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 23:15:57.813 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 23:15:57.814 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 23:15:57.815 DEBUG 12186 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 23:16:24.789 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 23:16:24.789 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 23:16:24.789 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 23:16:24.789 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 23:16:24.790 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 23:16:24.790 DEBUG 12186 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 23:16:31.232 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 23:16:31.232 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 23:16:31.233 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 23:16:31.234 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 23:16:31.235 DEBUG 12186 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 23:16:31.237 DEBUG 12186 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 23:17:49.360  WARN 12186 --- [http-nio-9090-exec-7] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 78123
+2022-04-23 23:17:49.363  WARN 12186 --- [http-nio-9090-exec-7] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 78128
+2022-04-23 23:17:49.385 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 23:17:49.386 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 23:17:49.388 DEBUG 12186 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : <==      Total: 12
+2022-04-23 23:17:49.388 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 23:17:49.388 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 23:17:49.389 DEBUG 12186 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 23:18:03.098 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-23 23:18:03.098 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-23 23:18:03.098 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-23 23:18:03.098 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-23 23:18:03.099 DEBUG 12186 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-23 23:18:03.099 DEBUG 12186 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : <==      Total: 12

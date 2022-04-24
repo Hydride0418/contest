@@ -25,10 +25,11 @@ public class LoginController {
     public Map<String, Object> login(@RequestBody User sysUser) {
         Map<String, Object> map = new HashMap<>();
         String username = sysUser.getUsername();
+        Integer id = sysUser.getId();
         String password = userService.getPassword(username);
         System.out.println(password);
         System.out.println(sysUser.getPassword());
-        if(!Objects.equals(password, sysUser.getPassword())) {
+        if (!Objects.equals(password, sysUser.getPassword())) {
             map.put("code", "403");
             map.put("message", "密码错误");
             map.put("role", 0);
@@ -43,6 +44,8 @@ public class LoginController {
             map.put("message", "认证成功");
             map.put("token", token);
             map.put("role", role);
+            map.put("username", username);
+            map.put("id", id);
             return map;
         }
         map.put("code", "403");
