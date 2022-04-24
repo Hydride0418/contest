@@ -1,18 +1,13 @@
-2022-04-24 10:51:15.273  INFO 12186 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-04-24 10:51:15.286  INFO 12186 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2022-04-24 10:51:15.289  INFO 12186 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2022-04-24 11:13:11.292  INFO 23639 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on MacBook-Pro-235.local with PID 23639 (/Users/bytedance/IdeaProjects/contest1/target/classes started by bytedance in /Users/bytedance/IdeaProjects/contest1)
-2022-04-24 11:13:11.293 DEBUG 23639 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
-2022-04-24 11:13:11.294  INFO 23639 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
-2022-04-24 11:13:11.327  INFO 23639 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-04-24 11:13:11.328  INFO 23639 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-04-24 11:13:12.283  INFO 23639 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2022-04-24 11:13:12.292  INFO 23639 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-04-24 11:13:12.292  INFO 23639 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
-2022-04-24 11:13:12.352  INFO 23639 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-04-24 11:13:12.353  INFO 23639 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1025 ms
-2022-04-24 11:13:12.989  INFO 23639 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-04-24 11:13:13.107  WARN 23639 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2022-04-24 11:13:13.205  INFO 23639 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-04-24 11:13:13.239  INFO 23639 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2022-04-24 11:13:13.250  INFO 23639 --- [restartedMain] yjp.SpringbootMybatisApplication         : Started SpringbootMybatisApplication in 2.261 seconds (JVM running for 2.999)
+2022-04-25 00:09:39.347  WARN 75057 --- [http-nio-9090-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 1141433
+2022-04-25 00:09:39.386 DEBUG 75057 --- [http-nio-9090-exec-3] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user where username = ? limit 1
+2022-04-25 00:09:39.387 DEBUG 75057 --- [http-nio-9090-exec-3] yjp.dao.UserDao.getPassword              : ==> Parameters: yjp(String)
+2022-04-25 00:09:39.392 DEBUG 75057 --- [http-nio-9090-exec-3] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-04-25 00:09:39.392 DEBUG 75057 --- [http-nio-9090-exec-3] yjp.dao.UserDao.getUserRole              : ==>  Preparing: select role from city.user where username = ? limit 1
+2022-04-25 00:09:39.393 DEBUG 75057 --- [http-nio-9090-exec-3] yjp.dao.UserDao.getUserRole              : ==> Parameters: yjp(String)
+2022-04-25 00:09:39.394 DEBUG 75057 --- [http-nio-9090-exec-3] yjp.dao.UserDao.getUserRole              : <==      Total: 1
+2022-04-25 00:09:41.192 DEBUG 75057 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-04-25 00:09:41.192 DEBUG 75057 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-04-25 00:09:41.200 DEBUG 75057 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : <==      Total: 6
+2022-04-25 00:09:41.201 DEBUG 75057 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-04-25 00:09:41.202 DEBUG 75057 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-04-25 00:09:41.211 DEBUG 75057 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : <==      Total: 12

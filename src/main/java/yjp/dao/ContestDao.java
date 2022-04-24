@@ -20,4 +20,6 @@ public interface ContestDao {
     public List<Contest> searchContest(ContestQuery contestQuery);
     //设置图片信息
     public boolean setImageUrl(Contest contest);
+    //
+    public Contest getContest(Integer id);
 }

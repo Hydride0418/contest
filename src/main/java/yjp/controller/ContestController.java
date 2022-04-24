@@ -24,9 +24,16 @@ public class ContestController {
 
     @GetMapping("/get")
     @ResponseBody
-    public List<Contest> getUserList() {
+    public List<Contest> getContestList() {
         List<Contest> contestList = contestService.showContestList();
         return contestList;
+    }
+
+    @GetMapping("/get_contest/{id}")
+    @ResponseBody
+    public Contest getContest(@PathVariable("id") Integer id) {
+        Contest contest = contestService.getContest(id);
+        return contest;
     }
 
     @PostMapping("/add_contest")

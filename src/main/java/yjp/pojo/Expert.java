@@ -21,6 +21,7 @@ public class Expert {
     private Integer contest_id;
     private String major_name;
     private String research_direction;
+    private String password;
 
     public String getName() {
         return name;

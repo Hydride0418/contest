@@ -24,4 +24,8 @@ public interface ExpertService {
     public List<Expert> queryExpert(Expert expert);
     //批量导入专家
     public boolean batchImport(String fileName, MultipartFile file) throws Exception;
+    //查密码
+    public String getPassword(String username);
+    //查用户角色
+    public Integer getUserRole(String username);
 }
