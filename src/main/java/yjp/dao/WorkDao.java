@@ -27,4 +27,8 @@ public interface WorkDao {
     public List<Work> queryWork(WorkQuery workQuery);
     //评审结果查询
     public List<Work> queryReview(ReviewQuery reviewQuery);
+    //
+    public boolean likeWork(Integer id);
+    //
+    public boolean revertLikeWork(Integer id);
 }

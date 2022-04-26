@@ -8,8 +8,8 @@
         from city.contest;
     </select>
     <insert id="addContest" parameterType="yjp.pojo.Contest">
-        insert into city.contest(name, time_limit, question_number, archive_status, contest_id, image)
-        values (#{name}, #{time_limit}, #{question_number}, #{archive_status}, #{contest_id}, #{image})
+        insert into city.contest(name, time_limit, question_number, archive_status, contest_id, image, desc)
+        values (#{name}, #{time_limit}, #{question_number}, #{archive_status}, #{contest_id}, #{image}, #{desc})
     </insert>
     <update id="modifyContest" parameterType="yjp.pojo.Contest">
         update city.contest
@@ -18,7 +18,8 @@
             question_number = #{question_number},
             archive_status  = #{archive_status},
             contest_id      = #{contest_id},
-            image           = #{image}
+            image           = #{image},
+            content         = #{content}
         where id = #{id}
     </update>
     <update id="setImageUrl" parameterType="yjp.pojo.Contest">

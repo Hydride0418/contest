@@ -93,13 +93,17 @@
     </delete>
     <update id="modifyWork" parameterType="yjp.pojo.Work">
         update city.work
-        set name    = #{name},
-            user_id = #{user_id},
-            team_id = #{team_id},
-            ques_id = #{ques_id},
-            rule_id = #{rule_id},
-            work_status = #{work_status},
-            where id = #{id}
+        set name         = #{name},
+            user_id      = #{user_id},
+            team_id      = #{team_id},
+            ques_id      = #{ques_id},
+            rule_id      = #{rule_id},
+            work_status  = #{work_status},
+            contest_name = #{contest_name},
+            authors      = #{authors},
+            likes        = #{likes},
+            content      = #{content}
+        where id = #{id}
     </update>
     <select id="getWorkById" parameterType="int" resultType="yjp.pojo.Work">
         select *
@@ -114,4 +118,14 @@
             </if>
         </where>
     </select>
+    <update id="likeWork" parameterType="int">
+        update city.work
+        set likes = likes + 1
+        where id = #{id}
+    </update>
+    <update id="revertLikeWork" parameterType="int">
+        update city.work
+        set likes = likes - 1
+        where id = #{id}
+    </update>
 </mapper>

@@ -46,6 +46,20 @@ public class WorkController {
         return success;
     }
 
+    @GetMapping("/like/{id}")
+    @ResponseBody
+    public boolean likeWork(@PathVariable("id") Integer id) {
+        boolean success = workService.likeWork(id);
+        return success;
+    }
+
+    @GetMapping("/revert_like/{id}")
+    @ResponseBody
+    public boolean revertLikeWork(@PathVariable("id") Integer id) {
+        boolean success = workService.revertLikeWork(id);
+        return success;
+    }
+
     @PostMapping("/add")
     @ResponseBody
     public boolean addWork(@RequestBody Work work) {

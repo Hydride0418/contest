@@ -55,4 +55,14 @@ public class WorkServiceImpl implements WorkService {
     public List<Work> queryReview(ReviewQuery reviewQuery) {
         return workDao.queryReview(reviewQuery);
     }
+
+    @Override
+    public boolean likeWork(Integer id) {
+        return workDao.likeWork(id);
+    }
+
+    @Override
+    public boolean revertLikeWork(Integer id) {
+        return workDao.revertLikeWork(id);
+    }
 }

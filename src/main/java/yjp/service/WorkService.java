@@ -20,4 +20,8 @@ public interface WorkService {
     public List<Work> showInfo();
     //搜索评审结果
     public List<Work> queryReview(ReviewQuery reviewQuery);
+    //
+    public boolean likeWork(Integer id);
+    //
+    public boolean revertLikeWork(Integer id);
 }

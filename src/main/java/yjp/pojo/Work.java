@@ -19,4 +19,8 @@ public class Work {
     private Integer reviewed_num; //评审完成数
     private Integer reviewed; //是否完成评审
     private Integer work_status; //1已提交2未提交0为空值
+    private String content;
+    private String authors;
+    private Integer likes;
+    private String contest_name;
 }

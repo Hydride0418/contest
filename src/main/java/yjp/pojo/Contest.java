@@ -15,4 +15,5 @@ public class Contest {
     private Integer archive_status;
     private Integer contest_id;
     private String image;
+    private String content;
 }
