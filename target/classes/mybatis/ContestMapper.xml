@@ -8,18 +8,26 @@
         from city.contest;
     </select>
     <insert id="addContest" parameterType="yjp.pojo.Contest">
-        insert into city.contest(name, time_limit, question_number, archive_status, contest_id, image, desc)
-        values (#{name}, #{time_limit}, #{question_number}, #{archive_status}, #{contest_id}, #{image}, #{desc})
+        insert into city.contest(name, time_limit, question_number, archive_status, contest_id, image, start_time,
+                                 end_time, apply_start, apply_end, content)
+        values ( #{name}, #{time_limit}, #{question_number}, #{archive_status}, #{contest_id}, #{image}
+               , #{start_time}, #{end_time}, #{apply_start}, #{apply_end}, #{content})
     </insert>
     <update id="modifyContest" parameterType="yjp.pojo.Contest">
         update city.contest
-        set name            = #{name},
-            time_limit      = #{time_limit},
-            question_number = #{question_number},
-            archive_status  = #{archive_status},
-            contest_id      = #{contest_id},
-            image           = #{image},
-            content         = #{content}
+        <set>
+            <if test="name != null and name != ''">name = #{name},</if>
+            <if test="time_limit != null">time_limit = #{time_limit},</if>
+            <if test="question_number != null">question_number = #{question_number},</if>
+            <if test="archive_status != null">archive_status = #{archive_status},</if>
+            <if test="contest_id != null">contest_id = #{contest_id},</if>
+            <if test="image != null and image != ''">image = #{image},</if>
+            <if test="content != null and content != ''">content = #{content},</if>
+            <if test="start_time != null">start_time = #{start_time},</if>
+            <if test="end_time != null">end_time = #{end_time},</if>
+            <if test="apply_start != null">apply_start = #{apply_start},</if>
+            <if test="apply_end != null">apply_end = #{apply_end}</if>
+        </set>
         where id = #{id}
     </update>
     <update id="setImageUrl" parameterType="yjp.pojo.Contest">
@@ -33,6 +41,9 @@
         <where>
             <if test="name != null and name != ''">
                 and `name` like concat('%',#{name},'%')
+            </if>
+            <if test="archive_status != null">
+                and `archive_status` = #{archive_status}
             </if>
         </where>
     </select>

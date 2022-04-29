@@ -39,6 +39,7 @@ public class ContestController {
     @PostMapping("/add_contest")
     @ResponseBody
     public AddContestResponse addContest(@RequestBody Contest contest) {
+        System.out.println(contest.getStart_time());
         boolean success = contestService.addContest(contest);
         AddContestResponse addContestResponse = new AddContestResponse();
         addContestResponse.generate(success);
@@ -48,13 +49,14 @@ public class ContestController {
     @PostMapping("/modify_contest")
     @ResponseBody
     public ModifyContestResponse modifyContest(@RequestBody Contest contest) {
+        System.out.println(contest.getStart_time());
         boolean success = contestService.modifyContestInfo(contest);
         ModifyContestResponse modifyContestResponse = new ModifyContestResponse();
         modifyContestResponse.generate(success);
         return modifyContestResponse;
     }
 
-    @PostMapping("search")
+    @PostMapping("/search")
     @ResponseBody
     public List<Contest> searchContest(@RequestBody ContestQuery contestQuery) {
         List<Contest> contestList = contestService.searchContest(contestQuery);

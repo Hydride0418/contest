@@ -14,5 +14,7 @@ public class Question {
     private String name;
     private Integer track_id;
     private Integer batch_id;
+    private Integer contest_id;
+    private String content;
     private List<Team> team;
 }

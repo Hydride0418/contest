@@ -9,4 +9,5 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ContestQuery {
     private String name;
+    private Integer archive_status;
 }
