@@ -75,4 +75,9 @@ public class TeamServiceImpl implements TeamService {
     public List<Question> searchTeamInfo(TeamQuery teamQuery) {
         return teamDao.searchTeamInfo(teamQuery);
     }
+
+    @Override
+    public boolean setWorkPath(Team team) {
+        return teamDao.setWorkPath(team);
+    }
 }

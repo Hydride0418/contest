@@ -24,4 +24,5 @@ public class Team {
     private Date submit_date;
     private List<Work> work;
     private Question question;
+    private String work_path;
 }

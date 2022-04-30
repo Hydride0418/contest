@@ -9,7 +9,7 @@
     </select>
     <insert id="addTeam" parameterType="yjp.pojo.Team">
         insert into city.team(name, question_id, participat, team_leader, leader_school, leader_phone, advisor,
-                                team_no_rematch, is_rematch, submit_date)
+                              team_no_rematch, is_rematch, submit_date)
         values (#{name}, #{question_id}, #{participat}, #{team_leader}, #{leader_school}, #{leader_phone}, #{advisor},
                 #{team_no_rematch}, #{is_rematch}, #{submit_date})
     </insert>
@@ -30,6 +30,11 @@
             team_no_rematch = #{team_no_rematch},
             is_rematch      = #{is_rematch},
             submit_date     = #{submit_date}
+        where id = #{id}
+    </update>
+    <update id="setWorkPath" parameterType="yjp.pojo.Team">
+        update city.team
+        set work_path = #{work_path}
         where id = #{id}
     </update>
     <select id="getTeamById" parameterType="int" resultType="yjp.pojo.Team">

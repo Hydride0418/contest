@@ -3,12 +3,15 @@ package yjp.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import yjp.pojo.Question;
 import yjp.pojo.Team;
 import yjp.pojo.query.SelectionQuery;
 import yjp.pojo.query.TeamQuery;
 import yjp.service.TeamService;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
 @Controller
@@ -95,5 +98,25 @@ public class TeamController {
         return teamInfo;
     }
 
-    //查看审核历史（需要新增 审核信息 实体）
+    @PostMapping("/upload_work/{id}")
+    @ResponseBody
+    public String uploadWork(@RequestParam("file") MultipartFile file, @PathVariable("id") Integer teamID) {
+        if (file.isEmpty()) {
+            return "upload failed";
+        }
+        String filename = file.getOriginalFilename();
+        String filepath = "/Users/bytedance/IdeaProjects/team1/works"; //作品文件的本地文件夹 未来在服务器中修改
+        File dest = new File(filepath + filename);
+        try {
+            file.transferTo(dest);
+            Team team = new Team();
+            team.setId(teamID);
+            team.setWork_path(filepath + '/' + filename);
+            teamService.setWorkPath(team);
+            return "upload succeeded";
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+        return "upload failed";
+    }
 }

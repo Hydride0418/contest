@@ -33,4 +33,8 @@ public interface TeamDao {
     public List<Team> searchSelectionInfo(SelectionQuery selectionQuery);
     //搜索question+team
     public List<Question> searchTeamInfo(TeamQuery teamQuery);
+    //
+    public boolean setWorkPath(Team team);
 }
+
+
