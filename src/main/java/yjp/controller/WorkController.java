@@ -77,6 +77,7 @@ public class WorkController {
     @GetMapping("/get/{id}")
     @ResponseBody
     public Work getWorkInfo(@PathVariable("id") Integer id) {
+        System.out.println(id);
         Work work = workService.getWorkById(id);
         return work;
     }

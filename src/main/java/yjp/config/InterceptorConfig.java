@@ -19,24 +19,24 @@ public class InterceptorConfig implements WebMvcConfigurer {
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(authenticationInterceptor())
-                .addPathPatterns("/**")
-                .excludePathPatterns("/login")
-                .excludePathPatterns("/work/getImage/**")
-                .excludePathPatterns("/user/**")
-                .excludePathPatterns("/work/modify") //for test
-                .excludePathPatterns("/work/like/**")
-                .excludePathPatterns("/work/revert_like/**")
-                .excludePathPatterns("/work/get/**")
-                .excludePathPatterns("/work/get_list")
-                .excludePathPatterns("/contest/get_contest/**")
-                .excludePathPatterns("/contest/get")
-                .excludePathPatterns("/contest/search")
-                .excludePathPatterns("/contest/add_contest") // test
-                .excludePathPatterns("/contest/modify_contest") // for test
-                .excludePathPatterns("/question/get") // for test
-                .excludePathPatterns("/question/add") // for test
-                .excludePathPatterns("/expert/**")
-                .excludePathPatterns("/log_expert");
+                .excludePathPatterns("/**");
+//                .excludePathPatterns("/login")
+//                .excludePathPatterns("/work/getImage/**")
+//                .excludePathPatterns("/user/**")
+//                .excludePathPatterns("/work/modify") //for test
+//                .excludePathPatterns("/work/like/**")
+//                .excludePathPatterns("/work/revert_like/**")
+//                .excludePathPatterns("/work/get/**")
+//                .excludePathPatterns("/work/get_list")
+//                .excludePathPatterns("/contest/get_contest/**")
+//                .excludePathPatterns("/contest/get")
+//                .excludePathPatterns("/contest/search")
+//                .excludePathPatterns("/contest/add_contest") // test
+//                .excludePathPatterns("/contest/modify_contest") // for test
+//                .excludePathPatterns("/question/get") // for test
+//                .excludePathPatterns("/question/add") // for test
+//                .excludePathPatterns("/expert/**")
+//                .excludePathPatterns("/log_expert");
     }
 
     /* *

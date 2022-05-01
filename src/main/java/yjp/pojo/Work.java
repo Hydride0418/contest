@@ -23,4 +23,5 @@ public class Work {
     private String authors;
     private Integer likes;
     private String contest_name;
+    private String work_path;
 }
