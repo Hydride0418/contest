@@ -34,4 +34,9 @@
             </if>
         </where>
     </select>
+    <select id="getContest" parameterType="int" resultType="yjp.pojo.Contest">
+        select *
+        from city.contest
+        where id = #{id};
+    </select>
 </mapper>

@@ -18,14 +18,19 @@ public interface TeamDao {
     public List<Team> listTeam();
     //返回团队和赛题名称
     public List<Team> list2Team();
-    //增加一个团队
-    public boolean addTeam(Team team);
+    //增加一个团队并返回team_id
+    public Integer addTeam(Team team);
+    //设置一个团队的邀请码
+    public boolean setInviteId(@Param("id") Integer id,
+                               @Param("invite_id") String invite_id);
     //根据id删除一个团队
     public boolean deleteTeam(Integer id);
     //修改团队信息
     public boolean modifyTeam(Team Team);
     //根据id查一个团队的信息
     public Team getTeamById(Integer id);
+    //根据id查work_path
+    public String getWorkPath(Integer id);
     //审核参赛资格
     public boolean qualificationReview(Integer id);
     //批量审核选题
@@ -44,5 +49,7 @@ public interface TeamDao {
                                 @Param("is_award") Integer is_award);
     //给团队添加奖项
     public boolean addAward(TeamAwardQuery teamAwardQuery);
-
+//    //新建团队并返回team_id
+//    public Integer addInvite(Team team);
+    public boolean setWorkPath(Team team);
 }

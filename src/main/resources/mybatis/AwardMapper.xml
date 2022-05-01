@@ -37,15 +37,37 @@
             team_id = #{team_id}
         where id = #{id}
     </update>
-    <select id="searchAward" resultType="yjp.pojo.Award">
-        select a.* from award a
+    <resultMap id="awardMap" type="Award">
+        <id property="id" column="id"></id>
+        <result property="name" column="name"></result>
+        <result property="user_id" column="a_user_id"></result>
+        <association property="user" javaType="User">
+            <id property="id" column="id"></id>
+            <result property="team_id" column="u_team_id"></result>
+        </association>
+        <association property="team" javaType="Team">
+            <id property="id" column="id"></id>
+            <result property="name" column="t_name"></result>
+            <result property="question_id" column="t_ques_id"></result>
+        </association>
+        <association property="track" javaType="Track">
+            <id property="id" column="id"></id>
+            <result property="contest_id" column="t_c_id"></result>
+        </association>
+        <association property="question" javaType="Question">
+            <id property="id" column="id"></id>
+            <result property="name" column="q_name"></result>
+            <result property="track_id" column="q_tr_id"></result>
+        </association>
+        <association property="contest" javaType="Contest">
+            <id property="id" column="id"></id>
+            <result property="name" column="c_name"></result>
+        </association>
+    </resultMap>
+    <select id="searchAward" resultMap="awardMap">
+        select a.*, c.name c_name, q.name q_name, t.name t_name
+        from ((((award a inner join city.user u on a.user_id = u.id) inner join city.team t on u.team_id = t.id) inner join city.question q on t.question_id = q.id) inner join city.track tr on q.track_id = tr.id) inner join city.contest c on tr.contest_id = c.id
         <where>
-            <if test="org_id != null and org_id != ''">
-                and a.org_id = #{org_id}
-            </if>
-            <if test="team_id != null and team_id != ''">
-                and a.team_id = #{team_id}
-            </if>
             <if test="user_id != null and user_id != ''">
                 and a.user_id = #{user_id}
             </if>

@@ -36,6 +36,16 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public List<User> queryMem(Integer team_id) {
+        return userDao.queryMem(team_id);
+    }
+
+    @Override
+    public List<User> queryQuesById(Integer id) {
+        return userDao.queryQuesById(id);
+    }
+
+    @Override
     public boolean updateUser(User user) {
         int i = userDao.updateUser(user);
         if (i > 0) {
@@ -43,6 +53,11 @@ public class UserServiceImpl implements UserService {
         } else {
             return false;
         }
+    }
+
+    @Override
+    public boolean setTeam(Integer id, Integer team_id) {
+        return userDao.setTeam(id, team_id);
     }
 
     @Override
@@ -56,6 +71,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public boolean setPassword(String password, Integer id) {
+        return userDao.setPassword(password, id);
+    }
+
+    @Override
     public List<User> queryUser(String contest, String question, String team_name, String user_name, String user_school, String user_phone, Integer is_award) {
         return userDao.queryUser(contest, question, team_name, user_name, user_school, user_phone, is_award);
     }
@@ -63,6 +83,11 @@ public class UserServiceImpl implements UserService {
     @Override
     public Integer getUserRole(String username) {
         return userDao.getUserRole(username);
+    }
+
+    @Override
+    public Integer getUserId(String username, String password) {
+        return userDao.getUserId(username, password);
     }
 
 }

@@ -15,7 +15,7 @@ public interface AwardService {
     //分页展示奖项列表
     public List<Award> showAwardList();
     //搜索奖项并分页展示
-    public List<Award> searchAward(AwardQuery awardQuery);
+    public List<Award> searchAward(Integer user_id);
     //修改奖项信息
     public boolean modifyAwardInfo(Award award);
     //增加团队奖项

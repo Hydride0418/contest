@@ -1,6 +1,7 @@
 package yjp.dao;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 import yjp.pojo.Allocation;
 import yjp.pojo.RuleItem;
@@ -23,4 +24,11 @@ public interface AllocationDao {
     public boolean addAllocation(Allocation allocation);
     //查阅评阅信息
     public List<Allocation> queryAllocation(AllocationQuery allocationQuery);
+    //专家根据自己id查找评阅信息
+    public List<Allocation> queryAllByExpId(@Param("expert_id") Integer id,
+                                            @Param("is_valid") Integer is_valid);
+    //提交评阅信息(需要将is_valid设为1)
+    public boolean submitReview(Allocation allocation);
+    //暂存评阅信息
+    public boolean tempSubmit(Allocation allocation);
 }

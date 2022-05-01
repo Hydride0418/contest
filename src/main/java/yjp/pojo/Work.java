@@ -21,6 +21,10 @@ public class Work {
     private Integer review_num; //需要评审数
     private Integer reviewed_num; //评审完成数
     private Integer reviewed; //是否完成评审
+    private Integer likes;
+    private String authors;
+    private String contest_name;
+    private String content;
     private Batch batch;
     private Team team;
     private Question question;

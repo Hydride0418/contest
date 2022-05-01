@@ -10,11 +10,15 @@ import java.util.List;
 
 public interface TeamService {
     //新增团队
-    public boolean addTeam(Team team);
+    public Integer addTeam(Team team);
+    //设置一个团队的邀请码
+    public boolean setInviteId(Integer id, String invite_id);
     //返回团队和赛题名称
     public List<Team> list2Team();
     //分页展示团队列表
     public List<Team> showTeamList();
+    //根据id查work_path
+    public String getWorkPath(Integer id);
     //修改团队信息
     public boolean modifyTeamInfo(Team team);
     //删除团队
@@ -35,4 +39,6 @@ public interface TeamService {
                                 Integer is_award);
     //给团队添加奖项
     public boolean addAward(TeamAwardQuery teamAwardQuery);
+    //
+    public boolean setWorkPath(Team team);
 }

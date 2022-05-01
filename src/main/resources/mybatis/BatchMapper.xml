@@ -7,10 +7,7 @@
         select *
         from city.batch;
     </select>
-    <insert id="addBatch" parameterType="yjp.pojo.Batch">
-<!--        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">-->
-<!--            select LAST_INSERT_ID()-->
-<!--        </selectKey>-->
+    <insert id="addBatch" parameterType="yjp.pojo.Batch" keyProperty="id" useGeneratedKeys="true">
         insert into city.batch(name, track_id, rule_id, work_expert, expert_work, start_date, end_date, is_aveg, is_max)
         values (#{name}, #{track_id}, #{rule_id}, #{work_expert}, #{expert_work}, #{start_date}, #{end_date}, #{is_aveg}, #{is_max})
     </insert>

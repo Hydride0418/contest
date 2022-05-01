@@ -1,6 +1,7 @@
 package yjp.dao;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 import yjp.pojo.Work;
 import yjp.pojo.query.ReviewQuery;
@@ -27,4 +28,9 @@ public interface WorkDao {
     public List<Work> queryWork(WorkQuery workQuery);
     //评审结果查询
     public List<Work> queryReview(ReviewQuery reviewQuery);
+    //设置评审专家数
+    public boolean setWorkExp(@Param("id") Integer id,
+                              @Param("work_expert") Integer work_expert);
+    //将reviewed_num加1
+    public boolean addReviewed(Integer id);
 }

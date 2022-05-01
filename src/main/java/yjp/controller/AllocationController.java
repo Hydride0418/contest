@@ -92,4 +92,24 @@ public class AllocationController {
         writer.close();
     }
 
+    @GetMapping("/queryById")
+    @ResponseBody
+    public List<Allocation> queryAllByExpId(@RequestParam("expert_id") Integer expert_id,
+                                            @RequestParam("is_valid") Integer is_valid) {
+        System.out.println(is_valid);
+        return allocationService.queryAllByExpId(expert_id, is_valid);
+    }
+
+    @PostMapping("/submit")
+    @ResponseBody
+    public boolean submit(@RequestBody Allocation allocation) {
+        return allocationService.submitReview(allocation);
+    }
+
+    @PostMapping("/tempSubmit")
+    @ResponseBody
+    public boolean tempSubmit(@RequestBody Allocation allocation) {
+        return allocationService.tempSubmit(allocation);
+    }
+
 }

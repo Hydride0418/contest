@@ -59,6 +59,13 @@ public class WorkController {
         return success;
     }
 
+    @GetMapping("/set_workExp")
+    @ResponseBody
+    public boolean setWorkExp(@RequestParam("id") Integer id,
+                              @RequestParam("work_expert") Integer work_expert) {
+        return workService.setWorkExp(id, work_expert);
+    }
+
     @GetMapping("/get/{id}")
     @ResponseBody
     public Work getWorkInfo(@PathVariable("id") Integer id) {
@@ -93,7 +100,7 @@ public class WorkController {
     @GetMapping("/getImage/{id}")
     public void getImage(HttpServletResponse response, @PathVariable("id") Integer id) throws IOException {
         ServletOutputStream outputStream = response.getOutputStream();
-        String filepath = "/Users/bytedance/IdeaProjects/contest1/images"; //作品文件的本地文件夹 未来在服务器中修改
+        String filepath = "D:/resources/Agraduation/contest/images"; //作品文件的本地文件夹 未来在服务器中修改
         File f = new File(filepath);
         File[] fs = f.listFiles();
 
@@ -105,6 +112,12 @@ public class WorkController {
 
         outputStream.flush();
         outputStream.close();
+    }
+
+    @PostMapping("/add_Review")
+    @ResponseBody
+    public boolean addReview(@RequestBody Integer id) {
+        return workService.addReviewed(id);
     }
 
 }

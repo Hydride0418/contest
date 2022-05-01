@@ -19,4 +19,10 @@ public interface AllocationService {
     public boolean addAllocation(Allocation allocation);
     //查询评阅信息
     public List<Allocation> queryAllocation(AllocationQuery allocationQuery);
+    //专家根据自己id查找评阅信息
+    public List<Allocation> queryAllByExpId(Integer id, Integer is_valid);
+    //提交评阅信息(需要将is_valid设为1)
+    public boolean submitReview(Allocation allocation);
+    //暂存评阅信息
+    public boolean tempSubmit(Allocation allocation);
 }

@@ -22,7 +22,21 @@ public class Team {
     private Integer is_rematch;
     private Integer is_award; //是否获奖
     private Integer org_id; //所属组织id
+    private Integer invite_id; //团队邀请码（在新建团队时自动生成）
+    private String work_path; //作品文件路径
     private Date submit_date;
     private Work work;
     private Question question;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public void setWork_path(String work_path) {
+        this.work_path = work_path;
+    }
 }

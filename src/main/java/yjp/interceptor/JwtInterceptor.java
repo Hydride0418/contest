@@ -4,6 +4,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
+import yjp.service.ExpertService;
 import yjp.service.UserService;
 import yjp.util.JwtUtil;
 
@@ -16,6 +17,8 @@ public class JwtInterceptor implements HandlerInterceptor {
 
     @Autowired
     UserService sysUserService;
+    @Autowired
+    ExpertService expertService;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
@@ -29,15 +32,25 @@ public class JwtInterceptor implements HandlerInterceptor {
         System.out.println("判断token");
         if (token != null) {
             String username = JwtUtil.getUserNameByToken(request);
+            Integer role = JwtUtil.getRoleByToken(request);
             System.out.println("username: " + username);
             System.out.println("token " + token);
+            System.out.println(role);
             // 这边拿到的 用户名 应该去数据库查询获得密码，简略，步骤在service直接获取密码
-            System.out.println("password " + sysUserService.getPassword(username));
+            if (role == 0 || role == 255) { //表示为用户
+                System.out.println("password " + sysUserService.getPassword(username));
                 boolean result = JwtUtil.verify(token, username, sysUserService.getPassword(username));
                 System.out.println("result: " + result);
                 if (result) {
                     System.out.println("通过拦截器");
                     return true;
+                }
+            } else if (role == 2) { //表示为专家
+                boolean result = JwtUtil.verify(token, username, expertService.getPassword(username));
+                if (result) {
+                    System.out.println("通过拦截器");
+                    return true;
+                }
             }
         }
         return false;

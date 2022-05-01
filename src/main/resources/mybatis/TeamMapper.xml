@@ -7,6 +7,10 @@
         select *
         from city.team;
     </select>
+    <select id="getWorkPath" resultType="string">
+        select work_path
+        from city.team where id = #{id}
+    </select>
     <resultMap id="teamQuestionMap" type="Team">
         <id property="id" column="id"></id>
         <result property="name" column="name"></result>
@@ -57,12 +61,22 @@
 <!--        set is_award = 1 where id = #{id}-->
 <!--&#45;&#45;         and insert into city.award(name, team_id) values (#{content}, #{id})-->
 <!--    </update>-->
-    <insert id="addTeam" parameterType="yjp.pojo.Team">
+    <insert id="addTeam" parameterType="yjp.pojo.Team"  keyProperty="id" useGeneratedKeys="true">
         insert into city.team(name, question_id, participat, team_leader, leader_school, leader_phone, advisor,
                                 team_no_rematch, is_rematch, submit_date)
         values (#{name}, #{question_id}, #{participat}, #{team_leader}, #{leader_school}, #{leader_phone}, #{advisor},
                 #{team_no_rematch}, #{is_rematch}, #{submit_date})
     </insert>
+    <update id="setInviteId">
+        update city.team
+        set invite_id = #{invite_id}
+        where id = #{id}
+    </update>
+    <update id="setWorkPath" parameterType="yjp.pojo.Team">
+        update city.team
+        set work_path = #{work_path}
+        where id = #{id}
+    </update>
     <delete id="deleteTeam" parameterType="int">
         delete
         from city.team

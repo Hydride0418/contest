@@ -35,7 +35,7 @@ public class AwardServiceImpl implements AwardService {
     }
 
     @Override
-    public List<Award> searchAward(AwardQuery awardQuery) {
+    public List<Award> searchAward(Integer awardQuery) {
         return awardDao.searchAward(awardQuery);
     }
 

@@ -20,4 +20,8 @@ public interface WorkService {
     public List<Work> showInfo();
     //搜索评审结果
     public List<Work> queryReview(ReviewQuery reviewQuery);
+    //设置评审专家数
+    public boolean setWorkExp(Integer id, Integer work_expert);
+    //将reviewed_num加1
+    public boolean addReviewed(Integer id);
 }

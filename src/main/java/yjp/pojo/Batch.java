@@ -23,4 +23,8 @@ public class Batch {
     private Track track;
     private Contest contest;
     private Rule rule;
+
+    public Integer getId() {
+        return id;
+    }
 }

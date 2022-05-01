@@ -127,4 +127,24 @@ public class ExpertController {
         writer.close();
     }
 
+    @GetMapping("/get_expertId")
+    @ResponseBody
+    public Integer getExpertId(@RequestParam("username") String username,
+                             @RequestParam("password") String password) {
+        return expertService.getUserId(username, password);
+    }
+
+    @GetMapping("/get_exp")
+    @ResponseBody
+    public Expert getExpById(@RequestParam("id") Integer id) {
+        return expertService.getExpert(id);
+    }
+
+    @GetMapping("/setPass")
+    @ResponseBody
+    public boolean setPass(@RequestParam String password,
+                           @RequestParam Integer id) {
+        return expertService.setPassword(password, id);
+    }
+
 }

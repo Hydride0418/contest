@@ -2,19 +2,21 @@ package yjp.controller;
 
 import cn.hutool.poi.excel.ExcelUtil;
 import cn.hutool.poi.excel.ExcelWriter;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.poi.ss.formula.ptg.MemAreaPtg;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import yjp.pojo.Expert;
+import org.springframework.web.multipart.MultipartFile;
+import yjp.pojo.InviteCode;
 import yjp.pojo.Question;
 import yjp.pojo.Team;
 import yjp.pojo.query.SelectionQuery;
-import yjp.pojo.query.TeamAwardQuery;
 import yjp.pojo.query.TeamQuery;
 import yjp.service.TeamService;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.IOException;
 import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.List;
@@ -36,6 +38,14 @@ public class TeamController {
         return teamList;
     }
 
+    @PostMapping("/get_workPath")
+    @ResponseBody
+    public Map<String, String> getWorkPath(@RequestBody Integer id) {
+        Map<String, String> res = new HashMap<>();
+        res.put("work_path", teamService.getWorkPath(id));
+        return res;
+    }
+
     @GetMapping("/get_team_list")
     @ResponseBody
     public List<Team> getTeam2List() {
@@ -51,9 +61,22 @@ public class TeamController {
 
     @PostMapping("/add")
     @ResponseBody
-    public boolean addTeam(@RequestBody Team team) {
-        boolean success = teamService.addTeam(team);
-        return success;
+    public Map<String, String> addTeam(@RequestBody Team team) {
+        int success = teamService.addTeam(team);
+        long id = (long)team.getId();
+        System.out.println(id);
+            Map<String, String> team_id = new HashMap<>();
+            team_id.put("id", String.valueOf(id));
+            team_id.put("invite_id", InviteCode.gen(id));
+            return team_id;
+    }
+
+    //设置一个团队的邀请码
+    @GetMapping("/setInviteId")
+    @ResponseBody
+    public boolean setInviteId(@RequestParam("id") Integer id,
+                               @RequestParam("invite_id") String invite_id) {
+        return teamService.setInviteId(id, invite_id);
     }
 
     @PostMapping("/modify")
@@ -141,5 +164,25 @@ public class TeamController {
         writer.close();
     }
 
-    //查看审核历史（需要新增 审核信息 实体）
+    @PostMapping("/upload_work/{id}")
+    @ResponseBody
+    public String uploadWork(@RequestParam("file") MultipartFile file, @PathVariable("id") Integer teamID) {
+        if (file.isEmpty()) {
+            return "upload failed";
+        }
+        String filename = file.getOriginalFilename();
+        String filepath = "D:/resources/Agraduation/contest/works"; //作品文件的本地文件夹 未来在服务器中修改
+        File dest = new File(filepath + filename);
+        try {
+            file.transferTo(dest);
+            Team team = new Team();
+            team.setId(teamID);
+            team.setWork_path(filepath + '/' + filename);
+            teamService.setWorkPath(team);
+            return "upload succeeded";
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+        return "upload failed";
+    }
 }

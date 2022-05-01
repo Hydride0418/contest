@@ -17,4 +17,6 @@ public interface ContestService {
     public boolean modifyContestInfo(Contest contest);
     //改图片信息
     public boolean setImageUrl(Contest contest);
+    //
+    public Contest getContest(Integer id);
 }

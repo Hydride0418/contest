@@ -44,12 +44,13 @@ public class JwtUtil {
      * @Param [username, secret]
      * @Return java.lang.String
      */
-    public static String sign(String username, String secret) {
+    public static String sign(String username, String secret, Integer role) {
         Date date = new Date(System.currentTimeMillis() + EXPIRE_TIME);
         Algorithm algorithm = Algorithm.HMAC256(secret);
         // 附带username信息
         return JWT.create()
                 .withClaim("username", username)
+                .withClaim("role", role)
                 .withExpiresAt(date)
                 .sign(algorithm);
 
@@ -67,6 +68,14 @@ public class JwtUtil {
         DecodedJWT jwt = JWT.decode(token);
         return jwt.getClaim("username")
                 .asString();
+    }
+
+    public static Integer getRoleByToken(HttpServletRequest request) {
+        String token = request.getHeader("token");
+        System.out.println("token " + token);
+        DecodedJWT jwt = JWT.decode(token);
+        return jwt.getClaim("role")
+                .asInt();
     }
 
 

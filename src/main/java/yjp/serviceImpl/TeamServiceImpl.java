@@ -20,9 +20,13 @@ public class TeamServiceImpl implements TeamService {
     }
 
     @Override
-    public boolean addTeam(Team team) {
-        boolean success = teamDao.addTeam(team);
-        return success;
+    public Integer addTeam(Team team) {
+        return teamDao.addTeam(team);
+    }
+
+    @Override
+    public boolean setInviteId(Integer id, String invite_id) {
+        return teamDao.setInviteId(id, invite_id);
     }
 
     @Override
@@ -34,6 +38,11 @@ public class TeamServiceImpl implements TeamService {
     public List<Team> showTeamList() {
         List<Team> teamList = teamDao.listTeam();
         return teamList;
+    }
+
+    @Override
+    public String getWorkPath(Integer id) {
+        return teamDao.getWorkPath(id);
     }
 
     @Override
@@ -84,5 +93,10 @@ public class TeamServiceImpl implements TeamService {
     @Override
     public boolean addAward(TeamAwardQuery teamAwardQuery) {
         return teamDao.addAward(teamAwardQuery);
+    }
+
+    @Override
+    public boolean setWorkPath(Team team) {
+        return teamDao.setWorkPath(team);
     }
 }

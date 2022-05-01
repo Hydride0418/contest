@@ -29,10 +29,18 @@ public class ContestController {
 
     @GetMapping("/get")
     @ResponseBody
-    public List<Contest> getUserList() {
+    public List<Contest> getContestList() {
         List<Contest> contestList = contestService.showContestList();
         return contestList;
     }
+
+    @GetMapping("/get_contest/{id}")
+    @ResponseBody
+    public Contest getContest(@PathVariable("id") Integer id) {
+        Contest contest = contestService.getContest(id);
+        return contest;
+    }
+
 
     @PostMapping("/add_contest")
     @ResponseBody
@@ -81,7 +89,7 @@ public class ContestController {
             return "upload failed";
         }
         String filename = file.getOriginalFilename();
-        String filepath = "/Users/bytedance/IdeaProjects/contest1/images"; //作品文件的本地文件夹 未来在服务器中修改
+        String filepath = "D:/resources/Agraduation/city-front - 2/vuetest/src/assets"; //作品文件的本地文件夹 未来在服务器中修改
         File dest = new File(filepath + filename);
         try {
             file.transferTo(dest);

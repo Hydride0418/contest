@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -15,6 +17,12 @@ public class Contest {
     private Integer archive_status;
     private Integer contest_id;
     private String image;
+    private String content;
+    private Date start_time;
+    private Date end_time;
+    private Date apply_start;
+    private Date apply_end;
+
 
     public void setId(Integer id) {
         this.id = id;

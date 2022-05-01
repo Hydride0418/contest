@@ -17,8 +17,18 @@ public interface UserDao {
     // 根据id查询用户
     public User queryUserById(Integer id);
 
+    //根据id查用户报名信息（先根据用户查对应teamId，再查team对应的ques的id、name）
+    public List<User> queryQuesById(Integer id);
+
+    //根据team_id查对应的用户
+    public List<User> queryMem(Integer team_id);
+
     //根据id删除用户
     public int deleteUserById(Integer id);
+
+    //设置团队id
+    public boolean setTeam(@Param("id") Integer id,
+                           @Param("team_id") Integer team_id);
 
     // 修改用户
     public int updateUser(User user);
@@ -28,6 +38,9 @@ public interface UserDao {
 
     //查密码
     public String getPassword(String username);
+
+    //修改密码
+    public boolean setPassword(String password, Integer id);
 
     //搜索用户信息
     public List<User> queryUser(@Param("contest") String contest,
@@ -40,5 +53,7 @@ public interface UserDao {
 
     //查用户角色
     public Integer getUserRole(String username);
+    //根据用户用户名和密码查找用户id
+    public Integer getUserId(String username, String password);
 }
 

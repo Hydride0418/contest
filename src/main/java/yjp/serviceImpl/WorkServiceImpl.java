@@ -55,4 +55,14 @@ public class WorkServiceImpl implements WorkService {
     public List<Work> queryReview(ReviewQuery reviewQuery) {
         return workDao.queryReview(reviewQuery);
     }
+
+    @Override
+    public boolean setWorkExp(Integer id, Integer work_expert) {
+        return workDao.setWorkExp(id, work_expert);
+    }
+
+    @Override
+    public boolean addReviewed(Integer id) {
+        return workDao.addReviewed(id);
+    }
 }

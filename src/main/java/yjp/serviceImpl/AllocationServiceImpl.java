@@ -47,4 +47,19 @@ public class AllocationServiceImpl implements AllocationService {
     public List<Allocation> queryAllocation(AllocationQuery allocationQuery) {
         return allocationDao.queryAllocation(allocationQuery);
     }
+
+    @Override
+    public List<Allocation> queryAllByExpId(Integer id, Integer is_valid) {
+        return allocationDao.queryAllByExpId(id, is_valid);
+    }
+
+    @Override
+    public boolean submitReview(Allocation allocation) {
+        return allocationDao.submitReview(allocation);
+    }
+
+    @Override
+    public boolean tempSubmit(Allocation allocation) {
+        return allocationDao.tempSubmit(allocation);
+    }
 }

@@ -74,4 +74,29 @@ public class ExpertServiceImpl implements ExpertService {
     public boolean batchImport(String fileName, MultipartFile file) throws Exception {
         return false;
     }
+
+    @Override
+    public String getPassword(String username) {
+        return expertDao.getPassword(username);
+    }
+
+    @Override
+    public Integer getUserRole(String username) {
+        return expertDao.getUserRole(username);
+    }
+
+    @Override
+    public Integer getUserId(String username, String password) {
+        return expertDao.getUserId(username, password);
+    }
+
+    @Override
+    public Expert getExpert(Integer id) {
+        return expertDao.getExpert(id);
+    }
+
+    @Override
+    public boolean setPassword(String password, Integer id) {
+        return expertDao.setPassword(password, id);
+    }
 }

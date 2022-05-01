@@ -25,4 +25,5 @@ public class RuleItemController {
     public List<RuleItem> queryRuleItem(@RequestParam("rule_id") Integer rule_id) {
         return ruleItemService.queryRuleItem(rule_id);
     }
+
 }

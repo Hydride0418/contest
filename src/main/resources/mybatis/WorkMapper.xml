@@ -68,8 +68,8 @@
         </where>
     </select>
     <insert id="addWork" parameterType="yjp.pojo.Work">
-        insert into city.work(name, user_id, team_id, ques_id, rule_id, reviewed_num)
-        values (#{name}, #{user_id}, #{team_id}, #{ques_id},#{rule_id}, '0')
+        insert into city.work(name, user_id, team_id, ques_id, rule_id)
+        values (#{name}, #{user_id}, #{team_id}, #{ques_id},#{rule_id})
     </insert>
     <delete id="deleteWork" parameterType="int">
         delete
@@ -83,6 +83,16 @@
             team_id = #{team_id},
             ques_id  = #{ques_id},
             rule_id      = #{rule_id},
+        where id = #{id}
+    </update>
+    <update id="setWorkExp">
+        update city.work
+        set review_num = #{work_expert}
+        where id = #{id}
+    </update>
+    <update id="addReviewed">
+        update city.work
+        set reviewed_num = reviewed_num + 1
         where id = #{id}
     </update>
     <select id="getWorkById" parameterType="int" resultType="yjp.pojo.Work">

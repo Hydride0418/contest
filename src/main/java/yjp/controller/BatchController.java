@@ -43,8 +43,9 @@ public class BatchController {
     @ResponseBody
     public Map<String, Integer> addBatch(@RequestBody Batch batch) {
         Map<String, Integer> res = new HashMap<>();
-        int temp = batchService.addBatch(batch);
-        if (temp > 0) {
+        int tag = batchService.addBatch(batch);
+        int temp = batch.getId();
+        if (tag > 0) {
             res.put("code", 200);
             res.put("batch_id", temp);
         } else {

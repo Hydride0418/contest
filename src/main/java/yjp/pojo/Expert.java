@@ -21,6 +21,7 @@ public class Expert {
     private Integer contest_id;
     private String major_name;
     private String research_direction;
+    private String password;
 
     public Integer getId() {
         return id;
@@ -72,5 +73,9 @@ public class Expert {
 
     public void setResearch_direction(String research_direction) {
         this.research_direction = research_direction;
+    }
+
+    public String getPassword() {
+        return password;
     }
 }

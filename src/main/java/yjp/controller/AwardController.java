@@ -52,8 +52,8 @@ public class AwardController {
 
     @PostMapping("/search_award")
     @ResponseBody
-    public List<Award> SearchAward(@RequestBody AwardQuery awardQuery) {
-        return awardService.searchAward(awardQuery);
+    public List<Award> SearchAward(@RequestBody Integer user_id) {
+        return awardService.searchAward(user_id);
     }
 
     @PostMapping("/modify_award")
