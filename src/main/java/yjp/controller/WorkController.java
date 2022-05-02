@@ -77,6 +77,7 @@ public class WorkController {
     @ResponseBody
     public boolean addWork(@RequestBody Work work) {
         boolean success = workService.addWork(work);
+        //这里work_id通过mybatis自动设置为数据库自增id的值了
         SimpleDateFormat tempDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String datetime = tempDate.format(new java.util.Date());
         BlockWork blockWork = new BlockWork(work.getId(), work.getWork_path(), work.getTeam_id(), datetime);

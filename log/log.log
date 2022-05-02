@@ -620,3 +620,500 @@ java.sql.SQLException: Column count doesn't match value count at row 1
 2022-05-02 16:48:53.734 DEBUG 15784 --- [http-nio-9090-exec-2] yjp.dao.BlockDao.createUser              : ==>  Preparing: insert into city.blockuser(Score, name) values (?, ?)
 2022-05-02 16:48:53.754 DEBUG 15784 --- [http-nio-9090-exec-2] yjp.dao.BlockDao.createUser              : ==> Parameters: null, liyuzhuo(String)
 2022-05-02 16:48:53.756 DEBUG 15784 --- [http-nio-9090-exec-2] yjp.dao.BlockDao.createUser              : <==    Updates: 1
+2022-05-02 22:48:55.481 DEBUG 15784 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.addWork                  : ==>  Preparing: insert into city.work(name, user_id, team_id, ques_id, rule_id, reviewed_num, work_status) values (?, ?, ?, ?, ?, '0', ?)
+2022-05-02 22:48:55.486 DEBUG 15784 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.addWork                  : ==> Parameters: 基于深度学习的路况时空预测(String), null, 22(Integer), null, null, 0(Integer)
+2022-05-02 22:48:55.506 DEBUG 15784 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.addWork                  : <==    Updates: 1
+2022-05-02 22:49:09.689 DEBUG 15784 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.addWork                  : ==>  Preparing: insert into city.work(name, user_id, team_id, ques_id, rule_id, reviewed_num, work_status) values (?, ?, ?, ?, ?, '0', ?)
+2022-05-02 22:49:09.690 DEBUG 15784 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.addWork                  : ==> Parameters: 基于深度学习的蚊子杀手(String), null, 22(Integer), null, null, 0(Integer)
+2022-05-02 22:49:09.694 DEBUG 15784 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.addWork                  : <==    Updates: 1
+2022-05-02 22:49:26.955 DEBUG 15784 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.addWork                  : ==>  Preparing: insert into city.work(name, user_id, team_id, ques_id, rule_id, reviewed_num, work_status) values (?, ?, ?, ?, ?, '0', ?)
+2022-05-02 22:49:26.957 DEBUG 15784 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.addWork                  : ==> Parameters: 基于深度学习的今晚吃什么(String), null, 21(Integer), null, null, 0(Integer)
+2022-05-02 22:49:27.080 ERROR 15784 --- [http-nio-9090-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`city`.`work`, CONSTRAINT `work_fk_2` FOREIGN KEY (`team_id`) REFERENCES `team` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+### The error may exist in file [/Users/bytedance/IdeaProjects/contest1/target/classes/mybatis/WorkMapper.xml]
+### The error may involve yjp.dao.WorkDao.addWork-Inline
+### The error occurred while setting parameters
+### SQL: insert into city.work(name, user_id, team_id, ques_id, rule_id, reviewed_num, work_status)         values (?, ?, ?, ?, ?, '0', ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`city`.`work`, CONSTRAINT `work_fk_2` FOREIGN KEY (`team_id`) REFERENCES `team` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+; Cannot add or update a child row: a foreign key constraint fails (`city`.`work`, CONSTRAINT `work_fk_2` FOREIGN KEY (`team_id`) REFERENCES `team` (`id`) ON DELETE CASCADE ON UPDATE CASCADE); nested exception is java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`city`.`work`, CONSTRAINT `work_fk_2` FOREIGN KEY (`team_id`) REFERENCES `team` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)] with root cause
+
+java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`city`.`work`, CONSTRAINT `work_fk_2` FOREIGN KEY (`team_id`) REFERENCES `team` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:497) ~[druid-1.2.4.jar:1.2.4]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59) ~[mybatis-3.5.5.jar:3.5.5]
+	at jdk.proxy4/jdk.proxy4.$Proxy106.execute(Unknown Source) ~[na:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.5.5.jar:3.5.5]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63) ~[mybatis-3.5.5.jar:3.5.5]
+	at jdk.proxy2/jdk.proxy2.$Proxy104.update(Unknown Source) ~[na:na]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184) ~[mybatis-3.5.5.jar:3.5.5]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) ~[mybatis-spring-2.0.5.jar:2.0.5]
+	at jdk.proxy2/jdk.proxy2.$Proxy58.insert(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:271) ~[mybatis-spring-2.0.5.jar:2.0.5]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85) ~[mybatis-3.5.5.jar:3.5.5]
+	at jdk.proxy3/jdk.proxy3.$Proxy87.addWork(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
+	at jdk.proxy3/jdk.proxy3.$Proxy88.addWork(Unknown Source) ~[na:na]
+	at yjp.serviceImpl.WorkServiceImpl.addWork(WorkServiceImpl.java:21) ~[classes/:na]
+	at yjp.controller.WorkController.addWork(WorkController.java:66) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-05-02 22:49:35.648 DEBUG 15784 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.addWork                  : ==>  Preparing: insert into city.work(name, user_id, team_id, ques_id, rule_id, reviewed_num, work_status) values (?, ?, ?, ?, ?, '0', ?)
+2022-05-02 22:49:35.649 DEBUG 15784 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.addWork                  : ==> Parameters: 基于深度学习的今晚吃什么(String), null, 20(Integer), null, null, 0(Integer)
+2022-05-02 22:49:35.652 ERROR 15784 --- [http-nio-9090-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: 
+### Error updating database.  Cause: java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`city`.`work`, CONSTRAINT `work_fk_2` FOREIGN KEY (`team_id`) REFERENCES `team` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+### The error may exist in file [/Users/bytedance/IdeaProjects/contest1/target/classes/mybatis/WorkMapper.xml]
+### The error may involve yjp.dao.WorkDao.addWork-Inline
+### The error occurred while setting parameters
+### SQL: insert into city.work(name, user_id, team_id, ques_id, rule_id, reviewed_num, work_status)         values (?, ?, ?, ?, ?, '0', ?)
+### Cause: java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`city`.`work`, CONSTRAINT `work_fk_2` FOREIGN KEY (`team_id`) REFERENCES `team` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+; Cannot add or update a child row: a foreign key constraint fails (`city`.`work`, CONSTRAINT `work_fk_2` FOREIGN KEY (`team_id`) REFERENCES `team` (`id`) ON DELETE CASCADE ON UPDATE CASCADE); nested exception is java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`city`.`work`, CONSTRAINT `work_fk_2` FOREIGN KEY (`team_id`) REFERENCES `team` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)] with root cause
+
+java.sql.SQLIntegrityConstraintViolationException: Cannot add or update a child row: a foreign key constraint fails (`city`.`work`, CONSTRAINT `work_fk_2` FOREIGN KEY (`team_id`) REFERENCES `team` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370) ~[mysql-connector-java-8.0.23.jar:8.0.23]
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:497) ~[druid-1.2.4.jar:1.2.4]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59) ~[mybatis-3.5.5.jar:3.5.5]
+	at jdk.proxy4/jdk.proxy4.$Proxy106.execute(Unknown Source) ~[na:na]
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76) ~[mybatis-3.5.5.jar:3.5.5]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:63) ~[mybatis-3.5.5.jar:3.5.5]
+	at jdk.proxy2/jdk.proxy2.$Proxy104.update(Unknown Source) ~[na:na]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184) ~[mybatis-3.5.5.jar:3.5.5]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) ~[mybatis-spring-2.0.5.jar:2.0.5]
+	at jdk.proxy2/jdk.proxy2.$Proxy58.insert(Unknown Source) ~[na:na]
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:271) ~[mybatis-spring-2.0.5.jar:2.0.5]
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:152) ~[mybatis-3.5.5.jar:3.5.5]
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85) ~[mybatis-3.5.5.jar:3.5.5]
+	at jdk.proxy3/jdk.proxy3.$Proxy87.addWork(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137) ~[spring-tx-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186) ~[spring-aop-5.3.4.jar:5.3.4]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215) ~[spring-aop-5.3.4.jar:5.3.4]
+	at jdk.proxy3/jdk.proxy3.$Proxy88.addWork(Unknown Source) ~[na:na]
+	at yjp.serviceImpl.WorkServiceImpl.addWork(WorkServiceImpl.java:21) ~[classes/:na]
+	at yjp.controller.WorkController.addWork(WorkController.java:66) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.4.jar:5.3.4]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-05-02 22:51:07.424  WARN 15784 --- [http-nio-9090-exec-1] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 91767
+2022-05-02 22:51:07.438 DEBUG 15784 --- [http-nio-9090-exec-1] yjp.dao.TeamDao.addTeam                  : ==>  Preparing: insert into city.team(name, question_id, participat, team_leader, leader_school, leader_phone, advisor, team_no_rematch, is_rematch, submit_date) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2022-05-02 22:51:07.439 DEBUG 15784 --- [http-nio-9090-exec-1] yjp.dao.TeamDao.addTeam                  : ==> Parameters: test(String), 4(Integer), ok(String), yjp(String), 北京航空航天大学(String), 789678789(String), Seo(String), null, 1(Integer), null
+2022-05-02 22:51:07.444 DEBUG 15784 --- [http-nio-9090-exec-1] yjp.dao.TeamDao.addTeam                  : <==    Updates: 1
+2022-05-02 22:51:19.722 DEBUG 15784 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.addTeam                  : ==>  Preparing: insert into city.team(name, question_id, participat, team_leader, leader_school, leader_phone, advisor, team_no_rematch, is_rematch, submit_date) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2022-05-02 22:51:19.724 DEBUG 15784 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.addTeam                  : ==> Parameters: test52(String), 4(Integer), ok(String), yjp(String), 北京航空航天大学(String), 789678789(String), Seo(String), null, 1(Integer), null
+2022-05-02 22:51:19.726 DEBUG 15784 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.addTeam                  : <==    Updates: 1
+2022-05-02 22:51:23.355 DEBUG 15784 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.addTeam                  : ==>  Preparing: insert into city.team(name, question_id, participat, team_leader, leader_school, leader_phone, advisor, team_no_rematch, is_rematch, submit_date) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2022-05-02 22:51:23.356 DEBUG 15784 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.addTeam                  : ==> Parameters: test53(String), 4(Integer), ok(String), yjp(String), 北京航空航天大学(String), 789678789(String), Seo(String), null, 1(Integer), null
+2022-05-02 22:51:23.357 DEBUG 15784 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.addTeam                  : <==    Updates: 1
+2022-05-02 22:51:28.090 DEBUG 15784 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.addTeam                  : ==>  Preparing: insert into city.team(name, question_id, participat, team_leader, leader_school, leader_phone, advisor, team_no_rematch, is_rematch, submit_date) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2022-05-02 22:51:28.091 DEBUG 15784 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.addTeam                  : ==> Parameters: test54(String), 4(Integer), ok(String), yjp(String), 北京航空航天大学(String), 789678789(String), Seo(String), null, 1(Integer), null
+2022-05-02 22:51:28.095 DEBUG 15784 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.addTeam                  : <==    Updates: 1
+2022-05-02 22:51:44.173 DEBUG 15784 --- [http-nio-9090-exec-4] yjp.dao.TeamDao.listTeam                 : ==>  Preparing: select * from city.team;
+2022-05-02 22:51:44.174 DEBUG 15784 --- [http-nio-9090-exec-4] yjp.dao.TeamDao.listTeam                 : ==> Parameters: 
+2022-05-02 22:51:44.203 DEBUG 15784 --- [http-nio-9090-exec-4] yjp.dao.TeamDao.listTeam                 : <==      Total: 14
+2022-05-02 22:52:24.431 DEBUG 15784 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.addWork                  : ==>  Preparing: insert into city.work(name, user_id, team_id, ques_id, rule_id, reviewed_num, work_status) values (?, ?, ?, ?, ?, '0', ?)
+2022-05-02 22:52:24.432 DEBUG 15784 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.addWork                  : ==> Parameters: 基于深度学习的今晚吃什么(String), null, 19(Integer), null, null, 0(Integer)
+2022-05-02 22:52:24.434 DEBUG 15784 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.addWork                  : <==    Updates: 1
+2022-05-02 22:52:38.037 DEBUG 15784 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.addWork                  : ==>  Preparing: insert into city.work(name, user_id, team_id, ques_id, rule_id, reviewed_num, work_status) values (?, ?, ?, ?, ?, '0', ?)
+2022-05-02 22:52:38.038 DEBUG 15784 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.addWork                  : ==> Parameters: 基于深度学习的人工智障(String), null, 29(Integer), null, null, 0(Integer)
+2022-05-02 22:52:38.040 DEBUG 15784 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.addWork                  : <==    Updates: 1
+2022-05-02 22:52:47.317 DEBUG 15784 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.addWork                  : ==>  Preparing: insert into city.work(name, user_id, team_id, ques_id, rule_id, reviewed_num, work_status) values (?, ?, ?, ?, ?, '0', ?)
+2022-05-02 22:52:47.319 DEBUG 15784 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.addWork                  : ==> Parameters: 基于深度学习的人工智障(String), null, 30(Integer), null, null, 0(Integer)
+2022-05-02 22:52:47.322 DEBUG 15784 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.addWork                  : <==    Updates: 1
+2022-05-02 22:53:00.245 DEBUG 15784 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.addWork                  : ==>  Preparing: insert into city.work(name, user_id, team_id, ques_id, rule_id, reviewed_num, work_status) values (?, ?, ?, ?, ?, '0', ?)
+2022-05-02 22:53:00.246 DEBUG 15784 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.addWork                  : ==> Parameters: 基于深度学习的小爱同学(String), null, 31(Integer), null, null, 0(Integer)
+2022-05-02 22:53:00.248 DEBUG 15784 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.addWork                  : <==    Updates: 1
+2022-05-02 22:53:12.935 DEBUG 15784 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.addWork                  : ==>  Preparing: insert into city.work(name, user_id, team_id, ques_id, rule_id, reviewed_num, work_status) values (?, ?, ?, ?, ?, '0', ?)
+2022-05-02 22:53:12.935 DEBUG 15784 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.addWork                  : ==> Parameters: 基于深度学习的天猫精灵(String), null, 32(Integer), null, null, 0(Integer)
+2022-05-02 22:53:12.938 DEBUG 15784 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.addWork                  : <==    Updates: 1
+2022-05-02 22:56:14.822  INFO 15784 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-02 22:56:14.825  INFO 15784 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-05-02 22:56:14.829  INFO 15784 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-05-02 22:56:20.111  INFO 25663 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on MacBook-Pro-235.local with PID 25663 (/Users/bytedance/IdeaProjects/contest1/target/classes started by bytedance in /Users/bytedance/IdeaProjects/contest1)
+2022-05-02 22:56:20.112 DEBUG 25663 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
+2022-05-02 22:56:20.113  INFO 25663 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
+2022-05-02 22:56:20.147  INFO 25663 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-02 22:56:20.147  INFO 25663 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-02 22:56:21.152  INFO 25663 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-05-02 22:56:21.160  INFO 25663 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-02 22:56:21.161  INFO 25663 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-05-02 22:56:21.217  INFO 25663 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-02 22:56:21.218  INFO 25663 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1070 ms
+2022-05-02 22:56:21.859  INFO 25663 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-02 22:56:21.972  WARN 25663 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-05-02 22:56:22.070  INFO 25663 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-02 22:56:22.110  INFO 25663 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-05-02 22:56:22.120  INFO 25663 --- [restartedMain] yjp.SpringbootMybatisApplication         : Started SpringbootMybatisApplication in 2.295 seconds (JVM running for 3.082)
+2022-05-02 22:57:09.500  INFO 25663 --- [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-02 22:57:09.501  INFO 25663 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-02 22:57:09.502  INFO 25663 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-02 22:57:09.642  INFO 25663 --- [http-nio-9090-exec-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-05-02 22:57:09.966 DEBUG 25663 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.addTeam                  : ==>  Preparing: insert into city.team(name, question_id, participat, team_leader, leader_school, leader_phone, advisor, team_no_rematch, is_rematch, submit_date) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2022-05-02 22:57:09.985 DEBUG 25663 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.addTeam                  : ==> Parameters: test33(String), 4(Integer), ok(String), yjp(String), 北京航空航天大学(String), 789678789(String), Seo(String), null, 1(Integer), null
+2022-05-02 22:57:09.990 DEBUG 25663 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.addTeam                  : <==    Updates: 1
+2022-05-02 22:57:09.992 DEBUG 25663 --- [http-nio-9090-exec-2] yjp.dao.BlockDao.createUser              : ==>  Preparing: insert into city.blockuser(Id, Score, name) values (?, ?, ?)
+2022-05-02 22:57:09.992 DEBUG 25663 --- [http-nio-9090-exec-2] yjp.dao.BlockDao.createUser              : ==> Parameters: null, 0(Integer), null
+2022-05-02 22:57:09.994 DEBUG 25663 --- [http-nio-9090-exec-2] yjp.dao.BlockDao.createUser              : <==    Updates: 1
+2022-05-02 22:57:48.731 DEBUG 25663 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.addWork                  : ==>  Preparing: insert into city.work(name, user_id, team_id, ques_id, rule_id, reviewed_num, work_status) values (?, ?, ?, ?, ?, '0', ?)
+2022-05-02 22:57:48.732 DEBUG 25663 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.addWork                  : ==> Parameters: 基于深度学习的小度小度(String), null, 32(Integer), null, null, 0(Integer)
+2022-05-02 22:57:48.735 DEBUG 25663 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.addWork                  : <==    Updates: 1
+2022-05-02 22:57:48.736 DEBUG 25663 --- [http-nio-9090-exec-3] yjp.dao.BlockDao.uploadResource          : ==>  Preparing: insert into city.blockwork(Id, Hash, Uploader, Time, Cost, GetScore) values (?, ?, ?, ?, ?, ?)
+2022-05-02 22:57:48.737 DEBUG 25663 --- [http-nio-9090-exec-3] yjp.dao.BlockDao.uploadResource          : ==> Parameters: null, /Users/bytedance/IdeaProjects/contest1/works/11.txt(String), 32(Integer), 2022(String), 0(Integer), 0(Integer)
+2022-05-02 22:57:48.739 DEBUG 25663 --- [http-nio-9090-exec-3] yjp.dao.BlockDao.uploadResource          : <==    Updates: 1
+2022-05-02 23:05:32.481  INFO 25663 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-02 23:05:32.483  INFO 25663 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-05-02 23:05:32.490  INFO 25663 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-05-02 23:05:37.202  INFO 25763 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on MacBook-Pro-235.local with PID 25763 (/Users/bytedance/IdeaProjects/contest1/target/classes started by bytedance in /Users/bytedance/IdeaProjects/contest1)
+2022-05-02 23:05:37.203 DEBUG 25763 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
+2022-05-02 23:05:37.204  INFO 25763 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
+2022-05-02 23:05:37.236  INFO 25763 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-02 23:05:37.236  INFO 25763 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-02 23:05:38.181  INFO 25763 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-05-02 23:05:38.189  INFO 25763 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-02 23:05:38.189  INFO 25763 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-05-02 23:05:38.246  INFO 25763 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-02 23:05:38.247  INFO 25763 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1010 ms
+2022-05-02 23:05:38.818  INFO 25763 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-02 23:05:38.937  WARN 25763 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-05-02 23:05:39.033  INFO 25763 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-02 23:05:39.065  INFO 25763 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-05-02 23:05:39.075  INFO 25763 --- [restartedMain] yjp.SpringbootMybatisApplication         : Started SpringbootMybatisApplication in 2.173 seconds (JVM running for 2.814)
+2022-05-02 23:06:09.130  INFO 25763 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-02 23:06:09.131  INFO 25763 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-02 23:06:09.132  INFO 25763 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-02 23:06:09.300  INFO 25763 --- [http-nio-9090-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-05-02 23:06:09.579 DEBUG 25763 --- [http-nio-9090-exec-1] yjp.dao.TeamDao.addTeam                  : ==>  Preparing: insert into city.team(name, question_id, participat, team_leader, leader_school, leader_phone, advisor, team_no_rematch, is_rematch, submit_date) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+2022-05-02 23:06:09.600 DEBUG 25763 --- [http-nio-9090-exec-1] yjp.dao.TeamDao.addTeam                  : ==> Parameters: test34(String), 4(Integer), ok(String), yjp(String), 北京航空航天大学(String), 789678789(String), Seo(String), null, 1(Integer), null
+2022-05-02 23:06:09.604 DEBUG 25763 --- [http-nio-9090-exec-1] yjp.dao.TeamDao.addTeam                  : <==    Updates: 1
+2022-05-02 23:06:09.606 DEBUG 25763 --- [http-nio-9090-exec-1] yjp.dao.BlockDao.createUser              : ==>  Preparing: insert into city.blockuser(Id, Score, name) values (?, ?, ?)
+2022-05-02 23:06:09.606 DEBUG 25763 --- [http-nio-9090-exec-1] yjp.dao.BlockDao.createUser              : ==> Parameters: null, 0(Integer), null
+2022-05-02 23:06:09.608 DEBUG 25763 --- [http-nio-9090-exec-1] yjp.dao.BlockDao.createUser              : <==    Updates: 1
+2022-05-02 23:06:22.476 DEBUG 25763 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.addWork                  : ==>  Preparing: insert into city.work(name, user_id, team_id, ques_id, rule_id, reviewed_num, work_status) values (?, ?, ?, ?, ?, '0', ?)
+2022-05-02 23:06:22.477 DEBUG 25763 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.addWork                  : ==> Parameters: 基于深度学习的抖音小助手(String), null, 34(Integer), null, null, 0(Integer)
+2022-05-02 23:06:22.480 DEBUG 25763 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.addWork                  : <==    Updates: 1
+2022-05-02 23:06:22.491 DEBUG 25763 --- [http-nio-9090-exec-3] yjp.dao.BlockDao.uploadResource          : ==>  Preparing: insert into city.blockwork(Id, Hash, Uploader, Time, Cost, GetScore) values (?, ?, ?, ?, ?, ?)
+2022-05-02 23:06:22.492 DEBUG 25763 --- [http-nio-9090-exec-3] yjp.dao.BlockDao.uploadResource          : ==> Parameters: 30(Integer), /Users/bytedance/IdeaProjects/contest1/works/12.txt(String), 34(Integer), 2022-05-02 23:06:22(String), 0(Integer), 0(Integer)
+2022-05-02 23:06:22.494 DEBUG 25763 --- [http-nio-9090-exec-3] yjp.dao.BlockDao.uploadResource          : <==    Updates: 1
+2022-05-02 23:10:41.181  WARN 25763 --- [http-nio-9090-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 258677
+2022-05-02 23:10:41.203 DEBUG 25763 --- [http-nio-9090-exec-6] yjp.dao.BlockDao.queryResource           : ==>  Preparing: select Uploader from city.blockwork where Id = ?;
+2022-05-02 23:10:41.204 DEBUG 25763 --- [http-nio-9090-exec-6] yjp.dao.BlockDao.queryResource           : ==> Parameters: 30(Integer)
+2022-05-02 23:10:41.213 DEBUG 25763 --- [http-nio-9090-exec-6] yjp.dao.BlockDao.queryResource           : <==      Total: 1
+2022-05-02 23:11:32.897 DEBUG 25763 --- [http-nio-9090-exec-8] yjp.dao.ExpertDao.listExpert             : ==>  Preparing: select * from city.expert;
+2022-05-02 23:11:32.898 DEBUG 25763 --- [http-nio-9090-exec-8] yjp.dao.ExpertDao.listExpert             : ==> Parameters: 
+2022-05-02 23:11:32.908 DEBUG 25763 --- [http-nio-9090-exec-8] yjp.dao.ExpertDao.listExpert             : <==      Total: 3
+2022-05-02 23:11:33.470 DEBUG 25763 --- [http-nio-9090-exec-10] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:11:33.470 DEBUG 25763 --- [http-nio-9090-exec-10] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:11:33.489 DEBUG 25763 --- [http-nio-9090-exec-10] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:11:41.323 DEBUG 25763 --- [http-nio-9090-exec-1] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:11:41.324 DEBUG 25763 --- [http-nio-9090-exec-1] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:11:41.331 DEBUG 25763 --- [http-nio-9090-exec-1] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:12:01.785 DEBUG 25763 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:12:01.786 DEBUG 25763 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:12:01.790 DEBUG 25763 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:12:06.733 DEBUG 25763 --- [http-nio-9090-exec-7] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:12:06.734 DEBUG 25763 --- [http-nio-9090-exec-7] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:12:06.738 DEBUG 25763 --- [http-nio-9090-exec-7] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:12:13.235 DEBUG 25763 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:12:13.236 DEBUG 25763 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:12:13.239 DEBUG 25763 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:12:43.701 DEBUG 25763 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:12:43.702 DEBUG 25763 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:12:43.708 DEBUG 25763 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:12:43.790 DEBUG 25763 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:12:43.791 DEBUG 25763 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:12:43.795 DEBUG 25763 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:12:47.297 DEBUG 25763 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:12:47.298 DEBUG 25763 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:12:47.301 DEBUG 25763 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:12:50.785 DEBUG 25763 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-02 23:12:50.786 DEBUG 25763 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-02 23:12:50.799 DEBUG 25763 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : <==      Total: 15
+2022-05-02 23:12:50.802 DEBUG 25763 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-02 23:12:50.803 DEBUG 25763 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-02 23:12:50.820 DEBUG 25763 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-02 23:12:56.197 DEBUG 25763 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:12:56.197 DEBUG 25763 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:12:56.201 DEBUG 25763 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:13:07.048 DEBUG 25763 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.getWorkById              : ==>  Preparing: select * from city.work where id = ?;
+2022-05-02 23:13:07.048 DEBUG 25763 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.getWorkById              : ==> Parameters: 14(Integer)
+2022-05-02 23:13:07.049 DEBUG 25763 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.getWorkById              : <==      Total: 0
+2022-05-02 23:13:24.825 DEBUG 25763 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:13:24.826 DEBUG 25763 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:13:24.831 DEBUG 25763 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:13:24.881 DEBUG 25763 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:13:24.881 DEBUG 25763 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:13:24.885 DEBUG 25763 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:13:32.591 DEBUG 25763 --- [http-nio-9090-exec-1] yjp.dao.BlockDao.queryResource           : ==>  Preparing: select Uploader from city.blockwork where Id = ?;
+2022-05-02 23:13:32.591 DEBUG 25763 --- [http-nio-9090-exec-1] yjp.dao.BlockDao.queryResource           : ==> Parameters: 12(Integer)
+2022-05-02 23:13:32.592 DEBUG 25763 --- [http-nio-9090-exec-1] yjp.dao.BlockDao.queryResource           : <==      Total: 0
+2022-05-02 23:13:40.569 DEBUG 25763 --- [http-nio-9090-exec-7] yjp.dao.BlockDao.queryResource           : ==>  Preparing: select Uploader from city.blockwork where Id = ?;
+2022-05-02 23:13:40.569 DEBUG 25763 --- [http-nio-9090-exec-7] yjp.dao.BlockDao.queryResource           : ==> Parameters: 12(Integer)
+2022-05-02 23:13:40.570 DEBUG 25763 --- [http-nio-9090-exec-7] yjp.dao.BlockDao.queryResource           : <==      Total: 0
+2022-05-02 23:16:13.958  INFO 25763 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-02 23:16:13.960  INFO 25763 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-05-02 23:16:13.963  INFO 25763 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-05-02 23:16:18.498  INFO 26577 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on MacBook-Pro-235.local with PID 26577 (/Users/bytedance/IdeaProjects/contest1/target/classes started by bytedance in /Users/bytedance/IdeaProjects/contest1)
+2022-05-02 23:16:18.500 DEBUG 26577 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
+2022-05-02 23:16:18.501  INFO 26577 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
+2022-05-02 23:16:18.547  INFO 26577 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-02 23:16:18.548  INFO 26577 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-02 23:16:20.122  INFO 26577 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-05-02 23:16:20.131  INFO 26577 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-02 23:16:20.131  INFO 26577 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-05-02 23:16:20.193  INFO 26577 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-02 23:16:20.193  INFO 26577 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1644 ms
+2022-05-02 23:16:20.885  INFO 26577 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-02 23:16:21.002  WARN 26577 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-05-02 23:16:21.110  INFO 26577 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-02 23:16:21.147  INFO 26577 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-05-02 23:16:21.158  INFO 26577 --- [restartedMain] yjp.SpringbootMybatisApplication         : Started SpringbootMybatisApplication in 3.032 seconds (JVM running for 3.725)
+2022-05-02 23:16:26.706  INFO 26577 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-02 23:16:26.707  INFO 26577 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-02 23:16:26.708  INFO 26577 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-02 23:16:26.792  INFO 26577 --- [http-nio-9090-exec-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-05-02 23:16:27.025 DEBUG 26577 --- [http-nio-9090-exec-2] yjp.dao.BlockDao.queryResource           : ==>  Preparing: select Uploader from city.blockwork where Id = ?;
+2022-05-02 23:16:27.042 DEBUG 26577 --- [http-nio-9090-exec-2] yjp.dao.BlockDao.queryResource           : ==> Parameters: 12(Integer)
+2022-05-02 23:16:27.057 DEBUG 26577 --- [http-nio-9090-exec-2] yjp.dao.BlockDao.queryResource           : <==      Total: 0
+2022-05-02 23:16:27.072 DEBUG 26577 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.getTeamById              : ==>  Preparing: select * from city.team where id = ?;
+2022-05-02 23:16:27.072 DEBUG 26577 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.getTeamById              : ==> Parameters: null
+2022-05-02 23:16:27.073 DEBUG 26577 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.getTeamById              : <==      Total: 0
+2022-05-02 23:17:35.131  WARN 26577 --- [http-nio-9090-exec-5] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 68048
+2022-05-02 23:17:35.149 DEBUG 26577 --- [http-nio-9090-exec-5] yjp.dao.BlockDao.queryResource           : ==>  Preparing: select Uploader from city.blockwork where Id = ?;
+2022-05-02 23:17:35.150 DEBUG 26577 --- [http-nio-9090-exec-5] yjp.dao.BlockDao.queryResource           : ==> Parameters: 30(Integer)
+2022-05-02 23:17:35.152 DEBUG 26577 --- [http-nio-9090-exec-5] yjp.dao.BlockDao.queryResource           : <==      Total: 1
+2022-05-02 23:17:35.153 DEBUG 26577 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.getTeamById              : ==>  Preparing: select * from city.team where id = ?;
+2022-05-02 23:17:35.153 DEBUG 26577 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.getTeamById              : ==> Parameters: 34(Integer)
+2022-05-02 23:17:35.156 DEBUG 26577 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.getTeamById              : <==      Total: 1
+2022-05-02 23:18:26.727 DEBUG 26577 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:18:26.727 DEBUG 26577 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:18:26.739 DEBUG 26577 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:18:26.740 DEBUG 26577 --- [http-nio-9090-exec-8] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:18:26.740 DEBUG 26577 --- [http-nio-9090-exec-8] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:18:26.747 DEBUG 26577 --- [http-nio-9090-exec-8] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:19:12.824 DEBUG 26577 --- [http-nio-9090-exec-1] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:19:12.829 DEBUG 26577 --- [http-nio-9090-exec-1] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:19:12.842 DEBUG 26577 --- [http-nio-9090-exec-1] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:19:12.944 DEBUG 26577 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:19:12.944 DEBUG 26577 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:19:12.952 DEBUG 26577 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:19:14.378 DEBUG 26577 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:19:14.378 DEBUG 26577 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:19:14.387 DEBUG 26577 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:19:28.615 DEBUG 26577 --- [http-nio-9090-exec-8] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:19:28.616 DEBUG 26577 --- [http-nio-9090-exec-8] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:19:28.622 DEBUG 26577 --- [http-nio-9090-exec-8] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:19:28.631 DEBUG 26577 --- [http-nio-9090-exec-10] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:19:28.631 DEBUG 26577 --- [http-nio-9090-exec-10] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:19:28.634 DEBUG 26577 --- [http-nio-9090-exec-10] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:19:31.406 DEBUG 26577 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:19:31.407 DEBUG 26577 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:19:31.410 DEBUG 26577 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:19:31.410 DEBUG 26577 --- [http-nio-9090-exec-4] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:19:31.410 DEBUG 26577 --- [http-nio-9090-exec-4] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:19:31.413 DEBUG 26577 --- [http-nio-9090-exec-4] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:19:34.977 DEBUG 26577 --- [http-nio-9090-exec-6] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:19:34.977 DEBUG 26577 --- [http-nio-9090-exec-6] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:19:34.983 DEBUG 26577 --- [http-nio-9090-exec-6] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:19:34.985 DEBUG 26577 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:19:34.986 DEBUG 26577 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:19:34.989 DEBUG 26577 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:19:40.646 DEBUG 26577 --- [http-nio-9090-exec-10] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:19:40.652  WARN 26577 --- [http-nio-9090-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 73910
+2022-05-02 23:19:40.656 DEBUG 26577 --- [http-nio-9090-exec-10] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:19:40.659 DEBUG 26577 --- [http-nio-9090-exec-10] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:19:40.661 DEBUG 26577 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:19:40.662 DEBUG 26577 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:19:40.666 DEBUG 26577 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:19:42.494 DEBUG 26577 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:19:42.494 DEBUG 26577 --- [http-nio-9090-exec-7] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:19:42.494 DEBUG 26577 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:19:42.494 DEBUG 26577 --- [http-nio-9090-exec-7] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:19:42.497 DEBUG 26577 --- [http-nio-9090-exec-7] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:19:42.497 DEBUG 26577 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:19:44.026 DEBUG 26577 --- [http-nio-9090-exec-1] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:19:44.026 DEBUG 26577 --- [http-nio-9090-exec-8] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:19:44.045 DEBUG 26577 --- [http-nio-9090-exec-1] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:19:44.045 DEBUG 26577 --- [http-nio-9090-exec-8] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:19:44.047 DEBUG 26577 --- [http-nio-9090-exec-8] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:19:44.047 DEBUG 26577 --- [http-nio-9090-exec-1] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:19:53.903 DEBUG 26577 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:19:53.904 DEBUG 26577 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:19:53.911 DEBUG 26577 --- [http-nio-9090-exec-2] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:19:53.917 DEBUG 26577 --- [http-nio-9090-exec-4] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:19:53.917 DEBUG 26577 --- [http-nio-9090-exec-4] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:19:53.920 DEBUG 26577 --- [http-nio-9090-exec-4] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:21:32.229  WARN 26577 --- [http-nio-9090-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 98309
+2022-05-02 23:21:32.231  WARN 26577 --- [http-nio-9090-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 108184
+2022-05-02 23:21:32.251 DEBUG 26577 --- [http-nio-9090-exec-6] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:21:32.252 DEBUG 26577 --- [http-nio-9090-exec-6] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:21:32.254 DEBUG 26577 --- [http-nio-9090-exec-6] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:21:32.255 DEBUG 26577 --- [http-nio-9090-exec-1] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
+2022-05-02 23:21:32.255 DEBUG 26577 --- [http-nio-9090-exec-1] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
+2022-05-02 23:21:32.257 DEBUG 26577 --- [http-nio-9090-exec-1] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-02 23:21:44.294 DEBUG 26577 --- [http-nio-9090-exec-3] yjp.dao.BlockDao.queryResource           : ==>  Preparing: select Uploader from city.blockwork where Id = ?;
+2022-05-02 23:21:44.295 DEBUG 26577 --- [http-nio-9090-exec-3] yjp.dao.BlockDao.queryResource           : ==> Parameters: 30(Integer)
+2022-05-02 23:21:44.296 DEBUG 26577 --- [http-nio-9090-exec-3] yjp.dao.BlockDao.queryResource           : <==      Total: 1
+2022-05-02 23:21:44.296 DEBUG 26577 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.getTeamById              : ==>  Preparing: select * from city.team where id = ?;
+2022-05-02 23:21:44.297 DEBUG 26577 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.getTeamById              : ==> Parameters: 34(Integer)
+2022-05-02 23:21:44.298 DEBUG 26577 --- [http-nio-9090-exec-3] yjp.dao.TeamDao.getTeamById              : <==      Total: 1

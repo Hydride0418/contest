@@ -82,7 +82,7 @@
             </if>
         </where>
     </select>
-    <insert id="addWork" parameterType="yjp.pojo.Work">
+    <insert id="addWork" useGeneratedKeys="true" keyProperty="id" parameterType="yjp.pojo.Work">
         insert into city.work(name, user_id, team_id, ques_id, rule_id, reviewed_num, work_status)
         values (#{name}, #{user_id}, #{team_id}, #{ques_id}, #{rule_id}, '0', #{work_status})
     </insert>

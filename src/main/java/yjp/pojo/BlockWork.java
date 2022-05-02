@@ -22,7 +22,7 @@ public class BlockWork {
         Id = id;
         Hash = hash;
         Uploader = uploader;
-        Time = "2022";
+        Time = time;
         Cost = 0;
         GetScore = 0;
     }
