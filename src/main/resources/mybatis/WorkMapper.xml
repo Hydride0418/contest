@@ -119,6 +119,11 @@
             </if>
         </where>
     </select>
+    <update id="setBlockID" parameterType="yjp.pojo.Work">
+        update city.work
+        set block_id = #{block_id}
+        where id = #{id}
+    </update>
     <update id="likeWork" parameterType="int">
         update city.work
         set likes = likes + 1

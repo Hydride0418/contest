@@ -4,23 +4,28 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import yjp.pojo.BlockUser;
 import yjp.pojo.Question;
 import yjp.pojo.Team;
 import yjp.pojo.query.SelectionQuery;
 import yjp.pojo.query.TeamQuery;
+import yjp.service.BlockService;
 import yjp.service.TeamService;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 @Controller
 @RequestMapping("/team")
 public class TeamController {
+    private final BlockService blockService;
     private final TeamService teamService;
 
-    public TeamController(TeamService teamService) {
+    public TeamController(TeamService teamService, BlockService blockService) {
         this.teamService = teamService;
+        this.blockService = blockService;
     }
 
     @GetMapping("/get_list")
@@ -41,7 +46,10 @@ public class TeamController {
     @ResponseBody
     public boolean addTeam(@RequestBody Team team) {
         boolean success = teamService.addTeam(team);
-        return success;
+        SimpleDateFormat tempDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        BlockUser blockUser = new BlockUser(team.getId(),team.getName()); //在区块链中创建团队为一个用户
+        boolean success1 = blockService.createUser(blockUser);
+        return success && success1;
     }
 
     @PostMapping("/modify")

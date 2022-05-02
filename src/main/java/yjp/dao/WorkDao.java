@@ -28,6 +28,8 @@ public interface WorkDao {
     //评审结果查询
     public List<Work> queryReview(ReviewQuery reviewQuery);
     //
+    public boolean setBlockID(Work work);
+    //
     public boolean likeWork(Integer id);
     //
     public boolean revertLikeWork(Integer id);

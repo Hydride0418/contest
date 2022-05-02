@@ -57,6 +57,11 @@ public class WorkServiceImpl implements WorkService {
     }
 
     @Override
+    public boolean setBlockID(Work work) {
+        return workDao.setBlockID(work);
+    }
+
+    @Override
     public boolean likeWork(Integer id) {
         return workDao.likeWork(id);
     }

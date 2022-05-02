@@ -21,6 +21,8 @@ public interface WorkService {
     //搜索评审结果
     public List<Work> queryReview(ReviewQuery reviewQuery);
     //
+    public boolean setBlockID(Work work);
+    //
     public boolean likeWork(Integer id);
     //
     public boolean revertLikeWork(Integer id);

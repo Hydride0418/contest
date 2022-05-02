@@ -1,10 +1,13 @@
 package yjp.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import yjp.pojo.BlockWork;
 import yjp.pojo.Work;
 import yjp.pojo.query.ReviewQuery;
+import yjp.service.BlockService;
 import yjp.service.WorkService;
 
 import javax.servlet.ServletOutputStream;
@@ -13,6 +16,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -20,10 +24,12 @@ import java.util.logging.Logger;
 @RequestMapping("/work")
 @Controller
 public class WorkController {
+    private final BlockService blockService;
     private final WorkService workService;
 
-    public WorkController(WorkService workService) {
+    public WorkController(WorkService workService, BlockService blockService) {
         this.workService = workService;
+        this.blockService = blockService;
     }
 
     @GetMapping("/get_list")
@@ -46,6 +52,13 @@ public class WorkController {
         return success;
     }
 
+    @PostMapping("/set_block_id")
+    @ResponseBody
+    public boolean setBlockID(@RequestBody Work work) {
+        boolean success = workService.setBlockID(work);
+        return success;
+    }
+
     @GetMapping("/like/{id}")
     @ResponseBody
     public boolean likeWork(@PathVariable("id") Integer id) {
@@ -64,7 +77,11 @@ public class WorkController {
     @ResponseBody
     public boolean addWork(@RequestBody Work work) {
         boolean success = workService.addWork(work);
-        return success;
+        SimpleDateFormat tempDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String datetime = tempDate.format(new java.util.Date());
+        BlockWork blockWork = new BlockWork(work.getWork_path(), work.getTeam_id(), datetime);
+        boolean success1 = blockService.uploadResource(blockWork);
+        return success && success1;
     }
 
     @PostMapping("/modify")

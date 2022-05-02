@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yjp.dao.BlockDao">
+    <insert id="createUser" parameterType="yjp.pojo.BlockUser">
+        insert into city.blockuser(Score, name)
+        values (#{Score}, #{name})
+    </insert>
+    <insert id="uploadResource" parameterType="yjp.pojo.BlockWork">
+        insert into city.blockwork(Hash, Uploader, Time, Cost, GetScore)
+        values (#{Hash}, #{Uploader}, #{Time}, #{Cost}, #{GetScore})
+    </insert>
+    <select id="queryResource" parameterType="int" resultType="int">
+        select Uploader
+        from city.blockwork
+        where Id = #{Id};
+    </select>
+</mapper>
