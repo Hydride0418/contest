@@ -12,8 +12,7 @@ import yjp.service.WorkService;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
@@ -139,5 +138,50 @@ public class WorkController {
 
         outputStream.flush();
         outputStream.close();
+    }
+
+    @GetMapping("/download")
+    public String downloadFile(HttpServletResponse response, @RequestParam("fileName") String fileName) {
+        if (fileName != null) {
+            //设置文件路径
+            File file = new File("/Users/bytedance/IdeaProjects/contest1/images/1.jpg"); //用了一个本地路径来测试
+//            File file = new File(realPath , fileName); 这里的realPath填写文件的真实路径即可
+            if (file.exists()) {
+                response.setContentType("application/force-download");// 设置强制下载不打开
+                response.addHeader("Content-Disposition", "attachment;fileName=" + fileName);// 设置文件名
+                byte[] buffer = new byte[1024];
+                FileInputStream fis = null;
+                BufferedInputStream bis = null;
+                try {
+                    fis = new FileInputStream(file);
+                    bis = new BufferedInputStream(fis);
+                    OutputStream os = response.getOutputStream();
+                    int i = bis.read(buffer);
+                    while (i != -1) {
+                        os.write(buffer, 0, i);
+                        i = bis.read(buffer);
+                    }
+                    return "下载成功";
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    if (bis != null) {
+                        try {
+                            bis.close();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                    if (fis != null) {
+                        try {
+                            fis.close();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            }
+        }
+        return "下载失败";
     }
 }

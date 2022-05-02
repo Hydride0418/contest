@@ -12,8 +12,9 @@ import yjp.pojo.query.TeamQuery;
 import yjp.service.BlockService;
 import yjp.service.TeamService;
 
-import java.io.File;
-import java.io.IOException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.List;
 
@@ -47,7 +48,7 @@ public class TeamController {
     public boolean addTeam(@RequestBody Team team) {
         boolean success = teamService.addTeam(team);
         SimpleDateFormat tempDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        BlockUser blockUser = new BlockUser(team.getId(),team.getName()); //在区块链中创建团队为一个用户
+        BlockUser blockUser = new BlockUser(team.getId(), team.getName()); //在区块链中创建团队为一个用户
         boolean success1 = blockService.createUser(blockUser);
         return success && success1;
     }
@@ -94,7 +95,7 @@ public class TeamController {
     @PostMapping("/search_selection_info")
     @ResponseBody
     public List<Team> searchSelectionInfo(@RequestBody SelectionQuery selectionQuery) {
-        List<Team> selectionInfos =  teamService.searchSelectionInfo(selectionQuery);
+        List<Team> selectionInfos = teamService.searchSelectionInfo(selectionQuery);
         return selectionInfos;
     }
 
@@ -113,7 +114,7 @@ public class TeamController {
             return "upload failed";
         }
         String filename = file.getOriginalFilename();
-        String filepath = "/Users/bytedance/IdeaProjects/team1/works"; //作品文件的本地文件夹 未来在服务器中修改
+        String filepath = "/Users/bytedance/IdeaProjects/contest1/works"; //作品文件的本地文件夹 未来在服务器中修改
         File dest = new File(filepath + filename);
         try {
             file.transferTo(dest);
