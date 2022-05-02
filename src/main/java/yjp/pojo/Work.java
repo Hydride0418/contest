@@ -24,5 +24,5 @@ public class Work {
     private Integer likes;
     private String contest_name;
     private String work_path;
-    private Integer block_id;
+    private Integer block_id; // Deprecated
 }

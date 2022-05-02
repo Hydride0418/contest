@@ -79,7 +79,7 @@ public class WorkController {
         boolean success = workService.addWork(work);
         SimpleDateFormat tempDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String datetime = tempDate.format(new java.util.Date());
-        BlockWork blockWork = new BlockWork(work.getWork_path(), work.getTeam_id(), datetime);
+        BlockWork blockWork = new BlockWork(work.getId(), work.getWork_path(), work.getTeam_id(), datetime);
         boolean success1 = blockService.uploadResource(blockWork);
         return success && success1;
     }

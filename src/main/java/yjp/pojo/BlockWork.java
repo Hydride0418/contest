@@ -18,7 +18,8 @@ public class BlockWork {
     private Integer Cost; //交换积分
     private Integer GetScore; //上传所获积分
 
-    public BlockWork(String hash, Integer uploader,String time) {
+    public BlockWork(Integer id,String hash, Integer uploader,String time) {
+        Id = id;
         Hash = hash;
         Uploader = uploader;
         Time = "2022";
