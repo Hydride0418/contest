@@ -67,17 +67,19 @@ public class ContestController {
     @PostMapping("/upload_Image/{id}")
     @ResponseBody
     public String uploadImage(@RequestParam("file") MultipartFile file, @PathVariable("id") Integer contestID) {
+        System.out.println("contestID: " + contestID);
         if (file.isEmpty()) {
             return "upload failed";
         }
         String filename = file.getOriginalFilename();
-        String filepath = "/Users/bytedance/IdeaProjects/contest1/images"; //作品文件的本地文件夹 未来在服务器中修改
+        String filepath = "/Users/bytedance/city_front/city_front/src/assets/"; //作品文件的本地文件夹 未来在服务器中修改
+        System.out.println("filePath： " + filepath);
         File dest = new File(filepath + filename);
         try {
             file.transferTo(dest);
             Contest contest = new Contest();
             contest.setId(contestID);
-            contest.setImage(filepath + '/' + filename);
+            contest.setImage(filename);
             contestService.setImageUrl(contest);
             return "upload succeeded";
         } catch (IOException e) {

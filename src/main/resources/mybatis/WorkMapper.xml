@@ -103,7 +103,8 @@
             authors      = #{authors},
             likes        = #{likes},
             content      = #{content},
-            work_path     = #{work_path}
+            work_path    = #{work_path},
+            image        = #{image}
         where id = #{id}
     </update>
     <select id="getWorkById" parameterType="int" resultType="yjp.pojo.Work">

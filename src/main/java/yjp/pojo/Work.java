@@ -25,4 +25,5 @@ public class Work {
     private String contest_name;
     private String work_path;
     private Integer block_id; // Deprecated
+    private String image;
 }
