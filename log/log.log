@@ -337,3 +337,1051 @@
 2022-05-05 00:08:53.113 DEBUG 86296 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
 2022-05-05 00:08:53.113 DEBUG 86296 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : <==      Total: 15
 2022-05-05 00:08:53.113 DEBUG 86296 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:14:10.769  INFO 86296 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-05 00:14:10.772  INFO 86296 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-05-05 00:14:10.781  INFO 86296 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-05-05 00:14:16.661  INFO 89097 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on MacBook-Pro-235.local with PID 89097 (/Users/bytedance/IdeaProjects/contest1/target/classes started by bytedance in /Users/bytedance/IdeaProjects/contest1)
+2022-05-05 00:14:16.664 DEBUG 89097 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
+2022-05-05 00:14:16.664  INFO 89097 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
+2022-05-05 00:14:16.708  INFO 89097 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-05 00:14:16.709  INFO 89097 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-05 00:14:18.158  INFO 89097 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-05-05 00:14:18.166  INFO 89097 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-05 00:14:18.167  INFO 89097 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-05-05 00:14:18.253  INFO 89097 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-05 00:14:18.253  INFO 89097 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1544 ms
+2022-05-05 00:14:19.088  INFO 89097 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-05 00:14:19.181  INFO 89097 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-05-05 00:14:19.237  WARN 89097 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-05-05 00:14:19.417  INFO 89097 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-05 00:14:19.456  INFO 89097 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-05-05 00:14:19.468  INFO 89097 --- [restartedMain] yjp.SpringbootMybatisApplication         : Started SpringbootMybatisApplication in 3.117 seconds (JVM running for 3.807)
+2022-05-05 00:14:40.138  INFO 89097 --- [http-nio-9090-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-05 00:14:40.139  INFO 89097 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-05 00:14:40.141  INFO 89097 --- [http-nio-9090-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-05-05 00:14:40.297  INFO 89097 --- [http-nio-9090-exec-4] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-05-05 00:14:40.680 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:14:40.696 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:14:40.696 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:14:40.697 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:14:40.716 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:14:40.719 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:14:40.719 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:14:40.721 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : <==      Total: 15
+2022-05-05 00:14:40.729 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:17:06.637  WARN 89097 --- [http-nio-9090-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 145923
+2022-05-05 00:17:06.637  WARN 89097 --- [http-nio-9090-exec-5] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 145923
+2022-05-05 00:17:06.638  WARN 89097 --- [http-nio-9090-exec-1] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 145907
+2022-05-05 00:17:06.665 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:17:06.665 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:17:06.668 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:17:06.668 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:17:06.668 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:17:06.680 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:17:06.680 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:17:06.681 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:17:06.690 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : <==      Total: 15
+2022-05-05 00:19:05.244  WARN 89097 --- [http-nio-9090-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 118553
+2022-05-05 00:19:05.244  WARN 89097 --- [http-nio-9090-exec-3] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 118557
+2022-05-05 00:19:05.281 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:19:05.282 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:19:05.286 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:19:05.286 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:19:05.287 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:19:05.293 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:19:05.294 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:19:05.295 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:19:05.300 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:20:25.774  WARN 89097 --- [http-nio-9090-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 80440
+2022-05-05 00:20:25.776  WARN 89097 --- [http-nio-9090-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 80478
+2022-05-05 00:20:25.795 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.getWorkById              : ==>  Preparing: select * from city.work where id = ?;
+2022-05-05 00:20:25.795 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.getWorkById              : ==> Parameters: 18(Integer)
+2022-05-05 00:20:25.796 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.getWorkById              : <==      Total: 1
+2022-05-05 00:20:27.927 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:20:27.927 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:20:27.930 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:20:27.930 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:20:27.930 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:20:27.934 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:20:27.934 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:20:27.935 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:20:27.936 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:23:47.684  WARN 89097 --- [http-nio-9090-exec-5] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 199741
+2022-05-05 00:23:47.686  WARN 89097 --- [http-nio-9090-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 199750
+2022-05-05 00:23:47.713 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:23:47.714 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:23:47.717 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:23:47.717 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:23:47.718 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:23:47.722 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:23:47.722 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:23:47.723 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:23:47.725 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:26:07.351  WARN 89097 --- [http-nio-9090-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 139625
+2022-05-05 00:26:07.351  WARN 89097 --- [http-nio-9090-exec-5] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 139618
+2022-05-05 00:26:07.368 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:26:07.368 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:26:07.370 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:26:07.370 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:26:07.371 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:26:07.373 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:26:07.375 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:26:07.375 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:26:07.380 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:26:12.151 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:26:12.151 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:26:12.151 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:26:12.151 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:26:12.153 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:26:12.154 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:26:12.154 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:26:12.154 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:26:12.155 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:26:43.729 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:26:43.729 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:26:43.730 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:26:43.730 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:26:43.730 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:26:43.730 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:26:43.731 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:26:43.732 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:26:43.732 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:26:50.505 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:26:50.505 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:26:50.506 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:26:50.506 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:26:50.506 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:26:50.506 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:26:50.507 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:26:50.508 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:26:50.509 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:27:13.867 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:27:13.867 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:27:13.867 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:27:13.867 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:27:13.867 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:27:13.868 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:27:13.869 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:27:13.869 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:27:13.870 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:27:36.943 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:27:36.943 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:27:36.943 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:27:36.944 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:27:36.944 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:27:36.944 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:27:36.945 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:27:36.946 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:27:36.947 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:29:02.063  WARN 89097 --- [http-nio-9090-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 85115
+2022-05-05 00:29:02.063  WARN 89097 --- [http-nio-9090-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 85115
+2022-05-05 00:29:02.065  WARN 89097 --- [http-nio-9090-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 85119
+2022-05-05 00:29:02.120 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:29:02.121 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:29:02.124 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:29:02.125 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:29:02.126 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:29:02.127 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:29:02.127 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:29:02.128 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:29:02.132 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:29:05.089 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.getWorkById              : ==>  Preparing: select * from city.work where id = ?;
+2022-05-05 00:29:05.089 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.getWorkById              : ==> Parameters: 12(Integer)
+2022-05-05 00:29:05.091 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.getWorkById              : <==      Total: 1
+2022-05-05 00:29:06.730 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:29:06.730 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:29:06.730 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:29:06.730 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:29:06.731 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:29:06.732 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:29:06.732 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:29:06.732 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:29:06.733 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:29:08.802 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.getWorkById              : ==>  Preparing: select * from city.work where id = ?;
+2022-05-05 00:29:08.803 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.getWorkById              : ==> Parameters: 10(Integer)
+2022-05-05 00:29:08.805 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.getWorkById              : <==      Total: 1
+2022-05-05 00:29:10.290 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:29:10.290 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:29:10.291 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:29:10.291 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:29:10.291 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:29:10.291 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:29:10.292 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:29:10.292 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:29:10.293 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:31:56.520  WARN 89097 --- [http-nio-9090-exec-1] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 166227
+2022-05-05 00:31:56.520  WARN 89097 --- [http-nio-9090-exec-4] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 166227
+2022-05-05 00:31:56.521  WARN 89097 --- [http-nio-9090-exec-9] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 166228
+2022-05-05 00:31:56.562 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:31:56.562 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:31:56.566 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:31:56.569 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:31:56.569 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:31:56.574 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:31:56.576 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:31:56.576 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:31:56.581 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:32:00.509 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:32:00.510 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:32:00.510 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:32:00.510 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:32:00.513 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:32:00.515 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:32:00.516 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:32:00.516 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:32:00.520 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:34:14.577  WARN 89097 --- [http-nio-9090-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 134059
+2022-05-05 00:34:14.581  WARN 89097 --- [http-nio-9090-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 134068
+2022-05-05 00:34:14.623 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:34:14.624 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:34:14.627 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:34:14.628 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:34:14.628 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:34:14.630 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:34:14.631 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:34:14.631 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:34:14.634 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:34:26.799 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:34:26.800 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:34:26.802 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:34:26.803 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:34:26.805 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:34:26.806 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:34:26.807 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:34:26.807 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:34:26.809 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:34:38.706 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:34:38.706 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:34:38.707 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:34:38.707 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:34:38.707 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:34:38.707 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:34:38.708 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:34:38.708 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:34:38.708 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:34:42.348 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:34:42.349 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:34:42.350 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:34:42.350 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:34:42.350 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:34:42.351 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:34:42.351 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:34:42.353 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:34:42.353 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:34:54.047 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.getWorkById              : ==>  Preparing: select * from city.work where id = ?;
+2022-05-05 00:34:54.047 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.getWorkById              : ==> Parameters: 10(Integer)
+2022-05-05 00:34:54.049 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.getWorkById              : <==      Total: 1
+2022-05-05 00:34:55.555 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:34:55.555 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:34:55.555 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:34:55.555 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:34:55.555 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:34:55.556 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:34:55.556 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:34:55.557 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:34:55.557 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:34:57.393 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.getWorkById              : ==>  Preparing: select * from city.work where id = ?;
+2022-05-05 00:34:57.393 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.getWorkById              : ==> Parameters: 12(Integer)
+2022-05-05 00:34:57.394 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.getWorkById              : <==      Total: 1
+2022-05-05 00:34:58.790 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:34:58.790 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:34:58.791 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:34:58.791 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:34:58.791 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:34:58.791 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:34:58.792 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:34:58.792 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:34:58.792 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:35:23.119 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:35:23.120 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:35:23.121 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:35:23.121 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:35:23.122 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:35:23.123 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:35:23.123 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:35:23.123 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:35:23.124 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:35:31.470 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.getWorkById              : ==>  Preparing: select * from city.work where id = ?;
+2022-05-05 00:35:31.470 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.getWorkById              : ==> Parameters: 10(Integer)
+2022-05-05 00:35:31.472 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.getWorkById              : <==      Total: 1
+2022-05-05 00:35:32.933 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:35:32.933 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:35:32.934 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:35:32.934 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:35:32.934 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:35:32.934 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:35:32.935 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:35:32.935 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:35:32.935 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:35:34.555 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.getWorkById              : ==>  Preparing: select * from city.work where id = ?;
+2022-05-05 00:35:34.556 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.getWorkById              : ==> Parameters: 12(Integer)
+2022-05-05 00:35:34.557 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.getWorkById              : <==      Total: 1
+2022-05-05 00:35:36.107 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:35:36.107 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:35:36.107 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:35:36.107 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:35:36.107 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:35:36.107 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:35:36.108 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:35:36.108 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:35:36.108 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:36:24.981 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:36:24.981 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:36:24.982 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:36:24.982 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:36:24.982 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:36:24.982 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:36:24.983 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:36:24.984 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:36:24.984 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:36:49.793 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:36:49.793 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:36:49.793 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:36:49.793 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:36:49.794 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:36:49.794 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:36:49.794 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:36:49.795 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:36:49.797 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:36:51.959 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:36:51.959 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:36:51.959 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:36:51.959 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:36:51.959 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:36:51.960 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:36:51.961 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:36:51.961 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:36:51.961 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:36:53.715 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:36:53.715 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:36:53.716 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:36:53.716 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:36:53.716 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:36:53.716 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:36:53.717 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:36:53.717 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:36:53.718 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:36:54.875 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:36:54.875 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:36:54.875 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:36:54.876 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:36:54.877 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:36:54.877 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:36:54.878 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:36:54.879 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:36:54.881 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:36:57.845 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:36:57.845 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:36:57.851 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:36:57.851 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:36:57.852 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:36:57.852 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:36:57.853 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:36:57.853 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:36:57.854 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:37:01.856 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:37:01.857 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:37:01.857 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:37:01.857 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:37:01.858 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:37:01.858 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:37:01.861 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:37:01.862 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:37:01.862 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:38:10.273  WARN 89097 --- [http-nio-9090-exec-6] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 68410
+2022-05-05 00:38:10.273  WARN 89097 --- [http-nio-9090-exec-7] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 68412
+2022-05-05 00:38:10.273  WARN 89097 --- [http-nio-9090-exec-4] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 68412
+2022-05-05 00:38:10.296 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:38:10.296 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:38:10.298 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:38:10.299 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:38:10.299 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:38:10.302 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:38:10.302 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:38:10.303 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:38:10.304 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:38:14.057 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:38:14.057 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:38:14.057 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:38:14.057 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:38:14.061 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:38:14.061 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:38:14.061 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:38:14.062 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:38:14.067 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:38:24.868 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:38:24.869 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:38:24.870 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:38:24.870 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:38:24.870 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:38:24.871 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:38:24.872 DEBUG 89097 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:38:24.873 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:38:24.874 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:38:31.141 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:38:31.141 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:38:31.142 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:38:31.143 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:38:31.143 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:38:31.143 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:38:31.143 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:38:31.144 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:38:31.145 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:38:33.944 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:38:33.944 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:38:33.945 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:38:33.945 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:38:33.945 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:38:33.945 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:38:33.946 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:38:33.948 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:38:33.948 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:39:27.335 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:39:27.335 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:39:27.336 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:39:27.336 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:39:27.336 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:39:27.337 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:39:27.338 DEBUG 89097 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:39:27.339 DEBUG 89097 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:39:27.340 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:40:06.315 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:40:06.315 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:40:06.316 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:40:06.316 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:40:06.316 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:40:06.317 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:40:06.318 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:40:06.318 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:40:06.318 DEBUG 89097 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:41:21.259  WARN 89097 --- [http-nio-9090-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 74940
+2022-05-05 00:41:21.259  WARN 89097 --- [http-nio-9090-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 74940
+2022-05-05 00:41:21.259  WARN 89097 --- [http-nio-9090-exec-1] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 74941
+2022-05-05 00:41:21.299 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:41:21.299 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:41:21.301 DEBUG 89097 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:41:21.301 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:41:21.301 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:41:21.302 DEBUG 89097 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:41:21.303 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:41:21.303 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:41:21.304 DEBUG 89097 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:41:23.324 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:41:23.324 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:41:23.324 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:41:23.324 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:41:23.325 DEBUG 89097 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:41:23.326 DEBUG 89097 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:41:23.326 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:41:23.326 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:41:23.327 DEBUG 89097 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:47:53.649  INFO 89097 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-05 00:47:53.653  INFO 89097 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2022-05-05 00:47:53.661  INFO 89097 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2022-05-05 00:47:58.248  INFO 91043 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on MacBook-Pro-235.local with PID 91043 (/Users/bytedance/IdeaProjects/contest1/target/classes started by bytedance in /Users/bytedance/IdeaProjects/contest1)
+2022-05-05 00:47:58.250 DEBUG 91043 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
+2022-05-05 00:47:58.251  INFO 91043 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
+2022-05-05 00:47:58.293  INFO 91043 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-05-05 00:47:58.293  INFO 91043 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-05-05 00:47:59.288  INFO 91043 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
+2022-05-05 00:47:59.296  INFO 91043 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-05-05 00:47:59.296  INFO 91043 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
+2022-05-05 00:47:59.366  INFO 91043 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-05-05 00:47:59.367  INFO 91043 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1073 ms
+2022-05-05 00:48:00.032  INFO 91043 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-05 00:48:00.099  INFO 91043 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-05-05 00:48:00.144  WARN 91043 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-05-05 00:48:00.244  INFO 91043 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-05-05 00:48:00.278  INFO 91043 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
+2022-05-05 00:48:00.288  INFO 91043 --- [restartedMain] yjp.SpringbootMybatisApplication         : Started SpringbootMybatisApplication in 2.335 seconds (JVM running for 3.038)
+2022-05-05 00:48:13.051  INFO 91043 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-05 00:48:13.051  INFO 91043 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-05-05 00:48:13.053  INFO 91043 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-05-05 00:48:13.161  INFO 91043 --- [http-nio-9090-exec-5] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2022-05-05 00:48:13.640 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:48:13.657 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:48:13.659 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:48:13.660 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:48:13.680 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:48:13.680 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:48:13.680 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:48:13.682 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:48:13.683 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:48:13.683 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:48:13.684 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:48:13.686 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:49:37.264  WARN 91043 --- [http-nio-9090-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 83589
+2022-05-05 00:49:37.266  WARN 91043 --- [http-nio-9090-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 83581
+2022-05-05 00:49:37.268  WARN 91043 --- [http-nio-9090-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 83585
+2022-05-05 00:49:37.288 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:49:37.288 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:49:37.294 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:49:39.872 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:49:39.873 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:49:39.876 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:49:43.145 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.modifyStrategy       : ==>  Preparing: update city.strategy SET work_number = ?, work_strategy = ?, picture_number = ?, picture_show_all = ? where id = 1
+2022-05-05 00:49:43.146 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.modifyStrategy       : ==> Parameters: 10(Integer), 按热度(String), 5(Integer), false(Boolean)
+2022-05-05 00:49:43.154 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.modifyStrategy       : <==    Updates: 1
+2022-05-05 00:49:45.890 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:49:45.890 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:49:45.892 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:49:55.637 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:49:55.637 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:49:55.642 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:49:55.642 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:49:55.643 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:49:55.650 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:49:55.650 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:49:55.650 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:49:55.652 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:49:55.652 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:49:55.652 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:49:55.654 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:50:07.584 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:50:07.585 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:50:07.586 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:50:33.476 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:50:33.476 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:50:33.476 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:50:33.476 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:50:33.480 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:50:33.481 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:50:33.482 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:50:33.484 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:50:33.484 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:50:33.484 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:50:33.485 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:50:33.487 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:50:39.057 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:50:39.058 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:50:39.064 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:50:47.214 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:50:47.215 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:50:47.216 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:50:48.657 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:50:48.657 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:50:48.658 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:50:48.658 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:50:48.658 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:50:48.658 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:50:48.659 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:50:48.660 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:50:48.661 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:50:48.661 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:50:48.661 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:50:48.662 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:50:54.100 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:50:54.101 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:50:54.102 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:50:56.641 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:50:56.641 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:50:56.643 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:50:56.644 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:50:56.644 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:50:56.645 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:50:56.677 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:50:56.677 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:50:56.678 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:50:56.678 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:50:56.679 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:50:56.682 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:51:02.218 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:51:02.219 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:51:02.220 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:51:10.509 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:51:10.509 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:51:10.511 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:51:12.108 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.modifyStrategy       : ==>  Preparing: update city.strategy SET work_number = ?, work_strategy = ?, picture_number = ?, picture_show_all = ? where id = 1
+2022-05-05 00:51:12.108 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.modifyStrategy       : ==> Parameters: 10(Integer), 按热度(String), 5(Integer), false(Boolean)
+2022-05-05 00:51:12.109 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.modifyStrategy       : <==    Updates: 1
+2022-05-05 00:51:13.975 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:51:13.975 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:51:13.977 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:52:16.012  WARN 91043 --- [http-nio-9090-exec-1] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 62035
+2022-05-05 00:52:16.014  WARN 91043 --- [http-nio-9090-exec-1] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 79334
+2022-05-05 00:52:16.016  WARN 91043 --- [http-nio-9090-exec-1] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 87356
+2022-05-05 00:52:16.042 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:52:16.044 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:52:16.048 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:52:19.909 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:52:19.910 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:52:19.911 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:52:22.491 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:52:22.492 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:52:22.493 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:52:23.918 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:52:23.918 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:52:23.919 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:52:24.975 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:52:24.975 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:52:24.977 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:52:24.977 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:52:24.977 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:52:24.980 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:52:24.980 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:52:24.980 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:52:24.982 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:52:24.983 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:52:24.984 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:52:25.027 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:52:25.968 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:52:25.978 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:52:25.980 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:52:28.315 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:52:28.316 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:52:28.317 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:52:46.050 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:52:46.051 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:52:46.052 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:53:04.084 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:53:04.085 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:53:04.086 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:53:05.230 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:53:05.230 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:53:05.232 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:53:08.385 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user u where u.username = ? limit 1
+2022-05-05 00:53:08.385 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.UserDao.getPassword              : ==> Parameters: 杨靖平(String)
+2022-05-05 00:53:08.388 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-05-05 00:53:08.388 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user u where u.username = ? limit 1
+2022-05-05 00:53:08.389 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.UserDao.getPassword              : ==> Parameters: 杨靖平(String)
+2022-05-05 00:53:08.390 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-05-05 00:53:09.698 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:53:09.698 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:53:09.699 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:53:14.377 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:53:14.378 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:53:14.381 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:53:17.578 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user u where u.username = ? limit 1
+2022-05-05 00:53:17.578 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.UserDao.getPassword              : ==> Parameters: 杨靖平(String)
+2022-05-05 00:53:17.580 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-05-05 00:53:17.581 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user u where u.username = ? limit 1
+2022-05-05 00:53:17.581 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.UserDao.getPassword              : ==> Parameters: 杨靖平(String)
+2022-05-05 00:53:17.583 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-05-05 00:53:18.955 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:53:18.955 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:53:18.958 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:53:20.812 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.UserDao.queryUser                : ==>  Preparing: select u.*, q.name q_name, t.name t_name from (((city.user u inner join team t on u.team_id = t.id) inner join question q on t.question_id = q.id) inner join track tr on q.track_id = tr.id) inner join contest c on tr.contest_id = c.id
+2022-05-05 00:53:20.813 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.UserDao.queryUser                : ==> Parameters: 
+2022-05-05 00:53:20.834 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.UserDao.queryUser                : <==      Total: 0
+2022-05-05 00:53:21.958 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:53:21.958 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:53:21.959 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:53:23.264 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.TeamDao.queryTeam                : ==>  Preparing: select t.*, q.name q_name from ((city.team t inner join question q on t.question_id = q.id) inner join track k on q.track_id = k.id) inner join contest c on k.contest_id = c.id
+2022-05-05 00:53:23.264 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.TeamDao.queryTeam                : ==> Parameters: 
+2022-05-05 00:53:23.265 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.TeamDao.queryTeam                : <==      Total: 0
+2022-05-05 00:53:24.481 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:53:24.481 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:53:24.482 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:53:28.486 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:53:28.486 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:53:28.487 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:53:30.655 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:53:30.655 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:53:30.658 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:53:36.048 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:53:36.048 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:53:36.049 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:53:40.537 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:53:40.538 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:53:40.539 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:53:42.274 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:53:42.274 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:53:42.276 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:53:44.204 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:53:44.204 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:53:44.205 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:54:03.021 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:54:03.021 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:54:03.022 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:54:29.222 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:54:29.223 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:54:29.224 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:54:47.201 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:54:47.201 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:54:47.202  WARN 91043 --- [http-nio-9090-exec-4] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 142208
+2022-05-05 00:54:47.204 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:54:47.204 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:54:47.205 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:54:47.206 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:54:47.206 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:54:47.207 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:54:47.209 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:54:47.210 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:54:47.210 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:54:47.211 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:54:50.619 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:54:50.620 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:54:50.624 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:54:53.263 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:54:53.264 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:54:53.265 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:54:55.665 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:54:55.665 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:54:55.666 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:54:56.893 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:54:56.893 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:54:56.895 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:55:26.916 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:55:26.916 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:55:26.917 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:55:29.290 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:55:29.291 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:55:29.292 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:55:30.727 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:55:30.728 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:55:30.728 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:55:34.010 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:55:34.010 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:55:34.011 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:55:41.440 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:55:41.440 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:55:41.441 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:55:50.095 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:55:50.095 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:55:50.096 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:55:59.234 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:55:59.235 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:55:59.236 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:56:03.150 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:56:03.151 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:56:03.152 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:56:08.719 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:56:08.720 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:56:08.721 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:56:13.671 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:56:13.671 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:56:13.672 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:56:14.838 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:56:14.839 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:56:14.842  WARN 91043 --- [http-nio-9090-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 87628
+2022-05-05 00:56:14.843 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:56:14.844 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:56:14.844 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:56:14.845 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:56:14.846 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:56:14.846 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:56:14.849 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:56:14.849 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:56:14.849 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:56:14.851 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:56:17.866 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:56:17.866 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 00:56:17.866 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:56:17.866 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 00:56:17.869 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 00:56:17.869 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:56:17.870 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:56:17.870 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:56:17.870 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:56:17.870 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:56:17.872 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:56:17.872 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:56:20.724 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:56:20.725 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:56:20.728 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:56:25.277 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:56:25.278 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:56:25.280 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:56:26.575 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:56:26.575 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:56:26.577 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:56:28.788 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:56:28.788 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:56:28.789 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:56:47.970 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:56:47.971 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:56:47.972 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:56:48.831 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:56:48.831 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:56:48.832 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:56:49.740 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:56:49.740 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:56:49.742 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:56:50.396 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:56:50.396 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:56:50.397 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:56:51.184 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:56:51.197 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:56:51.199 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:56:52.838 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:56:52.838 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:56:52.839 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:57:13.901 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:57:13.901 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:57:13.902 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:57:15.853 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:57:15.853 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:57:15.854 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:57:17.475 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:57:17.475 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:57:17.476 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:57:17.726 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:57:17.726 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:57:17.727 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:57:19.546 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:57:19.546 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:57:19.547 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:57:20.585 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:57:20.586 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:57:20.586 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:57:57.393 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:57:57.395 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:57:57.397 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:57:59.127 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:57:59.127 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:57:59.128 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:57:59.801 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:57:59.801 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:57:59.802 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:58:01.605 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:58:01.606 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:58:01.608 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:58:03.480 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:58:03.481 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:58:03.481 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:58:14.015 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:58:14.016 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:58:14.016 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:58:27.044 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:58:27.044 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:58:27.045 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:59:07.365 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:59:07.366 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:59:07.367 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:59:11.598 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:59:11.598 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:59:11.599 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:59:14.057 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:59:14.058 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:59:14.058 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:59:29.846 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:59:29.847 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:59:29.849 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:59:30.627 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:59:30.627 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:59:30.628 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:59:33.508 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:59:33.509 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:59:33.516 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:59:34.647 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:59:34.647 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:59:34.648 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:59:35.672 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:59:35.673 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:59:35.674 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:59:36.110 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:59:36.110 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:59:36.111 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:59:36.737 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 00:59:36.737 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 00:59:36.739 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 00:59:37.417 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:59:37.417 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:59:37.418 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 00:59:39.122 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:59:39.122 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:59:39.123 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:59:44.570 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:59:44.571 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:59:44.571 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:59:46.622 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:59:46.622 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:59:46.624 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:59:58.024 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 00:59:58.024 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 00:59:58.026 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 00:59:59.608 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 00:59:59.608 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 00:59:59.609 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 01:00:00.568 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:00:00.568 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:00:00.569 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:00:01.454 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-05 01:00:01.454 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.UserDao.queryUserById            : ==> Parameters: 5(Integer)
+2022-05-05 01:00:01.455 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-05 01:00:34.646 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 01:00:34.646 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 01:00:34.648 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 01:00:36.834 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:00:36.834 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:00:36.835 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:00:39.705 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 01:00:39.705 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 01:00:39.707 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 01:00:39.707 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:00:39.707 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:00:39.708 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:00:39.708  WARN 91043 --- [http-nio-9090-exec-7] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 261835
+2022-05-05 01:00:39.708  WARN 91043 --- [http-nio-9090-exec-4] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 261837
+2022-05-05 01:00:39.709 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:00:39.709 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:00:39.710 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:00:39.710 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 01:00:39.710 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 01:00:39.713 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 01:02:16.971  WARN 91043 --- [http-nio-9090-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 97258
+2022-05-05 01:02:16.971  WARN 91043 --- [http-nio-9090-exec-5] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 97239
+2022-05-05 01:02:16.997 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:02:16.998 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:02:16.999 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:02:17.000 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 01:02:17.000 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 01:02:17.002 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 01:02:17.002 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 01:02:17.003 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 01:02:17.006 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 01:02:17.007 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:02:17.008 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:02:17.009 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:04:48.028  WARN 91043 --- [http-nio-9090-exec-7] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 151002
+2022-05-05 01:04:48.028  WARN 91043 --- [http-nio-9090-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 151018
+2022-05-05 01:04:48.048 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:04:48.048 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:04:48.050 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:04:48.050 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 01:04:48.050 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 01:04:48.053 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 01:04:48.054 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 01:04:48.054 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 01:04:48.056 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 01:04:48.057 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:04:48.057 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:04:48.058 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:04:54.040 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 01:04:54.040 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 01:04:54.041 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 01:04:54.041 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 01:04:54.044 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 01:04:54.044 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 01:04:54.044 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:04:54.045 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:04:54.045 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:04:54.045 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:04:54.046 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:04:54.046 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:05:04.978 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 01:05:04.978 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 01:05:04.978 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 01:05:04.978 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:05:04.978 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 01:05:04.979 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:05:04.980 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 01:05:04.981 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:05:04.982 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 01:05:04.982 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:05:04.983 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:05:04.986 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:05:49.108 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.getWorkById              : ==>  Preparing: select * from city.work where id = ?;
+2022-05-05 01:05:49.108 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.getWorkById              : ==> Parameters: 30(Integer)
+2022-05-05 01:05:49.110 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.WorkDao.getWorkById              : <==      Total: 1
+2022-05-05 01:05:50.668 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 01:05:50.668 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 01:05:50.668 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 01:05:50.668 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 01:05:50.668 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:05:50.668 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:05:50.669 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 01:05:50.669 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:05:50.669 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:05:50.669 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:05:50.670 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 01:05:50.670 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:05:52.542 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.getContest            : ==>  Preparing: select * from city.contest where id = ?;
+2022-05-05 01:05:52.542 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.getContest            : ==> Parameters: 3(Integer)
+2022-05-05 01:05:52.544 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.ContestDao.getContest            : <==      Total: 1
+2022-05-05 01:05:54.272 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 01:05:54.272 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 01:05:54.272 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:05:54.272 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 01:05:54.272 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:05:54.272 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 01:05:54.273 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 01:05:54.273 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:05:54.274 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 01:05:54.274 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:05:54.274 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:05:54.276 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:06:35.259 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 01:06:35.260 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 01:06:35.261 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 01:06:35.261 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 01:06:35.262 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:06:35.262 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 01:06:35.262 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:06:35.262 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:06:35.263 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:06:35.263 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:06:35.263 DEBUG 91043 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 01:06:35.263 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:06:48.611 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 01:06:48.611 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 01:06:48.611 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 01:06:48.611 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 01:06:48.613 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 01:06:48.613 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 01:06:48.613 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:06:48.614 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:06:48.614 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:06:48.614 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:06:48.615 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:06:48.615 DEBUG 91043 --- [http-nio-9090-exec-6] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:06:52.790 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.getContest            : ==>  Preparing: select * from city.contest where id = ?;
+2022-05-05 01:06:52.791 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.getContest            : ==> Parameters: 3(Integer)
+2022-05-05 01:06:52.791 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.ContestDao.getContest            : <==      Total: 1
+2022-05-05 01:06:55.537 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 01:06:55.537 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 01:06:55.537 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 01:06:55.537 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 01:06:55.537 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:06:55.538 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:06:55.538 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:06:55.538 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 01:06:55.538 DEBUG 91043 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 01:06:55.539 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:06:55.539 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:06:55.540 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:07:40.475 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 01:07:40.475 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 01:07:40.475 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:07:40.476 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 01:07:40.476 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 01:07:40.476 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:07:40.477 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:07:40.478 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 01:07:40.478 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 01:07:40.478 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:07:40.478 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:07:40.479 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:08:07.486 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.getWorkById              : ==>  Preparing: select * from city.work where id = ?;
+2022-05-05 01:08:07.487 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.getWorkById              : ==> Parameters: 30(Integer)
+2022-05-05 01:08:07.488 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.getWorkById              : <==      Total: 1
+2022-05-05 01:08:07.898 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.getWorkById              : ==>  Preparing: select * from city.work where id = ?;
+2022-05-05 01:08:07.898 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.getWorkById              : ==> Parameters: 30(Integer)
+2022-05-05 01:08:07.898 DEBUG 91043 --- [http-nio-9090-exec-7] yjp.dao.WorkDao.getWorkById              : <==      Total: 1
+2022-05-05 01:08:09.700 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 01:08:09.700 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 01:08:09.700 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 01:08:09.700 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 01:08:09.700 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:08:09.700 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:08:09.701 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 01:08:09.701 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 01:08:09.701 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:08:09.702 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:08:09.702 DEBUG 91043 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:08:09.702 DEBUG 91043 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:08:11.272 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.getContest            : ==>  Preparing: select * from city.contest where id = ?;
+2022-05-05 01:08:11.272 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.getContest            : ==> Parameters: 3(Integer)
+2022-05-05 01:08:11.273 DEBUG 91043 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.getContest            : <==      Total: 1
+2022-05-05 01:08:15.231 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-05 01:08:15.231 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-05 01:08:15.231 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-05 01:08:15.231 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-05 01:08:15.231 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:08:15.232 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:08:15.232 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.listWork                 : <==      Total: 13
+2022-05-05 01:08:15.232 DEBUG 91043 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-05 01:08:15.232 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-05 01:08:15.232 DEBUG 91043 --- [http-nio-9090-exec-3] yjp.dao.ContestDao.listContest           : <==      Total: 19
+2022-05-05 01:08:15.232 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-05 01:08:15.233 DEBUG 91043 --- [http-nio-9090-exec-9] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
