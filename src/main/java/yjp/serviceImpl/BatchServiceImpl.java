@@ -23,7 +23,7 @@ public class BatchServiceImpl implements BatchService {
     }
 
     @Override
-    public boolean addBatch(Batch batch) {
+    public Integer addBatch(Batch batch) {
         return batchDao.addBatch(batch);
     }
 

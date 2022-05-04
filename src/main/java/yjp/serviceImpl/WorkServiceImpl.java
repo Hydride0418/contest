@@ -18,7 +18,7 @@ public class WorkServiceImpl implements WorkService {
 
     @Override
     public boolean addWork(Work work) {
-        boolean success =  workDao.addWork(work);
+        boolean success = workDao.addWork(work);
         return success;
     }
 
@@ -69,5 +69,14 @@ public class WorkServiceImpl implements WorkService {
     @Override
     public boolean revertLikeWork(Integer id) {
         return workDao.revertLikeWork(id);
+    }
+
+    public boolean setWorkExp(Integer id, Integer work_expert) {
+        return workDao.setWorkExp(id, work_expert);
+    }
+
+    @Override
+    public boolean addReviewed(Integer id) {
+        return workDao.addReviewed(id);
     }
 }

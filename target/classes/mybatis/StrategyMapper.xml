@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yjp.dao.RuleDao">
+    <select id="getStrategy" resultType="yjp.pojo.Strategy">
+        select *
+        from city.strategy
+        where id = 1;
+    </select>
+    <update id="modifyStrategy" parameterType="yjp.pojo.Strategy">
+        update city.strategy
+        <set>
+            <if test="work_number != null">work_number = #{work_number},</if>
+            <if test="work_strategy != null">work_strategy = #{work_strategy},</if>
+            <if test="picture_number != null">picture_number = #{picture_number},</if>
+            <if test="picture_show_all != null">picture_show_all = #{picture_show_all}</if>
+        </set>
+        where id = 1
+    </update>
+</mapper>

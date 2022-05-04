@@ -26,4 +26,8 @@ public interface WorkService {
     public boolean likeWork(Integer id);
     //
     public boolean revertLikeWork(Integer id);
+    //设置评审专家数
+    public boolean setWorkExp(Integer id, Integer work_expert);
+    //将reviewed_num加1
+    public boolean addReviewed(Integer id);
 }

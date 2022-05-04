@@ -1,10 +1,13 @@
 package yjp.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import cn.hutool.poi.excel.ExcelUtil;
+import cn.hutool.poi.excel.ExcelWriter;
+import org.apache.poi.ss.formula.ptg.MemAreaPtg;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import yjp.pojo.BlockUser;
+import yjp.pojo.InviteCode;
 import yjp.pojo.Question;
 import yjp.pojo.Team;
 import yjp.pojo.query.SelectionQuery;
@@ -12,11 +15,15 @@ import yjp.pojo.query.TeamQuery;
 import yjp.service.BlockService;
 import yjp.service.TeamService;
 
-import javax.servlet.http.HttpServletRequest;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
-import java.io.*;
+import java.io.File;
+import java.io.IOException;
+import java.net.URLEncoder;
 import java.text.SimpleDateFormat;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/team")
@@ -36,6 +43,20 @@ public class TeamController {
         return teamList;
     }
 
+    @PostMapping("/get_workPath")
+    @ResponseBody
+    public Map<String, String> getWorkPath(@RequestBody Integer id) {
+        Map<String, String> res = new HashMap<>();
+        res.put("work_path", teamService.getWorkPath(id));
+        return res;
+    }
+
+    @GetMapping("/get_team_list")
+    @ResponseBody
+    public List<Team> getTeam2List() {
+        return teamService.list2Team();
+    }
+
     @GetMapping("/delete/{id}")
     @ResponseBody
     public boolean deleteTeam(@PathVariable("id") Integer id) {
@@ -45,12 +66,25 @@ public class TeamController {
 
     @PostMapping("/add")
     @ResponseBody
-    public boolean addTeam(@RequestBody Team team) {
-        boolean success = teamService.addTeam(team);
+    public Map<String, String> addTeam(@RequestBody Team team) {
+        int success = teamService.addTeam(team);
         SimpleDateFormat tempDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         BlockUser blockUser = new BlockUser(team.getId(), team.getName()); //在区块链中创建团队为一个用户
         boolean success1 = blockService.createUser(blockUser);
-        return success && success1;
+        long id = (long) team.getId();
+        System.out.println(id);
+        Map<String, String> team_id = new HashMap<>();
+        team_id.put("id", String.valueOf(id));
+        team_id.put("invite_id", InviteCode.gen(id));
+        return team_id;
+    }
+
+    //设置一个团队的邀请码
+    @GetMapping("/setInviteId")
+    @ResponseBody
+    public boolean setInviteId(@RequestParam("id") Integer id,
+                               @RequestParam("invite_id") String invite_id) {
+        return teamService.setInviteId(id, invite_id);
     }
 
     @PostMapping("/modify")
@@ -65,6 +99,18 @@ public class TeamController {
     public Team getTeamInfo(@PathVariable("id") Integer id) {
         Team team = teamService.getTeamById(id);
         return team;
+    }
+
+    @GetMapping("/query_info") //查询队伍获奖信息
+    @ResponseBody
+    public List<Team> queryTeam(@RequestParam("contest") String contest,
+                                @RequestParam("question") String question,
+                                @RequestParam("team_name") String team_name,
+                                @RequestParam("team_leader") String team_leader,
+                                @RequestParam("leader_school") String leader_school,
+                                @RequestParam("leader_phone") String leader_phone,
+                                @RequestParam("is_award") Integer is_award) {
+        return teamService.queryTeam(contest, question, team_name, team_leader, leader_school, leader_phone, is_award);
     }
 
     //参赛资格审核
@@ -107,8 +153,36 @@ public class TeamController {
         return teamInfo;
     }
 
+
+    @GetMapping("/export")
+    @ResponseBody
+    public void export(HttpServletResponse response) throws Exception {
+        List<Team> list = teamService.showTeamList();
+        ExcelWriter writer = ExcelUtil.getWriter(true);
+        writer.addHeaderAlias("name", "队伍名称");
+        writer.addHeaderAlias("question.name", "赛题");
+        writer.addHeaderAlias("is_award", "是否获奖");
+        writer.addHeaderAlias("team_leader", "队长姓名");
+        writer.addHeaderAlias("leader_school", "队长所在学校");
+        writer.addHeaderAlias("leader_phone", "队长手机号");
+        writer.addHeaderAlias("advisor", "指导老师");
+        // 一次性写出list内的对象到excel，使用默认样式，强制输出标题
+        writer.write(list, true);
+
+        // 设置浏览器响应的格式
+        response.setContentType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;charset=utf-8");
+        String fileName = URLEncoder.encode("参赛队伍获奖情况", "UTF-8");
+        response.setHeader("Content-Disposition", "attachment;filename=" + fileName + ".xlsx");
+
+        ServletOutputStream out = response.getOutputStream();
+        writer.flush(out, true);
+        out.close();
+        writer.close();
+    }
+
     @PostMapping("/upload_work/{id}")
     @ResponseBody
+
     public String uploadWork(@RequestParam("file") MultipartFile file, @PathVariable("id") Integer teamID) {
         if (file.isEmpty()) {
             return "upload failed";

@@ -8,7 +8,7 @@
         <if test="organization_id != null and organization_id != ''">
             and organization_id = #{organization_id}
         </if>
-        <if test="phone != null and phone != ''">
+        <if test="organization_name != null and organization_name != ''">
             and organization_name like concat('%',#{organization_name},'%')
         </if>
     </select>

@@ -11,7 +11,7 @@
  Target Server Version : 80027
  File Encoding         : 65001
 
- Date: 05/04/2022 20:51:53
+ Date: 04/05/2022 16:13:43
 */
 
 SET NAMES utf8mb4;
@@ -33,6 +33,20 @@ CREATE TABLE `administrator` (
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3;
 
 -- ----------------------------
+-- Records of administrator
+-- ----------------------------
+BEGIN;
+INSERT INTO `administrator` VALUES (4, 'admin', 0, '北航', '12312312312', '123456@qq.com', '2021-01-19 00:00:00');
+INSERT INTO `administrator` VALUES (5, '杨靖平', 0, '北航', '12312312312', '123456@qq.com', '2021-01-19 00:00:00');
+INSERT INTO `administrator` VALUES (6, 'admin2', 0, '北航', '12312312312', '123456@qq.com', '2021-01-19 00:00:00');
+INSERT INTO `administrator` VALUES (7, '1', 1, 'w', NULL, NULL, '2022-03-23 21:46:56');
+INSERT INTO `administrator` VALUES (8, 'wefwe', 1, NULL, NULL, NULL, '2022-03-23 21:47:04');
+INSERT INTO `administrator` VALUES (9, 'qw', 1, NULL, NULL, NULL, '2022-03-23 21:47:10');
+INSERT INTO `administrator` VALUES (10, 'q', 1, NULL, NULL, NULL, '2022-03-23 21:47:17');
+INSERT INTO `administrator` VALUES (11, 'Jingping Yang', 1, '北航', '13941140083', NULL, '2022-03-23 21:47:31');
+COMMIT;
+
+-- ----------------------------
 -- Table structure for allocation
 -- ----------------------------
 DROP TABLE IF EXISTS `allocation`;
@@ -52,6 +66,12 @@ CREATE TABLE `allocation` (
   CONSTRAINT `allo_fk_2` FOREIGN KEY (`expert_id`) REFERENCES `expert` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `allo_fk_3` FOREIGN KEY (`batch_id`) REFERENCES `batch` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb3;
+
+-- ----------------------------
+-- Records of allocation
+-- ----------------------------
+BEGIN;
+COMMIT;
 
 -- ----------------------------
 -- Table structure for award
@@ -78,6 +98,12 @@ CREATE TABLE `award` (
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3;
 
 -- ----------------------------
+-- Records of award
+-- ----------------------------
+BEGIN;
+COMMIT;
+
+-- ----------------------------
 -- Table structure for batch
 -- ----------------------------
 DROP TABLE IF EXISTS `batch`;
@@ -100,6 +126,58 @@ CREATE TABLE `batch` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 
 -- ----------------------------
+-- Records of batch
+-- ----------------------------
+BEGIN;
+COMMIT;
+
+-- ----------------------------
+-- Table structure for blockuser
+-- ----------------------------
+DROP TABLE IF EXISTS `blockuser`;
+CREATE TABLE `blockuser` (
+  `Id` int NOT NULL AUTO_INCREMENT,
+  `Score` int DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- ----------------------------
+-- Records of blockuser
+-- ----------------------------
+BEGIN;
+INSERT INTO `blockuser` VALUES (1, NULL, 'yjp');
+INSERT INTO `blockuser` VALUES (2, NULL, 'dxh');
+INSERT INTO `blockuser` VALUES (3, NULL, 'lc');
+INSERT INTO `blockuser` VALUES (4, NULL, 'liyuzhuo');
+INSERT INTO `blockuser` VALUES (5, 0, NULL);
+INSERT INTO `blockuser` VALUES (6, 0, NULL);
+COMMIT;
+
+-- ----------------------------
+-- Table structure for blockwork
+-- ----------------------------
+DROP TABLE IF EXISTS `blockwork`;
+CREATE TABLE `blockwork` (
+  `Id` int NOT NULL AUTO_INCREMENT,
+  `Hash` varchar(255) DEFAULT NULL,
+  `Uploader` int DEFAULT NULL,
+  `Time` varchar(255) DEFAULT NULL,
+  `Cost` int DEFAULT NULL,
+  `GetScore` int DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- ----------------------------
+-- Records of blockwork
+-- ----------------------------
+BEGIN;
+INSERT INTO `blockwork` VALUES (1, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `blockwork` VALUES (2, '/Users/bytedance/IdeaProjects/contest1/works/11.txt', 32, '2022', 0, 0);
+INSERT INTO `blockwork` VALUES (30, '/Users/bytedance/IdeaProjects/contest1/works/12.txt', 34, '2022-05-02 23:06:22', 0, 0);
+COMMIT;
+
+-- ----------------------------
 -- Table structure for contest
 -- ----------------------------
 DROP TABLE IF EXISTS `contest`;
@@ -110,8 +188,39 @@ CREATE TABLE `contest` (
   `question_number` int DEFAULT NULL COMMENT '问题数',
   `archive_status` int DEFAULT NULL COMMENT '归档状态 0 未归档 1 已归档',
   `contest_id` int DEFAULT NULL COMMENT '所属赛事id',
+  `image` varchar(255) DEFAULT NULL,
+  `content` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `start_time` date DEFAULT NULL,
+  `end_time` date DEFAULT NULL,
+  `apply_start` date DEFAULT NULL,
+  `apply_end` date DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- ----------------------------
+-- Records of contest
+-- ----------------------------
+BEGIN;
+INSERT INTO `contest` VALUES (3, '北航AI五子棋大赛', 2, 2, 2, 1234, '1.jpg', '北航AI五子棋大赛', '2022-04-02', '2022-04-04', '2022-04-02', '2022-04-03');
+INSERT INTO `contest` VALUES (4, '北航AI围棋大赛', 2, 3, 2, 1234, '2.jpg', '北航AI围棋大赛', '2022-03-31', '2022-04-29', '2022-03-31', '2022-04-20');
+INSERT INTO `contest` VALUES (5, '北航AI象棋大赛', 2, 2, 2, 1234, '3.jpg', '111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111', '2022-04-01', '2022-05-03', '2022-04-05', '2022-04-11');
+INSERT INTO `contest` VALUES (6, '北航AI国际象棋大赛', 2, 2, 1, 1234, '4.jpg', '111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111', '2022-03-31', '2022-04-05', '2022-03-31', '2022-04-03');
+INSERT INTO `contest` VALUES (7, '研究生创新大赛', 2, 2, 1, 1234, '5.jpg', '111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111', '2022-04-07', '2022-04-29', '2022-04-12', '2022-04-26');
+INSERT INTO `contest` VALUES (8, '智慧城市设计大赛', 2, 2, 1, 1234, '6.jpg', '111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111', NULL, NULL, NULL, NULL);
+INSERT INTO `contest` VALUES (9, '北京航空航天大学程序设计大赛', 2, 2, 1, 1234, '7.jpg', '111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111', NULL, NULL, NULL, NULL);
+INSERT INTO `contest` VALUES (10, '北京航空航天大学人工智能大赛', 2, 2, 1, 1234, '5.jpg', '111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111', NULL, NULL, NULL, NULL);
+INSERT INTO `contest` VALUES (11, '北京航空航天大学算法大赛', 2, 2, 1, 1234, '5.jpg', '111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111', NULL, NULL, NULL, NULL);
+INSERT INTO `contest` VALUES (12, 'kkkkkk', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `contest` VALUES (13, 'kkkkkk', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `contest` VALUES (14, 'kkkkkk', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `contest` VALUES (15, 'er', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `contest` VALUES (16, 's', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `contest` VALUES (17, 'sdfghj', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `contest` VALUES (18, 's', NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-13', '2022-04-11', '2022-04-07', '2022-04-16');
+INSERT INTO `contest` VALUES (19, 's', NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-13', '2022-04-11', '2022-04-07', '2022-04-16');
+INSERT INTO `contest` VALUES (20, 'erer', NULL, NULL, NULL, NULL, NULL, NULL, '2022-04-05', '2022-04-11', '2022-04-19', '2022-04-20');
+INSERT INTO `contest` VALUES (21, 'erer', NULL, NULL, NULL, NULL, NULL, 'this is the content of the contest', '2022-04-04', '2022-04-10', '2022-04-18', '2022-04-19');
+COMMIT;
 
 -- ----------------------------
 -- Table structure for expert
@@ -129,10 +238,20 @@ CREATE TABLE `expert` (
   `contest_id` int DEFAULT NULL,
   `major_name` varchar(255) DEFAULT NULL,
   `research_direction` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk` (`contest_id`),
   CONSTRAINT `fk` FOREIGN KEY (`contest_id`) REFERENCES `contest` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb3;
+
+-- ----------------------------
+-- Records of expert
+-- ----------------------------
+BEGIN;
+INSERT INTO `expert` VALUES (25, 'dxh', 1, '北航', '12312312312', '123456@qq.com', '2021-01-19 00:00:00', '好', NULL, NULL, NULL, 'root');
+INSERT INTO `expert` VALUES (26, 'yjp', 1, '北航', '12312312312', '123456@qq.com', '2021-01-19 00:00:00', '好', NULL, NULL, NULL, 'root');
+INSERT INTO `expert` VALUES (27, 'lichao', 1, '北航', '12312312312', '123456@qq.com', '2021-01-19 00:00:00', '好', NULL, NULL, NULL, 'root');
+COMMIT;
 
 -- ----------------------------
 -- Table structure for master_principal
@@ -144,6 +263,12 @@ CREATE TABLE `master_principal` (
   `organization_name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+-- ----------------------------
+-- Records of master_principal
+-- ----------------------------
+BEGIN;
+COMMIT;
 
 -- ----------------------------
 -- Table structure for member_team
@@ -159,6 +284,12 @@ CREATE TABLE `member_team` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ----------------------------
+-- Records of member_team
+-- ----------------------------
+BEGIN;
+COMMIT;
+
+-- ----------------------------
 -- Table structure for organization
 -- ----------------------------
 DROP TABLE IF EXISTS `organization`;
@@ -167,6 +298,12 @@ CREATE TABLE `organization` (
   `name` varchar(255) DEFAULT NULL COMMENT '参赛机构名称',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- ----------------------------
+-- Records of organization
+-- ----------------------------
+BEGIN;
+COMMIT;
 
 -- ----------------------------
 -- Table structure for pre_contest
@@ -185,6 +322,12 @@ CREATE TABLE `pre_contest` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ----------------------------
+-- Records of pre_contest
+-- ----------------------------
+BEGIN;
+COMMIT;
+
+-- ----------------------------
 -- Table structure for question
 -- ----------------------------
 DROP TABLE IF EXISTS `question`;
@@ -193,10 +336,22 @@ CREATE TABLE `question` (
   `name` varchar(255) DEFAULT NULL COMMENT '赛题名称',
   `track_id` int DEFAULT NULL,
   `batch_id` int DEFAULT NULL COMMENT '对应批次id',
+  `contest_id` int DEFAULT NULL,
+  `content` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `question_fk1` (`track_id`),
   CONSTRAINT `question_fk1` FOREIGN KEY (`track_id`) REFERENCES `track` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- ----------------------------
+-- Records of question
+-- ----------------------------
+BEGIN;
+INSERT INTO `question` VALUES (4, '题1', NULL, NULL, NULL, NULL);
+INSERT INTO `question` VALUES (5, '题2', NULL, NULL, NULL, NULL);
+INSERT INTO `question` VALUES (6, '题3', NULL, NULL, NULL, NULL);
+INSERT INTO `question` VALUES (7, 'fghjk', NULL, NULL, 3, 'tryui');
+COMMIT;
 
 -- ----------------------------
 -- Table structure for rule
@@ -214,6 +369,12 @@ CREATE TABLE `rule` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
 
 -- ----------------------------
+-- Records of rule
+-- ----------------------------
+BEGIN;
+COMMIT;
+
+-- ----------------------------
 -- Table structure for team
 -- ----------------------------
 DROP TABLE IF EXISTS `team`;
@@ -229,10 +390,33 @@ CREATE TABLE `team` (
   `team_no_rematch` int DEFAULT NULL COMMENT '队伍决赛编号',
   `is_rematch` int DEFAULT NULL COMMENT '0 未晋级 1 晋级',
   `submit_date` date DEFAULT NULL COMMENT '提交时间',
+  `work_paht` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `team_fk_1` (`question_id`),
   CONSTRAINT `team_fk_1` FOREIGN KEY (`question_id`) REFERENCES `question` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- ----------------------------
+-- Records of team
+-- ----------------------------
+BEGIN;
+INSERT INTO `team` VALUES (7, '啊对对对', NULL, 'failed', 'Sam', '北京大学', '123232323', 'Weam', NULL, 1, NULL, NULL);
+INSERT INTO `team` VALUES (12, '你说的对对对', 4, 'failed', 'yjp', '北京航空航天大学', '789678789', 'Seo', NULL, 1, NULL, NULL);
+INSERT INTO `team` VALUES (13, '你说的对', 4, 'failed', 'yjp', '北京航空航天大学', '789678789', 'Seo', NULL, 1, NULL, NULL);
+INSERT INTO `team` VALUES (14, '你说的对对', 4, 'failed', 'yjp', '北京航空航天大学', '789678789', 'Seo', NULL, 1, NULL, NULL);
+INSERT INTO `team` VALUES (15, '你说的对对', 4, 'failed', 'yjp', '北京航空航天大学', '789678789', 'Seo', NULL, 1, NULL, NULL);
+INSERT INTO `team` VALUES (16, '你说的对对', 4, 'failed', 'yjp', '北京航空航天大学', '789678789', 'Seo', NULL, 1, NULL, NULL);
+INSERT INTO `team` VALUES (17, '你说的对对', 4, 'failed', 'yjp', '北京航空航天大学', '789678789', 'Seo', NULL, 1, NULL, NULL);
+INSERT INTO `team` VALUES (18, '你说的对对', 4, 'failed', 'yjp', '北京航空航天大学', '789678789', 'Seo', NULL, 1, NULL, NULL);
+INSERT INTO `team` VALUES (19, '你说的对对', 4, 'ok', 'yjp', '北京航空航天大学', '789678789', 'Seo', NULL, 1, NULL, NULL);
+INSERT INTO `team` VALUES (22, '你说的对对', 4, 'ok', 'yjp', '北京航空航天大学', '789678789', 'Seo', NULL, 1, NULL, NULL);
+INSERT INTO `team` VALUES (29, 'test', 4, 'ok', 'yjp', '北京航空航天大学', '789678789', 'Seo', NULL, 1, NULL, NULL);
+INSERT INTO `team` VALUES (30, 'test52', 4, 'ok', 'yjp', '北京航空航天大学', '789678789', 'Seo', NULL, 1, NULL, NULL);
+INSERT INTO `team` VALUES (31, 'test53', 4, 'ok', 'yjp', '北京航空航天大学', '789678789', 'Seo', NULL, 1, NULL, NULL);
+INSERT INTO `team` VALUES (32, 'test54', 4, 'ok', 'yjp', '北京航空航天大学', '789678789', 'Seo', NULL, 1, NULL, NULL);
+INSERT INTO `team` VALUES (33, 'test33', 4, 'ok', 'yjp', '北京航空航天大学', '789678789', 'Seo', NULL, 1, NULL, NULL);
+INSERT INTO `team` VALUES (34, 'test34', 4, 'ok', 'yjp', '北京航空航天大学', '789678789', 'Seo', NULL, 1, NULL, NULL);
+COMMIT;
 
 -- ----------------------------
 -- Table structure for track
@@ -254,6 +438,12 @@ CREATE TABLE `track` (
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ----------------------------
+-- Records of track
+-- ----------------------------
+BEGIN;
+COMMIT;
+
+-- ----------------------------
 -- Table structure for user
 -- ----------------------------
 DROP TABLE IF EXISTS `user`;
@@ -268,9 +458,35 @@ CREATE TABLE `user` (
   `gender` int DEFAULT NULL COMMENT '性别 0 女 1 男',
   `birthday` date DEFAULT NULL COMMENT '生日',
   `school` varchar(255) DEFAULT NULL COMMENT '学校',
+  `role` int DEFAULT NULL COMMENT '角色',
   PRIMARY KEY (`id`),
   KEY `user_ibfk_1` (`team_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- ----------------------------
+-- Records of user
+-- ----------------------------
+BEGIN;
+INSERT INTO `user` VALUES (5, '杨靖平', 'root', 'wewe@qq.com', '12312312312', 'rrdd', 1, 1, NULL, '北京航空航天大学', 0);
+INSERT INTO `user` VALUES (6, 'yjp', 'root', 'wewe@qq.com', '12312312312', 'rrdd', 1, 1, NULL, '北京航空航天大学', 0);
+INSERT INTO `user` VALUES (7, 'yjpp', 'root', 'wewe@qq.com', '12312312312', 'rrdd', 1, 1, NULL, '北京航空航天大学', 0);
+INSERT INTO `user` VALUES (8, 'yjpp', 'root', 'wewe@qq.com', '12312312312', 'rrdd', 1, 1, NULL, '北京航空航天大学', 0);
+INSERT INTO `user` VALUES (9, 'root', 'root', 'wewe@qq.com', '12312312312', 'rrdd', 1, 1, NULL, '北京航空航天大学', 255);
+INSERT INTO `user` VALUES (10, 'root', 'root', 'wewe@qq.com', '12312312312', 'rrdd', 1, 1, NULL, '北京航空航天大学', NULL);
+INSERT INTO `user` VALUES (11, 'name', '123', '', '', 'asd', NULL, NULL, NULL, '', NULL);
+INSERT INTO `user` VALUES (12, '', '123', '', '', '', NULL, NULL, NULL, '', NULL);
+INSERT INTO `user` VALUES (13, '', '123', '', '', '', NULL, NULL, NULL, '', NULL);
+INSERT INTO `user` VALUES (14, 'name', '123', '', '', 'name', NULL, NULL, NULL, '', NULL);
+INSERT INTO `user` VALUES (15, 'name', '123', '23', '13', 'name', NULL, NULL, NULL, '', NULL);
+INSERT INTO `user` VALUES (16, 'name', '123', '23', '13', 'name', NULL, 1, NULL, '', NULL);
+INSERT INTO `user` VALUES (17, 'name', '123', '23', '13', 'name', NULL, 1, NULL, '', NULL);
+INSERT INTO `user` VALUES (18, 'name', '123', '23', '13', 'name', NULL, 1, NULL, 'BUAA', NULL);
+INSERT INTO `user` VALUES (19, '', '123', '23', '13', 'name', NULL, 1, NULL, 'BUAA', NULL);
+INSERT INTO `user` VALUES (20, '', '13', '23', '13', 'name', NULL, 1, NULL, 'BUAA', NULL);
+INSERT INTO `user` VALUES (21, 'uname', '123455', 'emali', '124', 'name', NULL, 2, NULL, 'BUAA', NULL);
+INSERT INTO `user` VALUES (22, '', '123', '', '', '', NULL, NULL, NULL, '', NULL);
+INSERT INTO `user` VALUES (23, 'yjp1', '123456', '20356335t', '23322', '杨靖平', NULL, 1, NULL, 'BUAA', NULL);
+COMMIT;
 
 -- ----------------------------
 -- Table structure for user_log
@@ -281,6 +497,12 @@ CREATE TABLE `user_log` (
   `content` text,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+-- ----------------------------
+-- Records of user_log
+-- ----------------------------
+BEGIN;
+COMMIT;
 
 -- ----------------------------
 -- Table structure for user_team
@@ -298,6 +520,12 @@ CREATE TABLE `user_team` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- ----------------------------
+-- Records of user_team
+-- ----------------------------
+BEGIN;
+COMMIT;
+
+-- ----------------------------
 -- Table structure for work
 -- ----------------------------
 DROP TABLE IF EXISTS `work`;
@@ -310,6 +538,13 @@ CREATE TABLE `work` (
   `rule_id` int DEFAULT NULL,
   `work_status` int DEFAULT NULL,
   `reviewed_num` int DEFAULT NULL,
+  `content` blob,
+  `likes` int DEFAULT '0',
+  `authors` varchar(255) DEFAULT NULL,
+  `contest_name` varchar(255) DEFAULT NULL,
+  `work_path` varchar(255) DEFAULT NULL,
+  `block_id` int DEFAULT NULL,
+  `image` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `work_fk_1` (`user_id`),
   KEY `work_fk_2` (`team_id`),
@@ -319,6 +554,27 @@ CREATE TABLE `work` (
   CONSTRAINT `work_fk_2` FOREIGN KEY (`team_id`) REFERENCES `team` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `work_fk_3` FOREIGN KEY (`ques_id`) REFERENCES `question` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT `work_fk_4` FOREIGN KEY (`rule_id`) REFERENCES `rule` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8mb3;
+
+-- ----------------------------
+-- Records of work
+-- ----------------------------
+BEGIN;
+INSERT INTO `work` VALUES (10, '基于强化学习的80天环游地球', NULL, 14, NULL, NULL, NULL, 0, NULL, 5, 'yjp', NULL, '/Users/bytedance/IdeaProjects/contest1/works/10.txt', NULL, '1.jpg');
+INSERT INTO `work` VALUES (11, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, '/Users/bytedance/IdeaProjects/contest1/works/11.txt', NULL, '2.jpg');
+INSERT INTO `work` VALUES (12, '基于强化学习的80天环游地球', NULL, 15, NULL, NULL, 2, 0, NULL, 0, 'yjp', NULL, '/Users/bytedance/IdeaProjects/contest1/works/12.txt', NULL, '3.jpg');
+INSERT INTO `work` VALUES (13, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, 0, NULL, NULL, '/Users/bytedance/IdeaProjects/contest1/works/13.txt', NULL, '4.jpg');
+INSERT INTO `work` VALUES (18, '基于强化学习的80天环游地球', NULL, 17, NULL, NULL, 1, 0, NULL, 0, 'yjp1', NULL, '/Users/bytedance/IdeaProjects/contest1/works/18.txt', NULL, '5.jpg');
+INSERT INTO `work` VALUES (19, '基于强化学习的80天环游地球', NULL, 18, NULL, NULL, 1, 0, NULL, 0, '杨靖平1', NULL, '/Users/bytedance/IdeaProjects/contest1/works/19.txt', NULL, '6.jpg');
+INSERT INTO `work` VALUES (20, '基于深度学习的路况时空预测', NULL, 22, NULL, NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `work` VALUES (21, '基于深度学习的蚊子杀手', NULL, 22, NULL, NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `work` VALUES (24, '基于深度学习的今晚吃什么', NULL, 19, NULL, NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `work` VALUES (25, '基于深度学习的人工智障', NULL, 29, NULL, NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `work` VALUES (26, '基于深度学习的人工智障', NULL, 30, NULL, NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `work` VALUES (27, '基于深度学习的小爱同学', NULL, 31, NULL, NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `work` VALUES (28, '基于深度学习的天猫精灵', NULL, 32, NULL, NULL, 0, 0, NULL, 2, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `work` VALUES (29, '基于深度学习的小度小度', NULL, 32, NULL, NULL, 0, 0, NULL, 1, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `work` VALUES (30, '基于深度学习的抖音小助手', NULL, 34, NULL, NULL, 0, 0, NULL, 0, NULL, NULL, NULL, NULL, NULL);
+COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;

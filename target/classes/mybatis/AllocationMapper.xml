@@ -4,8 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="yjp.dao.AllocationDao">
     <insert id="addAllocation" parameterType="yjp.pojo.Allocation">
-        insert into city.allocation(work_id, expert_id, batch_id, is_valid, sum)
-        values (#{work_id}, #{expert_id}, #{batch_id}, #{is_valid}, '0')
+        insert into city.allocation(team_id, expert_id, batch_id, is_valid, sum)
+        values (#{team_id}, #{expert_id}, #{batch_id}, #{is_valid}, '0')
     </insert>
     <select id="listAllocation" resultType="yjp.pojo.Allocation">
         select *
@@ -13,7 +13,7 @@
     </select>
     <resultMap id="allocationExpertMap" type="Allocation">
         <id property="id" column="id"></id>
-        <result property="work_id" column="work_id"></result>
+        <result property="team_id" column="team_id"></result>
         <result property="expert_id" column="expert_id"></result>
         <result property="is_valid" column="is_valid"></result>
         <result property="masks" column="masks"></result>
@@ -30,34 +30,60 @@
     </select>
     <update id="backAllocation" parameterType="yjp.pojo.Allocation">
         update city.allocation
-        set is_valid = 0
+        set is_valid = 2
         where id = #{id}
     </update>
-    <select id="checkAllocation" parameterType="int" resultType="yjp.pojo.Allocation">
-        select *
-        from city.allocation
-        where id = #{id};
+    <resultMap id="reviewMap" type="RuleItem">
+        <id property="id" column="id"></id>
+        <result property="scorePoint" column="scorePoint"></result>
+        <result property="remarks" column="remarks"></result>
+        <result property="minPoint" column="minPoint"></result>
+        <result property="fulPoint" column="fulPoint"></result>
+        <result property="batch_id" column="batch_id"></result>
+        <association property="rule" javaType="Rule">
+            <id property="id" column="r_id"></id>
+        </association>
+        <association property="batch" javaType="Batch">
+            <id property="id" column="b_id"></id>
+            <result property="rule_id" column="r_rule_id"></result>
+        </association>
+        <association property="allocation" javaType="Allocation">
+            <id property="id" column="a_id"></id>
+            <result property="batch_id" column="a_batch_id"></result>
+            <result property="masks" column="a_masks"></result>
+            <result property="sum" column="a_sum"></result>
+            <result property="advice" column="a_advice"></result>
+        </association>
+    </resultMap>
+    <select id="checkAllocation" parameterType="int" resultMap="reviewMap">
+        select i.*, a.sum, a.masks, a.advice
+        from ((city.rule_item i inner join rule r on i.rule_id = r.id) inner join batch b on b.rule_id = r.id) inner join allocation a on a.batch_id = b.id
+        where a.id = #{id};
     </select>
     <resultMap id="allocationMap" type="Allocation">
         <id property="id" column="id"></id>
-        <result property="work_id" column="work_id"></result>
+        <result property="team_id" column="team_id"></result>
         <result property="expert_id" column="expert_id"></result>
         <result property="is_valid" column="is_valid"></result>
         <result property="masks" column="masks"></result>
         <result property="advice" column="advice"></result>
-        <association property="work" javaType="Work">
-            <id property="id" column="w_id"></id>
-            <result property="name" column="w_name"></result>
-            <result property="team_id" column="team_id"></result>
-            <result property="ques_id" column="ques_id"></result>
-        </association>
+        <result property="sum" column="sum"></result>
+        <result property="finish_date" column="finish_date"></result>
         <association property="team" javaType="Team">
             <id property="id" column="t_id"></id>
             <result property="name" column="t_name"></result>
         </association>
+        <association property="work" javaType="Work">
+            <id property="id" column="w_id"></id>
+            <result property="name" column="w_name"></result>
+            <result property="team_id" column="w_team_id"></result>
+        </association>
         <association property="batch" javaType="Batch">
             <id property="id" column="b_id"></id>
             <result property="name" column="b_name"></result>
+            <result property="start_date" column="b_start_date"></result>
+            <result property="end_date" column="b_end_date"></result>
+            <result property="rule_id" column="b_rule_id"></result>
         </association>
         <association property="question" javaType="Question">
             <id property="id" column="q_id"></id>
@@ -70,9 +96,21 @@
             <result property="organization_name" column="e_organ_name"></result>
         </association>
     </resultMap>
+    <select id="queryAllByExpId" resultMap="allocationMap">
+        select a.*, b.start_date b_start_date, b.end_date b_end_date, b.rule_id b_rule_id, q.name q_name, t.name t_name, w.id w_id
+        from ((((city.allocation a inner join expert e on a.expert_id = e.id) inner join city.team t on a.team_id = t.id) inner join work w on w.team_id = t.id) inner join question q on t.question_id = q.id) inner join batch b on a.batch_id = b.id
+        <where>
+            <if test="expert_id != null and expert_id != ''">
+                and a.expert_id = #{expert_id}
+            </if>
+            <if test="is_valid != null">
+                and a.is_valid = #{is_valid}
+            </if>
+        </where>
+    </select>
     <select id="queryAllocation" parameterType="yjp.pojo.query.AllocationQuery" resultMap="allocationMap">
-        select a.*,b.name b_name,t.name t_name,w.name w_name,q.name q_name,e.name e_name,e.organization_name e_organ_name
-        from ((((city.allocation a inner join expert e on a.expert_id = e.id) inner join city.work w on a.work_id = w.id) inner join team t on w.team_id = t.id) inner join question q on t.question_id = q.id) inner join batch b on q.batch_id = b.id
+        select a.*,b.name b_name,t.name t_name,w.*,q.name q_name,e.name e_name,e.organization_name e_organ_name
+        from ((((city.allocation a inner join expert e on a.expert_id = e.id) inner join city.team t on a.team_id = t.id) inner join work w on w.team_id = t.id) inner join question q on t.question_id = q.id) inner join batch b on q.batch_id = b.id
         <where>
             <if test="batch_name != null and batch_name != ''">
                 and b.name = #{batch_name}
@@ -97,4 +135,19 @@
             </if>
         </where>
     </select>
+    <update id="submitReview" parameterType="yjp.pojo.Allocation">
+        update city.allocation
+        set is_valid = 1,
+        masks = #{masks},
+        advice = #{advice},
+        sum = #{sum},
+        finish_date = sysdate()
+        where id = #{id}
+    </update>
+    <update id="tempSubmit" parameterType="yjp.pojo.Allocation">
+        update city.allocation
+        set masks = #{masks},
+        advice = #{advice}
+        where id = #{id}
+    </update>
 </mapper>

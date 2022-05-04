@@ -20,5 +20,22 @@ public class User {
     private Integer gender;
     private Date birthday;
     private String school;
-    private Integer role;// 0:学生、普通用户 1：指导老师 2：评审专家 255：管理员
+    private Integer role; // // 0:学生、普通用户 1：指导老师 2：评审专家 255：管理员
+    private Integer is_award; //是否获奖
+    private Team team;
+    private Question question;
+    private Track track;
+    private Contest contest;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public Integer getId() {
+        return id;
+    }
 }

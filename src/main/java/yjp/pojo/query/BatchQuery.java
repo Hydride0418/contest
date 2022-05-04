@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class BatchQuery {
-    private String batch_name;
-    private String rule_name;
-    private String contest_name;
+    private String batch_name; //批次名称
+    private String rule_name; //指标名称
+    private String contest_name; //赛事名称
 }

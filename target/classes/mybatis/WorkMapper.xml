@@ -12,12 +12,16 @@
         <result property="name" column="name"></result>
         <result property="team_id" column="team_id"></result>
         <result property="ques_id" column="ques_id"></result>
+        <result property="reviewed_num" column="reviewed_num"></result>
+        <result property="review_num" column="review_num"></result>
+        <result property="aveg_sum" column="aveg_sum"></result>
+        <result property="reviewed" column="reviewed"></result>
         <association property="team" javaType="Team">
             <id property="id" column="t_id"></id>
             <result property="name" column="t_name"></result>
             <result property="team_leader" column="t_leader"></result>
             <result property="leader_school" column="t_school"></result>
-            <result property="advisor" column="t_advisor"></result>
+            <result property="leader_phone" column="t_phone"></result>
         </association>
         <association property="question" javaType="Question">
             <id property="id" column="q_id"></id>
@@ -27,14 +31,6 @@
         <association property="batch" javaType="Batch">
             <id property="id" column="b_id"></id>
             <result property="name" column="b_name"></result>
-            <result property="work_expert" column="b_work_expert"></result>
-        </association>
-        <association property="allocation" javaType="Allocation">
-            <id property="id" column="a_id"></id>
-            <result property="work_id" column="a_work_id"></result>
-            <result property="sum" column="a_sum"></result>
-            <result property="masks" column="a_masks"></result>
-            <result property="is_valid" column="a_is_valid"></result>
         </association>
     </resultMap>
     <select id="listInfo" resultMap="workMap">
@@ -66,7 +62,7 @@
                 and w.name like concat('%',#{work_name},'%')
             </if>
             <if test="ques_name != null and ques_name != ''">
-                and t.name like concat('%',#{team_name},'%')
+                and q.name like concat('%',#{ques_name},'%')
             </if>
             <if test="team_leader != null and team_leader != ''">
                 and t.team_leader like concat('%',#{team_leader},'%')
@@ -105,6 +101,16 @@
             content      = #{content},
             work_path    = #{work_path},
             image        = #{image}
+        where id = #{id}
+    </update>
+    <update id="setWorkExp">
+        update city.work
+        set review_num = #{work_expert}
+        where id = #{id}
+    </update>
+    <update id="addReviewed">
+        update city.work
+        set reviewed_num = reviewed_num + 1
         where id = #{id}
     </update>
     <select id="getWorkById" parameterType="int" resultType="yjp.pojo.Work">

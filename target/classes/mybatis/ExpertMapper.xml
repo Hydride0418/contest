@@ -9,7 +9,7 @@
     </select>
     <insert id="addExpert" parameterType="yjp.pojo.Expert">
         insert into city.expert(name, gender, organization_name, phone, email, create_date, remarks, contest_id, major_name, research_direction, password)
-        values (#{name}, #{gender}, #{organization_name}, #{phone},#{email},#{create_date},#{remarks}, #{contest_id}, #{major_name}, #{research_direction}, #{password})
+        values (#{name}, #{gender}, #{organization_name}, #{phone},#{email}, sysdate(),#{remarks}, #{contest_id}, #{major_name}, #{research_direction}, #{password})
     </insert>
     <delete id="deleteExpert" parameterType="int">
         delete
@@ -76,10 +76,24 @@
         where name = #{username}
             limit 1
     </select>
+    <update id="setPassword">
+        update city.expert
+        set password = #{password}
+        where id = #{id}
+    </update>
     <select id="getUserRole" parameterType="string" resultType="int">
         select role
         from city.expert
         where username = #{username}
             limit 1
+    </select>
+    <select id="getUserId" resultType="int">
+        select id from city.expert
+        where name = #{username} and password = #{password}
+        limit 1;
+    </select>
+    <select id="getExpert" resultType="yjp.pojo.Expert">
+        select * from city.expert
+        where id = #{id};
     </select>
 </mapper>

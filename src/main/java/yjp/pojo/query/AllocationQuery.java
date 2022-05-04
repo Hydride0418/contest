@@ -15,10 +15,5 @@ public class AllocationQuery {
     private String ques_name;
     private String expert_name;
     private String expert_organization_name;
-    private boolean is_valid;
-    private Work work;
-    private Team team;
-    private Batch batch;
-    private Question question;
-    private Expert expert;
+    private Integer is_valid;
 }

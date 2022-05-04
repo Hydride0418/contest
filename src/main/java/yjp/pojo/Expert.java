@@ -23,6 +23,10 @@ public class Expert {
     private String research_direction;
     private String password;
 
+    public Integer getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
     }
@@ -69,5 +73,9 @@ public class Expert {
 
     public void setResearch_direction(String research_direction) {
         this.research_direction = research_direction;
+    }
+
+    public String getPassword() {
+        return password;
     }
 }

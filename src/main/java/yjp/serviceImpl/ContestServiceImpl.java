@@ -42,8 +42,7 @@ public class ContestServiceImpl implements ContestService {
 
     @Override
     public boolean setImageUrl(Contest contest) {
-        boolean success = contestDao.setImageUrl(contest);
-        return success;
+        return contestDao.setImageUrl(contest);
     }
 
     @Override

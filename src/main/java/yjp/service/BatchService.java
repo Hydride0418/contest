@@ -9,7 +9,7 @@ public interface BatchService {
     //返回所有批次
     public List<Batch> listBatch();
     //新增批次
-    public boolean addBatch(Batch batch);
+    public Integer addBatch(Batch batch);
     //查看批次信息
     public Batch checkBatch(Integer id);
     //查询批次

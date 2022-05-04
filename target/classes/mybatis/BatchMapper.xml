@@ -7,7 +7,7 @@
         select *
         from city.batch;
     </select>
-    <insert id="addBatch" parameterType="yjp.pojo.Batch">
+    <insert id="addBatch" parameterType="yjp.pojo.Batch" keyProperty="id" useGeneratedKeys="true">
         insert into city.batch(name, track_id, rule_id, work_expert, expert_work, start_date, end_date, is_aveg, is_max)
         values (#{name}, #{track_id}, #{rule_id}, #{work_expert}, #{expert_work}, #{start_date}, #{end_date}, #{is_aveg}, #{is_max})
     </insert>
@@ -29,7 +29,7 @@
         <result property="end_date" column="end_date"></result>
         <association property="track" javaType="yjp.pojo.Track">
             <id property="id" column="t_id"></id>
-            <result property="contest_id" column="contest_id"></result>
+            <result property="name" column="t_name"></result>
         </association>
         <association property="contest" javaType="yjp.pojo.Contest">
             <id property="id" column="c_id"></id>

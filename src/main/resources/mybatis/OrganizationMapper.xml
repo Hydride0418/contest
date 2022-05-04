@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="yjp.dao.OrganizationDao">
+    <select id="listOrg" resultType="yjp.pojo.Organization">
+        select * from city.organization
+    </select>
+    <select id="queryOrganization" parameterType="yjp.pojo.Organization" resultType="yjp.pojo.Organization">
+        select * from city.organization where 1=1
+        <if test="name != null and name != ''">
+            and name like concat('%',#{name},'%')
+        </if>
+        <if test="is_award != null and is_award != ''">
+            and is_award = #{is_award}
+        </if>
+    </select>
+</mapper>

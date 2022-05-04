@@ -28,7 +28,11 @@ public class ExpertServiceImpl implements ExpertService {
 
     @Override
     public boolean addExpert(Expert expert) {
-        return expertDao.addExpert(expert);
+        if (expert.getId() == null) {
+            return expertDao.addExpert(expert);
+        } else {
+            return expertDao.modifyExpert(expert);
+        }
     }
 
     @Override
@@ -74,5 +78,20 @@ public class ExpertServiceImpl implements ExpertService {
     @Override
     public Integer getUserRole(String username) {
         return expertDao.getUserRole(username);
+    }
+
+    @Override
+    public Integer getUserId(String username, String password) {
+        return expertDao.getUserId(username, password);
+    }
+
+    @Override
+    public Expert getExpert(Integer id) {
+        return expertDao.getExpert(id);
+    }
+
+    @Override
+    public boolean setPassword(String password, Integer id) {
+        return expertDao.setPassword(password, id);
     }
 }

@@ -16,10 +16,12 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.logging.Logger;
 
-@CrossOrigin(origins = "http://localhost:8080", maxAge = 3600)
+//@CrossOrigin(origins = "http://localhost:8080", maxAge = 3600)
 @RequestMapping("/work")
 @Controller
 public class WorkController {
@@ -91,6 +93,13 @@ public class WorkController {
         return success;
     }
 
+    @GetMapping("/set_workExp")
+    @ResponseBody
+    public boolean setWorkExp(@RequestParam("id") Integer id,
+                              @RequestParam("work_expert") Integer work_expert) {
+        return workService.setWorkExp(id, work_expert);
+    }
+
     @GetMapping("/get/{id}")
     @ResponseBody
     public Work getWorkInfo(@PathVariable("id") Integer id) {
@@ -102,7 +111,7 @@ public class WorkController {
     @PostMapping("/search_review")
     @ResponseBody
     public List<Work> searchReview(@RequestBody ReviewQuery reviewQuery) {
-        return workService.showWorkList();
+        return workService.queryReview(reviewQuery);
     }
 
     @PostMapping("/upload")
@@ -121,6 +130,12 @@ public class WorkController {
             System.out.println(e);
         }
         return "upload failed";
+    }
+
+    @PostMapping("/add_Review")
+    @ResponseBody
+    public boolean addReview(@RequestBody Integer id) {
+        return workService.addReviewed(id);
     }
 
     @GetMapping("/getImage/{id}")

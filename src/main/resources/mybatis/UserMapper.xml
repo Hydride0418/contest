@@ -7,6 +7,19 @@
         select *
         from city.user;
     </select>
+    <select id="queryUserById" resultType="yjp.pojo.User">
+        select * from city.user
+        where id = #{id};
+    </select>
+    <select id="queryMem" resultType="yjp.pojo.User">
+        select * from city.user
+        where team_id = #{team_id};
+    </select>
+    <select id="getUserId" resultType="int">
+        select id from city.user
+        where username = #{username} and password = #{password}
+        limit 1;
+    </select>
     <insert id="addUser" parameterType="yjp.pojo.User">
         insert into city.user(username, password, email, phone, name, team_id, gender, school, role)
         values (#{username}, #{password}, #{email}, #{phone}, #{name}, #{team_id}, #{gender},
@@ -25,10 +38,78 @@
             role     = #{role}
         where id = #{id}
     </update>
+    <update id="setPassword">
+        update city.user
+        set password = #{password}
+        where id = #{id}
+    </update>
+    <update id="setTeam">
+        update city.user
+        set team_id = #{team_id}
+        where id = #{id}
+    </update>
+    <resultMap id="userQuestionMap" type="User">
+        <id property="id" column="id"></id>
+        <result property="name" column="name"></result>
+        <result property="phone" column="phone"></result>
+        <result property="school" column="school"></result>
+        <result property="type" column="type"></result>
+        <result property="is_award" column="is_award"></result>
+        <result property="team_id" column="team_id"></result>
+        <association property="team" javaType="Team">
+            <id property="id" column="t_id"></id>
+            <result property="name" column="t_name"></result>
+            <result property="question_id" column="t_ques_id"></result>
+        </association>
+        <association property="question" javaType="Question">
+            <id property="id" column="q_id"></id>
+            <result property="name" column="q_name"></result>
+            <result property="track_id" column="q_track_id"></result>
+        </association>
+        <association property="track" javaType="Track">
+            <id property="id" column="track_id"></id>
+            <result property="contest_id" column="track_con_id"></result>
+        </association>
+        <association property="contest" javaType="Contest">
+            <id property="id" column="c_id"></id>
+            <result property="name" column="c_name"></result>
+        </association>
+    </resultMap>
+    <select id="queryQuesById" resultMap="userQuestionMap">
+    select u.*, q.name q_name, t.*
+    from (city.user u inner join team t on u.team_id = t.id) inner join question q on t.question_id = q.id
+    where u.id = #{id}
+    </select>
+    <select id="queryUser" resultMap="userQuestionMap">
+        select u.*, q.name q_name, t.name t_name
+        from (((city.user u inner join team t on u.team_id = t.id) inner join question q on t.question_id = q.id) inner join track tr on q.track_id = tr.id) inner join contest c on tr.contest_id = c.id
+        <where>
+            <if test="contest != null and contest != ''">
+                and c.`name` = #{contest}
+            </if>
+            <if test="question != null and question != ''">
+                and q.`name` like concat('%',#{question},'%')
+            </if>
+            <if test="team_name != null and team_name != ''">
+                and t.`name` like concat('%',#{team_name},'%')
+            </if>
+            <if test="user_name != null and user_name != ''">
+                and u.name like concat('%',#{user_name},'%')
+            </if>
+            <if test="user_school != null and user_school != ''">
+                and u.school like concat('%',#{user_school},'%')
+            </if>
+            <if test="user_phone != null and user_phone != ''">
+                and u.`phone` = #{user_phone}
+            </if>
+            <if test="is_award != null and is_award != ''">
+                and u.`is_award` = #{is_award}
+            </if>
+        </where>
+    </select>
     <select id="getPassword" parameterType="string" resultType="string">
-        select password
-        from city.user
-        where username = #{username}
+        select password from city.user u
+        where u.username = #{username}
         limit 1
     </select>
     <select id="getUserRole" parameterType="string" resultType="int">

@@ -1,15 +1,14 @@
 package yjp.controller;
 
-
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import cn.hutool.poi.excel.ExcelReader;
+import cn.hutool.poi.excel.ExcelUtil;
+import cn.hutool.poi.excel.ExcelWriter;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import yjp.pojo.Administrator;
 import yjp.response.AdministratorResponse.AddAdministratorResponse;
 import yjp.response.AdministratorResponse.DeleteAdministratorResponse;
-import yjp.response.AdministratorResponse.ModifyAdministratorResponse;
 import yjp.service.AdministratorService;
 
 import javax.servlet.ServletOutputStream;
@@ -50,6 +49,17 @@ public class AdministratorController {
         DeleteAdministratorResponse deleteAdministratorResponse = new DeleteAdministratorResponse();
         deleteAdministratorResponse.generate(administratorService.deleteAdmin(id));
         return deleteAdministratorResponse;
+    }
+
+    @PostMapping("/delete_batch")
+    @ResponseBody
+    public boolean deleteBatchAdmin(@RequestBody List<Integer> ids) {
+        for (int i = 0; i < ids.size(); i++) {
+            if (!administratorService.deleteAdmin(ids.get(i))) {
+                return false;
+            }
+        }
+        return true;
     }
 
     @GetMapping("/query_admin")

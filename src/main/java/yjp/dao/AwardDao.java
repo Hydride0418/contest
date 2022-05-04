@@ -17,7 +17,12 @@ public interface AwardDao {
     //根据id删除一个奖项
     public boolean deleteAward(Integer id);
     //搜索奖项
-    public List<Award> searchAward(AwardQuery awardQuery);
+    public List<Award> searchAward(Integer user_id);
     //修改奖项信息
     public boolean modifyAward(Award award);
+    //增加团队奖项
+    public boolean addTeamAward(Integer team_id);
+    //增加机构奖项
+    public boolean addOrgAward(Integer org_id);
+
 }
