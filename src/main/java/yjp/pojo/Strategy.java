@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Strategy {
-//    private Integer work_number;
-    private Integer work_strategy; // 0: no strategy 1: likes desc
+    private Integer work_number;
+    private String work_strategy; // 0: no strategy 1: likes desc
     private Integer picture_number;
-    private Integer picture_show_all;// 0: not show all 1: show_all
+    private boolean picture_show_all;// 0: not show all 1: show_all
 }

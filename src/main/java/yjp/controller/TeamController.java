@@ -3,16 +3,15 @@ package yjp.controller;
 import cn.hutool.poi.excel.ExcelUtil;
 import cn.hutool.poi.excel.ExcelWriter;
 import org.apache.poi.ss.formula.ptg.MemAreaPtg;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import yjp.pojo.BlockUser;
-import yjp.pojo.InviteCode;
-import yjp.pojo.Question;
-import yjp.pojo.Team;
+import yjp.pojo.*;
 import yjp.pojo.query.SelectionQuery;
 import yjp.pojo.query.TeamQuery;
 import yjp.service.BlockService;
+import yjp.service.StrategyService;
 import yjp.service.TeamService;
 
 import javax.servlet.ServletOutputStream;
@@ -28,12 +27,14 @@ import java.util.Map;
 @Controller
 @RequestMapping("/team")
 public class TeamController {
+    private final StrategyService strategyService;
     private final BlockService blockService;
     private final TeamService teamService;
 
-    public TeamController(TeamService teamService, BlockService blockService) {
+    public TeamController(TeamService teamService, BlockService blockService, StrategyService strategyService) {
         this.teamService = teamService;
         this.blockService = blockService;
+        this.strategyService = strategyService;
     }
 
     @GetMapping("/get_list")
@@ -99,6 +100,20 @@ public class TeamController {
     public Team getTeamInfo(@PathVariable("id") Integer id) {
         Team team = teamService.getTeamById(id);
         return team;
+    }
+
+    @GetMapping("/strategy/{id}")
+    @ResponseBody
+    public Strategy getStrategyInfo(@PathVariable("id") Integer id) {
+        Strategy s = strategyService.getStrategy(id);
+        return s;
+    }
+
+    @PostMapping("/modify_strategy")
+    @ResponseBody
+    public boolean modifyStrategy(@RequestBody Strategy strategy) {
+        System.out.println("modifyStrategy");
+        return strategyService.modifyStrategy(strategy);
     }
 
     @GetMapping("/query_info") //查询队伍获奖信息

@@ -16,9 +16,9 @@ public class StrategyServiceImpl implements StrategyService {
     }
 
     @Override
-    public Strategy getStrategy() {
+    public Strategy getStrategy(Integer id) {
         System.out.println("1111111");
-        return strategyDao.getStrategy();
+        return strategyDao.getStrategy(id);
     }
 
     @Override

@@ -19,11 +19,11 @@ public class StrategyController {
         this.strategyService = strategyService;
     }
 
-    @GetMapping("/get")
+    @GetMapping("/get/{id}")
     @ResponseBody
-    public Strategy getStrategy() {
+    public Strategy getStrategy(@PathVariable Integer id) {
         System.out.println("getStrategy");
-        return strategyService.getStrategy();
+        return strategyService.getStrategy(id);
     }
 
     @PostMapping("/modify")
