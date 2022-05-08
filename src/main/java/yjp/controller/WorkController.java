@@ -7,10 +7,12 @@ import org.springframework.web.multipart.MultipartFile;
 import yjp.pojo.BlockWork;
 import yjp.pojo.Strategy;
 import yjp.pojo.Work;
+import yjp.pojo.WorkIncident;
 import yjp.pojo.query.ReviewQuery;
 import yjp.service.BlockService;
 import yjp.service.StrategyService;
 import yjp.service.WorkService;
+import yjp.util.ConvUtil;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
@@ -20,10 +22,7 @@ import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.io.File;
 import java.io.IOException;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.logging.Logger;
 
 //@CrossOrigin(origins = "http://localhost:8080", maxAge = 3600)
@@ -45,8 +44,8 @@ public class WorkController {
     public List<Work> getWorkList() {
         List<Work> workList = workService.showWorkList();
         Strategy s = strategyService.getStrategy(1);
-        if(Objects.equals(s.getWork_strategy(), "按热度")) {
-            Collections.sort(workList,new Comparator<Work>() {
+        if (Objects.equals(s.getWork_strategy(), "按热度")) {
+            Collections.sort(workList, new Comparator<Work>() {
                 @Override
                 public int compare(Work o1, Work o2) {
                     int diff = o1.getLikes() - o2.getLikes();
@@ -60,6 +59,42 @@ public class WorkController {
             });
         }
         return workList;
+    }
+
+    @GetMapping("/trace_progress/{id}")
+    @ResponseBody
+    public List<WorkIncident> traceProgress(@PathVariable("id") Integer id) {
+        List<WorkIncident> progressList = workService.getWorkIncident(id);
+        Collections.sort(progressList, new Comparator<WorkIncident>() {
+            @Override
+            public int compare(WorkIncident o1, WorkIncident o2) {
+                Integer time1 = ConvUtil.ConvStrToInt(o1.getTimeStr());
+                Integer time2 = ConvUtil.ConvStrToInt(o2.getTimeStr());
+                Integer diff = time1 - time2;
+                if (diff > 0) {
+                    return 1;
+                } else if (diff < 0) {
+                    return -1;
+                } else {
+                    return 0;
+                }
+            }
+        });
+//        if(Objects.equals(s.getWork_strategy(), "按热度")) {
+//            Collections.sort(workList,new Comparator<Work>() {
+//                @Override
+//                public int compare(Work o1, Work o2) {
+//                    int diff = o1.getLikes() - o2.getLikes();
+//                    if (diff < 0) {
+//                        return 1;
+//                    } else if (diff > 0) {
+//                        return -1;
+//                    }
+//                    return 0;
+//                }
+//            });
+//        }
+        return progressList;
     }
 
     @GetMapping("/get_reviewed_info")
@@ -106,6 +141,13 @@ public class WorkController {
         BlockWork blockWork = new BlockWork(work.getId(), work.getWork_path(), work.getTeam_id(), datetime);
         boolean success1 = blockService.uploadResource(blockWork);
         return success && success1;
+    }
+
+    @PostMapping("/add_progress")
+    @ResponseBody
+    public boolean addProgress(@RequestBody WorkIncident workIncident) {
+        boolean success = workService.addWorkIncident(workIncident);
+        return success;
     }
 
     @PostMapping("/modify")

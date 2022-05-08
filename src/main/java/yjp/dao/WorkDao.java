@@ -4,6 +4,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 import yjp.pojo.Work;
+import yjp.pojo.WorkIncident;
 import yjp.pojo.query.ReviewQuery;
 import yjp.pojo.query.WorkQuery;
 
@@ -39,4 +40,8 @@ public interface WorkDao {
                               @Param("work_expert") Integer work_expert);
     //将reviewed_num加1
     public boolean addReviewed(Integer id);
+    //作品追踪
+    public List<WorkIncident> getWorkIncident(Integer id);
+    //
+    public boolean addWorkIncident(WorkIncident workIncident);
 }

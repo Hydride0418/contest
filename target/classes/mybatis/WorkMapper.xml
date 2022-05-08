@@ -7,6 +7,11 @@
         select *
         from city.work;
     </select>
+    <select id="getWorkIncident" resultType="yjp.pojo.WorkIncident" parameterType="int">
+        select *
+        from city.work_incident
+        where work_id = #{id}
+    </select>
     <resultMap id="workMap" type="Work">
         <id property="id" column="id"></id>
         <result property="name" column="name"></result>
@@ -81,6 +86,10 @@
     <insert id="addWork" useGeneratedKeys="true" keyProperty="id" parameterType="yjp.pojo.Work">
         insert into city.work(name, user_id, team_id, ques_id, rule_id, reviewed_num, work_status)
         values (#{name}, #{user_id}, #{team_id}, #{ques_id}, #{rule_id}, '0', #{work_status})
+    </insert>
+    <insert id="addWorkIncident" parameterType="yjp.pojo.WorkIncident">
+        insert into city.work_incident(work_id, incident, timeStr, detail)
+        values (#{work_id}, #{incident}, #{timeStr}, #{detail})
     </insert>
     <delete id="deleteWork" parameterType="int">
         delete

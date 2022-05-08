@@ -1,6 +1,7 @@
 package yjp.service;
 
 import yjp.pojo.Work;
+import yjp.pojo.WorkIncident;
 import yjp.pojo.query.ReviewQuery;
 
 import java.util.List;
@@ -30,4 +31,8 @@ public interface WorkService {
     public boolean setWorkExp(Integer id, Integer work_expert);
     //将reviewed_num加1
     public boolean addReviewed(Integer id);
+    //作品追踪
+    public List<WorkIncident> getWorkIncident(Integer workID);
+    //
+    public boolean addWorkIncident(WorkIncident workIncident);
 }
