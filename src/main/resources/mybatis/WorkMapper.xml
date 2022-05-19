@@ -88,8 +88,8 @@
         values (#{name}, #{user_id}, #{team_id}, #{ques_id}, #{rule_id}, '0', #{work_status})
     </insert>
     <insert id="addWorkIncident" parameterType="yjp.pojo.WorkIncident">
-        insert into city.work_incident(work_id, incident, timeStr, detail)
-        values (#{work_id}, #{incident}, #{timeStr}, #{detail})
+        insert into city.work_incident(work_id, incident, time, detail)
+        values (#{work_id}, #{incident}, #{time}, #{detail})
     </insert>
     <delete id="deleteWork" parameterType="int">
         delete

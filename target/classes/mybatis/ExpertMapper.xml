@@ -8,8 +8,10 @@
         from city.expert;
     </select>
     <insert id="addExpert" parameterType="yjp.pojo.Expert">
-        insert into city.expert(name, gender, organization_name, phone, email, create_date, remarks, contest_id, major_name, research_direction, password)
-        values (#{name}, #{gender}, #{organization_name}, #{phone},#{email}, sysdate(),#{remarks}, #{contest_id}, #{major_name}, #{research_direction}, #{password})
+        insert into city.expert(name, gender, organization_name, phone, email, create_date, remarks, contest_id,
+                                major_name, research_direction, password)
+        values (#{name}, #{gender}, #{organization_name}, #{phone}, #{email}, sysdate(), #{remarks}, #{contest_id},
+                #{major_name}, #{research_direction}, #{password})
     </insert>
     <delete id="deleteExpert" parameterType="int">
         delete
@@ -18,26 +20,28 @@
     </delete>
     <update id="emptyRemarks" parameterType="list">
         update city.expert
-        set remarks  = null
+        set remarks = null
         where id in
-            <foreach collection="idList" item="id" index="index" open="(" close=")" separator=",">
-                #{id}
-            </foreach>
+        <foreach collection="idList" item="id" index="index" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
     </update>
     <update id="modifyExpert" parameterType="yjp.pojo.Expert">
         update city.expert
-        set name            = #{name},
-            gender      = #{gender},
-            organization_name = #{organization_name},
-            phone  = #{phone},
-            email  = #{email},
-            create_date  = #{create_date},
-            remarks  = #{remarks}
+        set name               = #{name},
+            gender             = #{gender},
+            organization_name  = #{organization_name},
+            phone              = #{phone},
+            email              = #{email},
+            create_date        = #{create_date},
+            remarks            = #{remarks},
+            research_direction = #{research_direction},
+            major_name         = #{major_name}
         where id = #{id}
     </update>
     <update id="modifyRemark" parameterType="yjp.pojo.Expert">
         update city.expert
-        set remarks  = #{remarks}
+        set remarks = #{remarks}
         where id = #{id}
     </update>
     <update id="modifyRemarks" parameterType="java.util.List">
@@ -73,8 +77,7 @@
     <select id="getPassword" parameterType="string" resultType="string">
         select password
         from city.expert
-        where name = #{username}
-            limit 1
+        where name = #{username} limit 1
     </select>
     <update id="setPassword">
         update city.expert
@@ -84,16 +87,17 @@
     <select id="getUserRole" parameterType="string" resultType="int">
         select role
         from city.expert
-        where username = #{username}
-            limit 1
+        where username = #{username} limit 1
     </select>
     <select id="getUserId" resultType="int">
-        select id from city.expert
-        where name = #{username} and password = #{password}
-        limit 1;
+        select id
+        from city.expert
+        where name = #{username}
+          and password = #{password} limit 1;
     </select>
     <select id="getExpert" resultType="yjp.pojo.Expert">
-        select * from city.expert
+        select *
+        from city.expert
         where id = #{id};
     </select>
 </mapper>

@@ -85,7 +85,7 @@ public class ExpertController {
     @GetMapping("/query_expert")
     @ResponseBody
     public List<Expert> queryExpert(@RequestParam("name") String name,
-                                    @RequestParam("orgarnization_name") String organization_name,
+                                    @RequestParam("organization_name") String organization_name,
                                     @RequestParam("major_name") String major_name,
                                     @RequestParam("phone") String phone,
                                     @RequestParam("research_direction") String research_direction,

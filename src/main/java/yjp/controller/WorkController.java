@@ -68,9 +68,7 @@ public class WorkController {
         Collections.sort(progressList, new Comparator<WorkIncident>() {
             @Override
             public int compare(WorkIncident o1, WorkIncident o2) {
-                Integer time1 = ConvUtil.ConvStrToInt(o1.getTimeStr());
-                Integer time2 = ConvUtil.ConvStrToInt(o2.getTimeStr());
-                Integer diff = time1 - time2;
+                Integer diff = o1.getTime().compareTo(o2.getTime());
                 if (diff > 0) {
                     return 1;
                 } else if (diff < 0) {
@@ -146,6 +144,7 @@ public class WorkController {
     @PostMapping("/add_progress")
     @ResponseBody
     public boolean addProgress(@RequestBody WorkIncident workIncident) {
+        System.out.println(workIncident.getTime());
         boolean success = workService.addWorkIncident(workIncident);
         return success;
     }
