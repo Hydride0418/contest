@@ -11,6 +11,7 @@ import yjp.pojo.*;
 import yjp.pojo.query.SelectionQuery;
 import yjp.pojo.query.TeamQuery;
 import yjp.service.BlockService;
+import yjp.service.ContestService;
 import yjp.service.StrategyService;
 import yjp.service.TeamService;
 
@@ -30,11 +31,13 @@ public class TeamController {
     private final StrategyService strategyService;
     private final BlockService blockService;
     private final TeamService teamService;
+    private final ContestService contestService;
 
-    public TeamController(TeamService teamService, BlockService blockService, StrategyService strategyService) {
+    public TeamController(TeamService teamService, BlockService blockService, StrategyService strategyService,ContestService contestService) {
         this.teamService = teamService;
         this.blockService = blockService;
         this.strategyService = strategyService;
+        this.contestService = contestService;
     }
 
     @GetMapping("/get_list")
@@ -211,6 +214,28 @@ public class TeamController {
             team.setId(teamID);
             team.setWork_path(filepath + '/' + filename);
             teamService.setWorkPath(team);
+            return "upload succeeded";
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+        return "upload failed";
+    }
+
+    @PostMapping("/upload_image/{id}")
+    @ResponseBody
+    public String uploadImage(@RequestParam("file") MultipartFile file, @PathVariable("id") Integer contestID) {
+        if (file.isEmpty()) {
+            return "upload failed";
+        }
+        String filename = file.getOriginalFilename();
+        String filepath = "/Users/bytedance/city_front/city_front/src/assets/"; //作品文件的本地文件夹 未来在服务器中修改
+        File dest = new File(filepath + filename);
+        try {
+            file.transferTo(dest);
+            Contest contest = new Contest();
+            contest.setId(contestID);
+            contest.setImage(filename);
+            contestService.setImageUrl(contest);
             return "upload succeeded";
         } catch (IOException e) {
             System.out.println(e);

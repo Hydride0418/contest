@@ -1,553 +1,112 @@
-2022-05-20 00:00:43.442  INFO 51120 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-05-20 00:00:43.456  INFO 51120 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2022-05-20 00:00:43.465  INFO 51120 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2022-05-20 00:00:48.282  INFO 52651 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on MacBook-Pro-235.local with PID 52651 (/Users/bytedance/IdeaProjects/contest1/target/classes started by bytedance in /Users/bytedance/IdeaProjects/contest1)
-2022-05-20 00:00:48.284 DEBUG 52651 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
-2022-05-20 00:00:48.284  INFO 52651 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
-2022-05-20 00:00:48.320  INFO 52651 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-05-20 00:00:48.320  INFO 52651 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-05-20 00:00:49.324  INFO 52651 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2022-05-20 00:00:49.332  INFO 52651 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-05-20 00:00:49.332  INFO 52651 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
-2022-05-20 00:00:49.398  INFO 52651 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-05-20 00:00:49.398  INFO 52651 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1077 ms
-2022-05-20 00:00:50.068  INFO 52651 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-05-20 00:00:50.137  INFO 52651 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-05-20 00:00:50.189  WARN 52651 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2022-05-20 00:00:50.307  INFO 52651 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-05-20 00:00:50.341  INFO 52651 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2022-05-20 00:00:50.351  INFO 52651 --- [restartedMain] yjp.SpringbootMybatisApplication         : Started SpringbootMybatisApplication in 2.348 seconds (JVM running for 3.149)
-2022-05-20 00:01:40.624  INFO 52651 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-05-20 00:01:40.625  INFO 52651 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-05-20 00:01:40.626  INFO 52651 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-05-20 00:01:40.730  INFO 52651 --- [http-nio-9090-exec-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2022-05-20 00:01:41.082 DEBUG 52651 --- [http-nio-9090-exec-2] yjp.dao.ExpertDao.deleteExpert           : ==>  Preparing: delete from city.expert where id = ?
-2022-05-20 00:01:41.103 DEBUG 52651 --- [http-nio-9090-exec-2] yjp.dao.ExpertDao.deleteExpert           : ==> Parameters: 27(Integer)
-2022-05-20 00:01:41.113 DEBUG 52651 --- [http-nio-9090-exec-2] yjp.dao.ExpertDao.deleteExpert           : <==    Updates: 1
-2022-05-20 00:01:41.195 DEBUG 52651 --- [http-nio-9090-exec-4] yjp.dao.ExpertDao.queryExpert            : ==>  Preparing: select * from city.expert where 1=1
-2022-05-20 00:01:41.195 DEBUG 52651 --- [http-nio-9090-exec-4] yjp.dao.ExpertDao.queryExpert            : ==> Parameters: 
-2022-05-20 00:01:41.212 DEBUG 52651 --- [http-nio-9090-exec-4] yjp.dao.ExpertDao.queryExpert            : <==      Total: 3
-2022-05-20 00:01:50.901 DEBUG 52651 --- [http-nio-9090-exec-5] yjp.dao.ExpertDao.listExpert             : ==>  Preparing: select * from city.expert;
-2022-05-20 00:01:50.901 DEBUG 52651 --- [http-nio-9090-exec-5] yjp.dao.ExpertDao.listExpert             : ==> Parameters: 
-2022-05-20 00:01:50.905 DEBUG 52651 --- [http-nio-9090-exec-5] yjp.dao.ExpertDao.listExpert             : <==      Total: 3
-2022-05-20 00:01:50.929 ERROR 52651 --- [http-nio-9090-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is cn.hutool.core.exceptions.DependencyException: You need to add dependency of 'poi-ooxml' to your project, and version >= 3.17] with root cause
-
-java.lang.ClassNotFoundException: org.apache.poi.xssf.usermodel.XSSFWorkbook
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
-	at cn.hutool.poi.excel.WorkbookUtil.createBook(WorkbookUtil.java:108) ~[hutool-all-4.5.10.jar:na]
-	at cn.hutool.poi.excel.ExcelWriter.<init>(ExcelWriter.java:81) ~[hutool-all-4.5.10.jar:na]
-	at cn.hutool.poi.excel.ExcelUtil.getWriter(ExcelUtil.java:374) ~[hutool-all-4.5.10.jar:na]
-	at yjp.controller.ExpertController.export(ExpertController.java:106) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-
-2022-05-20 00:02:43.755 DEBUG 52651 --- [http-nio-9090-exec-8] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user u where u.username = ? limit 1
-2022-05-20 00:02:43.756 DEBUG 52651 --- [http-nio-9090-exec-8] yjp.dao.UserDao.getPassword              : ==> Parameters: root(String)
-2022-05-20 00:02:43.758 DEBUG 52651 --- [http-nio-9090-exec-8] yjp.dao.UserDao.getPassword              : <==      Total: 1
-2022-05-20 00:02:43.758 DEBUG 52651 --- [http-nio-9090-exec-8] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user u where u.username = ? limit 1
-2022-05-20 00:02:43.759 DEBUG 52651 --- [http-nio-9090-exec-8] yjp.dao.UserDao.getPassword              : ==> Parameters: root(String)
-2022-05-20 00:02:43.762 DEBUG 52651 --- [http-nio-9090-exec-8] yjp.dao.UserDao.getPassword              : <==      Total: 1
-2022-05-20 00:02:45.328 DEBUG 52651 --- [http-nio-9090-exec-10] yjp.dao.ExpertDao.queryExpert            : ==>  Preparing: select * from city.expert where 1=1
-2022-05-20 00:02:45.328 DEBUG 52651 --- [http-nio-9090-exec-10] yjp.dao.ExpertDao.queryExpert            : ==> Parameters: 
-2022-05-20 00:02:45.331 DEBUG 52651 --- [http-nio-9090-exec-10] yjp.dao.ExpertDao.queryExpert            : <==      Total: 3
-2022-05-20 00:03:00.873 DEBUG 52651 --- [http-nio-9090-exec-3] yjp.dao.ExpertDao.modifyExpert           : ==>  Preparing: update city.expert set name = ?, gender = ?, organization_name = ?, phone = ?, email = ?, create_date = ?, remarks = ?, research_direction = ?, major_name = ? where id = ?
-2022-05-20 00:03:00.875 DEBUG 52651 --- [http-nio-9090-exec-3] yjp.dao.ExpertDao.modifyExpert           : ==> Parameters: 李强(String), 2(Integer), 北航(String), 12312312312(String), 123456@qq.com(String), 2021-01-19 00:00:00.0(Timestamp), 好(String), null, null, 25(Integer)
-2022-05-20 00:03:00.879 DEBUG 52651 --- [http-nio-9090-exec-3] yjp.dao.ExpertDao.modifyExpert           : <==    Updates: 1
-2022-05-20 00:03:00.907 DEBUG 52651 --- [http-nio-9090-exec-5] yjp.dao.ExpertDao.queryExpert            : ==>  Preparing: select * from city.expert where 1=1
-2022-05-20 00:03:00.907 DEBUG 52651 --- [http-nio-9090-exec-5] yjp.dao.ExpertDao.queryExpert            : ==> Parameters: 
-2022-05-20 00:03:00.911 DEBUG 52651 --- [http-nio-9090-exec-5] yjp.dao.ExpertDao.queryExpert            : <==      Total: 3
-2022-05-20 00:03:10.877 DEBUG 52651 --- [http-nio-9090-exec-7] yjp.dao.ExpertDao.modifyExpert           : ==>  Preparing: update city.expert set name = ?, gender = ?, organization_name = ?, phone = ?, email = ?, create_date = ?, remarks = ?, research_direction = ?, major_name = ? where id = ?
-2022-05-20 00:03:10.879 DEBUG 52651 --- [http-nio-9090-exec-7] yjp.dao.ExpertDao.modifyExpert           : ==> Parameters: 李美丽(String), 2(Integer), 北航(String), 12312312312(String), 123456@qq.com(String), 2021-01-19 00:00:00.0(Timestamp), 好(String), null, null, 25(Integer)
-2022-05-20 00:03:10.886 DEBUG 52651 --- [http-nio-9090-exec-7] yjp.dao.ExpertDao.modifyExpert           : <==    Updates: 1
-2022-05-20 00:03:10.918 DEBUG 52651 --- [http-nio-9090-exec-9] yjp.dao.ExpertDao.queryExpert            : ==>  Preparing: select * from city.expert where 1=1
-2022-05-20 00:03:10.918 DEBUG 52651 --- [http-nio-9090-exec-9] yjp.dao.ExpertDao.queryExpert            : ==> Parameters: 
-2022-05-20 00:03:10.923 DEBUG 52651 --- [http-nio-9090-exec-9] yjp.dao.ExpertDao.queryExpert            : <==      Total: 3
-2022-05-20 00:03:41.673 DEBUG 52651 --- [http-nio-9090-exec-1] yjp.dao.ExpertDao.modifyExpert           : ==>  Preparing: update city.expert set name = ?, gender = ?, organization_name = ?, phone = ?, email = ?, create_date = ?, remarks = ?, research_direction = ?, major_name = ? where id = ?
-2022-05-20 00:03:41.675 DEBUG 52651 --- [http-nio-9090-exec-1] yjp.dao.ExpertDao.modifyExpert           : ==> Parameters: 杨尚武(String), 1(Integer), 北航(String), 12312312312(String), 123456@qq.com(String), 2021-01-19 00:00:00.0(Timestamp), 好(String), 数据挖掘(String), 人工智能(String), 26(Integer)
-2022-05-20 00:03:41.678 DEBUG 52651 --- [http-nio-9090-exec-1] yjp.dao.ExpertDao.modifyExpert           : <==    Updates: 1
-2022-05-20 00:03:41.701 DEBUG 52651 --- [http-nio-9090-exec-3] yjp.dao.ExpertDao.queryExpert            : ==>  Preparing: select * from city.expert where 1=1
-2022-05-20 00:03:41.701 DEBUG 52651 --- [http-nio-9090-exec-3] yjp.dao.ExpertDao.queryExpert            : ==> Parameters: 
-2022-05-20 00:03:41.704 DEBUG 52651 --- [http-nio-9090-exec-3] yjp.dao.ExpertDao.queryExpert            : <==      Total: 3
-2022-05-20 00:04:15.615 DEBUG 52651 --- [http-nio-9090-exec-5] yjp.dao.ExpertDao.modifyExpert           : ==>  Preparing: update city.expert set name = ?, gender = ?, organization_name = ?, phone = ?, email = ?, create_date = ?, remarks = ?, research_direction = ?, major_name = ? where id = ?
-2022-05-20 00:04:15.617 DEBUG 52651 --- [http-nio-9090-exec-5] yjp.dao.ExpertDao.modifyExpert           : ==> Parameters: 李美丽(String), 2(Integer), 北航(String), 12312312312(String), 123456@qq.com(String), 2021-01-19 00:00:00.0(Timestamp), 5.30之后有时间评阅(String), 5G技术(String), 通讯工程(String), 25(Integer)
-2022-05-20 00:04:15.621 DEBUG 52651 --- [http-nio-9090-exec-5] yjp.dao.ExpertDao.modifyExpert           : <==    Updates: 1
-2022-05-20 00:04:15.646 DEBUG 52651 --- [http-nio-9090-exec-7] yjp.dao.ExpertDao.queryExpert            : ==>  Preparing: select * from city.expert where 1=1
-2022-05-20 00:04:15.646 DEBUG 52651 --- [http-nio-9090-exec-7] yjp.dao.ExpertDao.queryExpert            : ==> Parameters: 
-2022-05-20 00:04:15.649 DEBUG 52651 --- [http-nio-9090-exec-7] yjp.dao.ExpertDao.queryExpert            : <==      Total: 3
-2022-05-20 00:04:26.404 DEBUG 52651 --- [http-nio-9090-exec-9] yjp.dao.ExpertDao.modifyExpert           : ==>  Preparing: update city.expert set name = ?, gender = ?, organization_name = ?, phone = ?, email = ?, create_date = ?, remarks = ?, research_direction = ?, major_name = ? where id = ?
-2022-05-20 00:04:26.405 DEBUG 52651 --- [http-nio-9090-exec-9] yjp.dao.ExpertDao.modifyExpert           : ==> Parameters: 李美丽(String), 2(Integer), 北航(String), 12312312312(String), 123456@qq.com(String), 2021-01-19 00:00:00.0(Timestamp), 5.30之后有时间评阅(String), 5G技术(String), 通信工程(String), 25(Integer)
-2022-05-20 00:04:26.408 DEBUG 52651 --- [http-nio-9090-exec-9] yjp.dao.ExpertDao.modifyExpert           : <==    Updates: 1
-2022-05-20 00:04:26.431 DEBUG 52651 --- [http-nio-9090-exec-1] yjp.dao.ExpertDao.queryExpert            : ==>  Preparing: select * from city.expert where 1=1
-2022-05-20 00:04:26.431 DEBUG 52651 --- [http-nio-9090-exec-1] yjp.dao.ExpertDao.queryExpert            : ==> Parameters: 
-2022-05-20 00:04:26.436 DEBUG 52651 --- [http-nio-9090-exec-1] yjp.dao.ExpertDao.queryExpert            : <==      Total: 3
-2022-05-20 00:04:57.200 DEBUG 52651 --- [http-nio-9090-exec-3] yjp.dao.ExpertDao.modifyExpert           : ==>  Preparing: update city.expert set name = ?, gender = ?, organization_name = ?, phone = ?, email = ?, create_date = ?, remarks = ?, research_direction = ?, major_name = ? where id = ?
-2022-05-20 00:04:57.201 DEBUG 52651 --- [http-nio-9090-exec-3] yjp.dao.ExpertDao.modifyExpert           : ==> Parameters: 杨尚武(String), 1(Integer), 北航(String), 12312312312(String), 123456@qq.com(String), 2021-01-19 00:00:00.0(Timestamp), 杰出学者(String), 数据挖掘(String), 人工智能(String), 26(Integer)
-2022-05-20 00:04:57.205 DEBUG 52651 --- [http-nio-9090-exec-3] yjp.dao.ExpertDao.modifyExpert           : <==    Updates: 1
-2022-05-20 00:04:57.228 DEBUG 52651 --- [http-nio-9090-exec-5] yjp.dao.ExpertDao.queryExpert            : ==>  Preparing: select * from city.expert where 1=1
-2022-05-20 00:04:57.229 DEBUG 52651 --- [http-nio-9090-exec-5] yjp.dao.ExpertDao.queryExpert            : ==> Parameters: 
-2022-05-20 00:04:57.230 DEBUG 52651 --- [http-nio-9090-exec-5] yjp.dao.ExpertDao.queryExpert            : <==      Total: 3
-2022-05-20 00:06:15.893  WARN 52651 --- [http-nio-9090-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 78653
-2022-05-20 00:06:15.917 DEBUG 52651 --- [http-nio-9090-exec-8] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user u where u.username = ? limit 1
-2022-05-20 00:06:15.917 DEBUG 52651 --- [http-nio-9090-exec-8] yjp.dao.UserDao.getPassword              : ==> Parameters: root(String)
-2022-05-20 00:06:15.919 DEBUG 52651 --- [http-nio-9090-exec-8] yjp.dao.UserDao.getPassword              : <==      Total: 1
-2022-05-20 00:06:15.919 DEBUG 52651 --- [http-nio-9090-exec-8] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user u where u.username = ? limit 1
-2022-05-20 00:06:15.919 DEBUG 52651 --- [http-nio-9090-exec-8] yjp.dao.UserDao.getPassword              : ==> Parameters: root(String)
-2022-05-20 00:06:15.921 DEBUG 52651 --- [http-nio-9090-exec-8] yjp.dao.UserDao.getPassword              : <==      Total: 1
-2022-05-20 00:11:40.212  WARN 52651 --- [http-nio-9090-exec-2] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 324290
-2022-05-20 00:11:40.251 DEBUG 52651 --- [http-nio-9090-exec-2] yjp.dao.ExpertDao.queryExpert            : ==>  Preparing: select * from city.expert where 1=1
-2022-05-20 00:11:40.252 DEBUG 52651 --- [http-nio-9090-exec-2] yjp.dao.ExpertDao.queryExpert            : ==> Parameters: 
-2022-05-20 00:11:40.259 DEBUG 52651 --- [http-nio-9090-exec-2] yjp.dao.ExpertDao.queryExpert            : <==      Total: 3
-2022-05-20 00:11:43.470 DEBUG 52651 --- [http-nio-9090-exec-3] yjp.dao.ExpertDao.listExpert             : ==>  Preparing: select * from city.expert;
-2022-05-20 00:11:43.470 DEBUG 52651 --- [http-nio-9090-exec-3] yjp.dao.ExpertDao.listExpert             : ==> Parameters: 
-2022-05-20 00:11:43.474 DEBUG 52651 --- [http-nio-9090-exec-3] yjp.dao.ExpertDao.listExpert             : <==      Total: 3
-2022-05-20 00:11:43.478 ERROR 52651 --- [http-nio-9090-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is cn.hutool.core.exceptions.DependencyException: You need to add dependency of 'poi-ooxml' to your project, and version >= 3.17] with root cause
-
-java.lang.ClassNotFoundException: org.apache.poi.xssf.usermodel.XSSFWorkbook
-	at cn.hutool.poi.excel.WorkbookUtil.createBook(WorkbookUtil.java:108) ~[hutool-all-4.5.10.jar:na]
-	at cn.hutool.poi.excel.ExcelWriter.<init>(ExcelWriter.java:81) ~[hutool-all-4.5.10.jar:na]
-	at cn.hutool.poi.excel.ExcelUtil.getWriter(ExcelUtil.java:374) ~[hutool-all-4.5.10.jar:na]
-	at yjp.controller.ExpertController.export(ExpertController.java:106) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-
-2022-05-20 00:11:47.898 DEBUG 52651 --- [http-nio-9090-exec-4] yjp.dao.ExpertDao.listExpert             : ==>  Preparing: select * from city.expert;
-2022-05-20 00:11:47.898 DEBUG 52651 --- [http-nio-9090-exec-4] yjp.dao.ExpertDao.listExpert             : ==> Parameters: 
-2022-05-20 00:11:47.902 DEBUG 52651 --- [http-nio-9090-exec-4] yjp.dao.ExpertDao.listExpert             : <==      Total: 3
-2022-05-20 00:11:47.904 ERROR 52651 --- [http-nio-9090-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is cn.hutool.core.exceptions.DependencyException: You need to add dependency of 'poi-ooxml' to your project, and version >= 3.17] with root cause
-
-java.lang.ClassNotFoundException: org.apache.poi.xssf.usermodel.XSSFWorkbook
-	at cn.hutool.poi.excel.WorkbookUtil.createBook(WorkbookUtil.java:108) ~[hutool-all-4.5.10.jar:na]
-	at cn.hutool.poi.excel.ExcelWriter.<init>(ExcelWriter.java:81) ~[hutool-all-4.5.10.jar:na]
-	at cn.hutool.poi.excel.ExcelUtil.getWriter(ExcelUtil.java:374) ~[hutool-all-4.5.10.jar:na]
-	at yjp.controller.ExpertController.export(ExpertController.java:106) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-
-2022-05-20 00:11:54.042 DEBUG 52651 --- [http-nio-9090-exec-5] yjp.dao.ExpertDao.listExpert             : ==>  Preparing: select * from city.expert;
-2022-05-20 00:11:54.043 DEBUG 52651 --- [http-nio-9090-exec-5] yjp.dao.ExpertDao.listExpert             : ==> Parameters: 
-2022-05-20 00:11:54.045 DEBUG 52651 --- [http-nio-9090-exec-5] yjp.dao.ExpertDao.listExpert             : <==      Total: 3
-2022-05-20 00:11:54.046 ERROR 52651 --- [http-nio-9090-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is cn.hutool.core.exceptions.DependencyException: You need to add dependency of 'poi-ooxml' to your project, and version >= 3.17] with root cause
-
-java.lang.ClassNotFoundException: org.apache.poi.xssf.usermodel.XSSFWorkbook
-	at cn.hutool.poi.excel.WorkbookUtil.createBook(WorkbookUtil.java:108) ~[hutool-all-4.5.10.jar:na]
-	at cn.hutool.poi.excel.ExcelWriter.<init>(ExcelWriter.java:81) ~[hutool-all-4.5.10.jar:na]
-	at cn.hutool.poi.excel.ExcelUtil.getWriter(ExcelUtil.java:374) ~[hutool-all-4.5.10.jar:na]
-	at yjp.controller.ExpertController.export(ExpertController.java:106) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-
-2022-05-20 00:17:50.821  INFO 52651 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-05-20 00:17:50.825  INFO 52651 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2022-05-20 00:17:50.833  INFO 52651 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2022-05-20 00:18:09.759  INFO 53458 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on MacBook-Pro-235.local with PID 53458 (/Users/bytedance/IdeaProjects/contest1/target/classes started by bytedance in /Users/bytedance/IdeaProjects/contest1)
-2022-05-20 00:18:09.761 DEBUG 53458 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
-2022-05-20 00:18:09.761  INFO 53458 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
-2022-05-20 00:18:09.798  INFO 53458 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-05-20 00:18:09.798  INFO 53458 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-05-20 00:18:10.916  INFO 53458 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2022-05-20 00:18:10.924  INFO 53458 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-05-20 00:18:10.924  INFO 53458 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
-2022-05-20 00:18:11.002  INFO 53458 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-05-20 00:18:11.003  INFO 53458 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1204 ms
-2022-05-20 00:18:11.705  INFO 53458 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-05-20 00:18:11.788  INFO 53458 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-05-20 00:18:11.836  WARN 53458 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2022-05-20 00:18:11.939  INFO 53458 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-05-20 00:18:11.975  INFO 53458 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2022-05-20 00:18:11.986  INFO 53458 --- [restartedMain] yjp.SpringbootMybatisApplication         : Started SpringbootMybatisApplication in 2.644 seconds (JVM running for 3.459)
-2022-05-20 00:18:25.708  INFO 53458 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-05-20 00:18:25.708  INFO 53458 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-05-20 00:18:25.710  INFO 53458 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-05-20 00:18:25.792  INFO 53458 --- [http-nio-9090-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2022-05-20 00:18:26.053 DEBUG 53458 --- [http-nio-9090-exec-1] yjp.dao.ExpertDao.listExpert             : ==>  Preparing: select * from city.expert;
-2022-05-20 00:18:26.074 DEBUG 53458 --- [http-nio-9090-exec-1] yjp.dao.ExpertDao.listExpert             : ==> Parameters: 
-2022-05-20 00:18:26.095 DEBUG 53458 --- [http-nio-9090-exec-1] yjp.dao.ExpertDao.listExpert             : <==      Total: 3
-2022-05-20 00:18:26.119 ERROR 53458 --- [http-nio-9090-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is cn.hutool.core.exceptions.DependencyException: You need to add dependency of 'poi-ooxml' to your project, and version >= 3.17] with root cause
-
-java.lang.ClassNotFoundException: org.apache.poi.ss.usermodel.Date1904Support
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
-	at java.base/java.lang.ClassLoader.defineClass1(Native Method) ~[na:na]
-	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1012) ~[na:na]
-	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150) ~[na:na]
-	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862) ~[na:na]
-	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760) ~[na:na]
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681) ~[na:na]
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639) ~[na:na]
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
-	at cn.hutool.poi.excel.WorkbookUtil.createBook(WorkbookUtil.java:108) ~[hutool-all-4.5.10.jar:na]
-	at cn.hutool.poi.excel.ExcelWriter.<init>(ExcelWriter.java:81) ~[hutool-all-4.5.10.jar:na]
-	at cn.hutool.poi.excel.ExcelUtil.getWriter(ExcelUtil.java:374) ~[hutool-all-4.5.10.jar:na]
-	at yjp.controller.ExpertController.export(ExpertController.java:106) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-
-2022-05-20 00:18:31.725 DEBUG 53458 --- [http-nio-9090-exec-3] yjp.dao.ExpertDao.queryExpert            : ==>  Preparing: select * from city.expert where 1=1
-2022-05-20 00:18:31.726 DEBUG 53458 --- [http-nio-9090-exec-3] yjp.dao.ExpertDao.queryExpert            : ==> Parameters: 
-2022-05-20 00:18:31.732 DEBUG 53458 --- [http-nio-9090-exec-3] yjp.dao.ExpertDao.queryExpert            : <==      Total: 3
-2022-05-20 00:18:34.192 DEBUG 53458 --- [http-nio-9090-exec-4] yjp.dao.ExpertDao.listExpert             : ==>  Preparing: select * from city.expert;
-2022-05-20 00:18:34.193 DEBUG 53458 --- [http-nio-9090-exec-4] yjp.dao.ExpertDao.listExpert             : ==> Parameters: 
-2022-05-20 00:18:34.196 DEBUG 53458 --- [http-nio-9090-exec-4] yjp.dao.ExpertDao.listExpert             : <==      Total: 3
-2022-05-20 00:18:34.197 ERROR 53458 --- [http-nio-9090-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is cn.hutool.core.exceptions.DependencyException: You need to add dependency of 'poi-ooxml' to your project, and version >= 3.17] with root cause
-
-java.lang.ClassNotFoundException: org.apache.poi.ss.usermodel.Date1904Support
-	at cn.hutool.poi.excel.WorkbookUtil.createBook(WorkbookUtil.java:108) ~[hutool-all-4.5.10.jar:na]
-	at cn.hutool.poi.excel.ExcelWriter.<init>(ExcelWriter.java:81) ~[hutool-all-4.5.10.jar:na]
-	at cn.hutool.poi.excel.ExcelUtil.getWriter(ExcelUtil.java:374) ~[hutool-all-4.5.10.jar:na]
-	at yjp.controller.ExpertController.export(ExpertController.java:106) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1060) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:962) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.4.jar:5.3.4]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) ~[tomcat-embed-core-9.0.43.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) ~[spring-web-5.3.4.jar:5.3.4]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:346) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:887) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1684) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.43.jar:9.0.43]
-	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
-
-2022-05-20 00:21:51.777  INFO 53458 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-05-20 00:21:51.779  INFO 53458 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
-2022-05-20 00:21:51.784  INFO 53458 --- [SpringContextShutdownHook] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2022-05-20 00:22:00.491  INFO 53608 --- [restartedMain] yjp.SpringbootMybatisApplication         : Starting SpringbootMybatisApplication using Java 17.0.1 on MacBook-Pro-235.local with PID 53608 (/Users/bytedance/IdeaProjects/contest1/target/classes started by bytedance in /Users/bytedance/IdeaProjects/contest1)
-2022-05-20 00:22:00.494 DEBUG 53608 --- [restartedMain] yjp.SpringbootMybatisApplication         : Running with Spring Boot v2.4.3, Spring v5.3.4
-2022-05-20 00:22:00.494  INFO 53608 --- [restartedMain] yjp.SpringbootMybatisApplication         : No active profile set, falling back to default profiles: default
-2022-05-20 00:22:00.543  INFO 53608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-05-20 00:22:00.544  INFO 53608 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-05-20 00:22:01.488  INFO 53608 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9090 (http)
-2022-05-20 00:22:01.497  INFO 53608 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-05-20 00:22:01.498  INFO 53608 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.43]
-2022-05-20 00:22:01.563  INFO 53608 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-05-20 00:22:01.564  INFO 53608 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1019 ms
-2022-05-20 00:22:02.225  INFO 53608 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-05-20 00:22:02.293  INFO 53608 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2022-05-20 00:22:02.340  WARN 53608 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2022-05-20 00:22:02.439  INFO 53608 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2022-05-20 00:22:02.474  INFO 53608 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9090 (http) with context path ''
-2022-05-20 00:22:02.484  INFO 53608 --- [restartedMain] yjp.SpringbootMybatisApplication         : Started SpringbootMybatisApplication in 2.333 seconds (JVM running for 3.021)
-2022-05-20 00:22:24.129  INFO 53608 --- [http-nio-9090-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-05-20 00:22:24.129  INFO 53608 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-05-20 00:22:24.131  INFO 53608 --- [http-nio-9090-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2022-05-20 00:22:24.206  INFO 53608 --- [http-nio-9090-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2022-05-20 00:22:24.458 DEBUG 53608 --- [http-nio-9090-exec-1] yjp.dao.ExpertDao.listExpert             : ==>  Preparing: select * from city.expert;
-2022-05-20 00:22:24.475 DEBUG 53608 --- [http-nio-9090-exec-1] yjp.dao.ExpertDao.listExpert             : ==> Parameters: 
-2022-05-20 00:22:24.494 DEBUG 53608 --- [http-nio-9090-exec-1] yjp.dao.ExpertDao.listExpert             : <==      Total: 3
-2022-05-20 00:23:43.905  WARN 53608 --- [http-nio-9090-exec-5] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 79415
-2022-05-20 00:23:43.925 DEBUG 53608 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
-2022-05-20 00:23:43.926 DEBUG 53608 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
-2022-05-20 00:23:43.990 DEBUG 53608 --- [http-nio-9090-exec-5] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
-2022-05-20 00:27:06.503  WARN 53608 --- [http-nio-9090-exec-8] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 202524
-2022-05-20 00:27:06.524 DEBUG 53608 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.getWorkById              : ==>  Preparing: select * from city.work where id = ?;
-2022-05-20 00:27:06.524 DEBUG 53608 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.getWorkById              : ==> Parameters: 0(Integer)
-2022-05-20 00:27:06.527 DEBUG 53608 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.getWorkById              : <==      Total: 0
-2022-05-20 00:27:06.551 DEBUG 53608 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : ==>  Preparing: select t.*, w.id w_id ,w.name w_name, w.work_status wt, q.id q_id, q.name q_name from city.team t left join city.work w on w.team_id = t.id left join city.question q on t.question_id = q.id
-2022-05-20 00:27:06.551 DEBUG 53608 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : ==> Parameters: 
-2022-05-20 00:27:06.559 DEBUG 53608 --- [http-nio-9090-exec-9] yjp.dao.TeamDao.searchSelectionInfo      : <==      Total: 18
+2022-05-23 01:41:56.082 DEBUG 1617 --- [http-nio-9090-exec-6] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user u where u.username = ? limit 1
+2022-05-23 01:41:56.123 DEBUG 1617 --- [http-nio-9090-exec-6] yjp.dao.UserDao.getPassword              : ==> Parameters: root(String)
+2022-05-23 01:41:56.126 DEBUG 1617 --- [http-nio-9090-exec-6] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-05-23 01:41:56.127 DEBUG 1617 --- [http-nio-9090-exec-6] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user u where u.username = ? limit 1
+2022-05-23 01:41:56.127 DEBUG 1617 --- [http-nio-9090-exec-6] yjp.dao.UserDao.getPassword              : ==> Parameters: root(String)
+2022-05-23 01:41:56.128 DEBUG 1617 --- [http-nio-9090-exec-6] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-05-23 01:43:41.193  WARN 1617 --- [http-nio-9090-exec-10] c.a.druid.pool.DruidAbstractDataSource   : discard long time none received connection. , jdbcUrl : jdbc:mysql://localhost:3306/city?useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8&allowMultiQueries=true, version : 1.2.4, lastPacketReceivedIdleMillis : 105064
+2022-05-23 01:43:41.207 DEBUG 1617 --- [http-nio-9090-exec-10] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user u where u.username = ? limit 1
+2022-05-23 01:43:41.207 DEBUG 1617 --- [http-nio-9090-exec-10] yjp.dao.UserDao.getPassword              : ==> Parameters: root(String)
+2022-05-23 01:43:41.210 DEBUG 1617 --- [http-nio-9090-exec-10] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-05-23 01:43:41.210 DEBUG 1617 --- [http-nio-9090-exec-10] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user u where u.username = ? limit 1
+2022-05-23 01:43:41.210 DEBUG 1617 --- [http-nio-9090-exec-10] yjp.dao.UserDao.getPassword              : ==> Parameters: root(String)
+2022-05-23 01:43:41.211 DEBUG 1617 --- [http-nio-9090-exec-10] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-05-23 01:43:43.380 DEBUG 1617 --- [http-nio-9090-exec-7] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user u where u.username = ? limit 1
+2022-05-23 01:43:43.380 DEBUG 1617 --- [http-nio-9090-exec-7] yjp.dao.UserDao.getPassword              : ==> Parameters: root(String)
+2022-05-23 01:43:43.381 DEBUG 1617 --- [http-nio-9090-exec-7] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-05-23 01:43:43.382 DEBUG 1617 --- [http-nio-9090-exec-7] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user u where u.username = ? limit 1
+2022-05-23 01:43:43.382 DEBUG 1617 --- [http-nio-9090-exec-7] yjp.dao.UserDao.getPassword              : ==> Parameters: root(String)
+2022-05-23 01:43:43.382 DEBUG 1617 --- [http-nio-9090-exec-7] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-05-23 01:43:45.909 DEBUG 1617 --- [http-nio-9090-exec-3] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user u where u.username = ? limit 1
+2022-05-23 01:43:45.909 DEBUG 1617 --- [http-nio-9090-exec-3] yjp.dao.UserDao.getPassword              : ==> Parameters: root(String)
+2022-05-23 01:43:45.910 DEBUG 1617 --- [http-nio-9090-exec-3] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-05-23 01:43:45.910 DEBUG 1617 --- [http-nio-9090-exec-3] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user u where u.username = ? limit 1
+2022-05-23 01:43:45.910 DEBUG 1617 --- [http-nio-9090-exec-3] yjp.dao.UserDao.getPassword              : ==> Parameters: root(String)
+2022-05-23 01:43:45.911 DEBUG 1617 --- [http-nio-9090-exec-3] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-05-23 01:43:48.460 DEBUG 1617 --- [http-nio-9090-exec-2] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user u where u.username = ? limit 1
+2022-05-23 01:43:48.460 DEBUG 1617 --- [http-nio-9090-exec-2] yjp.dao.UserDao.getPassword              : ==> Parameters: root(String)
+2022-05-23 01:43:48.461 DEBUG 1617 --- [http-nio-9090-exec-2] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-05-23 01:43:48.461 DEBUG 1617 --- [http-nio-9090-exec-2] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user u where u.username = ? limit 1
+2022-05-23 01:43:48.462 DEBUG 1617 --- [http-nio-9090-exec-2] yjp.dao.UserDao.getPassword              : ==> Parameters: root(String)
+2022-05-23 01:43:48.462 DEBUG 1617 --- [http-nio-9090-exec-2] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-05-23 01:43:50.986 DEBUG 1617 --- [http-nio-9090-exec-6] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user u where u.username = ? limit 1
+2022-05-23 01:43:50.986 DEBUG 1617 --- [http-nio-9090-exec-6] yjp.dao.UserDao.getPassword              : ==> Parameters: root(String)
+2022-05-23 01:43:50.988 DEBUG 1617 --- [http-nio-9090-exec-6] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-05-23 01:43:50.988 DEBUG 1617 --- [http-nio-9090-exec-6] yjp.dao.UserDao.getPassword              : ==>  Preparing: select password from city.user u where u.username = ? limit 1
+2022-05-23 01:43:50.988 DEBUG 1617 --- [http-nio-9090-exec-6] yjp.dao.UserDao.getPassword              : ==> Parameters: root(String)
+2022-05-23 01:43:50.989 DEBUG 1617 --- [http-nio-9090-exec-6] yjp.dao.UserDao.getPassword              : <==      Total: 1
+2022-05-23 01:43:54.513 DEBUG 1617 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.getWorkById              : ==>  Preparing: select * from city.work where id = ?;
+2022-05-23 01:43:54.513 DEBUG 1617 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.getWorkById              : ==> Parameters: 20(Integer)
+2022-05-23 01:43:54.516 DEBUG 1617 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.getWorkById              : <==      Total: 1
+2022-05-23 01:43:57.911 DEBUG 1617 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.getWorkById              : ==>  Preparing: select * from city.work where id = ?;
+2022-05-23 01:43:57.912 DEBUG 1617 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.getWorkById              : ==> Parameters: 25(Integer)
+2022-05-23 01:43:57.912 DEBUG 1617 --- [http-nio-9090-exec-1] yjp.dao.WorkDao.getWorkById              : <==      Total: 1
+2022-05-23 01:44:02.847 DEBUG 1617 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.getWorkById              : ==>  Preparing: select * from city.work where id = ?;
+2022-05-23 01:44:02.847 DEBUG 1617 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.getWorkById              : ==> Parameters: 27(Integer)
+2022-05-23 01:44:02.848 DEBUG 1617 --- [http-nio-9090-exec-9] yjp.dao.WorkDao.getWorkById              : <==      Total: 1
+2022-05-23 01:44:12.533 DEBUG 1617 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.getWorkById              : ==>  Preparing: select * from city.work where id = ?;
+2022-05-23 01:44:12.533 DEBUG 1617 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.getWorkById              : ==> Parameters: 28(Integer)
+2022-05-23 01:44:12.534 DEBUG 1617 --- [http-nio-9090-exec-5] yjp.dao.WorkDao.getWorkById              : <==      Total: 1
+2022-05-23 01:44:17.847 DEBUG 1617 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.getWorkById              : ==>  Preparing: select * from city.work where id = ?;
+2022-05-23 01:44:17.848 DEBUG 1617 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.getWorkById              : ==> Parameters: 29(Integer)
+2022-05-23 01:44:17.848 DEBUG 1617 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.getWorkById              : <==      Total: 1
+2022-05-23 03:07:03.593 DEBUG 1617 --- [http-nio-9090-exec-10] yjp.dao.UserDao.queryUserById            : ==>  Preparing: select * from city.user where id = ?;
+2022-05-23 03:07:03.596 DEBUG 1617 --- [http-nio-9090-exec-10] yjp.dao.UserDao.queryUserById            : ==> Parameters: 9(Integer)
+2022-05-23 03:07:03.601 DEBUG 1617 --- [http-nio-9090-exec-10] yjp.dao.UserDao.queryUserById            : <==      Total: 1
+2022-05-23 03:07:11.648 DEBUG 1617 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-23 03:07:11.649 DEBUG 1617 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-23 03:07:11.652 DEBUG 1617 --- [http-nio-9090-exec-3] yjp.dao.WorkDao.listWork                 : <==      Total: 12
+2022-05-23 03:07:11.652 DEBUG 1617 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-23 03:07:11.652 DEBUG 1617 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-23 03:07:11.654 DEBUG 1617 --- [http-nio-9090-exec-2] yjp.dao.ContestDao.listContest           : <==      Total: 20
+2022-05-23 03:07:11.654 DEBUG 1617 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-23 03:07:11.654 DEBUG 1617 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-23 03:07:11.656 DEBUG 1617 --- [http-nio-9090-exec-5] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-23 03:07:11.657 DEBUG 1617 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-23 03:07:11.657 DEBUG 1617 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-23 03:07:11.659 DEBUG 1617 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-23 03:07:13.800 DEBUG 1617 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.getWorkById              : ==>  Preparing: select * from city.work where id = ?;
+2022-05-23 03:07:13.801 DEBUG 1617 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.getWorkById              : ==> Parameters: 30(Integer)
+2022-05-23 03:07:13.804 DEBUG 1617 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.getWorkById              : <==      Total: 1
+2022-05-23 03:07:16.587 DEBUG 1617 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-23 03:07:16.587 DEBUG 1617 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-23 03:07:16.588 DEBUG 1617 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-23 03:07:16.588 DEBUG 1617 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-23 03:07:16.589 DEBUG 1617 --- [http-nio-9090-exec-4] yjp.dao.WorkDao.listWork                 : <==      Total: 12
+2022-05-23 03:07:16.589 DEBUG 1617 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-23 03:07:16.589 DEBUG 1617 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-23 03:07:16.590 DEBUG 1617 --- [http-nio-9090-exec-1] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-23 03:07:16.590 DEBUG 1617 --- [http-nio-9090-exec-10] yjp.dao.ContestDao.listContest           : <==      Total: 20
+2022-05-23 03:07:16.590 DEBUG 1617 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-23 03:07:16.590 DEBUG 1617 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-23 03:07:16.591 DEBUG 1617 --- [http-nio-9090-exec-4] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-23 03:07:18.543 DEBUG 1617 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.getContest            : ==>  Preparing: select * from city.contest where id = ?;
+2022-05-23 03:07:18.543 DEBUG 1617 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.getContest            : ==> Parameters: 3(Integer)
+2022-05-23 03:07:18.547 DEBUG 1617 --- [http-nio-9090-exec-9] yjp.dao.ContestDao.getContest            : <==      Total: 1
+2022-05-23 03:07:27.956 DEBUG 1617 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-23 03:07:27.956 DEBUG 1617 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-23 03:07:27.957 DEBUG 1617 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-23 03:07:27.957 DEBUG 1617 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-23 03:07:27.958 DEBUG 1617 --- [http-nio-9090-exec-5] yjp.dao.ContestDao.listContest           : <==      Total: 20
+2022-05-23 03:07:27.958 DEBUG 1617 --- [http-nio-9090-exec-2] yjp.dao.WorkDao.listWork                 : <==      Total: 12
+2022-05-23 03:07:27.959 DEBUG 1617 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-23 03:07:27.959 DEBUG 1617 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-23 03:07:27.960 DEBUG 1617 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-23 03:07:27.960 DEBUG 1617 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-23 03:07:27.964 DEBUG 1617 --- [http-nio-9090-exec-2] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-23 03:07:27.964 DEBUG 1617 --- [http-nio-9090-exec-3] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-23 03:07:29.544 DEBUG 1617 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.getWorkById              : ==>  Preparing: select * from city.work where id = ?;
+2022-05-23 03:07:29.545 DEBUG 1617 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.getWorkById              : ==> Parameters: 30(Integer)
+2022-05-23 03:07:29.547 DEBUG 1617 --- [http-nio-9090-exec-6] yjp.dao.WorkDao.getWorkById              : <==      Total: 1
+2022-05-23 03:07:31.940 DEBUG 1617 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==>  Preparing: select * from city.contest;
+2022-05-23 03:07:31.940 DEBUG 1617 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : ==> Parameters: 
+2022-05-23 03:07:31.940 DEBUG 1617 --- [http-nio-9090-exec-10] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-23 03:07:31.940 DEBUG 1617 --- [http-nio-9090-exec-10] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-23 03:07:31.940 DEBUG 1617 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==>  Preparing: select * from city.work;
+2022-05-23 03:07:31.940 DEBUG 1617 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : ==> Parameters: 
+2022-05-23 03:07:31.941 DEBUG 1617 --- [http-nio-9090-exec-10] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1
+2022-05-23 03:07:31.941 DEBUG 1617 --- [http-nio-9090-exec-1] yjp.dao.ContestDao.listContest           : <==      Total: 20
+2022-05-23 03:07:31.941 DEBUG 1617 --- [http-nio-9090-exec-8] yjp.dao.WorkDao.listWork                 : <==      Total: 12
+2022-05-23 03:07:31.941 DEBUG 1617 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==>  Preparing: select * from city.strategy where id = ?;
+2022-05-23 03:07:31.942 DEBUG 1617 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : ==> Parameters: 1(Integer)
+2022-05-23 03:07:31.942 DEBUG 1617 --- [http-nio-9090-exec-8] yjp.dao.StrategyDao.getStrategy          : <==      Total: 1

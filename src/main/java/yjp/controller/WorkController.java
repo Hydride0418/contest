@@ -17,6 +17,7 @@ import yjp.util.ConvUtil;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
@@ -219,12 +220,19 @@ public class WorkController {
     }
 
     @GetMapping("/download")
-    public String downloadFile(HttpServletResponse response, @RequestParam("fileName") String fileName) {
-        if (fileName != null) {
+    @ResponseBody
+    public boolean downloadFile(HttpServletResponse response, @RequestParam("filePath") String filePath) {
+        System.out.println("download");
+        if (filePath != null) {
             //设置文件路径
-            File file = new File("/Users/bytedance/IdeaProjects/contest1/images/1.jpg"); //用了一个本地路径来测试
+            System.out.println(filePath);
+            File file = new File(filePath); //用了一个本地路径来测试
 //            File file = new File(realPath , fileName); 这里的realPath填写文件的真实路径即可
             if (file.exists()) {
+                System.out.println("exist");
+                String fileName = filePath.split("/")[6]; // 取一下文件路径里的作品名称
+                byte[] fileNameBytes = fileName.getBytes(StandardCharsets.UTF_8);
+                fileName = new String(fileNameBytes, 0, fileNameBytes.length, StandardCharsets.ISO_8859_1);
                 response.setContentType("application/force-download");// 设置强制下载不打开
                 response.addHeader("Content-Disposition", "attachment;fileName=" + fileName);// 设置文件名
                 byte[] buffer = new byte[1024];
@@ -235,11 +243,12 @@ public class WorkController {
                     bis = new BufferedInputStream(fis);
                     OutputStream os = response.getOutputStream();
                     int i = bis.read(buffer);
+                    System.out.println(i);
                     while (i != -1) {
                         os.write(buffer, 0, i);
                         i = bis.read(buffer);
                     }
-                    return "下载成功";
+                    return true;
                 } catch (Exception e) {
                     e.printStackTrace();
                 } finally {
@@ -260,6 +269,6 @@ public class WorkController {
                 }
             }
         }
-        return "下载失败";
+        return false;
     }
 }

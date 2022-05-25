@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import yjp.pojo.Contest;
 import yjp.pojo.Strategy;
+import yjp.pojo.Team;
 import yjp.pojo.query.ContestQuery;
 import yjp.response.ContestResponse.AddContestResponse;
 import yjp.response.ContestResponse.ModifyContestResponse;
@@ -14,8 +15,7 @@ import yjp.service.StrategyService;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
@@ -85,28 +85,5 @@ public class ContestController {
 
         outputStream.flush();
         outputStream.close();
-    }
-
-    // 上传图片存储 并将图片url绑定至id所对contest
-    @PostMapping("/upload_Image/{id}")
-    @ResponseBody
-    public String uploadImage(@RequestParam("file") MultipartFile file, @PathVariable("id") Integer contestID) {
-        if (file.isEmpty()) {
-            return "upload failed";
-        }
-        String filename = file.getOriginalFilename();
-        String filepath = "/Users/bytedance/city_front/city_front/src/assets/"; //作品文件的本地文件夹 未来在服务器中修改
-        File dest = new File(filepath + filename);
-        try {
-            file.transferTo(dest);
-            Contest contest = new Contest();
-            contest.setId(contestID);
-            contest.setImage(filename);
-            contestService.setImageUrl(contest);
-            return "upload succeeded";
-        } catch (IOException e) {
-            System.out.println(e);
-        }
-        return "upload failed";
     }
 }
